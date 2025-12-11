@@ -99,15 +99,22 @@ class SmartQueue:
             print(f"⚠️  Error checking status: {e}")
             return self.max_concurrent  # Assume full on error (be conservative)
 
-    def submit_section(self, section: str) -> bool:
-        """Submit a single section to Aristotle."""
+    def submit_section(self, section: str) -> str:
+        """
+        Submit a single section to Aristotle.
+
+        Returns:
+            'success': Submitted successfully
+            'rate_limit': Hit rate limit, retry later
+            'failed': Permanent failure
+        """
         aristotle_file = self.project_root / 'src' / 'TaxCode' / f'Section{section}_aristotle.lean'
 
         if not aristotle_file.exists():
-            print(f"  ✗ {aristotle_file.name} not found")
+            print(f"  ✗ {aristotle_file.name} not found (permanent failure)")
             self.failed.append(section)
             self.save_queue()
-            return False
+            return 'failed'
 
         try:
             cmd = [
@@ -132,19 +139,25 @@ class SmartQueue:
                 }
                 self.save_queue()
                 print(f"  ✓ Submitted §{section} (project: {project_id[:8]}...)")
-                return True
+                return 'success'
             else:
-                print(f"  ✗ Failed to submit §{section}")
-                print(f"    {result.stderr}")
-                self.failed.append(section)
-                self.save_queue()
-                return False
+                output = result.stderr + result.stdout
+
+                # Check if it's a rate limit error
+                if '429 Too Many Requests' in output or 'already have 5 projects' in output:
+                    print(f"  ⏸️  Rate limit hit for §{section} - will retry")
+                    return 'rate_limit'
+                else:
+                    print(f"  ✗ Failed to submit §{section} (permanent)")
+                    print(f"    {result.stderr[:200]}")
+                    self.failed.append(section)
+                    self.save_queue()
+                    return 'failed'
 
         except Exception as e:
             print(f"  ✗ Error submitting §{section}: {e}")
-            self.failed.append(section)
-            self.save_queue()
-            return False
+            # Conservative: treat as rate limit (will retry)
+            return 'rate_limit'
 
     async def process_queue(self):
         """Main queue processing loop."""
@@ -173,21 +186,33 @@ class SmartQueue:
 
             # Submit as many as we have slots for
             submitted_this_round = 0
-            while available_slots > 0 and self.pending:
+            rate_limited = False
+
+            while available_slots > 0 and self.pending and not rate_limited:
                 section = self.pending[0]  # Peek at next
 
                 print(f"\n  Attempting to submit §{section}...")
-                if self.submit_section(section):
+                result = self.submit_section(section)
+
+                if result == 'success':
                     self.pending.pop(0)  # Remove from queue
                     submitted_this_round += 1
                     available_slots -= 1
-                else:
-                    # Remove failed section from queue
+                elif result == 'failed':
+                    # Permanent failure - remove from queue (already added to failed list)
                     self.pending.pop(0)
                     # Available slots unchanged (didn't actually submit)
+                elif result == 'rate_limit':
+                    # Hit rate limit - keep in pending, stop trying this round
+                    rate_limited = True
+                    print(f"  ⏸️  Stopping submissions this round (rate limited)")
+                    break
 
             if submitted_this_round > 0:
                 print(f"\n  ✓ Submitted {submitted_this_round} section(s) this round")
+
+            if rate_limited:
+                print(f"  ℹ️  Will retry remaining {len(self.pending)} section(s) next iteration")
 
             # Check if done
             if not self.pending:
