@@ -63,7 +63,7 @@ class LeanSkeletonGenerator:
         """Initialize with scraped section data."""
         self.sections = {s['section']: s for s in sections_data}
 
-    def generate_skeleton(self, section_num: str) -> str:
+    def generate_skeleton(self, section_num: int) -> str:
         """Generate Lean skeleton for a section."""
         if section_num not in self.sections:
             raise ValueError(f"Section {section_num} not found in data")
@@ -90,7 +90,7 @@ class LeanSkeletonGenerator:
             summary=summary or "   TODO: Add summary"
         )
 
-    def generate_test_skeleton(self, section_num: str) -> str:
+    def generate_test_skeleton(self, section_num: int) -> str:
         """Generate test file skeleton."""
         if section_num not in self.sections:
             raise ValueError(f"Section {section_num} not found")
@@ -102,7 +102,7 @@ class LeanSkeletonGenerator:
             title=section['title']
         )
 
-    def write_section_file(self, section_num: str, output_dir: Path):
+    def write_section_file(self, section_num: int, output_dir: Path):
         """Write Lean skeleton file."""
         skeleton = self.generate_skeleton(section_num)
 
@@ -118,7 +118,7 @@ class LeanSkeletonGenerator:
         print(f"Generated: {output_file}")
         return output_file
 
-    def write_test_file(self, section_num: str, output_dir: Path):
+    def write_test_file(self, section_num: int, output_dir: Path):
         """Write test skeleton file."""
         test_skeleton = self.generate_test_skeleton(section_num)
 
@@ -159,9 +159,9 @@ def main():
     # Determine which sections to generate
     section_nums = []
     if args.section:
-        section_nums = [args.section]
+        section_nums = [int(args.section)]
     elif args.batch:
-        section_nums = [s.strip() for s in args.batch.split(',')]
+        section_nums = [int(s.strip()) for s in args.batch.split(',')]
     else:
         parser.print_help()
         return 1
