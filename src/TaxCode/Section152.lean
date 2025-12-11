@@ -924,4 +924,4 @@ This file formalizes IRC §152 (Dependent defined).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -193,4 +193,4 @@ This file formalizes IRC §1012 (cost).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

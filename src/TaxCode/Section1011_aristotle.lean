@@ -173,4 +173,4 @@ This file formalizes IRC §1011 (Adjusted basis for determining gain or loss).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

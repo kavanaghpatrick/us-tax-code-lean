@@ -794,4 +794,4 @@ This file formalizes IRC §151 (Allowance of deductions for personal exemptions)
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

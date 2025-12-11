@@ -256,4 +256,4 @@ This file formalizes IRC §1001 (Determination of amount of and recognition of g
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

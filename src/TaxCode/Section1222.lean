@@ -304,4 +304,4 @@ This file formalizes IRC §1222 (Other terms relating to capital gains and losse
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"
