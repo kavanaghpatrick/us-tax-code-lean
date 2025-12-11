@@ -3,7 +3,7 @@ This file was edited by Aristotle.
 
 Lean version: leanprover/lean4:v4.24.0
 Mathlib version: f897ebcf72cd16f89ab4577d0c826cd14afaafc7
-This project request had uuid: ee342ebc-ccdc-4d24-a90b-6f4091755c44
+This project request had uuid: 4cf38843-09cd-4d38-ac02-71b9e6215b0e
 
 The following was proved by Aristotle:
 
@@ -222,13 +222,14 @@ theorem only_qualifying_deducted (e : BusinessExpense)
 theorem deductions_nonnegative (expenses : List BusinessExpense)
     (h : ∀ e ∈ expenses, (e.amount : Int) ≥ 0) :
     calculateSection162Deduction expenses ≥ 0 := by
-  unfold calculateSection162Deduction; induction expenses <;> aesop;
-  · decide;
-  · -- By definition of `foldl`, we can show that the sum of non-negative terms is non-negative.
-    have h_foldl : ∀ (tail : List BusinessExpense), (∀ e ∈ tail, 0 ≤ e.amount) → 0 ≤ List.foldl (fun (acc : Int) e => if qualifiesForDeduction e then acc + e.amount else acc) head.amount tail := by
-      intro tail ht; induction tail using List.reverseRecOn <;> aesop;
-      exact add_nonneg a_1 ( ht a ( Or.inr rfl ) );
-    exact h_foldl tail right
+  -- By definition of `calculateSection162Deduction`, we know that it is the sum of non-negative amounts.
+  have h_sum_nonneg : ∀ (expenses : List BusinessExpense), (∀ e ∈ expenses, e.amount ≥ 0) → calculateSection162Deduction expenses ≥ 0 := by
+    aesop;
+    induction expenses_1 using List.reverseRecOn <;> aesop;
+    · decide +revert;
+    · cases a_1 ; unfold calculateSection162Deduction at * ; aesop;
+      exact le_trans a_2 ( Int.le_add_of_nonneg_right ( a _ ( Or.inr rfl ) ) );
+  exact h_sum_nonneg expenses h
 
 -- Theorem: All qualifying expenses with non-negative amounts contribute to deduction
 theorem qualifying_expenses_count (e : BusinessExpense)

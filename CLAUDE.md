@@ -25,6 +25,7 @@ scripts/       # Aristotle automation
 5. Commit formal proof
 
 ## Critical Rules
+- **🎯 GitHub is Source of Truth** - ALL work tracking, planning, and status MUST be in GitHub (issues, projects, commits). Never rely on local files or external tools for coordination.
 - **Never commit API keys** (.gitignore enforced)
 - **Cite IRC sections** in comments (e.g., `-- IRC §61(a)`)
 - **Keep definitions atomic** - one concept per definition
