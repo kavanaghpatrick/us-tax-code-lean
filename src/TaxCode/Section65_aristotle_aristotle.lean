@@ -1,4 +1,18 @@
 /-
+This file was edited by Aristotle.
+
+Lean version: leanprover/lean4:v4.24.0
+Mathlib version: f897ebcf72cd16f89ab4577d0c826cd14afaafc7
+This project request had uuid: 97e7928d-2bb4-4b3c-aa1f-e62767bc785b
+
+The following was proved by Aristotle:
+
+- theorem ordinary_loss_nonpositive (losses : List PropertyLoss)
+    (h : ∀ l ∈ losses, (l.amount : Int) ≤ 0) :
+    calculateOrdinaryLoss losses ≤ 0
+-/
+
+/-
 Common definitions inlined for Aristotle processing
 -/
 
@@ -106,7 +120,6 @@ structure Taxpayer where
 instance : Repr Taxpayer where
   reprPrec t _ := s!"Taxpayer(id: {t.id}, status: {repr t.filingStatus}, year: {t.taxYear.year})"
 
-
 /-!
 # IRC Section 65 - Ordinary Loss Defined
 
@@ -139,20 +152,35 @@ def calculateOrdinaryLoss (losses : List PropertyLoss) : Currency :=
 
 -- Examples
 def example_inventory_loss : PropertyLoss :=
-  ⟨(-50000 : Int), false⟩  -- -$500 loss from inventory (ordinary property)
+  ⟨(-50000 : Int), false⟩
+
+-- -$500 loss from inventory (ordinary property)
 
 def example_stock_loss : PropertyLoss :=
-  ⟨(-100000 : Int), true⟩  -- -$1,000 loss from stock (capital asset)
+  ⟨(-100000 : Int), true⟩
 
-#eval isOrdinaryLoss example_inventory_loss   -- true
-#eval isOrdinaryLoss example_stock_loss       -- false
-#eval calculateOrdinaryLoss [example_inventory_loss, example_stock_loss]  -- -50000
+-- -$1,000 loss from stock (capital asset)
+
+#eval isOrdinaryLoss example_inventory_loss
+
+-- true
+#eval isOrdinaryLoss example_stock_loss
+
+-- false
+#eval calculateOrdinaryLoss [example_inventory_loss, example_stock_loss]
+
+-- -50000
 
 -- Theorem: Ordinary losses are non-positive
 theorem ordinary_loss_nonpositive (losses : List PropertyLoss)
     (h : ∀ l ∈ losses, (l.amount : Int) ≤ 0) :
     calculateOrdinaryLoss losses ≤ 0 := by
-  sorry
+  -- By definition of `calculateOrdinaryLoss`, each term in the sum is non-positive, so their sum is also non-positive.
+  have h_foldl : ∀ (l : List PropertyLoss), (∀ x ∈ l, x.amount ≤ 0) → List.foldl (fun (acc : Int) x => if isOrdinaryLoss x then acc + x.amount else acc) (0 : Int) l ≤ 0 := by
+    intro l hl;
+    induction l using List.reverseRecOn <;> aesop;
+    exact add_nonpos a_1 ( hl a ( Or.inr rfl ) );
+  convert h_foldl losses h using 1
 
 -- Theorem: Capital asset losses don't contribute to ordinary loss
 theorem capital_losses_excluded (l : PropertyLoss)

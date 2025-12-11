@@ -25,6 +25,49 @@ instance : LE Currency where
 instance : LT Currency where
   lt a b := @LT.lt Int _ a b
 
+-- Arithmetic instances for Currency (since Currency := Int)
+instance : HAdd Currency Currency Currency where
+  hAdd a b := a + b
+
+instance : HAdd Currency Int Currency where
+  hAdd a b := a + b
+
+instance : HAdd Int Currency Currency where
+  hAdd a b := a + b
+
+instance : HSub Currency Currency Currency where
+  hSub a b := a - b
+
+instance : HSub Currency Int Currency where
+  hSub a b := a - b
+
+instance : HSub Int Currency Currency where
+  hSub a b := a - b
+
+instance : HMul Currency Currency Currency where
+  hMul a b := a * b
+
+instance : HMul Currency Int Currency where
+  hMul a b := a * b
+
+instance : HMul Int Currency Currency where
+  hMul a b := a * b
+
+instance : HDiv Currency Int Currency where
+  hDiv a b := a / b
+
+instance : HDiv Currency Currency Currency where
+  hDiv a b := a / b
+
+instance : Max Currency where
+  max a b := max a b
+
+instance : Min Currency where
+  min a b := min a b
+
+instance : Neg Currency where
+  neg a := -a
+
 end Currency
 
 -- Tax Year

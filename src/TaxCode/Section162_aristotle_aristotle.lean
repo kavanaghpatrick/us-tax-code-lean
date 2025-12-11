@@ -1,4 +1,18 @@
 /-
+This file was edited by Aristotle.
+
+Lean version: leanprover/lean4:v4.24.0
+Mathlib version: f897ebcf72cd16f89ab4577d0c826cd14afaafc7
+This project request had uuid: ee342ebc-ccdc-4d24-a90b-6f4091755c44
+
+The following was proved by Aristotle:
+
+- theorem deductions_nonnegative (expenses : List BusinessExpense)
+    (h : ∀ e ∈ expenses, (e.amount : Int) ≥ 0) :
+    calculateSection162Deduction expenses ≥ 0
+-/
+
+/-
 Common definitions inlined for Aristotle processing
 -/
 
@@ -106,7 +120,6 @@ structure Taxpayer where
 instance : Repr Taxpayer where
   reprPrec t _ := s!"Taxpayer(id: {t.id}, status: {repr t.filingStatus}, year: {t.taxYear.year})"
 
-
 /-!
 # IRC Section 162 - Trade or Business Expenses
 
@@ -166,13 +179,19 @@ def makeBusinessExpense (amount : Currency) (expenseType : BusinessExpenseType) 
 
 -- Examples
 def example_salary_expense : BusinessExpense :=
-  makeBusinessExpense 5000000 BusinessExpenseType.Salaries  -- $50,000 salary
+  makeBusinessExpense 5000000 BusinessExpenseType.Salaries
+
+-- $50,000 salary
 
 def example_travel_expense : BusinessExpense :=
-  makeBusinessExpense 150000 BusinessExpenseType.TravelMeals  -- $1,500 travel
+  makeBusinessExpense 150000 BusinessExpenseType.TravelMeals
+
+-- $1,500 travel
 
 def example_lavish_expense : BusinessExpense :=
-  ⟨500000, BusinessExpenseType.TravelMeals, true, true, false, true⟩  -- $5,000 lavish meal (NOT reasonable)
+  ⟨500000, BusinessExpenseType.TravelMeals, true, true, false, true⟩
+
+-- $5,000 lavish meal (NOT reasonable)
 
 def example_business : List BusinessExpense := [
   example_salary_expense,
@@ -180,10 +199,18 @@ def example_business : List BusinessExpense := [
   example_lavish_expense
 ]
 
-#eval qualifiesForDeduction example_salary_expense    -- true
-#eval qualifiesForDeduction example_travel_expense    -- true
-#eval qualifiesForDeduction example_lavish_expense    -- false (not reasonable)
-#eval calculateSection162Deduction example_business   -- 5150000 ($51,500)
+#eval qualifiesForDeduction example_salary_expense
+
+-- true
+#eval qualifiesForDeduction example_travel_expense
+
+-- true
+#eval qualifiesForDeduction example_lavish_expense
+
+-- false (not reasonable)
+#eval calculateSection162Deduction example_business
+
+-- 5150000 ($51,500)
 
 -- Theorem: Only qualifying expenses are deducted
 theorem only_qualifying_deducted (e : BusinessExpense)
@@ -195,7 +222,13 @@ theorem only_qualifying_deducted (e : BusinessExpense)
 theorem deductions_nonnegative (expenses : List BusinessExpense)
     (h : ∀ e ∈ expenses, (e.amount : Int) ≥ 0) :
     calculateSection162Deduction expenses ≥ 0 := by
-  sorry
+  unfold calculateSection162Deduction; induction expenses <;> aesop;
+  · decide;
+  · -- By definition of `foldl`, we can show that the sum of non-negative terms is non-negative.
+    have h_foldl : ∀ (tail : List BusinessExpense), (∀ e ∈ tail, 0 ≤ e.amount) → 0 ≤ List.foldl (fun (acc : Int) e => if qualifiesForDeduction e then acc + e.amount else acc) head.amount tail := by
+      intro tail ht; induction tail using List.reverseRecOn <;> aesop;
+      exact add_nonneg a_1 ( ht a ( Or.inr rfl ) );
+    exact h_foldl tail right
 
 -- Theorem: All qualifying expenses with non-negative amounts contribute to deduction
 theorem qualifying_expenses_count (e : BusinessExpense)

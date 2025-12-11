@@ -1,4 +1,15 @@
 /-
+This file was edited by Aristotle.
+
+Lean version: leanprover/lean4:v4.24.0
+Mathlib version: f897ebcf72cd16f89ab4577d0c826cd14afaafc7
+This project request had uuid: 72293cd2-e879-41b1-b702-8d3decbf8166
+-/
+
+/- Aristotle failed to load this code into its environment. Double check that the syntax is correct.
+
+Unknown identifier `placeholder`-/
+/-
 Common definitions inlined for Aristotle processing
 -/
 
@@ -105,7 +116,6 @@ structure Taxpayer where
 
 instance : Repr Taxpayer where
   reprPrec t _ := s!"Taxpayer(id: {t.id}, status: {repr t.filingStatus}, year: {t.taxYear.year})"
-
 
 /-!
 # IRC Section 63 - Taxable income defined
