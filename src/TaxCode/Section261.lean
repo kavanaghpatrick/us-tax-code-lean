@@ -36,4 +36,4 @@ This file formalizes IRC §261 (General rule for disallowance of deductions).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

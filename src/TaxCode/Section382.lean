@@ -2144,4 +2144,4 @@ This file formalizes IRC §382 (Limitation on net operating loss carryforwards a
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -367,4 +367,4 @@ This file formalizes IRC §279 (Interest on indebtedness incurred by corporation
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

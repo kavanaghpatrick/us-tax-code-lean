@@ -171,4 +171,4 @@ This file formalizes IRC §1502 (Regulations).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

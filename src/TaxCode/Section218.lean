@@ -67,4 +67,4 @@ This file formalizes IRC §218 (Repealed. Pub. L. 95–600, title I, § 113(a)
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

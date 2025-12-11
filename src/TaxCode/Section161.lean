@@ -59,4 +59,4 @@ This file formalizes IRC §161 (Allowance of deductions).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -393,4 +393,4 @@ This file formalizes IRC §2010 (Unified credit against estate tax).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

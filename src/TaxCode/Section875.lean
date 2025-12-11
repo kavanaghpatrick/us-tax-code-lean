@@ -64,4 +64,4 @@ This file formalizes IRC §875 (Partnerships; beneficiaries of estates and trust
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

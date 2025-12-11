@@ -44,4 +44,4 @@ This file formalizes IRC §533 (Evidence of purpose to avoid income tax).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

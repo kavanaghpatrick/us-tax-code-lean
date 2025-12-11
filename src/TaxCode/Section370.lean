@@ -77,4 +77,4 @@ This file formalizes IRC §370 (26 U.S. Code § 370 to 372 - Repealed. Pub. L. 1
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

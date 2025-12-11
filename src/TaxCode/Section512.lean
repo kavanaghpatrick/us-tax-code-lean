@@ -1907,4 +1907,4 @@ This file formalizes IRC §512 (Unrelated business taxable income).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

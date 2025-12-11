@@ -102,4 +102,4 @@ This file formalizes IRC §271 (Debts owed by political parties, etc.).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

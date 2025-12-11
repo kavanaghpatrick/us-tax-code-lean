@@ -130,4 +130,4 @@ This file formalizes IRC §809 (Repealed. Pub. L. 108–218, title II, § 205(
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

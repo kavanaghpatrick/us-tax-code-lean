@@ -4749,4 +4749,4 @@ This file formalizes IRC §408 (Individual retirement accounts).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

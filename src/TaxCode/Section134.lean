@@ -302,4 +302,4 @@ This file formalizes IRC §134 (Certain military benefits).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

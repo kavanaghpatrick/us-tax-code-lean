@@ -44,4 +44,4 @@ This file formalizes IRC §1501 (Privilege to file consolidated returns).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

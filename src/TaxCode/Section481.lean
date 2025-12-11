@@ -304,4 +304,4 @@ This file formalizes IRC §481 (Adjustments required by changes in method of acc
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

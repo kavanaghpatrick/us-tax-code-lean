@@ -480,4 +480,4 @@ This file formalizes IRC §585 (Reserves for losses on loans of banks).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

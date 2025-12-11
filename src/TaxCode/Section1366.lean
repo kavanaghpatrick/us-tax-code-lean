@@ -362,4 +362,4 @@ This file formalizes IRC §1366 (Pass-thru of items to shareholders).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

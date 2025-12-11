@@ -311,4 +311,4 @@ This file formalizes IRC §334 (Basis of property received in liquidations).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

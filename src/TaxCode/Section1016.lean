@@ -1887,4 +1887,4 @@ This file formalizes IRC §1016 (Adjustments to basis).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

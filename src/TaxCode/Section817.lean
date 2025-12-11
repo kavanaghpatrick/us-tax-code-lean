@@ -462,4 +462,4 @@ This file formalizes IRC §817 (Treatment of variable contracts).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

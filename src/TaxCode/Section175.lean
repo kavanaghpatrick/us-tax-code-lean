@@ -299,4 +299,4 @@ This file formalizes IRC §175 (Soil and water conservation expenditures; endang
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -103,4 +103,4 @@ This file formalizes IRC §84 (Transfer of appreciated property to political org
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

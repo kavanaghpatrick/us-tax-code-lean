@@ -979,4 +979,4 @@ This file formalizes IRC §593 (Reserves for losses on loans).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -109,4 +109,4 @@ This file formalizes IRC §346 (Definition and special rule).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

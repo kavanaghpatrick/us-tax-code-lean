@@ -55,4 +55,4 @@ This file formalizes IRC §586 (Repealed. Pub. L. 99–514, title IX, § 901(c
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

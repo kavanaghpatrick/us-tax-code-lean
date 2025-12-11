@@ -249,4 +249,4 @@ This file formalizes IRC §2013 (Credit for tax on prior transfers).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -676,4 +676,4 @@ This file formalizes IRC §351 (Transfer to corporation controlled by transferor
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

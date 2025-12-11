@@ -446,4 +446,4 @@ This file formalizes IRC §1233 (Gains and losses from short sales).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

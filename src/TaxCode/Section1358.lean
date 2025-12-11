@@ -94,4 +94,4 @@ This file formalizes IRC §1358 (Allocation of credits, income, and deductions).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

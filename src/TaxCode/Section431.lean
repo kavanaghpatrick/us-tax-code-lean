@@ -724,4 +724,4 @@ This file formalizes IRC §431 (Minimum funding standards for multiemployer plan
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

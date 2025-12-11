@@ -667,4 +667,4 @@ This file formalizes IRC §530 (Coverdell education savings accounts).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

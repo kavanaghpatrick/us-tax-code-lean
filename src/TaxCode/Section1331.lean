@@ -67,4 +67,4 @@ This file formalizes IRC §1331 (26 U.S. Code § 1331 to 1337 - Repealed. Pub. L
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

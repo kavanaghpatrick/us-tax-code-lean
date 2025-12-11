@@ -38,4 +38,4 @@ This file formalizes IRC §28 (Renumbered § 45C]).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -266,4 +266,4 @@ This file formalizes IRC §508 (Special rules with respect to section 501(c)(3) 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

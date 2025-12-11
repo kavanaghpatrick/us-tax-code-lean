@@ -182,4 +182,4 @@ This file formalizes IRC §1312 (Circumstances of adjustment).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

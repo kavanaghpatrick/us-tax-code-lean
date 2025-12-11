@@ -1828,4 +1828,4 @@ This file formalizes IRC §897 (Disposition of investment in United States real 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

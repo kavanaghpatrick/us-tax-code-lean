@@ -102,4 +102,4 @@ This file formalizes IRC §446 (General rule for methods of accounting).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

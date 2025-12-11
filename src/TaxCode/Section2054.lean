@@ -37,4 +37,4 @@ This file formalizes IRC §2054 (Losses).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

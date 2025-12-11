@@ -737,4 +737,4 @@ This file formalizes IRC §1059 (Corporate shareholder’s basis in stock reduce
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

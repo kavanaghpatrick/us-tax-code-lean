@@ -157,4 +157,4 @@ This file formalizes IRC §531 (Imposition of accumulated earnings tax).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

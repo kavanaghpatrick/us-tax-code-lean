@@ -200,4 +200,4 @@ This file formalizes IRC §130 (Certain personal injury liability assignments).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

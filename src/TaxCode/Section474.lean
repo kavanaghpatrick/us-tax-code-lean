@@ -192,4 +192,4 @@ This file formalizes IRC §474 (Simplified dollar-value LIFO method for certain 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

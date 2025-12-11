@@ -358,4 +358,4 @@ This file formalizes IRC §842 (Foreign companies carrying on insurance business
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -1213,4 +1213,4 @@ This file formalizes IRC §460 (Special rules for long-term contracts).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -609,4 +609,4 @@ This file formalizes IRC §135 (Income from United States savings bonds used to 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

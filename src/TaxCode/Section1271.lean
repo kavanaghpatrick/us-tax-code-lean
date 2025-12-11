@@ -835,4 +835,4 @@ This file formalizes IRC §1271 (Treatment of amounts received on retirement or 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

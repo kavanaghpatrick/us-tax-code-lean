@@ -1038,4 +1038,4 @@ This file formalizes IRC §144 (Qualified small issue bond; qualified student lo
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

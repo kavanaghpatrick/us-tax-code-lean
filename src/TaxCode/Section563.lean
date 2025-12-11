@@ -138,4 +138,4 @@ This file formalizes IRC §563 (Rules relating to dividends paid after close of 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

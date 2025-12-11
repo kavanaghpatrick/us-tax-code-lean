@@ -232,4 +232,4 @@ This file formalizes IRC §281 (Terminal railroad corporations and their shareho
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

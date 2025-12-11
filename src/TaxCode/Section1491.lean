@@ -81,4 +81,4 @@ This file formalizes IRC §1491 (26 U.S. Code § 1491, 1492 - Repealed. Pub. L. 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

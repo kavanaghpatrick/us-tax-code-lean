@@ -502,4 +502,4 @@ This file formalizes IRC §884 (Branch profits tax).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -197,4 +197,4 @@ This file formalizes IRC §1294 (Election to extend time for payment of tax on u
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

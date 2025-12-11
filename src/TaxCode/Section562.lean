@@ -297,4 +297,4 @@ This file formalizes IRC §562 (Rules applicable in determining dividends eligib
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

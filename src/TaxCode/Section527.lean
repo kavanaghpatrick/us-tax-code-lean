@@ -1101,4 +1101,4 @@ This file formalizes IRC §527 (Political organizations).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

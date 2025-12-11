@@ -754,4 +754,4 @@ This file formalizes IRC §53 (Credit for prior year minimum tax liability).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

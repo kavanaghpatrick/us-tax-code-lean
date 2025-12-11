@@ -425,4 +425,4 @@ This file formalizes IRC §275 (Certain taxes).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

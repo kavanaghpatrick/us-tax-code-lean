@@ -65,4 +65,4 @@ This file formalizes IRC §2051 (Definition of taxable estate).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

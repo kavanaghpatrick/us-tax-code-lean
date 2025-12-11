@@ -326,4 +326,4 @@ This file formalizes IRC §421 (General rules).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

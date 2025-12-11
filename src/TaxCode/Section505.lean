@@ -411,4 +411,4 @@ This file formalizes IRC §505 (Additional requirements for organizations descri
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

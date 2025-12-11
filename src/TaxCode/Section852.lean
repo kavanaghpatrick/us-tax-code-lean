@@ -1873,4 +1873,4 @@ This file formalizes IRC §852 (Taxation of regulated investment companies and t
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -1128,4 +1128,4 @@ This file formalizes IRC §179 (Election to expense certain depreciable business
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

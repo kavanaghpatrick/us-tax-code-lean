@@ -175,4 +175,4 @@ This file formalizes IRC §2032 (Alternate valuation).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

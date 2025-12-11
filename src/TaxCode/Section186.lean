@@ -157,4 +157,4 @@ This file formalizes IRC §186 (Recoveries of damages for antitrust violations, 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

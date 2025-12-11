@@ -489,4 +489,4 @@ This file formalizes IRC §104 (Compensation for injuries or sickness).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

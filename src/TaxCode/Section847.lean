@@ -64,4 +64,4 @@ This file formalizes IRC §847 (Repealed. Pub. L. 115–97, title I, § 13516(
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

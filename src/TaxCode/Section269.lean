@@ -159,4 +159,4 @@ This file formalizes IRC §269 (Acquisitions made to evade or avoid income tax).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

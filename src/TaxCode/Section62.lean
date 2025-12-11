@@ -1829,4 +1829,4 @@ This file formalizes IRC §62 (Adjusted gross income defined).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

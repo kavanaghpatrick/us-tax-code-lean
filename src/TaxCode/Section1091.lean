@@ -171,4 +171,4 @@ This file formalizes IRC §1091 (Loss from wash sales of stock or securities).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

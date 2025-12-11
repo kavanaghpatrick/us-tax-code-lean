@@ -701,4 +701,4 @@ This file formalizes IRC §311 (Taxability of corporation on distribution).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

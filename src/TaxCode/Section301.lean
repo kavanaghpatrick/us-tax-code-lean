@@ -717,4 +717,4 @@ This file formalizes IRC §301 (Distributions of property).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

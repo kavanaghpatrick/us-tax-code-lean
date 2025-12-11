@@ -298,4 +298,4 @@ This file formalizes IRC §362 (Basis to corporations).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

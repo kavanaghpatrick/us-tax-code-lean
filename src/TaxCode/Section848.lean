@@ -467,4 +467,4 @@ This file formalizes IRC §848 (Capitalization of certain policy acquisition exp
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

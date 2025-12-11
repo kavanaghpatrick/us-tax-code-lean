@@ -743,4 +743,4 @@ This file formalizes IRC §367 (Foreign corporations).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

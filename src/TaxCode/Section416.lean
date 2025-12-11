@@ -986,4 +986,4 @@ This file formalizes IRC §416 (Special rules for top-heavy plans).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

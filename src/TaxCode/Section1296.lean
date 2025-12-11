@@ -367,4 +367,4 @@ This file formalizes IRC §1296 (Election of mark to market for marketable stock
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

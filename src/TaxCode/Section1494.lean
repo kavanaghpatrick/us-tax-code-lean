@@ -56,4 +56,4 @@ This file formalizes IRC §1494 (Repealed. Pub. L. 105–34, title XI, § 1131
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

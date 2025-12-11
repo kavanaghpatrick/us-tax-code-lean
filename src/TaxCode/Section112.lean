@@ -714,4 +714,4 @@ This file formalizes IRC §112 (Certain combat zone compensation of members of t
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

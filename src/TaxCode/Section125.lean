@@ -1418,4 +1418,4 @@ This file formalizes IRC §125 (Cafeteria plans).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

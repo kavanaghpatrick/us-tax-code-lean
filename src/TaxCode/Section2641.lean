@@ -94,4 +94,4 @@ This file formalizes IRC §2641 (Applicable rate).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -2146,4 +2146,4 @@ This file formalizes IRC §108 (Income from discharge of indebtedness).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

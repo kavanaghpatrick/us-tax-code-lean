@@ -2214,4 +2214,4 @@ This file formalizes IRC §857 (Taxation of real estate investment trusts and th
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

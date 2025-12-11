@@ -182,4 +182,4 @@ This file formalizes IRC §1061 (Partnership interests held in connection with p
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

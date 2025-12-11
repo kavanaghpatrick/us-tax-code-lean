@@ -68,4 +68,4 @@ This file formalizes IRC §81 (Repealed. Pub. L. 100–203, title X, § 10201(
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

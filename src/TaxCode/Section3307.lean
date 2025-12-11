@@ -56,4 +56,4 @@ This file formalizes IRC §3307 (Deductions as constructive payments).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

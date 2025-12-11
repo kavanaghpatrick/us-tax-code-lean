@@ -85,4 +85,4 @@ This file formalizes IRC §1373 (Foreign income).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

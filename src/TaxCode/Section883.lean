@@ -261,4 +261,4 @@ This file formalizes IRC §883 (Exclusions from gross income).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

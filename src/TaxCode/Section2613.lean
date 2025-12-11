@@ -190,4 +190,4 @@ This file formalizes IRC §2613 (Skip person and non-skip person defined).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

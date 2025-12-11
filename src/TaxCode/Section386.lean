@@ -57,4 +57,4 @@ This file formalizes IRC §386 (Repealed. Pub. L. 100–647, title I, § 1006(
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

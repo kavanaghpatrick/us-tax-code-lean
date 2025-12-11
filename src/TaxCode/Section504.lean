@@ -125,4 +125,4 @@ This file formalizes IRC §504 (Status after organization ceases to qualify for 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

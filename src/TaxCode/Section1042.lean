@@ -843,4 +843,4 @@ This file formalizes IRC §1042 (Sales of stock to employee stock ownership plan
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

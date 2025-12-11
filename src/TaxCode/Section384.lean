@@ -354,4 +354,4 @@ This file formalizes IRC §384 (Limitation on use of preacquisition losses to of
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

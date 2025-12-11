@@ -359,4 +359,4 @@ This file formalizes IRC §1275 (Other definitions and special rules).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

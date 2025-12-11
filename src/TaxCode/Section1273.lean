@@ -236,4 +236,4 @@ This file formalizes IRC §1273 (Determination of amount of original issue disco
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

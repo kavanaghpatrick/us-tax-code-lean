@@ -334,4 +334,4 @@ This file formalizes IRC §816 (Life insurance company defined).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

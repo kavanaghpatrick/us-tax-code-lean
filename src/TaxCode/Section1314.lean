@@ -171,4 +171,4 @@ This file formalizes IRC §1314 (Amount and method of adjustment).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

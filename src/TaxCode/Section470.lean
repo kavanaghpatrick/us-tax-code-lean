@@ -443,4 +443,4 @@ This file formalizes IRC §470 (Limitation on deductions allocable to property u
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

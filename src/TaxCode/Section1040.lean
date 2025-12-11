@@ -236,4 +236,4 @@ This file formalizes IRC §1040 (Transfer of certain farm, etc., real property).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

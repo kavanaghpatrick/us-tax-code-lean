@@ -424,4 +424,4 @@ This file formalizes IRC §250 (Foreign-derived deduction eligible income and ne
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

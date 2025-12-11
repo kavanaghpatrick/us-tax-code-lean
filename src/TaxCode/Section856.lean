@@ -3302,4 +3302,4 @@ This file formalizes IRC §856 (Definition of real estate investment trust).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

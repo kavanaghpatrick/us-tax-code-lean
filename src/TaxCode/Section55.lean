@@ -1743,4 +1743,4 @@ This file formalizes IRC §55 (Alternative minimum tax imposed).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

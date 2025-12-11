@@ -102,4 +102,4 @@ This file formalizes IRC §2108 (Application of pre-1967 estate tax provisions).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

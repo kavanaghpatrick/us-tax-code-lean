@@ -70,4 +70,4 @@ This file formalizes IRC §214 (Repealed. Pub. L. 94–455, title V, § 504(b)
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

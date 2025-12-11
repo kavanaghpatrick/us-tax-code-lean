@@ -720,4 +720,4 @@ This file formalizes IRC §1212 (Capital loss carrybacks and carryovers).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

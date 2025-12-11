@@ -175,4 +175,4 @@ This file formalizes IRC §1379 (Transitional rules on enactment).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

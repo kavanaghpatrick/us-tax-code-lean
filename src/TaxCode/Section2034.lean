@@ -60,4 +60,4 @@ This file formalizes IRC §2034 (Dower or curtesy interests).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

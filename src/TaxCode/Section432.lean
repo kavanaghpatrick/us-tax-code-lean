@@ -2256,4 +2256,4 @@ This file formalizes IRC §432 (Additional funding rules for multiemployer plans
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

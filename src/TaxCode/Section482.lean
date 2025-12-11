@@ -147,4 +147,4 @@ This file formalizes IRC §482 (Allocation of income and deductions among taxpay
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

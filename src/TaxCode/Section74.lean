@@ -293,4 +293,4 @@ This file formalizes IRC §74 (Prizes and awards).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

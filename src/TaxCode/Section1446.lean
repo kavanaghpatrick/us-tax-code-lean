@@ -293,4 +293,4 @@ This file formalizes IRC §1446 (Withholding of tax on foreign partners’ share
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

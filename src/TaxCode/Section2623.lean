@@ -57,4 +57,4 @@ This file formalizes IRC §2623 (Taxable amount in case of direct skip).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

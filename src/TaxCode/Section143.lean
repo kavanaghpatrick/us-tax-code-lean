@@ -2074,4 +2074,4 @@ This file formalizes IRC §143 (Mortgage revenue bonds: qualified mortgage bond 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

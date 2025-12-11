@@ -39,4 +39,4 @@ This file formalizes IRC §2103 (Definition of gross estate).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

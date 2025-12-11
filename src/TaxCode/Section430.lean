@@ -2662,4 +2662,4 @@ This file formalizes IRC §430 (Minimum funding standards for single-employer de
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

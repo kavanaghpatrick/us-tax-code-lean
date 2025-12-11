@@ -1598,4 +1598,4 @@ This file formalizes IRC §40 (Alcohol, etc., used as fuel).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

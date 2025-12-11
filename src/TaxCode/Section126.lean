@@ -268,4 +268,4 @@ This file formalizes IRC §126 (Certain cost-sharing payments).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

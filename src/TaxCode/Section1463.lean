@@ -74,4 +74,4 @@ This file formalizes IRC §1463 (Tax paid by recipient of income).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

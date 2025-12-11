@@ -60,4 +60,4 @@ This file formalizes IRC §442 (Change of annual accounting period).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

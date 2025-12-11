@@ -556,4 +556,4 @@ This file formalizes IRC §1031 (Exchange of real property held for productive u
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

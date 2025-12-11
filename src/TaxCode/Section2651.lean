@@ -176,4 +176,4 @@ This file formalizes IRC §2651 (Generation assignment).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

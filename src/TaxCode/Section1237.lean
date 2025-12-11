@@ -327,4 +327,4 @@ This file formalizes IRC §1237 (Real property subdivided for sale).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

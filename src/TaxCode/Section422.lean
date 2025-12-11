@@ -499,4 +499,4 @@ This file formalizes IRC §422 (Incentive stock options).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -874,4 +874,4 @@ This file formalizes IRC §417 (Definitions and special rules for purposes of mi
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -99,4 +99,4 @@ This file formalizes IRC §1313 (Definitions).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

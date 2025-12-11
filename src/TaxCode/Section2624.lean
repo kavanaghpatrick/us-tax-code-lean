@@ -73,4 +73,4 @@ This file formalizes IRC §2624 (Valuation).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

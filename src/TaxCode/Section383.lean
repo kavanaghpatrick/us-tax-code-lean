@@ -372,4 +372,4 @@ This file formalizes IRC §383 (Special limitations on certain excess credits, e
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

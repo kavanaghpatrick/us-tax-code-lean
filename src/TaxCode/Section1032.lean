@@ -93,4 +93,4 @@ This file formalizes IRC §1032 (Exchange of stock for property).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

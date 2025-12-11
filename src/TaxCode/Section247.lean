@@ -259,4 +259,4 @@ This file formalizes IRC §247 (Contributions to Alaska Native Settlement Trusts
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

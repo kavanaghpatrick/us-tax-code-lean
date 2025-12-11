@@ -714,4 +714,4 @@ This file formalizes IRC §79 (Group-term life insurance purchased for employees
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

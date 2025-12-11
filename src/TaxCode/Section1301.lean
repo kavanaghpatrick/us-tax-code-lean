@@ -456,4 +456,4 @@ This file formalizes IRC §1301 (Averaging of farm income).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

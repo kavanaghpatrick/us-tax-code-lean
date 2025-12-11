@@ -616,4 +616,4 @@ This file formalizes IRC §39 (Carryback and carryforward of unused credits).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

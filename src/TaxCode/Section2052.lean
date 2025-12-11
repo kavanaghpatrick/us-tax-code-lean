@@ -46,4 +46,4 @@ This file formalizes IRC §2052 (Repealed. Pub. L. 94–455, title XX, § 2001
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

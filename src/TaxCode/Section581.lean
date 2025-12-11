@@ -69,4 +69,4 @@ This file formalizes IRC §581 (Definition of bank).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

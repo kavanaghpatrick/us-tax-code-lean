@@ -175,4 +175,4 @@ This file formalizes IRC §892 (Income of foreign governments and of internation
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

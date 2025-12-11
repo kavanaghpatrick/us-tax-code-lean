@@ -122,4 +122,4 @@ This file formalizes IRC §1232 (26 U.S. Code § 1232 to 1232B - Repealed. Pub. 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

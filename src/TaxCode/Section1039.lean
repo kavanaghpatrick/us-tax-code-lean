@@ -60,4 +60,4 @@ This file formalizes IRC §1039 (Repealed. Pub. L. 101–508, title XI, § 118
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

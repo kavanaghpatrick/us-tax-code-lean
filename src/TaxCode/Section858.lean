@@ -165,4 +165,4 @@ This file formalizes IRC §858 (Dividends paid by real estate investment trust a
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

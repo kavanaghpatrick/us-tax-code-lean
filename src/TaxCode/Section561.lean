@@ -93,4 +93,4 @@ This file formalizes IRC §561 (Definition of deduction for dividends paid).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

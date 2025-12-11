@@ -640,4 +640,4 @@ This file formalizes IRC §3303 (Conditions of additional credit allowance).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

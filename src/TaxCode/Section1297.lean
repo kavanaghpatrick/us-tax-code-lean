@@ -464,4 +464,4 @@ This file formalizes IRC §1297 (Passive foreign investment company).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

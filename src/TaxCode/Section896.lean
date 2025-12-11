@@ -107,4 +107,4 @@ This file formalizes IRC §896 (Adjustment of tax on nationals, residents, and c
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -37,4 +37,4 @@ This file formalizes IRC §1021 (Sale of annuities).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

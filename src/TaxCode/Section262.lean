@@ -65,4 +65,4 @@ This file formalizes IRC §262 (Personal, living, and family expenses).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

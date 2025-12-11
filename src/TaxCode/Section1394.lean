@@ -513,4 +513,4 @@ This file formalizes IRC §1394 (Tax-exempt enterprise zone facility bonds).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

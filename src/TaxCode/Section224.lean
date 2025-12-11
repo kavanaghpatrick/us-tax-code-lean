@@ -164,4 +164,4 @@ This file formalizes IRC §224 (Qualified tips).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

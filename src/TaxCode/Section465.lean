@@ -1125,4 +1125,4 @@ This file formalizes IRC §465 (Deductions limited to amount at risk).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -131,4 +131,4 @@ This file formalizes IRC §331 (Gain or loss to shareholder in corporate liquida
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

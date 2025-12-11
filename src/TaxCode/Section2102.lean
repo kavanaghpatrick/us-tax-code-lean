@@ -202,4 +202,4 @@ This file formalizes IRC §2102 (Credits against tax).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

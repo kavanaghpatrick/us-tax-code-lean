@@ -589,4 +589,4 @@ This file formalizes IRC §336 (Gain or loss recognized on property distributed 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -116,4 +116,4 @@ This file formalizes IRC §1472 (Withholdable payments to other foreign entities
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

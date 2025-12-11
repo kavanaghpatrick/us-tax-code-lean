@@ -87,4 +87,4 @@ This file formalizes IRC §418 (26 U.S. Code § 418 to 418D - Repealed. Pub. L. 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

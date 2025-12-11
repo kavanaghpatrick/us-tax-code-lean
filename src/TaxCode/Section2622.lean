@@ -85,4 +85,4 @@ This file formalizes IRC §2622 (Taxable amount in case of taxable termination).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

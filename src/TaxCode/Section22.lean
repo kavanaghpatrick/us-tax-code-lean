@@ -568,4 +568,4 @@ This file formalizes IRC §22 (Credit for the elderly and the permanently and to
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

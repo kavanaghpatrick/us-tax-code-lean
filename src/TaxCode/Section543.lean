@@ -1103,4 +1103,4 @@ This file formalizes IRC §543 (Personal holding company income).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

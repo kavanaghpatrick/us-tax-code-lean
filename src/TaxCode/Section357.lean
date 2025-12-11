@@ -329,4 +329,4 @@ This file formalizes IRC §357 (Assumption of liability).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

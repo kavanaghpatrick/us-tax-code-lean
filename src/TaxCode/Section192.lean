@@ -262,4 +262,4 @@ This file formalizes IRC §192 (Contributions to black lung benefit trust).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -133,4 +133,4 @@ This file formalizes IRC §1282 (Deferral of interest deduction allocable to acc
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

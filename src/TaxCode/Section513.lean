@@ -634,4 +634,4 @@ This file formalizes IRC §513 (Unrelated trade or business).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

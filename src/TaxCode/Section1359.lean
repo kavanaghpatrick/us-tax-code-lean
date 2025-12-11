@@ -106,4 +106,4 @@ This file formalizes IRC §1359 (Disposition of qualifying vessels).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

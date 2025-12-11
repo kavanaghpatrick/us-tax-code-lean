@@ -229,4 +229,4 @@ This file formalizes IRC §12 (Cross references relating to tax on corporations)
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

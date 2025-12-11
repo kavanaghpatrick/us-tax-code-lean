@@ -39,4 +39,4 @@ This file formalizes IRC §176 (Payments with respect to employees of certain fo
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -85,4 +85,4 @@ This file formalizes IRC §591 (Deduction for dividends paid on deposits).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

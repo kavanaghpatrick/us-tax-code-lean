@@ -1614,4 +1614,4 @@ This file formalizes IRC §861 (Income from sources within the United States).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

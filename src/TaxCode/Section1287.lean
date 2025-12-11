@@ -95,4 +95,4 @@ This file formalizes IRC §1287 (Denial of capital gain treatment for gains on c
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -65,4 +65,4 @@ This file formalizes IRC §2516 (Certain property settlements).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -266,4 +266,4 @@ This file formalizes IRC §337 (Nonrecognition for property distributed to paren
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -723,4 +723,4 @@ This file formalizes IRC §86 (Social security and tier 1 railroad retirement be
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

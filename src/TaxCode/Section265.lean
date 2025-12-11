@@ -906,4 +906,4 @@ This file formalizes IRC §265 (Expenses and interest relating to tax-exempt inc
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

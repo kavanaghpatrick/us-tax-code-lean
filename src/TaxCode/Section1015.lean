@@ -268,4 +268,4 @@ This file formalizes IRC §1015 (Basis of property acquired by gifts and transfe
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

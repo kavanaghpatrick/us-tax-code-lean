@@ -768,4 +768,4 @@ This file formalizes IRC §1441 (Withholding of tax on nonresident aliens).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

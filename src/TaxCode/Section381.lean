@@ -1128,4 +1128,4 @@ This file formalizes IRC §381 (Carryovers in certain corporate acquisitions).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

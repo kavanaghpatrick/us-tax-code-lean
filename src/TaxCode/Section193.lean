@@ -149,4 +149,4 @@ This file formalizes IRC §193 (Tertiary injectants).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

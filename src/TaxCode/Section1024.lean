@@ -32,4 +32,4 @@ This file formalizes IRC §1024 (Renumbered § 1023]).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

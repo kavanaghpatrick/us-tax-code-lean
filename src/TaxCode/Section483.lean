@@ -397,4 +397,4 @@ This file formalizes IRC §483 (Interest on certain deferred payments).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

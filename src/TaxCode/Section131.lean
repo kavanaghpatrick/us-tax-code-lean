@@ -226,4 +226,4 @@ This file formalizes IRC §131 (Certain foster care payments).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

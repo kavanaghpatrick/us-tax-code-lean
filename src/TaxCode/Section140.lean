@@ -419,4 +419,4 @@ This file formalizes IRC §140 (Cross references to other Acts).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

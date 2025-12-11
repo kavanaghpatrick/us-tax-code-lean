@@ -101,4 +101,4 @@ This file formalizes IRC §1348 (Repealed. Pub. L. 97–34, title I, § 101(c)
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -303,4 +303,4 @@ This file formalizes IRC §1351 (Treatment of recoveries of foreign expropriatio
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

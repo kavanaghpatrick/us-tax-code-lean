@@ -78,4 +78,4 @@ This file formalizes IRC §1058 (Transfers of securities under certain agreement
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

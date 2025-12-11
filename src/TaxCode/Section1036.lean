@@ -73,4 +73,4 @@ This file formalizes IRC §1036 (Stock for stock of same corporation).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

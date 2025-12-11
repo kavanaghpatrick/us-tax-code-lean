@@ -132,4 +132,4 @@ This file formalizes IRC §2511 (Transfers in general).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

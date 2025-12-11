@@ -64,4 +64,4 @@ This file formalizes IRC §1352 (Alternative tax on qualifying shipping activiti
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -130,4 +130,4 @@ This file formalizes IRC §80 (Restoration of value of certain securities).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

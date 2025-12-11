@@ -202,4 +202,4 @@ This file formalizes IRC §537 (Reasonable needs of the business).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

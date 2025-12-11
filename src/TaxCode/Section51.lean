@@ -2595,4 +2595,4 @@ This file formalizes IRC §51 (Amount of credit).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

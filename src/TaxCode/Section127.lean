@@ -870,4 +870,4 @@ This file formalizes IRC §127 (Educational assistance programs).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

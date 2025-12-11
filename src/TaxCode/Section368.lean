@@ -955,4 +955,4 @@ This file formalizes IRC §368 (Definitions relating to corporate reorganization
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

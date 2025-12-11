@@ -40,4 +40,4 @@ This file formalizes IRC §1399 (No separate taxable entities for partnerships, 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

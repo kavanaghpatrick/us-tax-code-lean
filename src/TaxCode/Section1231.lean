@@ -517,4 +517,4 @@ This file formalizes IRC §1231 (Property used in the trade or business and invo
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

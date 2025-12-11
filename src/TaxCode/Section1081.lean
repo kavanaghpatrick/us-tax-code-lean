@@ -103,4 +103,4 @@ This file formalizes IRC §1081 (26 U.S. Code § 1081 to 1083 - Repealed. Pub. L
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

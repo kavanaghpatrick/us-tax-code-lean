@@ -792,4 +792,4 @@ This file formalizes IRC §213 (Medical, dental, etc., expenses).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

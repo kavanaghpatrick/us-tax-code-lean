@@ -411,4 +411,4 @@ This file formalizes IRC §1272 (Current inclusion in income of original issue d
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

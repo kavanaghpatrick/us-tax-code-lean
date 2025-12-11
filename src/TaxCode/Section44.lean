@@ -206,4 +206,4 @@ This file formalizes IRC §44 (Expenditures to provide access to disabled indivi
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

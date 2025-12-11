@@ -372,4 +372,4 @@ This file formalizes IRC §31 (Tax withheld on wages).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -309,4 +309,4 @@ This file formalizes IRC §198 (Expensing of environmental remediation costs).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

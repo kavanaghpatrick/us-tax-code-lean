@@ -909,4 +909,4 @@ This file formalizes IRC §105 (Amounts received under accident and health plans
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

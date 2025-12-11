@@ -869,4 +869,4 @@ This file formalizes IRC §851 (Definition of regulated investment company).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

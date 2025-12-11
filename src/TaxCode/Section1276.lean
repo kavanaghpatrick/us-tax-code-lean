@@ -411,4 +411,4 @@ This file formalizes IRC §1276 (Disposition gain representing accrued market di
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

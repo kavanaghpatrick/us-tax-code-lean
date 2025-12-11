@@ -70,4 +70,4 @@ This file formalizes IRC §1053 (Property acquired before March 1, 1913).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

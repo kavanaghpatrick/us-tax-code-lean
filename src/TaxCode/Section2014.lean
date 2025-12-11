@@ -208,4 +208,4 @@ This file formalizes IRC §2014 (Credit for foreign death taxes).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

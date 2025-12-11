@@ -2993,4 +2993,4 @@ This file formalizes IRC §3306 (Definitions).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -1318,4 +1318,4 @@ This file formalizes IRC §451 (General rule for taxable year of inclusion).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

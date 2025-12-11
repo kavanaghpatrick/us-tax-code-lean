@@ -857,4 +857,4 @@ This file formalizes IRC §304 (Redemption through use of related corporations).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

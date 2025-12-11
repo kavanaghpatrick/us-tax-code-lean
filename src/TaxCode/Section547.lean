@@ -163,4 +163,4 @@ This file formalizes IRC §547 (Deduction for deficiency dividends).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -135,4 +135,4 @@ This file formalizes IRC §341 (Repealed. Pub. L. 108–27, title III, § 302(
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

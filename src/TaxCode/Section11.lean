@@ -942,4 +942,4 @@ This file formalizes IRC §11 (Tax imposed).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

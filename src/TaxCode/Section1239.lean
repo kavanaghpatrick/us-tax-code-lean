@@ -361,4 +361,4 @@ This file formalizes IRC §1239 (Gain from sale of depreciable property between 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

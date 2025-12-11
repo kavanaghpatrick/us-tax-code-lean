@@ -275,4 +275,4 @@ This file formalizes IRC §356 (Receipt of additional consideration).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

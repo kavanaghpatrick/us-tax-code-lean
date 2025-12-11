@@ -263,4 +263,4 @@ This file formalizes IRC §2505 (Unified credit against gift tax).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

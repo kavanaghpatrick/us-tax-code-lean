@@ -457,4 +457,4 @@ This file formalizes IRC §217 (Moving expenses).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

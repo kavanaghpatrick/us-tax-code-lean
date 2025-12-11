@@ -81,4 +81,4 @@ This file formalizes IRC §876 (Alien residents of Puerto Rico, Guam, American S
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

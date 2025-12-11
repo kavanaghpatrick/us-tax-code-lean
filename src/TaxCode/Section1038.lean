@@ -256,4 +256,4 @@ This file formalizes IRC §1038 (Certain reacquisitions of real property).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

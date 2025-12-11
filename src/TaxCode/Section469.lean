@@ -1481,4 +1481,4 @@ This file formalizes IRC §469 (Passive activity losses and credits limited).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

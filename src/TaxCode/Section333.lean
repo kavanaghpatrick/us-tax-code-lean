@@ -66,4 +66,4 @@ This file formalizes IRC §333 (Repealed. Pub. L. 99–514, title VI, § 631(e
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

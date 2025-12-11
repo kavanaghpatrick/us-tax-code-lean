@@ -169,4 +169,4 @@ This file formalizes IRC §2518 (Disclaimers).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

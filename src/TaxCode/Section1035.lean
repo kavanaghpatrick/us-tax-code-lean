@@ -207,4 +207,4 @@ This file formalizes IRC §1035 (Certain exchanges of insurance policies).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -229,4 +229,4 @@ This file formalizes IRC §2201 (Combat zone-related deaths of members of the Ar
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

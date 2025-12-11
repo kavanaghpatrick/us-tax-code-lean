@@ -395,4 +395,4 @@ This file formalizes IRC §43 (Enhanced oil recovery credit).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

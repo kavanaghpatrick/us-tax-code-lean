@@ -64,4 +64,4 @@ This file formalizes IRC §2207 (Liability of recipient of property over which d
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

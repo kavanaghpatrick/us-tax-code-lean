@@ -178,4 +178,4 @@ This file formalizes IRC §78 (Gross up for deemed paid foreign tax credit).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

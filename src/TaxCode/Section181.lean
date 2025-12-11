@@ -599,4 +599,4 @@ This file formalizes IRC §181 (Treatment of certain qualified productions).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

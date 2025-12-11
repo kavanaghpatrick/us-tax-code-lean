@@ -252,4 +252,4 @@ This file formalizes IRC §138 (Medicare Advantage MSA).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

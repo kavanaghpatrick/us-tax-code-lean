@@ -2481,4 +2481,4 @@ This file formalizes IRC §103 (Interest on State and local bonds).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

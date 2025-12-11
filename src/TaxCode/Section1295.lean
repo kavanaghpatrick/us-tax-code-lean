@@ -155,4 +155,4 @@ This file formalizes IRC §1295 (Qualified electing fund).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

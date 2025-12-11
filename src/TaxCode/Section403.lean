@@ -2375,4 +2375,4 @@ This file formalizes IRC §403 (Taxation of employee annuities).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

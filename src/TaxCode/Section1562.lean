@@ -71,4 +71,4 @@ This file formalizes IRC §1562 (Repealed. Pub. L. 91–172, title IV, § 401(
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

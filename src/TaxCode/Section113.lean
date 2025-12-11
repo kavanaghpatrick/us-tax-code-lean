@@ -50,4 +50,4 @@ This file formalizes IRC §113 (Repealed. Pub. L. 101–508, title XI, § 1180
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -217,4 +217,4 @@ This file formalizes IRC §1377 (Definitions and special rule).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

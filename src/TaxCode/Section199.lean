@@ -199,4 +199,4 @@ This file formalizes IRC §199 (Repealed. Pub. L. 115–97, title I, § 13305(
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

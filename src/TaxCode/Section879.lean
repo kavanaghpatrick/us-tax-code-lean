@@ -156,4 +156,4 @@ This file formalizes IRC §879 (Tax treatment of certain community income in the
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

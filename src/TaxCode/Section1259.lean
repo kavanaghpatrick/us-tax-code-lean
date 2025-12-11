@@ -364,4 +364,4 @@ This file formalizes IRC §1259 (Constructive sales treatment for appreciated fi
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

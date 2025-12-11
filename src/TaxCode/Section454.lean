@@ -90,4 +90,4 @@ This file formalizes IRC §454 (Obligations issued at discount).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

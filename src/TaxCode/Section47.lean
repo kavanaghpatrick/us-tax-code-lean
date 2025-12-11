@@ -1012,4 +1012,4 @@ This file formalizes IRC §47 (Rehabilitation credit).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -131,4 +131,4 @@ This file formalizes IRC §894 (Income affected by treaty).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

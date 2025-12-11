@@ -37,4 +37,4 @@ This file formalizes IRC §1241 (Cancellation of lease or distributor’s agreem
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

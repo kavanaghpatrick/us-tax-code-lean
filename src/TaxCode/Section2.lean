@@ -439,4 +439,4 @@ This file formalizes IRC §2 (Definitions and special rules).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

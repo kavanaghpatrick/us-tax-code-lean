@@ -513,4 +513,4 @@ This file formalizes IRC §833 (Treatment of Blue Cross and Blue Shield organiza
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

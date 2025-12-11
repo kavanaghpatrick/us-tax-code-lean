@@ -388,4 +388,4 @@ This file formalizes IRC §860 (Deduction for deficiency dividends).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

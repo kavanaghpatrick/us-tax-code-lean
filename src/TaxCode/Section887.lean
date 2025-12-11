@@ -157,4 +157,4 @@ This file formalizes IRC §887 (Imposition of tax on gross transportation income
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

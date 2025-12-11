@@ -553,4 +553,4 @@ This file formalizes IRC §196 (Deduction for certain unused business credits).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

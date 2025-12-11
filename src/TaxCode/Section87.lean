@@ -122,4 +122,4 @@ This file formalizes IRC §87 (Alcohol and biodiesel fuels credits).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

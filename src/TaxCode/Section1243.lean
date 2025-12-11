@@ -124,4 +124,4 @@ This file formalizes IRC §1243 (Loss of small business investment company).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -1285,4 +1285,4 @@ This file formalizes IRC §355 (Distribution of stock and securities of a contro
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

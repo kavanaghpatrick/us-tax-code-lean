@@ -219,4 +219,4 @@ This file formalizes IRC §183 (Activities not engaged in for profit).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

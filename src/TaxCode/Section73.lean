@@ -58,4 +58,4 @@ This file formalizes IRC §73 (Services of child).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -370,4 +370,4 @@ This file formalizes IRC §3305 (Applicability of State law).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

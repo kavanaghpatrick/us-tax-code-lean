@@ -324,4 +324,4 @@ This file formalizes IRC §1398 (Rules relating to individuals’ title 11 cases
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

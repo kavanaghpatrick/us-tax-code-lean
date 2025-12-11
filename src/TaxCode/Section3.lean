@@ -398,4 +398,4 @@ This file formalizes IRC §3 (Tax tables for individuals).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

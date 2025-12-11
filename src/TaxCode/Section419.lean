@@ -453,4 +453,4 @@ This file formalizes IRC §419 (Treatment of funded welfare benefit plans).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

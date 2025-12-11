@@ -88,4 +88,4 @@ This file formalizes IRC §88 (Certain amounts with respect to nuclear decommiss
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

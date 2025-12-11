@@ -261,4 +261,4 @@ This file formalizes IRC §1293 (Current taxation of income from qualified elect
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

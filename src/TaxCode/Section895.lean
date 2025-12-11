@@ -88,4 +88,4 @@ This file formalizes IRC §895 (Income derived by a foreign central bank of issu
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

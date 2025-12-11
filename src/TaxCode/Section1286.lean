@@ -515,4 +515,4 @@ This file formalizes IRC §1286 (Tax treatment of stripped bonds).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

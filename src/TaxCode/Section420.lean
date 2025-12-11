@@ -1618,4 +1618,4 @@ This file formalizes IRC §420 (Transfers of excess pension assets to retiree he
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

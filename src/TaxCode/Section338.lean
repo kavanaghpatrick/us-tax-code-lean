@@ -1237,4 +1237,4 @@ This file formalizes IRC §338 (Certain stock purchases treated as asset acquisi
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

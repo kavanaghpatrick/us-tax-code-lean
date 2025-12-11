@@ -1220,4 +1220,4 @@ This file formalizes IRC §223 (Health savings accounts).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

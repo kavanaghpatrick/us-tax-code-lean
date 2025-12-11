@@ -135,4 +135,4 @@ This file formalizes IRC §804 (Life insurance deductions).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

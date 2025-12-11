@@ -86,4 +86,4 @@ This file formalizes IRC §2515 (Treatment of generation-skipping transfer tax).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

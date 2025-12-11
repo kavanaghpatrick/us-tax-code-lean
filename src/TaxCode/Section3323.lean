@@ -50,4 +50,4 @@ This file formalizes IRC §3323 (Omitted]).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

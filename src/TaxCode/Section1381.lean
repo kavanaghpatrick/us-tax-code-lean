@@ -159,4 +159,4 @@ This file formalizes IRC §1381 (Organizations to which part applies).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

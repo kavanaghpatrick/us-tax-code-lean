@@ -116,4 +116,4 @@ This file formalizes IRC §2057 (Repealed. Pub. L. 113–295, div. A, title II, 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

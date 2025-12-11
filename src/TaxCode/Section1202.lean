@@ -1138,4 +1138,4 @@ This file formalizes IRC §1202 (Partial exclusion for gain from certain small b
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

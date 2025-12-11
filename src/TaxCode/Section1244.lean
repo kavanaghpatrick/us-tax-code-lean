@@ -345,4 +345,4 @@ This file formalizes IRC §1244 (Losses on small business stock).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -148,4 +148,4 @@ This file formalizes IRC §222 (Repealed. Pub. L. 116–260, div. EE, title I, �
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -166,4 +166,4 @@ This file formalizes IRC §1257 (Disposition of converted wetlands or highly ero
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -340,4 +340,4 @@ This file formalizes IRC §468 (Special rules for mining and solid waste reclama
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

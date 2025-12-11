@@ -97,4 +97,4 @@ This file formalizes IRC §2519 (Dispositions of certain life estates).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

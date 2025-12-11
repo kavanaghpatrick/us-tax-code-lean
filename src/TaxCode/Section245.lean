@@ -667,4 +667,4 @@ This file formalizes IRC §245 (Dividends received from certain foreign corporat
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

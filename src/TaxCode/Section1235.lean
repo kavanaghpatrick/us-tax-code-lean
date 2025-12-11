@@ -230,4 +230,4 @@ This file formalizes IRC §1235 (Sale or exchange of patents).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

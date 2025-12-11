@@ -84,4 +84,4 @@ This file formalizes IRC §893 (Compensation of employees of foreign governments
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

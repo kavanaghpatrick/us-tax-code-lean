@@ -546,4 +546,4 @@ This file formalizes IRC §1014 (Basis of property acquired from a decedent).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

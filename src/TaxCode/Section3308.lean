@@ -77,4 +77,4 @@ This file formalizes IRC §3308 (Instrumentalities of the United States).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

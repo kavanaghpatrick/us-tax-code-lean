@@ -69,4 +69,4 @@ This file formalizes IRC §123 (Amounts received under insurance contracts for c
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

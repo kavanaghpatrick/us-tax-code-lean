@@ -105,4 +105,4 @@ This file formalizes IRC §506 (Organizations required to notify Secretary of in
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

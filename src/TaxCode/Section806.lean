@@ -76,4 +76,4 @@ This file formalizes IRC §806 (Repealed. Pub. L. 115–97, title I, § 13512(
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

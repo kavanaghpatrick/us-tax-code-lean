@@ -113,4 +113,4 @@ This file formalizes IRC §91 (Certain foreign branch losses transferred to spec
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

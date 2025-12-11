@@ -557,4 +557,4 @@ This file formalizes IRC §221 (Interest on education loans).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

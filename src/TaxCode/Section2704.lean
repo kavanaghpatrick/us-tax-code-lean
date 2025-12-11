@@ -153,4 +153,4 @@ This file formalizes IRC §2704 (Treatment of certain lapsing rights and restric
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

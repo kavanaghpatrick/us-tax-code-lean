@@ -105,4 +105,4 @@ This file formalizes IRC §2653 (Taxation of multiple skips).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

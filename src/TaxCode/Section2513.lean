@@ -141,4 +141,4 @@ This file formalizes IRC §2513 (Gift by husband or wife to third party).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

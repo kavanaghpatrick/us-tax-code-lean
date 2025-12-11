@@ -437,4 +437,4 @@ This file formalizes IRC §863 (Special rules for determining source).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

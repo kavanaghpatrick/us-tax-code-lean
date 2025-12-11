@@ -3028,4 +3028,4 @@ This file formalizes IRC §415 (Limitations on benefits and contribution under q
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

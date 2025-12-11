@@ -388,4 +388,4 @@ This file formalizes IRC §15 (Effect of changes).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

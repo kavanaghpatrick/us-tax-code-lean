@@ -63,4 +63,4 @@ This file formalizes IRC §391 (26 U.S. Code § 391 to 395 - Repealed. Pub. L. 9
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

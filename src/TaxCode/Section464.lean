@@ -373,4 +373,4 @@ This file formalizes IRC §464 (Limitations on deductions for certain farming ex
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

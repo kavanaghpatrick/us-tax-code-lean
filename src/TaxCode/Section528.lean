@@ -329,4 +329,4 @@ This file formalizes IRC §528 (Certain homeowners associations).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

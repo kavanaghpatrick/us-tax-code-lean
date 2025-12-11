@@ -77,4 +77,4 @@ This file formalizes IRC §502 (Feeder organizations).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

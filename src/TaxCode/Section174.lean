@@ -319,4 +319,4 @@ This file formalizes IRC §174 (Amortization of research and experimental expend
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

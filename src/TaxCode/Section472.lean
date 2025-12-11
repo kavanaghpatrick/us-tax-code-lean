@@ -161,4 +161,4 @@ This file formalizes IRC §472 (Last-in, first-out inventories).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

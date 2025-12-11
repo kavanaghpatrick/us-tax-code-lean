@@ -217,4 +217,4 @@ This file formalizes IRC §303 (Distributions in redemption of stock to pay deat
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

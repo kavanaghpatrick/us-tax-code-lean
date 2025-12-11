@@ -100,4 +100,4 @@ This file formalizes IRC §82 (Reimbursement of moving expenses).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -72,4 +72,4 @@ This file formalizes IRC §2058 (State death taxes).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -222,4 +222,4 @@ This file formalizes IRC §473 (Qualified liquidations of LIFO inventories).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

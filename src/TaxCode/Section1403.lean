@@ -100,4 +100,4 @@ This file formalizes IRC §1403 (Miscellaneous provisions).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

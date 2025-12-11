@@ -56,4 +56,4 @@ This file formalizes IRC §2046 (Disclaimers).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

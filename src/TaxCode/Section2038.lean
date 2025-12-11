@@ -134,4 +134,4 @@ This file formalizes IRC §2038 (Revocable transfers).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

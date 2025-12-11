@@ -141,4 +141,4 @@ This file formalizes IRC §178 (Amortization of cost of acquiring a lease).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -246,4 +246,4 @@ This file formalizes IRC §1260 (Gains from constructive ownership transactions)
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

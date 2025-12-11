@@ -523,4 +523,4 @@ This file formalizes IRC §406 (Employees of foreign affiliates covered by secti
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

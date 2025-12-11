@@ -5370,4 +5370,4 @@ This file formalizes IRC §141 (Private activity bond; qualified bond).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

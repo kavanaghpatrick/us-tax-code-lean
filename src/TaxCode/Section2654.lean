@@ -211,4 +211,4 @@ This file formalizes IRC §2654 (Special rules).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

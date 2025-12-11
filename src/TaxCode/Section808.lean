@@ -299,4 +299,4 @@ This file formalizes IRC §808 (Policyholder dividends deduction).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

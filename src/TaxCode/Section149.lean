@@ -1021,4 +1021,4 @@ This file formalizes IRC §149 (Bonds must be registered to be tax exempt; other
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

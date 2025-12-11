@@ -4949,4 +4949,4 @@ This file formalizes IRC §72 (Annuities; certain proceeds of endowment and life
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

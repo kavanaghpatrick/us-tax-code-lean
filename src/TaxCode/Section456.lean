@@ -178,4 +178,4 @@ This file formalizes IRC §456 (Prepaid dues income of certain membership organi
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

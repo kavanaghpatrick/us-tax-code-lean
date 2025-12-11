@@ -458,4 +458,4 @@ This file formalizes IRC §1561 (Limitation on accumulated earnings credit in th
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

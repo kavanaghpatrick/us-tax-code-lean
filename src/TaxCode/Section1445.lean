@@ -796,4 +796,4 @@ This file formalizes IRC §1445 (Withholding of tax on dispositions of United St
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

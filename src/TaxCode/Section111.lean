@@ -158,4 +158,4 @@ This file formalizes IRC §111 (Recovery of tax benefit items).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

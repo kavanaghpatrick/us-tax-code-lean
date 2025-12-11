@@ -497,4 +497,4 @@ This file formalizes IRC §2523 (Gift to spouse).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

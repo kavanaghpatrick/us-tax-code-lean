@@ -2715,4 +2715,4 @@ This file formalizes IRC §45 (Electricity produced from certain renewable resou
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

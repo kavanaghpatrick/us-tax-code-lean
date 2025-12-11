@@ -152,4 +152,4 @@ This file formalizes IRC §1037 (Certain exchanges of United States obligations)
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

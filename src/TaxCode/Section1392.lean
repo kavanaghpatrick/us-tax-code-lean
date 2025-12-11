@@ -222,4 +222,4 @@ This file formalizes IRC §1392 (Eligibility criteria).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

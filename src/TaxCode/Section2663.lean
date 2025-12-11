@@ -89,4 +89,4 @@ This file formalizes IRC §2663 (Regulations).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

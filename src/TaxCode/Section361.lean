@@ -231,4 +231,4 @@ This file formalizes IRC §361 (Nonrecognition of gain or loss to corporations; 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

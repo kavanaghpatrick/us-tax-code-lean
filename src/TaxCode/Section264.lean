@@ -647,4 +647,4 @@ This file formalizes IRC §264 (Certain amounts paid in connection with insuranc
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -434,4 +434,4 @@ This file formalizes IRC §1471 (Withholdable payments to foreign financial inst
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

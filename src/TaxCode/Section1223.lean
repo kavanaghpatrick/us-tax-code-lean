@@ -567,4 +567,4 @@ This file formalizes IRC §1223 (Holding period of property).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

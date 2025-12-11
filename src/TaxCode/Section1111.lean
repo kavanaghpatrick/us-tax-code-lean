@@ -38,4 +38,4 @@ This file formalizes IRC §1111 (Repealed. Pub. L. 94–455, title XIX, § 190
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

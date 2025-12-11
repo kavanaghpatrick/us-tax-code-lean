@@ -173,4 +173,4 @@ This file formalizes IRC §2702 (Special valuation rules in case of transfers of
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

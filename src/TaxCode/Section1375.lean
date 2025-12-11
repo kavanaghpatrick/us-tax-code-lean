@@ -297,4 +297,4 @@ This file formalizes IRC §1375 (Tax imposed when passive investment income of c
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

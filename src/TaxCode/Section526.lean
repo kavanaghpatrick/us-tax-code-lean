@@ -34,4 +34,4 @@ This file formalizes IRC §526 (Shipowners’ protection and indemnity associati
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

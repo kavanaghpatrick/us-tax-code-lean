@@ -1962,4 +1962,4 @@ This file formalizes IRC §142 (Exempt facility bond).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

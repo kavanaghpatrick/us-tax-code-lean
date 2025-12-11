@@ -752,4 +752,4 @@ This file formalizes IRC §807 (Rules for certain reserves).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

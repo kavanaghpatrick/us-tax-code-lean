@@ -558,4 +558,4 @@ This file formalizes IRC §171 (Amortizable bond premium).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

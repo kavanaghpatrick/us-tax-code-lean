@@ -104,4 +104,4 @@ This file formalizes IRC §845 (Certain reinsurance agreements).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

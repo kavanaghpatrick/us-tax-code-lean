@@ -86,4 +86,4 @@ This file formalizes IRC §466 (Repealed. Pub. L. 99–514, title VIII, § 823
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

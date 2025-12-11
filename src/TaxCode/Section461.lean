@@ -1441,4 +1441,4 @@ This file formalizes IRC §461 (General rule for taxable year of deduction).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

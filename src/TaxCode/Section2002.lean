@@ -84,4 +84,4 @@ This file formalizes IRC §2002 (Liability for payment).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

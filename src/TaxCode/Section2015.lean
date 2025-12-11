@@ -79,4 +79,4 @@ This file formalizes IRC §2015 (Credit for death taxes on remainders).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

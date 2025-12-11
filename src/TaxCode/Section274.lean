@@ -1550,4 +1550,4 @@ This file formalizes IRC §274 (Disallowance of certain entertainment, etc., exp
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

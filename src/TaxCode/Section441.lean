@@ -385,4 +385,4 @@ This file formalizes IRC §441 (Period for computation of taxable income).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

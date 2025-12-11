@@ -421,4 +421,4 @@ This file formalizes IRC §597 (Treatment of transactions in which Federal finan
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

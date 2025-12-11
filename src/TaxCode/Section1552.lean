@@ -93,4 +93,4 @@ This file formalizes IRC §1552 (Earnings and profits).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

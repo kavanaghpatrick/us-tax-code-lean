@@ -168,4 +168,4 @@ This file formalizes IRC §122 (Certain reduced uniformed services retirement pa
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

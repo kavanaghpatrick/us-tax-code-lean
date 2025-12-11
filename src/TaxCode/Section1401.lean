@@ -1601,4 +1601,4 @@ This file formalizes IRC §1401 (Rate of tax).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

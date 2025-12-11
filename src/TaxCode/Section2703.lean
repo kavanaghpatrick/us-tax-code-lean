@@ -56,4 +56,4 @@ This file formalizes IRC §2703 (Certain rights and restrictions disregarded).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

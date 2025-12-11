@@ -124,4 +124,4 @@ This file formalizes IRC §815 (Repealed. Pub. L. 115–97, title I, § 13514(
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

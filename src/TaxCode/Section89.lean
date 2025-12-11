@@ -108,4 +108,4 @@ This file formalizes IRC §89 (Repealed. Pub. L. 101–140, title II, § 202(a
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

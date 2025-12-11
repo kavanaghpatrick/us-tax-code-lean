@@ -504,4 +504,4 @@ This file formalizes IRC §1388 (Definitions; special rules).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

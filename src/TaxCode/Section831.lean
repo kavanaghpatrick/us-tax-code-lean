@@ -615,4 +615,4 @@ This file formalizes IRC §831 (Tax on insurance companies other than life insur
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

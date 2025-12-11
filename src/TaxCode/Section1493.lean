@@ -46,4 +46,4 @@ This file formalizes IRC §1493 (Repealed. Pub. L. 89–809, title I, § 103(l
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

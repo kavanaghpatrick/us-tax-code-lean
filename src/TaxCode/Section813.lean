@@ -67,4 +67,4 @@ This file formalizes IRC §813 (Repealed. Pub. L. 100–203, title X, § 10242
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

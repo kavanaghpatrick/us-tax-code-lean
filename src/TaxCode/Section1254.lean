@@ -284,4 +284,4 @@ This file formalizes IRC §1254 (Gain from disposition of interest in oil, gas, 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

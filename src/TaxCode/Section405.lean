@@ -128,4 +128,4 @@ This file formalizes IRC §405 (Repealed. Pub. L. 98–369, div. A, title IV, §
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

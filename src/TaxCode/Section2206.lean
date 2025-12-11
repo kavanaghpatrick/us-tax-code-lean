@@ -66,4 +66,4 @@ This file formalizes IRC §2206 (Liability of life insurance beneficiaries).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

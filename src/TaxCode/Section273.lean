@@ -64,4 +64,4 @@ This file formalizes IRC §273 (Holders of life or terminable interest).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

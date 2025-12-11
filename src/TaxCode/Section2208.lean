@@ -51,4 +51,4 @@ This file formalizes IRC §2208 (Certain residents of possessions considered cit
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

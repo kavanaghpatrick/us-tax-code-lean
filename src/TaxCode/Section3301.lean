@@ -433,4 +433,4 @@ This file formalizes IRC §3301 (Rate of tax).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

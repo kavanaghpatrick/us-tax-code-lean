@@ -101,4 +101,4 @@ This file formalizes IRC §2037 (Transfers taking effect at death).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

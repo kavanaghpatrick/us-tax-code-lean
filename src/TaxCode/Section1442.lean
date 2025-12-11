@@ -329,4 +329,4 @@ This file formalizes IRC §1442 (Withholding of tax on foreign corporations).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

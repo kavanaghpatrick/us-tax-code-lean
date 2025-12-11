@@ -133,4 +133,4 @@ This file formalizes IRC §75 (Dealers in tax-exempt securities).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

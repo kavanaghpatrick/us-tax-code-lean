@@ -172,4 +172,4 @@ This file formalizes IRC §1062 (Gain from the sale or exchange of qualified far
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

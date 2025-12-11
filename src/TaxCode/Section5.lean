@@ -385,4 +385,4 @@ This file formalizes IRC §5 (Cross references relating to tax on individuals).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

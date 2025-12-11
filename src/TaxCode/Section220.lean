@@ -1420,4 +1420,4 @@ This file formalizes IRC §220 (Archer MSAs).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

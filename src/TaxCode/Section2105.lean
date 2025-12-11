@@ -255,4 +255,4 @@ This file formalizes IRC §2105 (Property without the United States).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

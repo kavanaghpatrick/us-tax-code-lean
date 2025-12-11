@@ -2599,4 +2599,4 @@ This file formalizes IRC §1402 (Definitions).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

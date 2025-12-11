@@ -58,4 +58,4 @@ This file formalizes IRC §462 (Repealed. June 15, 1955, ch. 143, § 1(b), 69 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

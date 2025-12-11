@@ -1403,4 +1403,4 @@ This file formalizes IRC §453 (Installment method).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

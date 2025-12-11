@@ -39,4 +39,4 @@ This file formalizes IRC §1505 (Cross references).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

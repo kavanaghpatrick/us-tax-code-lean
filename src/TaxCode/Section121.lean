@@ -1223,4 +1223,4 @@ This file formalizes IRC §121 (Exclusion of gain from sale of principal residen
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

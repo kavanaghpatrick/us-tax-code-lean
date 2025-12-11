@@ -244,4 +244,4 @@ This file formalizes IRC §1043 (Sale of property to comply with conflict-of-int
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

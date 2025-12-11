@@ -2498,4 +2498,4 @@ This file formalizes IRC §56 (Adjustments in computing alternative minimum taxa
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

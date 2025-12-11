@@ -633,4 +633,4 @@ This file formalizes IRC §542 (Definition of personal holding company).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

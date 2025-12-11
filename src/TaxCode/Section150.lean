@@ -497,4 +497,4 @@ This file formalizes IRC §150 (Definitions and special rules).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

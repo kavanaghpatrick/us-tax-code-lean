@@ -118,4 +118,4 @@ This file formalizes IRC §803 (Life insurance gross income).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

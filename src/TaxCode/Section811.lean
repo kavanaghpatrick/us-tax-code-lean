@@ -217,4 +217,4 @@ This file formalizes IRC §811 (Accounting provisions).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

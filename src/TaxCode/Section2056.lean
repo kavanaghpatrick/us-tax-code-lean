@@ -881,4 +881,4 @@ This file formalizes IRC §2056 (Bequests, etc., to surviving spouse).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

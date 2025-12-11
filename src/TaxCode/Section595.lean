@@ -79,4 +79,4 @@ This file formalizes IRC §595 (26 U.S. Code § 595, 596 - Repealed. Pub. L. 104
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

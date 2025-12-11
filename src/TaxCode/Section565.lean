@@ -78,4 +78,4 @@ This file formalizes IRC §565 (Consent dividends).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

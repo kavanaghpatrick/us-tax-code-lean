@@ -513,4 +513,4 @@ This file formalizes IRC §467 (Certain payments for the use of property or serv
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

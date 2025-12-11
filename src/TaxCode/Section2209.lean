@@ -53,4 +53,4 @@ This file formalizes IRC §2209 (Certain residents of possessions considered non
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

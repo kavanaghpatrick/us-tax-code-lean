@@ -999,4 +999,4 @@ This file formalizes IRC §23 (Adoption expenses).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

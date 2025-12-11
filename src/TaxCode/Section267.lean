@@ -821,4 +821,4 @@ This file formalizes IRC §267 (Losses, expenses, and interest with respect to t
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

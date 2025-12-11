@@ -78,4 +78,4 @@ This file formalizes IRC §1444 (Withholding on Virgin Islands source income).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -660,4 +660,4 @@ This file formalizes IRC §854 (Limitations applicable to dividends received fro
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

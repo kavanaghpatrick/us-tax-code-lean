@@ -356,4 +356,4 @@ This file formalizes IRC §1234 (Options to buy or sell).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

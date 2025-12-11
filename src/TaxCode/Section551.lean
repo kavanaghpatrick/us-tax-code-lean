@@ -208,4 +208,4 @@ This file formalizes IRC §551 (26 U.S. Code § 551 to 558 - Repealed. Pub. L. 1
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

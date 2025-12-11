@@ -272,4 +272,4 @@ This file formalizes IRC §2036 (Transfers with retained life estate).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

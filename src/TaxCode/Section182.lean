@@ -62,4 +62,4 @@ This file formalizes IRC §182 (Repealed. Pub. L. 99–514, title IV, § 402(a
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

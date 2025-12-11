@@ -372,4 +372,4 @@ This file formalizes IRC §509 (Private foundation defined).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

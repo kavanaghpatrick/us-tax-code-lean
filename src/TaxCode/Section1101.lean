@@ -101,4 +101,4 @@ This file formalizes IRC §1101 (26 U.S. Code § 1101 to 1103 - Repealed. Pub. L
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -51,4 +51,4 @@ This file formalizes IRC §1051 (Repealed. Pub. L. 113–295, div. A, title II, 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

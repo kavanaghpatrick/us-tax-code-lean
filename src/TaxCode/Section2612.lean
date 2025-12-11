@@ -187,4 +187,4 @@ This file formalizes IRC §2612 (Taxable termination; taxable distribution; dire
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

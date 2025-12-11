@@ -110,4 +110,4 @@ This file formalizes IRC §885 (Cross references).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

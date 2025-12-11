@@ -56,4 +56,4 @@ This file formalizes IRC §1018 (Repealed. Pub. L. 96–589, § 6(h)(1), Dec. 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -498,4 +498,4 @@ This file formalizes IRC §443 (Returns for a period of less than 12 months).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

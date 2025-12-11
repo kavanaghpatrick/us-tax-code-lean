@@ -170,4 +170,4 @@ This file formalizes IRC §1041 (Transfers of property between spouses or incide
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

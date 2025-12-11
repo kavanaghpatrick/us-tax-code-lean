@@ -157,4 +157,4 @@ This file formalizes IRC §173 (Circulation expenditures).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

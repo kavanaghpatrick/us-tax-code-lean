@@ -309,4 +309,4 @@ This file formalizes IRC §1400 (26 U.S. Code § 1400 to 1400C - Repealed. Pub. 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

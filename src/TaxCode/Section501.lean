@@ -3536,4 +3536,4 @@ This file formalizes IRC §501 (Exemption from tax on corporations, certain trus
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -1950,4 +1950,4 @@ This file formalizes IRC §219 (Retirement savings).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

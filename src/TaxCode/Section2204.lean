@@ -185,4 +185,4 @@ This file formalizes IRC §2204 (Discharge of fiduciary from personal liability)
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

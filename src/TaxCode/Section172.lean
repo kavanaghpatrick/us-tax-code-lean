@@ -2955,4 +2955,4 @@ This file formalizes IRC §172 (Net operating loss deduction).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

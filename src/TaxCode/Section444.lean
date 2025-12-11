@@ -286,4 +286,4 @@ This file formalizes IRC §444 (Election of taxable year other than required tax
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

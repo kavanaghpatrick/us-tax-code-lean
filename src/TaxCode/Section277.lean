@@ -161,4 +161,4 @@ This file formalizes IRC §277 (Deductions incurred by certain membership organi
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

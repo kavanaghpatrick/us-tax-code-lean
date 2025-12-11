@@ -106,4 +106,4 @@ This file formalizes IRC §1052 (Basis established by the Revenue Act of 1932 or
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

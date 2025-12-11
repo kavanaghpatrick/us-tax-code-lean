@@ -1080,4 +1080,4 @@ This file formalizes IRC §164 (Taxes).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

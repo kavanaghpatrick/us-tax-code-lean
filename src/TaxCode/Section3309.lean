@@ -368,4 +368,4 @@ This file formalizes IRC §3309 (State law coverage of services performed for no
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

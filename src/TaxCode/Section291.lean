@@ -762,4 +762,4 @@ This file formalizes IRC §291 (Special rules relating to corporate preference i
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

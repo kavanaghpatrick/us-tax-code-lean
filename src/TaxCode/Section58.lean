@@ -345,4 +345,4 @@ This file formalizes IRC §58 (Denial of certain losses).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

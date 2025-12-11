@@ -3294,4 +3294,4 @@ This file formalizes IRC §163 (Interest).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -1440,4 +1440,4 @@ This file formalizes IRC §312 (Effect on earnings and profits).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

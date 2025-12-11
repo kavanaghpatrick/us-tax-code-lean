@@ -259,4 +259,4 @@ This file formalizes IRC §2104 (Property within the United States).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

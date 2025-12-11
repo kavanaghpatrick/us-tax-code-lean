@@ -1349,4 +1349,4 @@ This file formalizes IRC §35 (Health insurance costs of eligible individuals).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

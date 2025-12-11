@@ -37,4 +37,4 @@ This file formalizes IRC §1462 (Withheld tax as credit to recipient of income).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

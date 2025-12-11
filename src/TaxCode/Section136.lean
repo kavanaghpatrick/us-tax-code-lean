@@ -151,4 +151,4 @@ This file formalizes IRC §136 (Energy conservation subsidies provided by public
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

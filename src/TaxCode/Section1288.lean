@@ -109,4 +109,4 @@ This file formalizes IRC §1288 (Treatment of original issue discount on tax-exe
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

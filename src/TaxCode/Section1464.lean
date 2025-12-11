@@ -39,4 +39,4 @@ This file formalizes IRC §1464 (Refunds and credits with respect to withheld ta
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

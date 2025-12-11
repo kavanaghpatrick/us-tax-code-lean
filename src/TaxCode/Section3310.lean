@@ -123,4 +123,4 @@ This file formalizes IRC §3310 (Judicial review).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

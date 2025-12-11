@@ -672,4 +672,4 @@ This file formalizes IRC §1291 (Interest on tax deferral).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

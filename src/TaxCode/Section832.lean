@@ -1353,4 +1353,4 @@ This file formalizes IRC §832 (Insurance company taxable income).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

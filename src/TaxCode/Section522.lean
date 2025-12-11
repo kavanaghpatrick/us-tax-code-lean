@@ -47,4 +47,4 @@ This file formalizes IRC §522 (Repealed. Pub. L. 87–834, § 17(b)(2), Oct. 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

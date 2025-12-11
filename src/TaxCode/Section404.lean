@@ -2714,4 +2714,4 @@ This file formalizes IRC §404 (Deduction for contributions of an employer to an
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -625,4 +625,4 @@ This file formalizes IRC §436 (Funding-based limits on benefits and benefit acc
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

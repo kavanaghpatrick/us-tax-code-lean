@@ -176,4 +176,4 @@ This file formalizes IRC §1063 (Cross references).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

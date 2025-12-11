@@ -78,4 +78,4 @@ This file formalizes IRC §180 (Expenditures by farmers for fertilizer, etc.).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

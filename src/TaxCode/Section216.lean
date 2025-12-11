@@ -625,4 +625,4 @@ This file formalizes IRC §216 (Deduction of taxes, interest, and business depre
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

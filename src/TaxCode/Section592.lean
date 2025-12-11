@@ -50,4 +50,4 @@ This file formalizes IRC §592 (Repealed. Pub. L. 94–455, title XIX, § 1901
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -513,4 +513,4 @@ This file formalizes IRC §1274 (Determination of issue price in the case of cer
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

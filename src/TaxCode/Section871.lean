@@ -2378,4 +2378,4 @@ This file formalizes IRC §871 (Tax on nonresident alien individuals).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

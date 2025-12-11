@@ -1452,4 +1452,4 @@ This file formalizes IRC §101 (Certain death benefits).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -339,4 +339,4 @@ This file formalizes IRC §423 (Employee stock purchase plans).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

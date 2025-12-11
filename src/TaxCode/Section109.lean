@@ -37,4 +37,4 @@ This file formalizes IRC §109 (Improvements by lessee on lessor’s property).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

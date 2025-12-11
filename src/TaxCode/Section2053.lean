@@ -340,4 +340,4 @@ This file formalizes IRC §2053 (Expenses, indebtedness, and taxes).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

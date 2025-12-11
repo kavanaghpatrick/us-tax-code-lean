@@ -700,4 +700,4 @@ This file formalizes IRC §877 (Expatriation to avoid tax).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

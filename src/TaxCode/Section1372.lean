@@ -123,4 +123,4 @@ This file formalizes IRC §1372 (Partnership rules to apply for fringe benefit p
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

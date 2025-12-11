@@ -126,4 +126,4 @@ This file formalizes IRC §225 (Qualified overtime compensation).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

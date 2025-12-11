@@ -100,4 +100,4 @@ This file formalizes IRC §2044 (Certain property for which marital deduction wa
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

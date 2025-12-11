@@ -320,4 +320,4 @@ This file formalizes IRC §85 (Unemployment compensation).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

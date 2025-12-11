@@ -208,4 +208,4 @@ This file formalizes IRC §471 (General rule for inventories).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -212,4 +212,4 @@ This file formalizes IRC §541 (Imposition of personal holding company tax).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

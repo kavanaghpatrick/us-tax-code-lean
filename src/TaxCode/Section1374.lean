@@ -650,4 +650,4 @@ This file formalizes IRC §1374 (Tax imposed on certain built-in gains).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -117,4 +117,4 @@ This file formalizes IRC §3311 (Short title).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

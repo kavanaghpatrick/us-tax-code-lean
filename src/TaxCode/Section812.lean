@@ -331,4 +331,4 @@ This file formalizes IRC §812 (Definition of company’s share and policyholder
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

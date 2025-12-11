@@ -38,4 +38,4 @@ This file formalizes IRC §515 (Taxes of foreign countries and possessions of th
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

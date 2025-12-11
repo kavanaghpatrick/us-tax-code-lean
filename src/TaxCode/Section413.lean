@@ -502,4 +502,4 @@ This file formalizes IRC §413 (Collectively bargained plans, etc.).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

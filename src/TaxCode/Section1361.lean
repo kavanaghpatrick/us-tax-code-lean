@@ -1587,4 +1587,4 @@ This file formalizes IRC §1361 (S corporation defined).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

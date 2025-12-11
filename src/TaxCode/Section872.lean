@@ -265,4 +265,4 @@ This file formalizes IRC §872 (Gross income).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

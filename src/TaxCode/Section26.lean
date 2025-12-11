@@ -1092,4 +1092,4 @@ This file formalizes IRC §26 (Limitation based on tax liability; definition of 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

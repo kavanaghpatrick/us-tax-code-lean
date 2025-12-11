@@ -726,4 +726,4 @@ This file formalizes IRC §1362 (Election; revocation; termination).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

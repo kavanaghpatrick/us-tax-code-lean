@@ -402,4 +402,4 @@ This file formalizes IRC §2503 (Taxable gifts).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

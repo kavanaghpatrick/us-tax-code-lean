@@ -64,4 +64,4 @@ This file formalizes IRC §4 (Repealed. Pub. L. 94–455, title V, § 501(b)(1
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

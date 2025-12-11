@@ -118,4 +118,4 @@ This file formalizes IRC §1034 (Repealed. Pub. L. 105–34, title III, § 312
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -651,4 +651,4 @@ This file formalizes IRC §305 (Distributions of stock and stock rights).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -137,4 +137,4 @@ This file formalizes IRC §1249 (Gain from certain sales or exchanges of patents
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

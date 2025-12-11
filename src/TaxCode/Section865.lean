@@ -746,4 +746,4 @@ This file formalizes IRC §865 (Source rules for personal property sales).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

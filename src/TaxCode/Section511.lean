@@ -352,4 +352,4 @@ This file formalizes IRC §511 (Imposition of tax on unrelated business income o
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -282,4 +282,4 @@ This file formalizes IRC §332 (Complete liquidations of subsidiaries).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

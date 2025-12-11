@@ -324,4 +324,4 @@ This file formalizes IRC §2632 (Special rules for allocation of GST exemption).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

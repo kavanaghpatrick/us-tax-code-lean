@@ -517,4 +517,4 @@ This file formalizes IRC §302 (Distributions in redemption of stock).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

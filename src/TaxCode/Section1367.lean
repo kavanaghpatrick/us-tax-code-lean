@@ -310,4 +310,4 @@ This file formalizes IRC §1367 (Adjustments to basis of stock of shareholders, 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

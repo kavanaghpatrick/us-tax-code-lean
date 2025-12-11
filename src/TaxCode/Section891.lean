@@ -112,4 +112,4 @@ This file formalizes IRC §891 (Doubling of rates of tax on citizens and corpora
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

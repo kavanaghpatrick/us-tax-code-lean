@@ -99,4 +99,4 @@ This file formalizes IRC §2016 (Recovery of taxes claimed as credit).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

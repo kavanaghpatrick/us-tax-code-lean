@@ -462,4 +462,4 @@ This file formalizes IRC §306 (Dispositions of certain stock).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

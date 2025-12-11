@@ -194,4 +194,4 @@ This file formalizes IRC §1356 (Qualifying shipping activities).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

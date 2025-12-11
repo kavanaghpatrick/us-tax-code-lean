@@ -454,4 +454,4 @@ This file formalizes IRC §119 (Meals or lodging furnished for the convenience o
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

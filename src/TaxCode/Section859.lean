@@ -151,4 +151,4 @@ This file formalizes IRC §859 (Adoption of annual accounting period).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -1253,4 +1253,4 @@ This file formalizes IRC §1256 (Section 1256 contracts marked to market).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

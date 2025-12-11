@@ -238,4 +238,4 @@ This file formalizes IRC §855 (Dividends paid by regulated investment company a
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

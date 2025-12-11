@@ -118,4 +118,4 @@ This file formalizes IRC §385 (Treatment of certain interests in corporations a
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -1008,4 +1008,4 @@ This file formalizes IRC §63 (Taxable income defined).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

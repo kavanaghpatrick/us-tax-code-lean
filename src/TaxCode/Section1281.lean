@@ -190,4 +190,4 @@ This file formalizes IRC §1281 (Current inclusion in income of discount on cert
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -328,4 +328,4 @@ This file formalizes IRC §318 (Constructive ownership of stock).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

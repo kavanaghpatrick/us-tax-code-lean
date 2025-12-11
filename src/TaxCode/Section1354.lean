@@ -149,4 +149,4 @@ This file formalizes IRC §1354 (Alternative tax election; revocation; terminati
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -76,4 +76,4 @@ This file formalizes IRC §307 (Basis of stock and stock rights acquired in dist
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

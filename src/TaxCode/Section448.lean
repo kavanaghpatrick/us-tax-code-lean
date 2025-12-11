@@ -371,4 +371,4 @@ This file formalizes IRC §448 (Limitation on use of cash method of accounting).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

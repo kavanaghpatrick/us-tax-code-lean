@@ -621,4 +621,4 @@ This file formalizes IRC §475 (Mark to market accounting method for dealers in 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

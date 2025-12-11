@@ -3947,4 +3947,4 @@ This file formalizes IRC §402 (Taxability of beneficiary of employees’ trust)
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

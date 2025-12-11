@@ -139,4 +139,4 @@ This file formalizes IRC §544 (Rules for determining stock ownership).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

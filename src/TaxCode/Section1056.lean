@@ -61,4 +61,4 @@ This file formalizes IRC §1056 (Repealed. Pub. L. 108–357, title VIII, § 8
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

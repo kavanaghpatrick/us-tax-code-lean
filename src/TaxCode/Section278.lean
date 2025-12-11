@@ -87,4 +87,4 @@ This file formalizes IRC §278 (Repealed. Pub. L. 99–514, title VIII, § 803
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

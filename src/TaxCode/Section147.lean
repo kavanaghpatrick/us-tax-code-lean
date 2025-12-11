@@ -833,4 +833,4 @@ This file formalizes IRC §147 (Other requirements applicable to certain private
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

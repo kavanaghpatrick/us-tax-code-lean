@@ -147,4 +147,4 @@ This file formalizes IRC §128 (Employer contributions to Trump accounts).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

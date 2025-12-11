@@ -497,4 +497,4 @@ This file formalizes IRC §34 (Certain uses of gasoline and special fuels).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

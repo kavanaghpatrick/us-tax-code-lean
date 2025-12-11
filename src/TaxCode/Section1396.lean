@@ -234,4 +234,4 @@ This file formalizes IRC §1396 (Empowerment zone employment credit).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

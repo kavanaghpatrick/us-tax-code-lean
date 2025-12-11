@@ -123,4 +123,4 @@ This file formalizes IRC §110 (Qualified lessee construction allowances for sho
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

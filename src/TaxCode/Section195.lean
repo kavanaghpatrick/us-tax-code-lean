@@ -224,4 +224,4 @@ This file formalizes IRC §195 (Start-up expenditures).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

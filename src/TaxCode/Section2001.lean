@@ -676,4 +676,4 @@ This file formalizes IRC §2001 (Imposition and rate of tax).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

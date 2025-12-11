@@ -219,4 +219,4 @@ This file formalizes IRC §3321 (Imposition of tax).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

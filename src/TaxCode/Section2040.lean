@@ -194,4 +194,4 @@ This file formalizes IRC §2040 (Joint interests).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

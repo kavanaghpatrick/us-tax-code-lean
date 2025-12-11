@@ -1688,4 +1688,4 @@ This file formalizes IRC §165 (Losses).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

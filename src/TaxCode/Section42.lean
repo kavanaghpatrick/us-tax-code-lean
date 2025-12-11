@@ -4390,4 +4390,4 @@ This file formalizes IRC §42 (Low-income housing credit).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

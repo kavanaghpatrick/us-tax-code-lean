@@ -943,4 +943,4 @@ This file formalizes IRC §21 (Expenses for household and dependent care service
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

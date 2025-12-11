@@ -669,4 +669,4 @@ This file formalizes IRC §881 (Tax on income of foreign corporations not connec
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

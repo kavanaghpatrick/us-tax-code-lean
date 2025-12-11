@@ -39,4 +39,4 @@ This file formalizes IRC §2205 (Reimbursement out of estate).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

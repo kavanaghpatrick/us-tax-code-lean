@@ -886,4 +886,4 @@ This file formalizes IRC §433 (Minimum funding standards for CSEC plans).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

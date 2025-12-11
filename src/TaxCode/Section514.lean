@@ -1168,4 +1168,4 @@ This file formalizes IRC §514 (Unrelated debt-financed income).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

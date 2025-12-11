@@ -244,4 +244,4 @@ This file formalizes IRC §2012 (Credit for gift tax).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

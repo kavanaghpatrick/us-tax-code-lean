@@ -48,4 +48,4 @@ This file formalizes IRC §270 (Repealed. Pub. L. 91–172, title II, § 213(b
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -72,4 +72,4 @@ This file formalizes IRC §2210 (Repealed. Pub. L. 111–312, title III, § 30
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -149,4 +149,4 @@ This file formalizes IRC §115 (Income of States, municipalities, etc.).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -875,4 +875,4 @@ This file formalizes IRC §1248 (Gain from certain sales or exchanges of stock i
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

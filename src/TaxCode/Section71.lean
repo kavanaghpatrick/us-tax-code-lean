@@ -65,4 +65,4 @@ This file formalizes IRC §71 (Repealed. Pub. L. 115–97, title I, § 11051(b
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -144,4 +144,4 @@ This file formalizes IRC §1211 (Limitation on capital losses).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -10988,4 +10988,4 @@ This file formalizes IRC §401 (Qualified pension, profit-sharing, and stock bon
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

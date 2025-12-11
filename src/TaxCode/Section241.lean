@@ -36,4 +36,4 @@ This file formalizes IRC §241 (Allowance of special deductions).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

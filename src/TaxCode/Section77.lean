@@ -56,4 +56,4 @@ This file formalizes IRC §77 (Commodity credit loans).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -414,4 +414,4 @@ This file formalizes IRC §882 (Tax on income of foreign corporations connected 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -245,4 +245,4 @@ This file formalizes IRC §2504 (Taxable gifts for preceding calendar periods).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -647,4 +647,4 @@ This file formalizes IRC §106 (Contributions by employer to accident and health
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

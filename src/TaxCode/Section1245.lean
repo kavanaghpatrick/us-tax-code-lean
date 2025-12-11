@@ -1230,4 +1230,4 @@ This file formalizes IRC §1245 (Gain from dispositions of certain depreciable p
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

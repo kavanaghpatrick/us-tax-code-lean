@@ -245,4 +245,4 @@ This file formalizes IRC §1382 (Taxable income of cooperatives).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -62,4 +62,4 @@ This file formalizes IRC §1019 (Property on which lessee has made improvements)
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -644,4 +644,4 @@ This file formalizes IRC §447 (Method of accounting for corporations engaged in
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -60,4 +60,4 @@ This file formalizes IRC §2033 (Property in which the decedent had an interest)
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

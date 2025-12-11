@@ -125,4 +125,4 @@ This file formalizes IRC §1383 (Computation of tax where cooperative redeems no
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

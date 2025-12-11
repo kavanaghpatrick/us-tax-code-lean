@@ -186,4 +186,4 @@ This file formalizes IRC §190 (Expenditures to remove architectural and transpo
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

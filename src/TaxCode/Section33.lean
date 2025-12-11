@@ -84,4 +84,4 @@ This file formalizes IRC §33 (Tax withheld at source on nonresident aliens and 
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -171,4 +171,4 @@ This file formalizes IRC §835 (Election by reciprocal).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

@@ -158,4 +158,4 @@ This file formalizes IRC §455 (Prepaid subscription income).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

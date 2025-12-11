@@ -83,4 +83,4 @@ This file formalizes IRC §102 (Gifts and inheritances).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

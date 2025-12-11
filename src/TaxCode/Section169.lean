@@ -413,4 +413,4 @@ This file formalizes IRC §169 (Amortization of pollution control facilities).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

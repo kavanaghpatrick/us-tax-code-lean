@@ -60,4 +60,4 @@ This file formalizes IRC §1461 (Liability for withheld tax).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

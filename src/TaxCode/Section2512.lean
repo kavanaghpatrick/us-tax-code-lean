@@ -94,4 +94,4 @@ This file formalizes IRC §2512 (Valuation of gifts).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

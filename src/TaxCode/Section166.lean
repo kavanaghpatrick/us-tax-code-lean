@@ -448,4 +448,4 @@ This file formalizes IRC §166 (Bad debts).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

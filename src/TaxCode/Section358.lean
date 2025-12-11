@@ -447,4 +447,4 @@ This file formalizes IRC §358 (Basis to distributees).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

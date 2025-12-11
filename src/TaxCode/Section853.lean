@@ -247,4 +247,4 @@ This file formalizes IRC §853 (Foreign tax credit allowed to shareholders).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

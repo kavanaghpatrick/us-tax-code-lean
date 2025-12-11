@@ -393,4 +393,4 @@ This file formalizes IRC §582 (Bad debts, losses, and gains with respect to sec
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

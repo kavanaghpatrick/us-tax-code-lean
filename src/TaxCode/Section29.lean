@@ -33,4 +33,4 @@ This file formalizes IRC §29 (Renumbered § 45K]).
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

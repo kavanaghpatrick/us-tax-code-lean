@@ -1487,4 +1487,4 @@ This file formalizes IRC §409 (Qualifications for tax credit employee stock own
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"

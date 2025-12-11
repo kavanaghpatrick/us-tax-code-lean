@@ -1096,4 +1096,4 @@ This file formalizes IRC §2055 (Transfers for public, charitable, and religious
 -- TODO: Add theorems to prove
 
 -- Example usage
-#check placeholder
+#eval "Section loaded"
