@@ -1,9 +1,9 @@
 {
   "completed": [
-    "61",
-    "62",
-    "63"
+    "24"
   ],
-  "failed": [],
+  "failed": [
+    "1"
+  ],
   "project_uuids": {}
 }

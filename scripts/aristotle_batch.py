@@ -65,7 +65,7 @@ class AristotleBatchProcessor:
         Returns:
             True if successful, False otherwise
         """
-        lean_file = Path(f'src/TaxCode/Section{section_num}.lean')
+        lean_file = Path(f'src/TaxCode/Section{section_num}_aristotle.lean')
 
         if not lean_file.exists():
             print(f"Error: {lean_file} not found. Generate skeleton first.", file=sys.stderr)
