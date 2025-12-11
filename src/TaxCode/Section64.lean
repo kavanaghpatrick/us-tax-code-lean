@@ -1,50 +1,65 @@
 import Common.Basic
 
 /-!
-# IRC Section 64 - Ordinary income defined
+# IRC Section 64 - Ordinary Income Defined
 
-This file formalizes IRC §64 (Ordinary income defined).
+For purposes of the Internal Revenue Code, defines "ordinary income" as including
+any gain from the sale or exchange of property which is neither a capital asset
+nor property described in IRC §1231(b).
 
 ## References
 - [26 USC §64](https://www.law.cornell.edu/uscode/text/26/64)
 
-## Summary
-   Quick search by citation:
-   Title
-   Section
-   Go!
-   26 U.S. Code § 64 - Ordinary income defined
-   U.S. Code
-   prev
-   |
-   next
-   For purposes of this subtitle, the term “
-   ordinary income
-   ” includes any gain from the sale or exchange of property which is neither a capital asset nor property described in
-   section 1231(b).
-   Any gain from the sale or exchange of property which is treated or considered, under other provisions of this subtitle, as
-   “ordinary income”
-   shall be treated as gain from the sale or exchange of property which is neither a capital asset nor property described in section 1231(b).
-   (Added
-   Pub. L. 94–455, title XIX, § 1901(a)(10)
-   ,
-   Oct. 4, 1976
-   ,
-   90 Stat. 1765
-   .)
-   U.S. Code Toolbox
-   Law about... Articles from Wex
-   Table of Popular Names
-   Parallel Table of Authorities
-   How
-   current is this?
+## Key Provisions
+- Ordinary income includes gains from non-capital, non-§1231(b) property
+- Any gain treated as "ordinary income" under other IRC provisions is also ordinary income
 -/
 
--- TODO: Add type definitions
+-- Property classification for income purposes
+inductive PropertyType
+  | CapitalAsset               -- IRC §1221 capital asset
+  | Section1231Property        -- IRC §1231(b) property (trade/business property)
+  | OrdinaryIncomeProperty     -- Neither capital nor §1231(b)
+  deriving Repr, DecidableEq
 
--- TODO: Add main functions
+-- Gain from sale or exchange
+structure PropertyGain where
+  amount : Currency
+  propertyType : PropertyType
+  deriving Repr
 
--- TODO: Add theorems to prove
+-- Determine if a gain is ordinary income
+def isOrdinaryIncome (gain : PropertyGain) : Bool :=
+  match gain.propertyType with
+  | PropertyType.CapitalAsset => false          -- Capital gains, not ordinary
+  | PropertyType.Section1231Property => false   -- §1231 treatment
+  | PropertyType.OrdinaryIncomeProperty => true -- Ordinary income
 
--- Example usage
-#check placeholder
+-- Calculate ordinary income from a list of gains
+def calculateOrdinaryIncome (gains : List PropertyGain) : Currency :=
+  gains.foldl (fun (acc : Int) g =>
+    let amt : Int := g.amount
+    if isOrdinaryIncome g then acc + amt else acc) (0 : Int)
+
+-- Examples
+def example_inventory_sale : PropertyGain :=
+  ⟨50000, PropertyType.OrdinaryIncomeProperty⟩  -- $500 gain from inventory
+
+def example_stock_sale : PropertyGain :=
+  ⟨100000, PropertyType.CapitalAsset⟩           -- $1,000 gain from stock
+
+#eval isOrdinaryIncome example_inventory_sale   -- true
+#eval isOrdinaryIncome example_stock_sale       -- false
+#eval calculateOrdinaryIncome [example_inventory_sale, example_stock_sale]  -- 50000
+
+-- Theorem: Ordinary income is non-negative
+theorem ordinary_income_nonnegative (gains : List PropertyGain)
+    (h : ∀ g ∈ gains, (g.amount : Int) ≥ 0) :
+    calculateOrdinaryIncome gains ≥ 0 := by
+  sorry
+
+-- Theorem: Capital asset gains don't contribute to ordinary income
+theorem capital_gains_excluded (g : PropertyGain)
+    (h : g.propertyType = PropertyType.CapitalAsset) :
+    isOrdinaryIncome g = false := by
+  simp [isOrdinaryIncome, h]
