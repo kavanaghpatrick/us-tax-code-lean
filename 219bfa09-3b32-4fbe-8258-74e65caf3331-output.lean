@@ -1,0 +1,421 @@
+/-
+This file was edited by Aristotle.
+
+Lean version: leanprover/lean4:v4.24.0
+Mathlib version: f897ebcf72cd16f89ab4577d0c826cd14afaafc7
+This project request had uuid: 219bfa09-3b32-4fbe-8258-74e65caf3331
+-/
+
+/-
+Common definitions inlined for Aristotle processing
+-/
+
+-- Currency represented in cents (to avoid floating point issues)
+def Currency := Int
+  deriving Repr, DecidableEq
+
+namespace Currency
+
+def make (dollars : Int) (cents : Nat) : Currency :=
+  dollars * 100 + (cents : Int)
+
+def zero : Currency := (0 : Int)
+
+def toDollars (c : Currency) : Int :=
+  let ci : Int := c
+  ci / 100
+
+instance : OfNat Currency n := ⟨(n : Int)⟩
+
+instance : LE Currency where
+  le a b := @LE.le Int _ a b
+
+instance : LT Currency where
+  lt a b := @LT.lt Int _ a b
+
+-- Arithmetic instances for Currency (delegates to Int since Currency := Int)
+instance : HAdd Currency Currency Currency where
+  hAdd a b := Int.add a b
+
+instance : HAdd Currency Int Currency where
+  hAdd a b := Int.add a b
+
+instance : HAdd Int Currency Currency where
+  hAdd a b := Int.add a b
+
+instance : HSub Currency Currency Currency where
+  hSub a b := Int.sub a b
+
+instance : HSub Currency Int Currency where
+  hSub a b := Int.sub a b
+
+instance : HSub Int Currency Currency where
+  hSub a b := Int.sub a b
+
+instance : HMul Currency Currency Currency where
+  hMul a b := Int.mul a b
+
+instance : HMul Currency Int Currency where
+  hMul a b := Int.mul a b
+
+instance : HMul Int Currency Currency where
+  hMul a b := Int.mul a b
+
+instance : HDiv Currency Int Currency where
+  hDiv a b := Int.tdiv a b
+
+instance : HDiv Currency Currency Currency where
+  hDiv a b := Int.tdiv a b
+
+instance : Max Currency where
+  max a b := let ai : Int := a; let bi : Int := b; if ai ≤ bi then bi else ai
+
+instance : Min Currency where
+  min a b := let ai : Int := a; let bi : Int := b; if ai ≤ bi then ai else bi
+
+instance : Neg Currency where
+  neg a := Int.neg a
+
+end Currency
+
+-- Tax Year
+structure TaxYear where
+  year : Nat
+  h_valid : year ≥ 1913
+
+namespace TaxYear
+
+def current : TaxYear := ⟨2024, by decide⟩
+
+instance : DecidableEq TaxYear := fun a b =>
+  match a, b with
+  | ⟨y1, _⟩, ⟨y2, _⟩ =>
+    if h : y1 = y2 then
+      isTrue (by cases h; rfl)
+    else
+      isFalse (by intro eq; cases eq; exact h rfl)
+
+end TaxYear
+
+-- Filing Status
+inductive FilingStatus
+  | Single
+  | MarriedFilingJointly
+  | MarriedFilingSeparately
+  | HeadOfHousehold
+  | QualifyingWidower
+  deriving Repr, DecidableEq, Inhabited
+
+structure Taxpayer where
+  id : String
+  filingStatus : FilingStatus
+  taxYear : TaxYear
+
+instance : Repr Taxpayer where
+  reprPrec t _ := s!"Taxpayer(id: {t.id}, status: {repr t.filingStatus}, year: {t.taxYear.year})"
+
+/-!
+# IRC Section 1222 - Other terms relating to capital gains and losses
+
+This file formalizes IRC §1222 (Other terms relating to capital gains and losses).
+
+## References
+- [26 USC §1222](https://www.law.cornell.edu/uscode/text/26/1222)
+
+## Summary
+   Quick search by citation:
+   Title
+   Section
+   Go!
+   26 U.S. Code § 1222 - Other terms relating to capital gains and losses
+   U.S. Code
+   Notes
+   prev
+   |
+   next
+   For purposes of this subtitle—
+   (1)
+   Short-term capital gain
+   The term “
+   short-term capital gain
+   ” means gain from the sale or exchange of a
+   capital asset
+   held for not more than 1 year, if and to the extent such gain is taken into account in computing gross income.
+   (2)
+   Short-term capital loss
+   The term “
+   short-term capital loss
+   ” means loss from the sale or exchange of a
+   capital asset
+   held for not more than 1 year, if and to the extent that such loss is taken into account in computing taxable income.
+   (3)
+   Long-term capital gain
+   The term “
+   long-term capital gain
+   ” means gain from the sale or exchange of a
+   capital asset
+   held for more than 1 year, if and to the extent such gain is taken into account in computing gross income.
+   (4)
+   Long-term capital loss
+   The term “
+   long-term capital loss
+   ” means loss from the sale or exchange of a
+   capital asset
+   held for more than 1 year, if and to the extent that such loss is taken into account in computing taxable income.
+   (5)
+   Net short-term capital gain
+   The term “
+   net short-term capital gain
+   ” means the excess of
+   short-term capital gains
+   for the taxable year over the
+   short-term capital losses
+   for such year.
+   (6)
+   Net short-term capital loss
+   The term “
+   net short-term capital loss
+   ” means the excess of
+   short-term capital losses
+   for the taxable year over the
+   short-term capital gains
+   for such year.
+   (7)
+   Net long-term capital gain
+   The term “
+   net long-term capital gain
+   ” means the excess of
+   long-term capital gains
+   for the taxable year over the
+   long-term capital losses
+   for such year.
+   (8)
+   Net long-term capital loss
+   The term “
+   net long-term capital loss
+   ” means the excess of
+   long-term capital losses
+   for the taxable year over the
+   long-term capital gains
+   for such year.
+   (9)
+   Capital gain net income
+   The term “
+   capital gain net income
+   ” means the excess of the gains from sales or exchanges of
+   capital assets
+   over the losses from such sales or exchanges.
+   (10)
+   Net capital loss
+   The term “
+   net capital loss
+   ” means the excess of the losses from sales or exchanges of
+   capital assets
+   over the sum allowed under
+   section 1211.
+   In the case of a corporation, for the purpose of determining losses under this paragraph, amounts which are
+   short-term capital losses
+   under section 1212(a)(1) shall be excluded.
+   (11)
+   Net capital gain
+   The term “
+   net capital gain
+   ” means the excess of the
+   net long-term capital gain
+   for the taxable year over the
+   net short-term capital loss
+   for such year.
+   (Aug. 16, 1954, ch. 736,
+   68A Stat. 322
+   ;
+   Pub. L. 88–272, title II, § 230(b)
+   ,
+   Feb. 26, 1964
+   ,
+   78 Stat. 100
+   ;
+   Pub. L. 91–172, title V
+   , §§ 511(a), 513(c),
+   Dec. 30, 1969
+   ,
+   83 Stat. 635
+   , 643;
+   Pub. L. 94–455, title XIV, § 1402(a)(1)
+   , (2), (d), title XIX, § 1901(a)(136),
+   Oct. 4, 1976
+   ,
+   90 Stat. 1731
+   , 1733, 1787;
+   Pub. L. 98–369, div. A, title X, § 1001(a)
+   , (e),
+   July 18, 1984
+   ,
+   98 Stat. 1011
+   , 1012;
+   Pub. L. 111–325, title I, § 101(b)(2)
+   ,
+   Dec. 22, 2010
+   ,
+   124 Stat. 3538
+   ;
+   Pub. L. 113–295, div. A, title II, § 221(a)(79)
+   ,
+   Dec. 19, 2014
+   ,
+   128 Stat. 4049
+   .)
+   Editorial Notes
+   Amendments
+   2014—
+   Pub. L. 113–295
+   struck out concluding provisions which read as follows: “For purposes of this subtitle, in the case of futures transactions in any commodity subject to the rules of a board of trade or commodity exchange, the length of the holding period taken into account under this section or under any other section amended by section 1402 of the
+   Tax Reform Act of 1976
+   shall be determined without regard to the amendments made by subsections (a) and (b) of such section 1402.”
+   2010—Par. (10).
+   Pub. L. 111–325
+   substituted “section 1212(a)(1)” for “section 1212”.
+   1984—Pars. (1) to (4).
+   Pub. L. 98–369
+   substituted “6 months” for “1 year”, applicable to property acquired after
+   June 22, 1984
+   , and before
+   Jan. 1, 1988
+   . See Effective Date of 1984 Amendment note below.
+   1976—Pars. (1) to (4).
+   Pub. L. 94–455, § 1402(a)(2)
+   , provided that “9 months” would be changed to “1 year”.
+   Pub. L. 94–455, § 1402(a)(1)
+   , provided that “6 months” would be changed to “9 months” for taxable years beginning in 1977.
+   Par. (9).
+   Pub. L. 94–455, § 1901(a)(136)(A)
+   , substituted
+   “Capital gain net income”
+   and
+   “capital gain net income”
+   for
+   “Net capital gain”
+   and
+   “net capital gain”
+   in heading and text.
+   Par. (11).
+   Pub. L. 94–455, § 1901(a)(136)(B)
+   , substituted
+   “Net capital gain”
+   and
+   “net capital gain”
+   for “Net section 1201 gain” and “net section 1201 gain” in heading and text.
+   Pub. L. 94–455, § 1402(d)
+   , inserted sentence at end relating to length of holding period in case of futures transactions in commodities.
+   1969—Par. (9).
+   Pub. L. 91–172, § 513(c)
+   , substituted “The” for “In the case of a corporation, the”.
+   Par. (11).
+   Pub. L. 91–172, § 511(a)
+   , added par. (11).
+   1964—Pars. (9), (10).
+   Pub. L. 88–272
+   struck out provisions from par. (9) relating to taxpayers other than corporations, and inserted “In the case of a corporation” in par. (10).
+   Statutory Notes and Related Subsidiaries
+   Effective Date of 2014 Amendment
+   Amendment by
+   Pub. L. 113–295
+   effective
+   Dec. 19, 2014
+   , subject to a savings provision, see
+   section 221(b) of Pub. L. 113–295
+   , set out as a note under
+   section 1 of this title
+   .
+   Effective Date of 2010 Amendment
+   Except as otherwise provided, amendment by
+   Pub. L. 111–325
+   applicable to
+   net capital losses
+   for taxable years beginning after
+   Dec. 22, 2010
+   , see
+   section 101(c) of Pub. L. 111–325
+   , set out as a note under
+   section 1212 of this title
+   .
+   Effective Date of 1984 Amendment
+   Amendment by
+   Pub. L. 98–369
+   applicable to property acquired after
+   June 22, 1984
+   , and before
+   Jan. 1, 1988
+   , see
+   section 1001(e) of Pub. L. 98–369
+   , set out as a note under
+   section 166 of this title
+   .
+   Effective Date of 1976 Amendment
+   Pub. L. 94–455, title XIV, § 1402(a)(1)
+   ,
+   Oct. 4, 1976
+   ,
+   90 Stat. 1731
+   , provided that the amendment made by that section is effective with respect to taxable years beginning in 1977.
+   Pub. L. 94–455, title XIV, § 1402(a)(2)
+   ,
+   Oct. 4, 1976
+   ,
+   90 Stat. 1731
+   , provided that the amendment made by that section is effective with respect to taxable years beginning after
+   Dec. 31, 1977
+   .
+   Amendment by
+   section 1901(a)(136) of Pub. L. 94–455
+   applicable with respect to taxable years beginning after
+   Dec. 31, 1976
+   , see
+   section 1901(d) of Pub. L. 94–455
+   , set out as a note under
+   section 2 of this title
+   .
+   Effective Date of 1969 Amendment
+   Amendment by
+   section 511(a) of Pub. L. 91–172
+   applicable with respect to taxable years beginning after
+   Dec. 31, 1969
+   , see
+   section 511(d) of Pub. L. 91–172
+   , set out as an Effective Date note under
+   section 852 of this title
+   .
+   Amendment by
+   section 513(c) of Pub. L. 91–172
+   applicable to taxable years beginning after
+   Dec. 31, 1969
+   , see
+   section 513(d) of Pub. L. 91–172
+   , set out as a note under
+   section 1211 of this title
+   .
+   Effective Date of 1964 Amendment
+   Amendment by
+   Pub. L. 88–272
+   applicable to taxable years beginning after
+   Dec. 31, 1963
+   , see
+   section 230(c) of Pub. L. 88–272
+   , set out as a note under
+   section 1212 of this title
+   .
+   U.S. Code Toolbox
+   Law about... Articles from Wex
+   Table of Popular Names
+   Parallel Table of Authorities
+   How
+   current is this?
+-/
+
+-- TODO: Add type definitions
+
+-- TODO: Add main functions
+
+-- TODO: Add theorems to prove
+
+-- Example usage
+#eval "Section loaded"
