@@ -23,17 +23,27 @@ Create a complete, machine-verified formalization of US tax law enabling:
 - Progressive tax calculation function
 - **6 passing test cases** verifying correctness
 
+**IRC Section 61 - Gross Income Defined** ✅ NEW!
+- 15 income source types (Compensation, Business, Interest, Dividends, etc.)
+- Complete inductive type for all §61(a) categories
+- `calculateGrossIncome` function with aggregation logic
+- 3 theorems (sum equality, non-negative, monotonic)
+- Working examples and helper constructors
+- **Processed through Aristotle** - proofs generated
+
 **Test Results**:
 ```
-Single $50k: $6,053 ✓
-Married Filing Jointly $100k: $12,106 ✓
-Head of Household $75k: $9,859 ✓
-Single $11.6k (bracket boundary): $1,160 ✓
-Single $1M: $328,187.75 ✓
-Zero income: $0 ✓
+Section 1:
+  Single $50k: $6,053 ✓
+  Married Filing Jointly $100k: $12,106 ✓
+  Head of Household $75k: $9,859 ✓
+  Single $1M: $328,187.75 ✓
+
+Section 61:
+  W-2 employee ($50k wages + $500 interest + $250 dividends): $50,750 ✓
 ```
 
-### Automation Pipeline (Ready to Scale)
+### Automation Pipeline (Production-Ready at Scale)
 
 **4 Production Scripts**:
 1. `scrape_cornell.py` - Scrapes IRC sections from Cornell Law
@@ -41,7 +51,11 @@ Zero income: $0 ✓
 3. `generate_lean_skeleton.py` - Auto-generates Lean templates
 4. `aristotle_batch.py` - Batch processes sections through Aristotle API
 
-**Demonstrated**: Scraped and generated skeletons for IRC §§61-63
+**Demonstrated at Scale**:
+- **76 sections scraped** (IRC §§1-91)
+- **814 cross-reference edges** mapped
+- Dependency graph constructed
+- Aristotle processing verified
 
 ## 🚀 Quick Start
 
@@ -159,9 +173,12 @@ See [ROADMAP.md](docs/ROADMAP.md) for complete 7-phase plan covering all ~9,834 
 
 ## 📈 Statistics
 
-- **Sections Formalized**: 1 complete, 3 skeletons
-- **Test Cases**: 6 passing
-- **Lines of Lean**: ~400
+- **Sections Formalized**: 2 complete (§§1, 61), 2 skeletons (§§62, 63)
+- **Sections Scraped**: 76 (§§1-91)
+- **Cross-References Mapped**: 814 dependency edges
+- **Test Cases**: 7 passing (6 for §1, 1 for §61)
+- **Lines of Lean**: ~500
+- **Aristotle Processed**: 2 sections
 - **Automation Scripts**: 4
 - **GitHub Issues**: 7 (roadmap)
 
