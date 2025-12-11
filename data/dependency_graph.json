@@ -1,0 +1,58 @@
+{
+  "graph": {
+    "forward": {
+      "61": [
+        "61",
+        "62"
+      ],
+      "62": [
+        "61",
+        "63",
+        "62"
+      ],
+      "63": [
+        "63",
+        "62"
+      ]
+    },
+    "reverse": {
+      "61": [
+        "61",
+        "62"
+      ],
+      "62": [
+        "61",
+        "63",
+        "62"
+      ],
+      "63": [
+        "63",
+        "62"
+      ]
+    }
+  },
+  "topological_order": [],
+  "statistics": {
+    "total_sections": 3,
+    "sections_with_dependencies": 3,
+    "total_dependency_edges": 7,
+    "most_dependencies": {
+      "section": "62",
+      "count": 3,
+      "dependencies": [
+        "61",
+        "63",
+        "62"
+      ]
+    },
+    "most_dependents": {
+      "section": "62",
+      "count": 3,
+      "dependents": [
+        "61",
+        "63",
+        "62"
+      ]
+    }
+  }
+}
