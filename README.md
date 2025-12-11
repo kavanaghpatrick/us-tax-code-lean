@@ -173,11 +173,14 @@ See [ROADMAP.md](docs/ROADMAP.md) for complete 7-phase plan covering all ~9,834 
 
 ## 📈 Statistics
 
-- **Sections Formalized**: 2 complete (§§1, 61), 2 skeletons (§§62, 63)
+- **Sections Implemented**: 3 complete (§§1, 24, 61)
+- **Section Skeletons**: 73 (§§2-91, excluding implemented)
+- **Total Sections in Codebase**: 76
 - **Sections Scraped**: 76 (§§1-91)
 - **Cross-References Mapped**: 814 dependency edges
-- **Test Cases**: 7 passing (6 for §1, 1 for §61)
-- **Lines of Lean**: ~500
+- **Test Files**: 76
+- **Total Lean Files**: 156
+- **Test Cases**: 7 passing
 - **Aristotle Processed**: 2 sections
 - **Automation Scripts**: 4
 - **GitHub Issues**: 7 (roadmap)
