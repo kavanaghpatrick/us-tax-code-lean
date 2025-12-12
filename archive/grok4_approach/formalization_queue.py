@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Multi-LLM Formalization Queue System
+Grok-4 Formalization Queue System
 
-Uses Claude for generation, Grok for validation, iteration until quality threshold met.
+Uses Grok-4 for generation and validation, iteration until quality threshold met.
 """
 
 import argparse
@@ -13,7 +13,6 @@ import subprocess
 from pathlib import Path
 from typing import Dict, List, Optional
 from dataclasses import dataclass
-from anthropic import Anthropic
 import time
 
 @dataclass
@@ -36,14 +35,8 @@ class FormalizationQueue:
         self.queue_file = self.project_root / 'data' / 'formalization_queue.json'
         self.sections_data = self.project_root / 'data' / 'sections.json'
 
-        # Initialize API clients
-        anthropic_key = os.getenv('ANTHROPIC_API_KEY')
-        if not anthropic_key:
-            raise ValueError("ANTHROPIC_API_KEY environment variable not set")
-
-        self.claude = Anthropic(api_key=anthropic_key)
+        # Initialize Grok API
         self.grok_api_key = os.getenv('GROK_API_KEY')
-
         if not self.grok_api_key:
             raise ValueError("GROK_API_KEY environment variable not set")
 
@@ -85,8 +78,43 @@ class FormalizationQueue:
             # Convert list to dict keyed by section number
             self.sections = {str(s['section']): s for s in sections_list}
 
-    def generate_with_claude(self, section_num: str, legal_text: str) -> str:
-        """Generate Lean code using Claude Opus"""
+    def call_grok(self, prompt: str, temperature: float = 0.3, json_mode: bool = False) -> str:
+        """Call Grok-4 API via curl"""
+        request = {
+            "messages": [{"role": "user", "content": prompt}],
+            "model": "grok-4",
+            "temperature": temperature,
+            "max_tokens": 4000
+        }
+
+        if json_mode:
+            request["response_format"] = {"type": "json_object"}
+
+        # Use Python to write JSON (handles escaping)
+        request_file = '/tmp/grok_request.json'
+        with open(request_file, 'w') as f:
+            json.dump(request, f)
+
+        # Call Grok API
+        result = subprocess.run([
+            'curl', '-s', '-X', 'POST',
+            'https://api.x.ai/v1/chat/completions',
+            '-H', f'Authorization: Bearer {self.grok_api_key}',
+            '-H', 'Content-Type: application/json',
+            '-d', f'@{request_file}'
+        ], capture_output=True, text=True, timeout=300)
+
+        if result.returncode != 0:
+            raise RuntimeError(f"Grok API call failed: {result.stderr}")
+
+        response = json.loads(result.stdout)
+        if 'error' in response:
+            raise RuntimeError(f"Grok API error: {response['error']}")
+
+        return response['choices'][0]['message']['content']
+
+    def generate_with_grok(self, section_num: str, legal_text: str) -> str:
+        """Generate Lean code using Grok-4"""
 
         # Truncate if too long
         if len(legal_text) > 3000:
@@ -110,24 +138,16 @@ Requirements:
 
 Output ONLY valid Lean 4 code. Be comprehensive and accurate."""
 
-        print(f"  [Claude] Generating code for §{section_num}...")
+        print(f"  [Grok-4] Generating code for §{section_num}...")
 
-        response = self.claude.messages.create(
-            model="claude-opus-4-20250514",
-            max_tokens=4000,
-            messages=[{"role": "user", "content": prompt}]
-        )
+        code = self.call_grok(prompt, temperature=0.3)
 
-        code = response.content[0].text
-
-        # Track tokens
-        tokens = response.usage.input_tokens + response.usage.output_tokens
-        print(f"  [Claude] Generated {len(code)} chars ({tokens} tokens)")
+        print(f"  [Grok-4] Generated {len(code)} chars")
 
         return code
 
     def validate_with_grok(self, section_num: str, legal_text: str, lean_code: str) -> ValidationResult:
-        """Validate code using Grok"""
+        """Validate code using Grok-4 (critical reviewer mode)"""
 
         # Truncate for prompt
         if len(legal_text) > 2000:
@@ -170,29 +190,9 @@ Format response as JSON:
 }}
 """
 
-        print(f"  [Grok] Reviewing code...")
+        print(f"  [Grok-4] Reviewing code...")
 
-        # Call Grok API
-        request = {
-            "messages": [{"role": "user", "content": prompt}],
-            "model": "grok-2-1212",
-            "temperature": 0.3,
-            "response_format": {"type": "json_object"}
-        }
-
-        with open('/tmp/grok_validation.json', 'w') as f:
-            json.dump(request, f)
-
-        result = subprocess.run([
-            'curl', '-s', '-X', 'POST',
-            'https://api.x.ai/v1/chat/completions',
-            '-H', f'Authorization: Bearer {self.grok_api_key}',
-            '-H', 'Content-Type: application/json',
-            '-d', f'@/tmp/grok_validation.json'
-        ], capture_output=True, text=True)
-
-        response = json.loads(result.stdout)
-        review_json = json.loads(response['choices'][0]['message']['content'])
+        review_json = json.loads(self.call_grok(prompt, temperature=0.3, json_mode=True))
 
         # Parse into ValidationResult
         avg_score = (
@@ -212,12 +212,12 @@ Format response as JSON:
             average_score=avg_score
         )
 
-        print(f"  [Grok] Assessment: {validation.assessment} (avg {avg_score:.1f}/10)")
+        print(f"  [Grok-4] Assessment: {validation.assessment} (avg {avg_score:.1f}/10)")
 
         return validation
 
-    def refine_with_claude(self, section_num: str, code: str, issues: List[str]) -> str:
-        """Refine code based on Grok's feedback"""
+    def refine_with_grok(self, section_num: str, code: str, issues: List[str]) -> str:
+        """Refine code based on validation feedback"""
 
         issues_text = "\n".join(f"- {issue}" for issue in issues)
 
@@ -231,16 +231,10 @@ Format response as JSON:
 
 Generate IMPROVED code that addresses all issues. Output ONLY valid Lean 4 code."""
 
-        print(f"  [Claude] Refining code (fixing {len(issues)} issues)...")
+        print(f"  [Grok-4] Refining code (fixing {len(issues)} issues)...")
 
-        response = self.claude.messages.create(
-            model="claude-opus-4-20250514",
-            max_tokens=4000,
-            messages=[{"role": "user", "content": prompt}]
-        )
-
-        refined = response.content[0].text
-        print(f"  [Claude] Refinement complete")
+        refined = self.call_grok(prompt, temperature=0.3)
+        print(f"  [Grok-4] Refinement complete")
 
         return refined
 
@@ -266,7 +260,7 @@ Generate IMPROVED code that addresses all issues. Output ONLY valid Lean 4 code.
         return success
 
     def formalize_section(self, section_num: str) -> bool:
-        """Formalize a single section with multi-LLM validation"""
+        """Formalize a single section with Grok-4 validation"""
 
         print(f"\n{'='*60}")
         print(f"FORMALIZING SECTION {section_num}")
@@ -287,10 +281,10 @@ Generate IMPROVED code that addresses all issues. Output ONLY valid Lean 4 code.
             print(f"  {'-'*50}")
 
             try:
-                # Stage 1: Generate code
-                lean_code = self.generate_with_claude(section_num, legal_text)
+                # Stage 1: Generate code with Grok-4
+                lean_code = self.generate_with_grok(section_num, legal_text)
 
-                # Stage 2: Validate with Grok
+                # Stage 2: Validate with Grok-4 (critical reviewer mode)
                 validation = self.validate_with_grok(section_num, legal_text, lean_code)
 
                 # Track best attempt
@@ -310,7 +304,7 @@ Generate IMPROVED code that addresses all issues. Output ONLY valid Lean 4 code.
                     continue
                 elif validation.issues and iteration < self.max_iterations:
                     print(f"\n  ⚠ NEEDS_WORK - Refining...")
-                    lean_code = self.refine_with_claude(section_num, lean_code, validation.issues)
+                    lean_code = self.refine_with_grok(section_num, lean_code, validation.issues)
                     best_code = lean_code
 
             except Exception as e:
@@ -403,9 +397,21 @@ def main():
         sections = ['71', '101', '102', '103', '108']
         print("Running 5-section pilot...")
     elif args.priority_50:
-        # TODO: Full list of 50 priority sections
-        sections = ['71', '101', '102', '103', '108', '121', '163', '164', '165', '166']
-        print("Processing priority sections...")
+        # Full list of 50 priority sections (validated against scraped data)
+        sections = [
+            # Income (10)
+            '1', '61', '62', '63', '71', '101', '102', '103', '108', '121',
+            # Deductions (15)
+            '162', '163', '164', '165', '166', '167', '168', '170', '174', '179',
+            '195', '212', '213', '217', '274',
+            # Credits (10) - using main sections (25A/25D/30D are subsections of 25/30)
+            '21', '24', '25', '27', '30', '31', '32', '38', '41', '45',
+            # Capital Gains (10)
+            '1001', '1011', '1012', '1014', '1015', '1031', '1202', '1221', '1222', '1231',
+            # Corporate/Partnership (5)
+            '11', '301', '302', '303', '311'
+        ]
+        print(f"Processing {len(sections)} priority sections...")
     elif args.sections:
         sections = args.sections.split(',')
     else:

@@ -1,7 +1,25 @@
 # US Tax Code Formalization Project
 
 ## Mission
-Formalize US Internal Revenue Code (Title 26) in Lean 4 using Harmonic Aristotle.
+Formalize US Internal Revenue Code (Title 26) in Lean 4 using **Aristotle INFORMAL mode** for formal verification.
+
+## Formalization Strategy
+
+<formalization>
+<rule priority="critical">ALWAYS use Aristotle INFORMAL mode for tax code formalization</rule>
+<rule priority="critical">Formal verification is REQUIRED - no unverified LLM output</rule>
+<rule>Each section must pass Lean type checker via Aristotle proof search</rule>
+<rule>Timeout: 24 hours max per section (formal proving is slow but thorough)</rule>
+</formalization>
+
+**Why Aristotle INFORMAL**:
+- **Formal verification**: Code is mathematically proven correct
+- **No hallucinations**: Lean type system rejects invalid code
+- **Academic rigor**: Publication-ready quality
+- **Correctness guarantees**: Tax code needs precision, not probabilities
+- **Track record**: Gold medal IMO 2025, solved Erdős problems
+
+**Archived**: Grok-4/Claude LLM approaches → `archive/grok4_approach/`
 
 ## Primary Source
 **Cornell Law**: https://www.law.cornell.edu/uscode/text/26

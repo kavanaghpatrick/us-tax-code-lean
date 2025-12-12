@@ -107,7 +107,7 @@ python3 scripts/formalization_queue.py --pilot
 python3 scripts/formalization_queue.py --priority-50
 ```
 
-**Note**: Currently processes first 10, needs full list added
+**Sections**: All 50 priority sections (Income, Deductions, Credits, Capital Gains, Corporate/Partnership)
 
 **Expected**:
 - 2-4 hours total
