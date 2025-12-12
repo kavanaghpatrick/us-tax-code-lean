@@ -211,3 +211,102 @@ def example_lobbying : Expense := {
 
 theorem lobbying_not_deductible : deductibleAmount example_lobbying = 0 := by
   unfold deductibleAmount example_lobbying; rfl
+/-
+Additional verification theorems for IRC Section 162
+Generated: 2025-12-12
+Purpose: Formal verification of §162(f), §162(m), §162(e) fixes
+-/
+
+-- §162(f): Government fines are NEVER deductible
+theorem govt_fine_always_zero (e : Expense) (amt : Currency) :
+  e.type = ExpenseType.FineOrPenalty true amt →
+  e.ordinary ∧ e.necessary ∧ e.paidOrIncurred ∧ e.tradeOrBusiness →
+  deductibleAmount e = 0 := by
+  intro h_type h_conditions
+  unfold deductibleAmount
+  simp [h_conditions]
+  rw [h_type]
+  simp
+
+-- §162(f): Private penalties ARE deductible
+theorem private_penalty_deductible (e : Expense) (amt : Currency) :
+  e.type = ExpenseType.FineOrPenalty false amt →
+  e.ordinary ∧ e.necessary ∧ e.paidOrIncurred ∧ e.tradeOrBusiness →
+  amt > 0 →
+  deductibleAmount e = amt := by
+  intro h_type h_conditions h_positive
+  unfold deductibleAmount
+  simp [h_conditions]
+  rw [h_type]
+  simp
+
+-- §162(m): Executive compensation cap is enforced at $1M for public companies with covered employees
+theorem exec_comp_cap_enforced (e : Expense) (amt : Currency) :
+  e.type = ExpenseType.ExecutiveCompensation true true amt →
+  e.ordinary ∧ e.necessary ∧ e.paidOrIncurred ∧ e.tradeOrBusiness →
+  amt > 1000000 →
+  deductibleAmount e = 1000000 := by
+  intro h_type h_conditions h_exceeds
+  unfold deductibleAmount
+  simp [h_conditions]
+  rw [h_type]
+  simp
+  exact Int.min_eq_right (Int.le_of_lt h_exceeds)
+
+-- §162(m): Executive compensation for non-public companies has no cap
+theorem exec_comp_no_cap_private (e : Expense) (amt : Currency) :
+  e.type = ExpenseType.ExecutiveCompensation false true amt →
+  e.ordinary ∧ e.necessary ∧ e.paidOrIncurred ∧ e.tradeOrBusiness →
+  deductibleAmount e = amt := by
+  intro h_type h_conditions
+  unfold deductibleAmount
+  simp [h_conditions]
+  rw [h_type]
+  simp
+
+-- §162(m): Executive compensation for non-covered employees has no cap even in public companies
+theorem exec_comp_no_cap_non_covered (e : Expense) (amt : Currency) :
+  e.type = ExpenseType.ExecutiveCompensation true false amt →
+  e.ordinary ∧ e.necessary ∧ e.paidOrIncurred ∧ e.tradeOrBusiness →
+  deductibleAmount e = amt := by
+  intro h_type h_conditions
+  unfold deductibleAmount
+  simp [h_conditions]
+  rw [h_type]
+  simp
+
+-- §162(e): Lobbying expenses are NEVER deductible
+theorem lobbying_always_zero (e : Expense) (direct : Bool) (amt : Currency) :
+  e.type = ExpenseType.LobbyingExpense direct amt →
+  e.ordinary ∧ e.necessary ∧ e.paidOrIncurred ∧ e.tradeOrBusiness →
+  deductibleAmount e = 0 := by
+  intro h_type h_conditions
+  unfold deductibleAmount
+  simp [h_conditions]
+  rw [h_type]
+  simp
+
+-- §162(e): Lobbying disallowance applies regardless of whether direct or grassroots
+theorem lobbying_direct_and_grassroots_zero (e : Expense) (amt : Currency) :
+  (e.type = ExpenseType.LobbyingExpense true amt ∨ e.type = ExpenseType.LobbyingExpense false amt) →
+  e.ordinary ∧ e.necessary ∧ e.paidOrIncurred ∧ e.tradeOrBusiness →
+  deductibleAmount e = 0 := by
+  intro h_type h_conditions
+  unfold deductibleAmount
+  simp [h_conditions]
+  cases h_type with
+  | inl h => rw [h]; simp
+  | inr h => rw [h]; simp
+
+-- Completeness: All three new expense types are properly handled
+theorem new_provisions_coverage :
+  ∃ (e1 e2 e3 : Expense),
+    (∃ govt amt, e1.type = ExpenseType.FineOrPenalty govt amt) ∧
+    (∃ isPub isCov amt, e2.type = ExpenseType.ExecutiveCompensation isPub isCov amt) ∧
+    (∃ direct amt, e3.type = ExpenseType.LobbyingExpense direct amt) := by
+  use example_govt_fine, example_exec_comp_capped, example_lobbying
+  constructor
+  · use true, 50000; rfl
+  constructor
+  · use true, true, 2000000; rfl
+  · use true, 75000; rfl

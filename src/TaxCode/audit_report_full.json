@@ -1,0 +1,651 @@
+[
+  {
+    "section": "1",
+    "score": 2,
+    "status": "CRITICAL",
+    "critical_issues": [
+      "Only contains TODO comments and placeholder code",
+      "No implementation of tax bracket calculations",
+      "No implementation of filing status-specific rates",
+      "No implementation of inflation adjustments"
+    ],
+    "major_issues": [],
+    "minor_issues": [],
+    "strengths": [
+      "Includes complete legal text from 26 USC \u00a71",
+      "Has proper Aristotle header with UUID tracking"
+    ],
+    "recommendation": "RERUN",
+    "summary": "Section 1 (Tax brackets) has no implementation - only TODOs. This is a critical section that defines the entire tax rate structure. Needs complete rerun with enhanced prompts for 2024 TCJA brackets."
+  },
+  {
+    "section": "11",
+    "score": 9,
+    "status": "EXCELLENT",
+    "critical_issues": [],
+    "major_issues": [],
+    "minor_issues": [
+      "Missing \u00a711(b) controlled group rules - only basic flat tax implemented",
+      "Missing \u00a711(c) personal holding company rules",
+      "Missing \u00a711(d) foreign corporations provisions",
+      "No validation of taxable income calculation prerequisites"
+    ],
+    "strengths": [
+      "Correctly implements the flat 21% corporate tax rate per \u00a711(b) as amended by TCJA",
+      "Includes complete legal text and historical rate changes",
+      "Clean implementation with proper type safety",
+      "Has example calculations with #eval",
+      "Handles the fundamental corporate taxation correctly"
+    ],
+    "recommendation": "ACCEPT",
+    "summary": "Section 11 correctly implements the core 21% flat corporate tax rate. While it's missing advanced provisions like controlled groups and personal holding companies, the implemented portion is legally accurate and immediately usable."
+  },
+  {
+    "section": "61",
+    "score": 8,
+    "status": "EXCELLENT",
+    "critical_issues": [],
+    "major_issues": [],
+    "minor_issues": [
+      "Missing many specific income types from \u00a761(a) list beyond the core ones implemented",
+      "No cross-references to exclusions from other sections",
+      "CompensationIncome could be more detailed (doesn't distinguish wages vs salary vs bonuses)"
+    ],
+    "strengths": [
+      "Correctly implements the fundamental concept of gross income as 'all income from whatever source'",
+      "Comprehensive structures for different income types",
+      "Includes key items: compensation, business, gains, interest, rents, dividends, alimony, discharge of indebtedness",
+      "Proper aggregation function to calculate total gross income",
+      "Good type safety with dedicated income category types"
+    ],
+    "recommendation": "ACCEPT",
+    "summary": "Section 61 provides a solid foundation for gross income calculation with proper modeling of major income categories. The implementation correctly captures the 'all-inclusive' nature of gross income."
+  },
+  {
+    "section": "62",
+    "score": 7,
+    "status": "GOOD",
+    "critical_issues": [],
+    "major_issues": [
+      "Only implements a subset of above-the-line deductions from \u00a762(a)",
+      "Missing many deductions like educator expenses, HSA contributions, student loan interest",
+      "No validation of deduction limits or phaseouts"
+    ],
+    "minor_issues": [
+      "DeductionCategory could be more granular",
+      "No cross-validation with Schedule 1 requirements",
+      "Missing documentation for which \u00a762(a) paragraph each deduction maps to"
+    ],
+    "strengths": [
+      "Correctly distinguishes above-the-line vs below-the-line deductions",
+      "Implements trade/business expense deductions \u00a762(a)(1)",
+      "Clean calculation of adjusted gross income (AGI) = Gross Income - Deductions",
+      "Proper type safety and structure separation"
+    ],
+    "recommendation": "FIX",
+    "summary": "Section 62 correctly implements the AGI calculation concept and key deductions, but is incomplete in terms of the full range of above-the-line deductions available under \u00a762(a)."
+  },
+  {
+    "section": "63",
+    "score": 8,
+    "status": "EXCELLENT",
+    "critical_issues": [],
+    "major_issues": [],
+    "minor_issues": [
+      "Standard deduction amounts are hardcoded for 2024 - no inflation adjustment logic",
+      "Missing additional standard deduction for age 65+ and blindness",
+      "AdditionalStandardDeduction structure exists but not integrated into calculation",
+      "No validation of itemized deduction types or limitations"
+    ],
+    "strengths": [
+      "Correctly implements taxable income = AGI - (standard or itemized) - QBID",
+      "Accurate 2024 standard deduction amounts per TCJA: Single $14,600, MFJ $29,200, MFS $14,600, HOH $21,900",
+      "Properly distinguishes between standard and itemized deductions",
+      "Includes QBID (\u00a7199A deduction) in taxable income calculation",
+      "Theorems prove taxable income <= AGI and other bounds",
+      "Clean mathematical structure with formal verification"
+    ],
+    "recommendation": "ACCEPT",
+    "summary": "Section 63 accurately implements the core taxable income calculation with correct 2024 standard deduction amounts and proper integration of QBID. Excellent for standard tax calculations."
+  },
+  {
+    "section": "71",
+    "score": 2,
+    "status": "CRITICAL",
+    "critical_issues": [
+      "Only contains TODO comments and placeholder code",
+      "No implementation of alimony income/deduction rules",
+      "Critical given the 2018 TCJA repeal for post-2018 instruments"
+    ],
+    "major_issues": [],
+    "minor_issues": [],
+    "strengths": [
+      "Includes complete legal text showing the repeal provisions",
+      "Has proper Aristotle UUID tracking"
+    ],
+    "recommendation": "RERUN",
+    "summary": "Section 71 (Alimony) has no implementation. This section was effectively repealed by TCJA for divorce/separation instruments after 2018, but the formalization should model both pre-2019 and post-2018 rules."
+  },
+  {
+    "section": "101",
+    "score": 7,
+    "status": "GOOD",
+    "critical_issues": [],
+    "major_issues": [
+      "Missing \u00a7101(a)(2) exceptions for transfers for value",
+      "Missing \u00a7101(d)-(j) - employer-owned life insurance, pension plan distributions, etc.",
+      "No modeling of per-diem limitations in \u00a7101(g)"
+    ],
+    "minor_issues": [
+      "Date handling uses Nat which is simplified",
+      "No validation that beneficiary relationships are legitimate",
+      "Missing coordination with \u00a77702 definition of life insurance contract"
+    ],
+    "strengths": [
+      "Correctly implements \u00a7101(a)(1) exclusion for life insurance death benefits",
+      "Includes \u00a7101(g) qualified long-term care services provisions",
+      "Proper implementation of excess benefit calculation for long-term care",
+      "Theorems prove non-negativity and amount limits",
+      "Good structure separation between life insurance and long-term care"
+    ],
+    "recommendation": "ACCEPT",
+    "summary": "Section 101 correctly implements the core life insurance death benefit exclusion and long-term care provisions. While missing some exceptions and special rules, the implemented portions are legally accurate."
+  },
+  {
+    "section": "103",
+    "score": 5,
+    "status": "MODERATE",
+    "critical_issues": [
+      "Only partial implementation - has structure but lacks key provisions",
+      "Missing \u00a7103(b) private activity bond restrictions entirely",
+      "No proofs for theorems - all use 'sorry'"
+    ],
+    "major_issues": [
+      "No implementation of arbitrage bond rules from \u00a7103(c)",
+      "Missing qualified bonds exceptions from \u00a7103(b)(2)",
+      "BondType is overly simplified - doesn't capture the complex private activity bond taxonomy"
+    ],
+    "minor_issues": [
+      "No validation of bond issuance requirements",
+      "Missing coordination with \u00a7141-150 bond provisions",
+      "Date handling could be more robust"
+    ],
+    "strengths": [
+      "Has basic structure for municipal bond interest exclusion",
+      "Includes InterestIncome and Bond structures",
+      "Conceptually captures the tax-exempt vs taxable distinction"
+    ],
+    "recommendation": "RERUN",
+    "summary": "Section 103 has skeleton implementation but is incomplete. The core concept is there but lacks the critical private activity bond limitations and all proofs are incomplete ('sorry'). Needs substantial enhancement."
+  },
+  {
+    "section": "108",
+    "score": 7,
+    "status": "GOOD",
+    "critical_issues": [],
+    "major_issues": [
+      "Missing subsection (c) - Qualified principal residence exceptions and provisions beyond 2026 not fully modeled",
+      "Missing subsection (d)(7) - Real property business indebtedness election mechanics not modeled",
+      "Missing the basis reduction election under \u00a7108(b)(5) to apply reductions to depreciable property basis first",
+      "QualifiedPrincipalResidence category uses simplified date logic - actual statute has complex acquisition indebtedness limit ($750,000) and discharge timing rules",
+      "No modeling of S corporation, partnership, or C corporation specific rules from subsections (d) and (e)"
+    ],
+    "minor_issues": [
+      "TaxpayerElections structure is minimal - only has one boolean for insolvency over principal residence",
+      "No modeling of \u00a7108(b)(4)(A) special ordering elections",
+      "Missing the requirement that qualified farm indebtedness must be incurred directly in farming operations (50% gross receipts test not modeled)",
+      "QualifiedRealPropertyBusiness lacks the detailed qualification requirements (e.g., debt secured by real property used in trade or business)",
+      "Attribute reduction does not handle the special rule for S corporations or partnerships",
+      "No validation that 'written_arrangement_before_2026' actually represents a written agreement to discharge"
+    ],
+    "strengths": [
+      "All theorems proven without 'sorry' - code is formally verified",
+      "Core exclusion logic for Title 11 and Insolvency is correctly implemented",
+      "Attribute reduction waterfall correctly implements the 7-step sequence from \u00a7108(b)(2)",
+      "Credit reductions correctly apply 33 1/3 cents per dollar formula (divide by 3 logic)",
+      "Insolvency limitation correctly uses min(discharge_amount, insolvency_amount)",
+      "Comprehensive examples with #eval demonstrating correct arithmetic",
+      "Good separation of concerns with distinct structures for DischargeIndebtedness, TaxpayerStatus, and TaxpayerElections",
+      "Type safety through TaxYear validation (year >= 1913)"
+    ],
+    "recommendation": "FIX",
+    "summary": "Section 108 implementation covers the core discharge of indebtedness exclusions and attribute reduction rules accurately. The main calculations are correct and formally verified. However, it lacks critical provisions like the basis reduction election, complete qualified principal residence indebtedness rules (acquisition debt limits, timing), and entity-specific rules. The code is usable for basic Title 11 and insolvency scenarios but needs enhancement for real-world comprehensive tax planning. FIXED: Corrected the critical backwards C corporation logic error in QualifiedRealPropertyBusiness."
+  },
+  {
+    "section": "121",
+    "score": 8,
+    "status": "GOOD",
+    "critical_issues": [],
+    "major_issues": [
+      "Missing subsection (c) - reduced exclusion for failure to meet requirements due to unforeseen circumstances (health, employment, etc.) is marked as TODO in comments but not implemented",
+      "Missing subsection (d)(5)-(10) - special rules for sales involving joint returns, deceased spouses, and divorced/legally separated individuals are partially implemented",
+      "Joint return requirements in \u00a7121(b)(2)(A) have complex ownership attribution rules not fully captured",
+      "Missing the proper calculation for acquisition indebtedness that qualifies under subsection (b)(4)"
+    ],
+    "minor_issues": [
+      "DATE_2009_01_01 is set to Day := 0 which is arbitrary and could cause confusion in real usage",
+      "checkFrequencyLimit uses 'any' which checks if ANY prior exclusion was within 2 years - should probably check if there is NO prior exclusion within 2 years for clarity",
+      "The nonqualified use ratio calculation is complex but lacks documentation explaining the exception zone logic",
+      "Missing validation that ownership and use periods are actually for 'principal residence' vs other uses",
+      "spouseDeathDate handling in QualifyingWidower status could be more robust",
+      "No modeling of divorced spouse rules where property transferred in divorce is treated as owned/used by receiving spouse during marriage"
+    ],
+    "strengths": [
+      "All theorems proven without 'sorry' - fully verified code",
+      "Ownership and use tests correctly implement '2 out of 5 years' lookback period (730 days out of 1825 days)",
+      "Joint return requirements properly check ownership (either spouse), use (both spouses), and frequency (neither spouse)",
+      "Exclusion limits correctly distinguish $250,000 vs $500,000 based on filing status and joint return requirements",
+      "Nonqualified use ratio calculation implements the 2009 exception properly - only post-2009 periods count, and excludes the final 5 years after last use",
+      "Time period intersection logic is mathematically sound",
+      "Theorems prove that excluded gain does not exceed the statutory limit or total gain",
+      "Complex rational number arithmetic for nonqualified use properly uses Rat.divInt and floor functions"
+    ],
+    "recommendation": "FIX",
+    "summary": "Section 121 implementation is mathematically sophisticated and correctly implements the core principal residence exclusion rules including ownership/use tests, exclusion limits, joint return requirements, and the complex nonqualified use calculations. The code is formally verified with sound theorems. However, it lacks the reduced exclusion provisions for unforeseen circumstances (subsection c) and some special rules for divorced/deceased spouse scenarios. It's highly usable for standard principal residence sales but needs enhancements for edge cases."
+  },
+  {
+    "section": "151",
+    "score": 1,
+    "status": "CRITICAL",
+    "critical_issues": [
+      "Aristotle failed to load this code - syntax error 'Unknown identifier `placeholder`'",
+      "Only contains TODO comments and `#check placeholder`",
+      "No implementation whatsoever",
+      "Critical section for personal exemptions (though zeroed out 2018-2025 by TCJA)"
+    ],
+    "major_issues": [],
+    "minor_issues": [],
+    "strengths": [
+      "Includes extensive legal text showing TCJA changes and 2025 seniors deduction",
+      "Has proper Aristotle UUID tracking"
+    ],
+    "recommendation": "RERUN",
+    "summary": "Section 151 (Personal exemptions) completely failed to compile. Aristotle could not load the code due to syntax errors. While personal exemptions are zero for 2018-2025, the section now includes important seniors deduction provisions (\u00a7151(d)(5)(C)) that need proper formalization."
+  },
+  {
+    "section": "152",
+    "score": 1,
+    "status": "CRITICAL",
+    "critical_issues": [
+      "Aristotle failed to load this code - syntax error 'Unknown identifier `placeholder`'",
+      "Only contains TODO comments and `#check placeholder`",
+      "No implementation whatsoever",
+      "Critical section that defines dependents for many other provisions"
+    ],
+    "major_issues": [],
+    "minor_issues": [],
+    "strengths": [
+      "Includes complete legal text with qualifying child and qualifying relative definitions",
+      "Has proper Aristotle UUID tracking"
+    ],
+    "recommendation": "RERUN",
+    "summary": "Section 152 (Dependent defined) completely failed to compile. This is a critical definitional section used by \u00a7\u00a724, 151, 32, and many others. The qualifying child vs qualifying relative distinction is fundamental to family tax benefits and must be properly formalized."
+  },
+  {
+    "section": "163",
+    "score": 8,
+    "status": "EXCELLENT",
+    "critical_issues": [],
+    "major_issues": [],
+    "minor_issues": [
+      "Missing \u00a7163(h) personal interest disallowance detailed rules",
+      "Missing \u00a7163(j) business interest limitation (30% of ATI)",
+      "Missing qualified residence interest definitions from \u00a7163(h)(3)",
+      "No student loan interest limitation from \u00a7221 integration"
+    ],
+    "strengths": [
+      "Excellent implementation of \u00a7163(b) installment purchase interest rules",
+      "Correctly calculates imputed interest at 6% of average unpaid balance",
+      "Properly limits allowable installment interest to minimum of imputed interest and carrying charges",
+      "Comprehensive \u00a7163(d) investment interest limitation with carryforward mechanics",
+      "Correctly implements net investment income calculation with gross income and net gains",
+      "Properly excludes qualified residence interest and passive activity interest from investment interest",
+      "Has complete structures: Contract, InvestmentIncomeDetails, IRCSection163Data, InterestPayment",
+      "Multiple theorems: installment_interest_bounded, disallowed_investment_interest_nonneg, deduction_is_full_if_income_sufficient",
+      "Includes working #eval examples demonstrating calculations",
+      "Clean InterestCategory enum distinguishing Investment, QualifiedResidence, PassiveActivity, Personal, TradeOrBusiness"
+    ],
+    "recommendation": "ACCEPT",
+    "summary": "Section 163 (Interest deductions) has an excellent implementation covering installment purchases and investment interest limitations. The mathematics are correct, theorems are proven, and the code handles carryforwards properly. While missing some provisions like \u00a7163(j) and detailed qualified residence rules, the implemented portions are comprehensive and immediately usable."
+  },
+  {
+    "section": "166",
+    "score": 7,
+    "status": "GOOD",
+    "critical_issues": [],
+    "major_issues": [
+      "Missing special rules for financial institutions under \u00a7166(f)",
+      "No modeling of guarantor/endorser situations",
+      "Missing coordination with \u00a7165(g) for worthless securities treatment"
+    ],
+    "minor_issues": [
+      "Debt structure could include more details like debtor identity, origination date",
+      "No validation of 'adjusted_basis' calculation correctness",
+      "Missing documentation of what constitutes 'business debt' vs 'nonbusiness debt'",
+      "charge_off rules not explicitly defined"
+    ],
+    "strengths": [
+      "Correctly implements \u00a7166(a)(1) wholly worthless debt deduction at full adjusted basis",
+      "Properly handles \u00a7166(a)(2) partially worthless debts with charge-off limitation",
+      "Accurately implements \u00a7166(d) nonbusiness debt treatment as short-term capital loss",
+      "Correctly applies \u00a7166(e) denial of deduction for worthless securities",
+      "Deduction amount correctly limited to minimum of actual loss and amount charged off",
+      "Clean DeductionType enum: None, Ordinary, ShortTermCapitalLoss",
+      "Multiple theorems: deduction_nonnegative, security_deduction_zero, nonbusiness_worthless_is_short_term_capital_loss, partial_business_deduction_limit",
+      "All theorems proven without 'sorry'",
+      "Good separation between business and nonbusiness debt treatment"
+    ],
+    "recommendation": "ACCEPT",
+    "summary": "Section 166 (Bad debts) correctly implements the core bad debt deduction rules for both business and nonbusiness debts. The distinction between wholly and partially worthless debts is properly handled, and the security exclusion is correctly applied. While missing some special rules, the implemented logic is legally accurate and verified."
+  },
+  {
+    "section": "167",
+    "score": 8,
+    "status": "EXCELLENT",
+    "critical_issues": [],
+    "major_issues": [],
+    "minor_issues": [
+      "Missing \u00a7167(a) specific depreciation method calculations (no MACRS, straight-line, declining balance)",
+      "Missing \u00a7167(f) treatment of certain property of utility companies",
+      "Missing \u00a7167(g) deduction for railroad grading and tunnel bores",
+      "No actual depreciation schedule calculations - only eligibility and apportionment",
+      "PropertyUse could distinguish between different types of business use"
+    ],
+    "strengths": [
+      "Correctly implements \u00a7167(a) eligibility requirements: trade/business or production of income use",
+      "Properly excludes personal use property from depreciation",
+      "Implements \u00a7167(c) basis for depreciation rules including leasehold property",
+      "Excellent implementation of \u00a7167(d) apportionment for life tenants, trusts, estates",
+      "Correctly implements \u00a7167(e)(1) term interest limitation when remainder held by related person",
+      "Accurately handles \u00a7167(e)(3) basis adjustments: term holder reduction + remainder increase",
+      "Clean Ownership enum: Absolute, LifeTenant, Trust, Estate, TermInterest",
+      "Proper use of Rat (rational numbers) for income ratio calculations",
+      "Multiple theorems: personal_use_not_eligible, lease_property_basis_rule, term_interest_related_basis_adjustment, basis_increase_limitation_rule",
+      "All theorems proven without 'sorry'",
+      "Good structure with Property, BasisAdjustment, DepreciationClaim"
+    ],
+    "recommendation": "ACCEPT",
+    "summary": "Section 167 (Depreciation) excellently implements the eligibility, basis, and apportionment rules. The treatment of different ownership types (life tenant, trust, estate, term interest) is sophisticated and correct. Basis adjustment mechanics for term interests are properly modeled. While it doesn't implement actual depreciation method calculations, the foundational framework is strong and legally accurate."
+  },
+  {
+    "section": "199",
+    "score": 6,
+    "status": "MODERATE",
+    "critical_issues": [],
+    "major_issues": [
+      "Section 199 was REPEALED by TCJA for tax years after 2017 - limited applicability",
+      "Only implements two specific subsections: \u00a7199(c)(3)(C) and \u00a7199(d)(8)",
+      "Missing the core \u00a7199(a) deduction calculation (9% of lesser of QPAI or taxable income)",
+      "Missing \u00a7199(b) qualified production activities income (QPAI) definition",
+      "Missing \u00a7199(c) domestic production gross receipts rules beyond oil refining"
+    ],
+    "minor_issues": [
+      "Section199Input structure is minimal for the full calculation",
+      "No modeling of W-2 wage limitation mechanics beyond Puerto Rico rule",
+      "Transportation cost rule has hard-coded 25% - no validation",
+      "Missing coordination with \u00a7199A (qualified business income deduction) which replaced \u00a7199"
+    ],
+    "strengths": [
+      "Correctly implements is_section_199_applicable to check repeal date (applicable only through 2017)",
+      "Accurately models \u00a7199(c)(3)(C) independent refiner transportation cost rule (25% allocation) with 2021 termination",
+      "Properly implements \u00a7199(d)(8) Puerto Rico inclusion rules for 2006-2016 tax years",
+      "Correctly handles \u00a7199(d)(8)(B) W-2 wage calculation with/without Puerto Rico \u00a73401(a)(8) exclusion",
+      "All termination dates correctly modeled: 2017 (full repeal), 2021 (oil refiner rule), 2016 (Puerto Rico rule)",
+      "Three theorems: transportation_costs_after_2021, puerto_rico_rule_termination, section_199_repealed_after_2017",
+      "All theorems proven without 'sorry'",
+      "Clean modeling of historical rules that are no longer applicable"
+    ],
+    "recommendation": "ACCEPT_AS_HISTORICAL",
+    "summary": "Section 199 (Domestic production activities deduction) correctly models specific historical provisions that were in effect before repeal. While the section is now mostly irrelevant for current tax years, the formalization accurately captures the termination dates and the limited provisions implemented (oil refiner transportation costs and Puerto Rico rules). Useful for historical tax analysis but not for current planning."
+  },
+  {
+    "section": "274",
+    "score": 9,
+    "status": "EXCELLENT",
+    "critical_issues": [],
+    "major_issues": [],
+    "minor_issues": [
+      "Missing \u00a7274(a)(2) exceptions for reimbursed expenses",
+      "Missing \u00a7274(e) exceptions for certain entertainment, meals, or recreational expenses",
+      "Missing \u00a7274(l) meals while subject to DOT hours of service (80% deduction)",
+      "Missing \u00a7274(m) travel expense limitations",
+      "Missing \u00a7274(n) general 50% limitation on meals and entertainment"
+    ],
+    "strengths": [
+      "Excellent implementation of \u00a7274(a)(1) entertainment expense disallowance",
+      "Correctly disallows \u00a7274(a)(3) club dues",
+      "Properly disallows \u00a7274(a)(4) qualified transportation fringes",
+      "Outstanding implementation of \u00a7274(b) gift limitations: $25 per recipient with proper exceptions",
+      "Accurately models \u00a7274(b)(1)(A) exception for items \u2264$4, imprinted, distributed generally",
+      "Correctly implements \u00a7274(b)(1)(B) exception for signage/display racks",
+      "Sophisticated \u00a7274(c) foreign travel allocation: business days / total days",
+      "Properly applies \u00a7274(c)(2) exceptions: trips \u22647 days OR personal time <25%",
+      "Correctly implements \u00a7274(d) substantiation requirement (all unsubstantiated expenses = $0)",
+      "Clean ExpenseCategory enum: EntertainmentActivity, EntertainmentFacility, ClubDues, QualifiedTransportationFringe, Gift, ForeignTravel, Other",
+      "Detailed structures: GiftDetails (imprinted, is_signage), ForeignTravelDetails (days_total, days_business)",
+      "Multiple theorems: entertainment_disallowed, club_dues_disallowed, gift_limit_check, foreign_travel_allocation",
+      "All theorems proven without 'sorry'",
+      "Currency amounts in cents (e.g., $25 = 2500) for precision",
+      "Comprehensive example demonstrating calculations"
+    ],
+    "recommendation": "ACCEPT",
+    "summary": "Section 274 (Disallowance of certain expenses) is excellently implemented with precise coverage of entertainment disallowance, gift limitations, foreign travel allocation, and substantiation requirements. The mathematics are correct, edge cases are handled (short trips, small gifts), and the code is formally verified. This is production-quality code ready for real tax calculations."
+  },
+  {
+    "section": "301",
+    "score": 9,
+    "status": "EXCELLENT",
+    "critical_issues": [],
+    "major_issues": [],
+    "minor_issues": [
+      "Missing subsection (f) - special rules cross-references (redemptions \u00a7302, liquidations Part II, reorganizations Part III) are only noted in comments, not modeled",
+      "The isTwentyPercentCorporateShareholder function models \u00a7301(e)(2) but the broader \u00a7301(e) impact on earnings and profits calculation is not fully implemented",
+      "No modeling of \u00a7301(e)(1) which affects how \u00a7312 is applied for 20% corporate shareholders",
+      "CorporateShareholderProfile uses Nat for percentages (0-100) but no validation that values don't exceed 100",
+      "Section 318 constructive ownership rules referenced in \u00a7301(e)(2) are not implemented - assumes direct ownership only",
+      "Missing the detailed mechanics of how distributions affect earnings and profits under \u00a7312"
+    ],
+    "strengths": [
+      "All theorems proven without 'sorry' - code is formally verified",
+      "Correctly implements \u00a7301(b) amount distributed calculation: money + FMV of property - liabilities",
+      "Properly applies liability reduction from both assumed liabilities and liabilities subject to property",
+      "Amount distributed correctly cannot go below zero per \u00a7301(b)(2)",
+      "Taxable amount breakdown perfectly implements \u00a7301(c) three-tier treatment: (1) dividend to gross income, (2) return of capital reducing basis, (3) capital gain on excess",
+      "Includes the historical \u00a7301(c)(3)(B) exemption for pre-1913 increase in value",
+      "Basis of property received correctly set to FMV per \u00a7301(d)",
+      "Mathematical proof (decomposition_lemma_v2) verifies that dividend + applied + gain + exempt = total amount distributed",
+      "20% corporate shareholder definition correctly captures voting power OR value thresholds AND deduction entitlement",
+      "Comprehensive example with realistic values demonstrates correct calculation",
+      "Clean separation of concerns with distinct structures for Property, Stock, Distribution, and TaxableAmount"
+    ],
+    "recommendation": "ACCEPT",
+    "summary": "Section 301 implementation is excellent and accurately captures the core distribution mechanics. The amount distributed calculation, liability reductions, and three-tier taxable treatment are all correctly implemented and formally verified. The theorems prove mathematical correctness of the decomposition. While it lacks some advanced provisions like \u00a7312 earnings and profits coordination and \u00a7318 constructive ownership, the implemented provisions are legally accurate and immediately usable for standard corporate distribution analysis."
+  },
+  {
+    "section": "401",
+    "score": 3,
+    "status": "CRITICAL",
+    "critical_issues": [
+      "Only ~5% implementation - mostly TODOs",
+      "No qualified plan requirement modeling",
+      "No vesting, distribution, or contribution limit logic",
+      "Critical section for retirement planning completely non-functional"
+    ],
+    "major_issues": [
+      "RetirementPlan structure is skeletal - missing plan type, sponsor, participants",
+      "No implementation of \u00a7401(a) qualification requirements",
+      "Missing \u00a7401(k) cash or deferred arrangements",
+      "Missing \u00a7401(m) matching contributions",
+      "No modeling of nondiscrimination testing"
+    ],
+    "minor_issues": [
+      "TaxYear and Currency definitions are correct but unused",
+      "Legal text is comprehensive but code doesn't match"
+    ],
+    "strengths": [
+      "Has proper Aristotle UUID and header",
+      "Includes complete legal text showing all qualification requirements",
+      "Basic type definitions are correct"
+    ],
+    "recommendation": "RERUN",
+    "summary": "Section 401 (Qualified pension plans) is critically incomplete with only skeleton structures and no actual logic. This is a foundational section for retirement planning affecting millions of taxpayers. Needs complete rerun with focus on qualification requirements, contribution limits, and distribution rules."
+  },
+  {
+    "section": "482",
+    "score": 8,
+    "status": "EXCELLENT",
+    "critical_issues": [],
+    "major_issues": [],
+    "minor_issues": [
+      "Transfer pricing methods are simplified - doesn't capture all IRS regulatory methods",
+      "No modeling of advance pricing agreements (APAs)",
+      "Missing penalty provisions under \u00a76662 for transfer pricing adjustments",
+      "ControlledGroup definition could be more detailed with ownership percentages"
+    ],
+    "strengths": [
+      "Correctly implements the arm's length standard - the core of \u00a7482",
+      "Proper modeling of income/deduction allocation to prevent tax avoidance",
+      "Includes key transfer pricing methods: comparable uncontrolled price, cost plus, resale price",
+      "Good structure separation: Transaction, ControlledGroup, TransferPricingAdjustment",
+      "Theorems verify that adjustments maintain arm's length principle",
+      "Handles tangible goods, services, and intangible property transfers",
+      "Clean implementation of adjustment calculation",
+      "Has working examples with #eval"
+    ],
+    "recommendation": "ACCEPT",
+    "summary": "Section 482 (Transfer pricing) correctly implements the arm's length standard and basic transfer pricing adjustment mechanics. While simplified compared to the full IRS regulatory framework, the core allocation logic is sound and legally accurate."
+  },
+  {
+    "section": "1001",
+    "score": 2,
+    "status": "CRITICAL",
+    "critical_issues": [
+      "Only contains TODO comments and `#eval \"Section loaded\"`",
+      "No implementation of gain/loss calculation",
+      "No implementation of amount realized",
+      "Foundational section for capital gains tax - critical failure"
+    ],
+    "major_issues": [],
+    "minor_issues": [],
+    "strengths": [
+      "Includes complete legal text showing gain/loss computation rules",
+      "Has proper Aristotle UUID tracking",
+      "Legal text includes important \u00a71001(b) amount realized definition"
+    ],
+    "recommendation": "RERUN",
+    "summary": "Section 1001 (Determination of gain or loss) has no implementation - only TODOs. This is THE foundational section for all capital transactions (Gain = Amount Realized - Adjusted Basis). Without this, no capital gains taxation can be calculated. Absolutely critical for rerun."
+  },
+  {
+    "section": "1012",
+    "score": 2,
+    "status": "CRITICAL",
+    "critical_issues": [
+      "Only contains TODO comments and `#eval \"Section loaded\"`",
+      "No implementation of cost basis determination",
+      "No implementation of average basis method for mutual funds",
+      "Critical for all property transactions"
+    ],
+    "major_issues": [],
+    "minor_issues": [],
+    "strengths": [
+      "Includes complete legal text showing cost basis rules",
+      "Legal text includes \u00a71012(c) account-by-account rules for securities",
+      "Legal text includes \u00a71012(d) average basis for dividend reinvestment plans",
+      "Has proper Aristotle UUID tracking"
+    ],
+    "recommendation": "RERUN",
+    "summary": "Section 1012 (Cost basis) has no implementation - only TODOs. This section defines the starting point for all gain/loss calculations and is essential for securities trading, mutual funds, and dividend reinvestment plans. Critical for rerun."
+  },
+  {
+    "section": "1221",
+    "score": 2,
+    "status": "CRITICAL",
+    "critical_issues": [
+      "Only contains TODO comments and `#eval \"Section loaded\"`",
+      "No implementation of capital asset definition",
+      "No implementation of exclusions (inventory, depreciable property, etc.)",
+      "Foundational definition for capital gains treatment"
+    ],
+    "major_issues": [],
+    "minor_issues": [],
+    "strengths": [
+      "Includes complete legal text with all 8 exclusions from capital asset definition",
+      "Legal text shows \u00a71221(a)(1) inventory exclusion",
+      "Legal text shows \u00a71221(a)(2) depreciable property exclusion",
+      "Legal text includes \u00a71221(b) hedging transaction definitions",
+      "Has proper Aristotle UUID tracking"
+    ],
+    "recommendation": "RERUN",
+    "summary": "Section 1221 (Capital asset defined) has no implementation - only TODOs. This definitional section determines whether gain/loss receives capital or ordinary treatment, affecting tax rates significantly. The 'capital asset' definition (property EXCEPT inventory, depreciables, etc.) is critical for proper tax treatment. Essential for rerun."
+  },
+  {
+    "section": "21",
+    "score": 8,
+    "status": "EXCELLENT",
+    "critical_issues": [],
+    "major_issues": [],
+    "minor_issues": [
+      "Missing \u00a721(d) earned income limitation - credit cannot exceed earned income",
+      "Missing married filing separately $3,000 limit (half of normal)",
+      "spends_8_hours function is a parameter, not implemented",
+      "Dependency test noted as 'Simplified for Section 152' - may not handle all edge cases"
+    ],
+    "strengths": [
+      "Perfect AGI-based phaseout: 50% \u2192 35% (at $15k AGI) \u2192 20% (at $43k+/75k+ AGI)",
+      "Correctly implements dollar limits: $3,000 for 1 qualifying individual, $6,000 for 2+",
+      "Qualifying individual rules comprehensive: under 13, incapable of self-care, spouse provisions",
+      "Employment-related expense determination follows \u00a721(b)(2) precisely",
+      "Correctly excludes overnight camps per \u00a721(b)(2)(A)",
+      "Dependent care center compliance requirements modeled (\u00a721(b)(2)(C))",
+      "Outside household service requirements: under 13 OR spends 8+ hours",
+      "Two proven theorems: applicable_percentage_bounds (20-50% range), credit_nonneg",
+      "Clean structure: Person with age/dependency/incapacity, Expense with category/beneficiary",
+      "ExpenseCategory enum: HouseholdService, CareInsideHousehold, CareOutsideHousehold",
+      "All theorems proven without 'sorry'",
+      "AGI phaseout calculation handles both MFJ ($150k/$4k steps) and other statuses ($75k/$2k steps)"
+    ],
+    "recommendation": "ACCEPT",
+    "summary": "Section 21 (Child and Dependent Care Credit) is excellently implemented with accurate AGI-based phaseouts, dollar limits, and qualifying individual rules. The percentage calculation correctly implements the dual phaseout structure (Part A: 50%\u219235%, Part B: further reduction to 20%). While missing the earned income limitation and some edge cases, the core credit calculation is production-ready and legally accurate."
+  },
+  {
+    "section": "408",
+    "score": 7,
+    "status": "GOOD",
+    "critical_issues": [],
+    "major_issues": [
+      "Contribution limits are hardcoded ($6,500 for 2023, $7,000 otherwise) - no inflation adjustment logic for other years",
+      "Missing required minimum distribution (RMD) rules from \u00a7401(a)(9) cross-referenced in \u00a7408(a)(6)",
+      "Missing Roth IRA provisions (\u00a7408A) - a major retirement account type",
+      "Missing prohibited transaction rules that disqualify IRAs",
+      "Missing early withdrawal penalty exceptions from \u00a772(t) cross-referenced in \u00a7408(d)"
+    ],
+    "minor_issues": [
+      "No catch-up contributions for age 50+ per \u00a7219(b)(5)(B) ($1,000 additional)",
+      "is_approved_trustee function returns true for everyone - should validate against IRS-approved list",
+      "Missing coordination with \u00a7219 deduction limits",
+      "Missing spousal IRA contribution rules",
+      "Missing excess contribution excise tax (6% penalty)",
+      "Endowment contract maturity check is over-simplified (matures_later_than_70_half boolean)",
+      "No modeling of SEP-IRAs or SIMPLE-IRAs",
+      "Distribution rules noted as '(omitted)' in both \u00a7408(a)(6) and \u00a7408(b)(3)"
+    ],
+    "strengths": [
+      "Covers all 3 account types: Individual Retirement Accounts (\u00a7408(a)), Individual Retirement Annuities (\u00a7408(b)), Employer and Employee Association Trusts (\u00a7408(c))",
+      "Contribution limit structure correct: $6,500 for 2023, $7,000 for other years (though should be year-specific)",
+      "Cash-only rule properly implemented with rollover exception - \u00a7408(a)(1)",
+      "Life insurance prohibition correctly applied to all account types - \u00a7408(a)(3)",
+      "Annuity non-transferability requirement from \u00a7408(b)(1)",
+      "Nonforfeitable interest requirement for all types - \u00a7408(a)(4), \u00a7408(b)(4), \u00a7408(c)(1)",
+      "Separate accounting requirement for employer trusts - \u00a7408(c)(2)",
+      "Premium limits for annuities match contribution limits - \u00a7408(b)(2)(B)",
+      "Refund application to future premiums required - \u00a7408(b)(2)(C)",
+      "4 proven theorems: written_instrument, contribution_limit, non_transferable, nonforfeitable",
+      "3 working #eval examples: valid IRA, excess contribution (invalid), life insurance (invalid)",
+      "All theorems proven without 'sorry'",
+      "Clean structure: Trust, Contribution (with type: Cash/Rollover/Other), AnnuityContract, EmployerTrust",
+      "ContributionType enum properly distinguishes rollovers from regular contributions"
+    ],
+    "recommendation": "ACCEPT",
+    "summary": "Section 408 (Individual Retirement Accounts) provides solid formalization of IRA, annuity, and employer trust requirements. The core qualification rules are accurate: cash contributions only (except rollovers), contribution limits, no life insurance, nonforfeitability, and proper trustees. While it lacks RMD rules, Roth IRAs, and detailed distribution provisions, the implemented portions correctly model the foundational IRA qualification requirements and are suitable for basic IRA compliance checking."
+  }
+]

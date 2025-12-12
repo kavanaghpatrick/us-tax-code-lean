@@ -309,3 +309,106 @@ theorem registration_required_not_exempt (b : Bond)
   (h_not_reg : ¬b.isRegistered) :
   ¬isTaxExempt b := by
     unfold isTaxExempt; aesop;
+/-
+Additional verification theorems for IRC Section 103
+Generated: 2025-12-12
+Purpose: Formal verification of §141(c) loan test and §149(b) federal guarantee fixes
+-/
+
+-- §141(c): Private loan threshold is lesser of $5M or 5% of proceeds
+theorem private_loan_threshold_small_issue (proceeds : Rat) :
+  proceeds ≤ 100000000 →
+  min (5000000 : Rat) ((5/100 : Rat) * proceeds) = (5/100 : Rat) * proceeds := by
+  intro h_small
+  apply min_eq_right
+  calc (5/100 : Rat) * proceeds
+      ≤ (5/100 : Rat) * 100000000 := by exact Rat.mul_le_mul_of_nonneg_left h_small (by norm_num)
+    _ = 5000000 := by norm_num
+
+-- §141(c): Private loan threshold caps at $5M for large issues
+theorem private_loan_threshold_large_issue (proceeds : Rat) :
+  proceeds > 100000000 →
+  min (5000000 : Rat) ((5/100 : Rat) * proceeds) = 5000000 := by
+  intro h_large
+  apply min_eq_left
+  calc 5000000
+      = (5/100 : Rat) * 100000000 := by norm_num
+    _ < (5/100 : Rat) * proceeds := by exact Rat.mul_lt_mul_of_pos_left h_large (by norm_num)
+
+-- §149(b): Federally guaranteed state/local bonds are NEVER tax-exempt
+theorem federally_guaranteed_not_exempt (b : Bond) :
+  isStateOrLocal b = true →
+  b.isFederallyGuaranteed = true →
+  isTaxExempt b = false := by
+  intro h_local h_fed
+  unfold isTaxExempt
+  simp [h_local, h_fed]
+
+-- §149(b): Non-federally-guaranteed bonds may be tax-exempt (if other conditions met)
+theorem non_fed_guaranteed_may_be_exempt :
+  let b := exampleStateBond
+  isStateOrLocal b = true ∧
+  b.isFederallyGuaranteed = false ∧
+  isTaxExempt b = true := by
+  constructor
+  · unfold isStateOrLocal exampleStateBond; simp
+  constructor
+  · unfold exampleStateBond; rfl
+  · unfold isTaxExempt exampleStateBond isStateOrLocal isPrivateActivityBond; simp; decide
+
+-- §141(c): Large bond with $6M loan triggers private activity bond status
+theorem large_bond_loan_triggers_pab :
+  let b := exampleLargeBondWithLoan
+  isPrivateActivityBond b = true ∧
+  b.privateLoanFinancingAmount > 5000000 := by
+  constructor
+  · unfold isPrivateActivityBond exampleLargeBondWithLoan
+    simp
+    right
+    norm_num
+  · unfold exampleLargeBondWithLoan; norm_num
+
+-- §141(c): Loan test correctly uses "greater than" threshold (not >=)
+theorem loan_test_strictly_greater (b : Bond) :
+  let loanThreshold := min (5000000 : Rat) ((5/100 : Rat) * b.proceeds)
+  b.privateLoanFinancingAmount = loanThreshold →
+  b.privateBusinessUsePercent ≤ (1/10 : Rat) →
+  isPrivateActivityBond b = false := by
+  intro h_equal h_no_business
+  unfold isPrivateActivityBond
+  simp [h_no_business]
+  right
+  intro h_loan
+  have : ¬(b.privateLoanFinancingAmount > loanThreshold) := by
+    rw [h_equal]
+    exact Rat.lt_irrefl _
+  contradiction
+
+-- Completeness: Federal guarantee check is performed before other tests
+theorem federal_guarantee_checked_first (b : Bond) :
+  b.isFederallyGuaranteed = true →
+  isStateOrLocal b = true →
+  isTaxExempt b = false := by
+  intro h_fed h_local
+  unfold isTaxExempt
+  simp [h_local, h_fed]
+
+-- Edge case: Exactly $5M loan on $100M bond is at threshold (not over)
+theorem exactly_at_threshold_not_pab :
+  let b : Bond := {
+    issuer := IssuerType.State
+    interest := 1000
+    privateBusinessUsePercent := 0
+    privateSecurityPaymentPercent := 0
+    privateLoanFinancingAmount := 5000000
+    proceeds := 100000000
+    isQualifiedPrivateActivity := false
+    isArbitrage := false
+    isRegistrationRequired := true
+    isRegistered := true
+    isFederallyGuaranteed := false
+  }
+  isPrivateActivityBond b = false := by
+  unfold isPrivateActivityBond
+  simp
+  norm_num

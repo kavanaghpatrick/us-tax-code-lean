@@ -365,3 +365,130 @@ Verifying that Currency (which is Int) can be converted to/from Int without cast
 -/
 def Currency.toInt_safe (c : Currency) : Int := c
 def Currency.ofInt_safe (i : Int) : Currency := i
+/-
+Additional verification theorems for IRC Section 32
+Generated: 2025-12-12
+Purpose: Formal verification of §32(i) investment income limit and §32(d) MFS exclusion fixes
+-/
+
+-- §32(i): Excess investment income results in ineligibility
+theorem excess_investment_income_ineligible (tp : TaxpayerProfile) (ty : TaxYear) :
+  tp.investment_income > get_investment_income_limit ty →
+  is_eligible_individual tp ty = false := by
+  intro h_excess
+  unfold is_eligible_individual
+  simp
+  right; right; right; right; right
+  left
+  unfold get_investment_income_limit at h_excess
+  split_ifs at h_excess <;> omega
+
+-- §32(i): Investment income at or below limit doesn't disqualify (other factors may)
+theorem investment_income_ok_may_qualify (tp : TaxpayerProfile) (ty : TaxYear) :
+  tp.investment_income ≤ get_investment_income_limit ty →
+  tp.filing_status ≠ FilingStatus.MarriedFilingSeparately →
+  tp.has_valid_tin = true →
+  (tp.filing_status ≠ FilingStatus.MarriedFilingJointly ∨ tp.spouse_has_valid_tin = true) →
+  ¬tp.is_nonresident_alien →
+  ¬tp.claims_section_911_benefits →
+  ¬tp.is_qualifying_child_of_another →
+  (tp.num_qualifying_children > 0 ∨
+   (tp.principal_place_of_abode_in_us_more_than_half_year ∧
+    tp.age ≥ 25 ∧ tp.age < 65 ∧
+    ¬tp.is_dependent_of_another)) →
+  is_eligible_individual tp ty = true := by
+  intro h_inv h_mfs h_tin h_spouse_tin h_resident h_911 h_not_qc h_basic
+  unfold is_eligible_individual
+  simp [h_mfs, h_tin, h_resident, h_911, h_not_qc, h_inv]
+  cases tp.filing_status <;> simp [*]
+  · cases h_basic with
+    | inl h => left; exact h
+    | inr h => right; exact h
+  · cases h_basic with
+    | inl h => left; exact h
+    | inr h =>
+      right
+      simp at h
+      exact h
+  · contradiction
+  · cases h_basic with
+    | inl h => left; exact h
+    | inr h => right; exact h
+  · cases h_basic with
+    | inl h => left; exact h
+    | inr h => right; exact h
+
+-- §32(d): Married Filing Separately always results in ineligibility
+theorem mfs_always_ineligible (tp : TaxpayerProfile) (ty : TaxYear) :
+  tp.filing_status = FilingStatus.MarriedFilingSeparately →
+  is_eligible_individual tp ty = false := by
+  intro h_mfs
+  unfold is_eligible_individual
+  simp
+  left
+  exact h_mfs
+
+-- §32(d): Other filing statuses don't automatically disqualify
+theorem non_mfs_may_qualify (tp : TaxpayerProfile) (ty : TaxYear) :
+  tp.filing_status ≠ FilingStatus.MarriedFilingSeparately →
+  ∃ (tp' : TaxpayerProfile),
+    tp'.filing_status = tp.filing_status ∧
+    is_eligible_individual tp' ty = true := by
+  intro h_not_mfs
+  use example_profile_1
+  constructor
+  · cases tp.filing_status <;> try contradiction
+    · rfl
+    all_goals { unfold example_profile_1; simp }
+  · unfold is_eligible_individual example_profile_1 get_investment_income_limit example_tax_year
+    simp
+    decide
+
+-- General: Ineligible taxpayers always receive zero credit
+theorem ineligible_implies_zero_credit (tp : TaxpayerProfile) (ty : TaxYear) :
+  is_eligible_individual tp ty = false →
+  calculate_credit tp ty = 0 := by
+  intro h_inelig
+  unfold calculate_credit
+  simp [h_inelig]
+
+-- §32(i): Investment income limits are year-dependent
+theorem investment_limit_2024 (ty : TaxYear) :
+  ty.year ≥ 2024 →
+  get_investment_income_limit ty = 11600 := by
+  intro h_year
+  unfold get_investment_income_limit
+  simp [h_year]
+
+theorem investment_limit_2023 (ty : TaxYear) :
+  ty.year = 2023 →
+  get_investment_income_limit ty = 11000 := by
+  intro h_year
+  unfold get_investment_income_limit
+  simp [h_year]
+  omega
+
+theorem investment_limit_2022 (ty : TaxYear) :
+  ty.year < 2023 →
+  get_investment_income_limit ty = 10300 := by
+  intro h_year
+  unfold get_investment_income_limit
+  split_ifs <;> omega
+
+-- Completeness: All eligibility checks are enforced
+theorem eligibility_requirements_complete (tp : TaxpayerProfile) (ty : TaxYear) :
+  is_eligible_individual tp ty = true →
+  tp.filing_status ≠ FilingStatus.MarriedFilingSeparately ∧
+  tp.has_valid_tin = true ∧
+  (tp.filing_status ≠ FilingStatus.MarriedFilingJointly ∨ tp.spouse_has_valid_tin = true) ∧
+  ¬tp.is_nonresident_alien ∧
+  ¬tp.claims_section_911_benefits ∧
+  ¬tp.is_qualifying_child_of_another ∧
+  tp.investment_income ≤ get_investment_income_limit ty := by
+  intro h_eligible
+  unfold is_eligible_individual at h_eligible
+  simp at h_eligible
+  cases tp.filing_status <;> simp [*] at h_eligible ⊢
+  all_goals {
+    repeat (first | apply And.intro | assumption | (simp at h_eligible; tauto))
+  }

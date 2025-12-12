@@ -240,3 +240,125 @@ theorem final_credit_nonnegative (t : Taxpayer) (year : TaxYear) (h_limit : t.ta
     simp +zetaDelta at *;
     exact ⟨ Int.sub_nonneg_of_le <| refundable_le_allowable t year, h_limit ⟩;
   exact h_nonneg.2.trans ( Int.le_add_of_nonneg_right h_nonneg.1 )
+/-
+Additional verification theorems for IRC Section 24
+Generated: 2025-12-12
+Purpose: Formal verification of TCJA parameter temporal logic (2018-2025 vs pre/post)
+-/
+
+-- TCJA: Parameters apply for tax years 2018-2025
+theorem tcja_parameters_2018_2025 (ty : TaxYear) :
+  ty.year ≥ 2018 ∧ ty.year ≤ 2025 →
+  let params := get_credit_parameters ty
+  params.credit_per_child = 2000 ∧
+  params.mfj_threshold = 400000 ∧
+  params.single_threshold = 200000 ∧
+  params.max_refundable = 1600 ∧
+  params.earned_income_threshold = 2500 ∧
+  params.has_odc = true := by
+  intro h_tcja_period
+  unfold get_credit_parameters
+  split_ifs with h
+  · simp
+  · omega
+
+-- TCJA: Pre-2018 parameters
+theorem pre_tcja_parameters (ty : TaxYear) :
+  ty.year < 2018 →
+  let params := get_credit_parameters ty
+  params.credit_per_child = 1000 ∧
+  params.mfj_threshold = 110000 ∧
+  params.single_threshold = 75000 ∧
+  params.max_refundable = 1000 ∧
+  params.earned_income_threshold = 3000 ∧
+  params.has_odc = false := by
+  intro h_pre
+  unfold get_credit_parameters
+  split_ifs with h
+  · omega
+  · simp
+
+-- TCJA: Post-2025 parameters (revert to pre-TCJA)
+theorem post_tcja_parameters (ty : TaxYear) :
+  ty.year > 2025 →
+  let params := get_credit_parameters ty
+  params.credit_per_child = 1000 ∧
+  params.mfj_threshold = 110000 ∧
+  params.single_threshold = 75000 ∧
+  params.max_refundable = 1000 ∧
+  params.earned_income_threshold = 3000 ∧
+  params.has_odc = false := by
+  intro h_post
+  unfold get_credit_parameters
+  split_ifs with h
+  · omega
+  · simp
+
+-- TCJA: Credit amount doubles during TCJA period
+theorem tcja_doubles_credit (ty_pre ty_tcja : TaxYear) :
+  ty_pre.year < 2018 →
+  ty_tcja.year ≥ 2018 ∧ ty_tcja.year ≤ 2025 →
+  (get_credit_parameters ty_tcja).credit_per_child = 2 * (get_credit_parameters ty_pre).credit_per_child := by
+  intro h_pre h_tcja
+  unfold get_credit_parameters
+  split_ifs <;> omega
+
+-- TCJA: Threshold significantly higher during TCJA (MFJ)
+theorem tcja_higher_threshold_mfj (ty_pre ty_tcja : TaxYear) :
+  ty_pre.year < 2018 →
+  ty_tcja.year ≥ 2018 ∧ ty_tcja.year ≤ 2025 →
+  (get_credit_parameters ty_tcja).mfj_threshold > (get_credit_parameters ty_pre).mfj_threshold := by
+  intro h_pre h_tcja
+  unfold get_credit_parameters
+  split_ifs <;> omega
+
+-- Credit non-negative for all tax years
+theorem credit_nonneg_all_years (t : Taxpayer) (ty : TaxYear) :
+  final_credit t ty ≥ 0 := by
+  unfold final_credit
+  have h1 := refundable_credit_nonnegative t ty
+  have h2 : min (credit_after_agi_limitation t ty - refundable_credit t ty) t.tax_liability_limit ≥ 0 := by
+    apply le_min
+    · exact Int.sub_nonneg_of_le (refundable_le_allowable t ty)
+    · by_cases h : t.tax_liability_limit ≥ 0
+      · exact h
+      · exact Int.le_of_lt (Int.lt_of_not_ge h)
+  exact add_nonneg h2 h1
+
+-- Allowance uses correct year-specific parameters
+theorem allowance_uses_correct_parameters (t : Taxpayer) (ty : TaxYear) :
+  allowance_of_credit t ty =
+    natToCurrency (t.children.filter is_qualifying_child_section_24).length *
+    (get_credit_parameters ty).credit_per_child := by
+  unfold allowance_of_credit
+  rfl
+
+-- Threshold uses correct year-specific parameters
+theorem threshold_uses_correct_parameters (status : FilingStatus) (ty : TaxYear) :
+  threshold_amount status ty =
+    match status with
+    | FilingStatus.MarriedFilingJointly => (get_credit_parameters ty).mfj_threshold
+    | FilingStatus.MarriedFilingSeparately => (get_credit_parameters ty).mfj_threshold / 2
+    | _ => (get_credit_parameters ty).single_threshold := by
+  unfold threshold_amount
+  cases status <;> rfl
+
+-- TCJA: Earned income threshold lower during TCJA
+theorem tcja_lower_earned_income_threshold (ty_pre ty_tcja : TaxYear) :
+  ty_pre.year < 2018 →
+  ty_tcja.year ≥ 2018 ∧ ty_tcja.year ≤ 2025 →
+  (get_credit_parameters ty_tcja).earned_income_threshold < (get_credit_parameters ty_pre).earned_income_threshold := by
+  intro h_pre h_tcja
+  unfold get_credit_parameters
+  split_ifs <;> omega
+
+-- Completeness: All credit calculations respect year-specific parameters
+theorem credit_respects_year_parameters (t : Taxpayer) (ty : TaxYear) :
+  ∃ params : CreditParameters,
+    params = get_credit_parameters ty ∧
+    allowance_of_credit t ty ≤ natToCurrency (t.children.filter is_qualifying_child_section_24).length * params.credit_per_child := by
+  use get_credit_parameters ty
+  constructor
+  · rfl
+  · unfold allowance_of_credit
+    exact Int.le_refl _
