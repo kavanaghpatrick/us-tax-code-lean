@@ -4,6 +4,254 @@
       "status": "submitted",
       "project_id": "df2ca0b6-0052-463a-991b-571d26520ed5",
       "submitted_at": "2025-12-12 00:18:41"
+    },
+    "1": {
+      "status": "complete",
+      "project_id": "84b724c2-b03d-46e9-8552-db901d06fe09",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section1.lean",
+      "completed_at": "2025-12-12 02:16:40",
+      "time_taken_seconds": 6101
+    },
+    "61": {
+      "status": "complete",
+      "project_id": "66332a0f-abdc-43d8-8834-35f944f28ac7",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section61.lean",
+      "completed_at": "2025-12-12 02:47:44",
+      "time_taken_seconds": 1854
+    },
+    "62": {
+      "status": "complete",
+      "project_id": "c733566e-f570-4ea8-afa4-da687f07301d",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section62.lean",
+      "completed_at": "2025-12-12 03:07:14",
+      "time_taken_seconds": 1159
+    },
+    "63": {
+      "status": "complete",
+      "project_id": "91feabde-d0a7-47ab-b8aa-7e7537800dfc",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section63.lean",
+      "completed_at": "2025-12-12 03:45:58",
+      "time_taken_seconds": 2314
+    },
+    "101": {
+      "status": "complete",
+      "project_id": "6e86af46-b51d-46ec-942a-afd04a31b9d9",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section101.lean",
+      "completed_at": "2025-12-12 04:16:34",
+      "time_taken_seconds": 1826
+    },
+    "103": {
+      "status": "complete",
+      "project_id": "716f9923-f2d9-4d32-8085-acf1995d75a7",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section103.lean",
+      "completed_at": "2025-12-12 05:03:21",
+      "time_taken_seconds": 2796
+    },
+    "108": {
+      "status": "complete",
+      "project_id": "cdf288a9-dc8d-46f6-9b52-3faf7edff77f",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section108.lean",
+      "completed_at": "2025-12-12 05:29:14",
+      "time_taken_seconds": 1543
+    },
+    "121": {
+      "status": "complete",
+      "project_id": "ef5b431c-e790-46b5-b7cb-1e4db1493065",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section121.lean",
+      "completed_at": "2025-12-12 06:15:10",
+      "time_taken_seconds": 2745
+    },
+    "199": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:21:50"
+    },
+    "162": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:22:10"
+    },
+    "163": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:23:46"
+    },
+    "164": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:24:06"
+    },
+    "165": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:28:02"
+    },
+    "166": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:31:45"
+    },
+    "167": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:35:31"
+    },
+    "168": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:35:51"
+    },
+    "170": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:36:21"
+    },
+    "174": {
+      "status": "failed",
+      "error": "Request failed: ",
+      "failed_at": "2025-12-12 06:36:41"
+    },
+    "179": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:37:01"
+    },
+    "274": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:38:40"
+    },
+    "469": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:39:00"
+    },
+    "21": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:39:20"
+    },
+    "24": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:39:41"
+    },
+    "25": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:40:01"
+    },
+    "32": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:41:36"
+    },
+    "38": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:41:56"
+    },
+    "41": {
+      "status": "failed",
+      "error": "Request failed: ",
+      "failed_at": "2025-12-12 06:42:16"
+    },
+    "55": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:42:47"
+    },
+    "56": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:43:07"
+    },
+    "59": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:43:27"
+    },
+    "1001": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:43:47"
+    },
+    "1011": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:44:07"
+    },
+    "1012": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:44:27"
+    },
+    "1014": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 06:44:48"
+    },
+    "1015": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 07:48:06"
+    },
+    "1031": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 07:48:26"
+    },
+    "1202": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 07:48:46"
+    },
+    "1221": {
+      "status": "failed",
+      "error": "Request failed: ",
+      "failed_at": "2025-12-12 07:49:06"
+    },
+    "1222": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 07:49:27"
+    },
+    "1231": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 07:49:47"
+    },
+    "11": {
+      "status": "submitted",
+      "project_id": "a9813d5b-7d16-44cc-b5a7-477086ae8612",
+      "submitted_at": "2025-12-12 08:42:15"
+    },
+    "267": {
+      "status": "failed",
+      "error": "Request failed: ",
+      "failed_at": "2025-12-12 07:50:27"
+    },
+    "301": {
+      "status": "complete",
+      "project_id": "2838a889-1684-4030-b309-0f743a8ae953",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section301.lean",
+      "completed_at": "2025-12-12 08:28:30",
+      "time_taken_seconds": 2273
+    },
+    "302": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 08:28:51"
+    },
+    "311": {
+      "status": "failed",
+      "error": "Request failed: Server disconnected without sending a response.",
+      "failed_at": "2025-12-12 08:29:11"
+    },
+    "482": {
+      "status": "submitted",
+      "project_id": "f5a78caf-492a-4e19-b38e-6665b939d2aa",
+      "submitted_at": "2025-12-12 08:29:27"
     }
   },
   "metrics": {
@@ -13,5 +261,5 @@
     "failed": 0,
     "timeout": 0
   },
-  "last_updated": "2025-12-12 00:18:41"
+  "last_updated": "2025-12-12 08:42:15"
 }
