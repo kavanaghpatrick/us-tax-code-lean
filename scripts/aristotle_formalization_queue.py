@@ -415,20 +415,27 @@ def main():
         sections = ['71', '101', '102', '103', '108']
         print("Running 5-section pilot with Aristotle INFORMAL mode...")
     elif args.priority_50:
+        # REVISED priority 50 sections (Grok-optimized for maximum leverage)
+        # Focus: AMT, entity arbitrage, loophole-prone areas, contradiction detection
         sections = [
-            # Income (10)
-            '1', '61', '62', '63', '71', '101', '102', '103', '108', '121',
-            # Deductions (15)
-            '162', '163', '164', '165', '166', '167', '168', '170', '174', '179',
-            '195', '212', '213', '217', '274',
-            # Credits (10)
-            '21', '24', '25', '27', '30', '31', '32', '38', '41', '45',
-            # Capital Gains (10)
+            # Income (9) - removed §71 (alimony), §102 (gifts) for higher-leverage sections
+            '1', '61', '62', '63', '101', '103', '108', '121', '199',
+            # Deductions (12) - removed §195, §213, §217, added §469 (passive losses)
+            '162', '163', '164', '165', '166', '167', '168', '170', '174', '179', '274', '469',
+            # Credits (6) - removed §27, §30, §31, §45 (niche credits)
+            '21', '24', '25', '32', '38', '41',
+            # AMT - Alternative Minimum Tax (3) - CRITICAL for contradiction detection
+            '55', '56', '59',
+            # Capital Gains (10) - unchanged, high loophole potential
             '1001', '1011', '1012', '1014', '1015', '1031', '1202', '1221', '1222', '1231',
-            # Corporate/Partnership (5)
-            '11', '301', '302', '303', '311'
+            # Corporate/Partnership/International (6) - removed §303, added §482 (transfer pricing), §267 (related party)
+            '11', '267', '301', '302', '311', '482',
+            # Retirement (2) - CRITICAL for taxpayer impact and entity loopholes
+            '401', '408',
+            # Estate/Gift Tax (2) - CRITICAL for wealth transfer and cross-references
+            '2001', '2501'
         ]
-        print(f"Processing {len(sections)} priority sections with Aristotle INFORMAL mode...")
+        print(f"Processing {len(sections)} REVISED priority sections (Grok-optimized for leverage)...")
     elif args.sections:
         sections = [s.strip() for s in args.sections.split(',')]
     else:
