@@ -82,6 +82,9 @@ structure DischargeIndebtedness where
   year : TaxYear
   -- Specific condition for QualifiedPrincipalResidence (E)(ii)
   written_arrangement_before_2026 : Bool := false
+  -- NEW FIELDS for §108(c)(2) compliance (QualifiedRealPropertyBusiness)
+  outstanding_principal : Currency := 0
+  property_fmv : Currency := 0
   deriving DecidableEq
 
 -- Structure representing the taxpayer's status and attributes
@@ -97,6 +100,8 @@ structure TaxpayerStatus where
   basis_of_property : Currency
   passive_activity_loss_carryover : Currency
   foreign_tax_credit_carryover : Currency
+  -- NEW FIELD for §108(c)(2)(B) limitation
+  depreciable_real_property_basis : Currency := 0
   deriving DecidableEq
 
 /-
@@ -124,10 +129,18 @@ def excludedAmount (d : DischargeIndebtedness) (s : TaxpayerStatus) (e : Taxpaye
   | DischargeCategory.QualifiedFarm =>
     d.amount
   | DischargeCategory.QualifiedRealPropertyBusiness =>
+    -- IRC §108(a)(1)(D): "in the case of a taxpayer OTHER THAN A C CORPORATION"
+    -- C corporations are INELIGIBLE for this exclusion
     if s.is_c_corporation then
-      min d.amount s.insolvency_amount
+      0  -- C corporations get ZERO exclusion under §108(a)(1)(D)
     else
-      d.amount
+      -- IRC §108(c)(2): Apply TWO limitations for non-C corporations
+      -- Limit A: Excess of outstanding principal over FMV of property
+      let limitA := max 0 (d.outstanding_principal - d.property_fmv)
+      -- Limit B: Aggregate adjusted bases of depreciable real property
+      let limitB := s.depreciable_real_property_basis
+      -- Exclusion = min(discharge amount, min(limitA, limitB))
+      min d.amount (min limitA limitB)
   | DischargeCategory.QualifiedPrincipalResidence =>
     let is_valid_date := d.year.year < 2026 || d.written_arrangement_before_2026
     if is_valid_date then
@@ -301,6 +314,158 @@ def exampleDischargeTitle11 : DischargeIndebtedness := {
 #eval (reduceAttributes (excludedAmount exampleDischargeTitle11 exampleStatus exampleElections) exampleStatus).nol
 #eval (reduceAttributes (excludedAmount exampleDischargeTitle11 exampleStatus exampleElections) exampleStatus).general_business_credit
 #eval (reduceAttributes (excludedAmount exampleDischargeTitle11 exampleStatus exampleElections) exampleStatus).basis_of_property
+
+/-
+NEW: Test cases for QualifiedRealPropertyBusiness to verify the fix for Issue #24
+-/
+
+-- Test Case 1: C Corporation (Should Get Zero)
+def testCCorp : DischargeIndebtedness := {
+  amount := 100000,
+  category := DischargeCategory.QualifiedRealPropertyBusiness,
+  year := exampleYear,
+  outstanding_principal := 150000,
+  property_fmv := 80000
+}
+
+def testCCorpStatus : TaxpayerStatus := {
+  insolvency_amount := 50000,
+  is_c_corporation := true,
+  filing_status := FilingStatus.Single,
+  nol := 0,
+  general_business_credit := 0,
+  minimum_tax_credit := 0,
+  capital_loss_carryover := 0,
+  basis_of_property := 0,
+  passive_activity_loss_carryover := 0,
+  foreign_tax_credit_carryover := 0,
+  depreciable_real_property_basis := 120000
+}
+
+-- Expected: 0 (C corps ineligible per §108(a)(1)(D))
+-- Old (WRONG) code: 50000 (used insolvency amount)
+#eval excludedAmount testCCorp testCCorpStatus exampleElections
+
+-- Test Case 2: S Corporation with Depreciable Basis as Binding Limit
+def testSCorp : DischargeIndebtedness := {
+  amount := 100000,
+  category := DischargeCategory.QualifiedRealPropertyBusiness,
+  year := exampleYear,
+  outstanding_principal := 150000,  -- Principal
+  property_fmv := 80000             -- FMV
+  -- Principal - FMV = 70000 (limitation A)
+}
+
+def testSCorpStatus : TaxpayerStatus := {
+  insolvency_amount := 120000,
+  is_c_corporation := false,
+  filing_status := FilingStatus.Single,
+  nol := 0,
+  general_business_credit := 0,
+  minimum_tax_credit := 0,
+  capital_loss_carryover := 0,
+  basis_of_property := 0,
+  passive_activity_loss_carryover := 0,
+  foreign_tax_credit_carryover := 0,
+  depreciable_real_property_basis := 60000  -- Limitation B (BINDING)
+}
+
+-- Expected: 60000 (limited by basis, which is less than principal-FMV of 70000)
+-- Old (WRONG) code: 100000 (no limitations applied)
+#eval excludedAmount testSCorp testSCorpStatus exampleElections
+
+-- Test Case 3: Partnership - Principal-FMV Limit Binding
+def testPartnership : DischargeIndebtedness := {
+  amount := 100000,
+  category := DischargeCategory.QualifiedRealPropertyBusiness,
+  year := exampleYear,
+  outstanding_principal := 110000,
+  property_fmv := 85000
+  -- Principal - FMV = 25000 (limitation A - BINDING)
+}
+
+def testPartnershipStatus : TaxpayerStatus := {
+  insolvency_amount := 80000,
+  is_c_corporation := false,
+  filing_status := FilingStatus.Single,
+  nol := 0,
+  general_business_credit := 0,
+  minimum_tax_credit := 0,
+  capital_loss_carryover := 0,
+  basis_of_property := 0,
+  passive_activity_loss_carryover := 0,
+  foreign_tax_credit_carryover := 0,
+  depreciable_real_property_basis := 90000  -- Higher than 25000, so not binding
+}
+
+-- Expected: 25000 (limited by principal-FMV)
+-- Old (WRONG) code: 100000 (no limitations)
+#eval excludedAmount testPartnership testPartnershipStatus exampleElections
+
+-- Test Case 4: Edge case - property_fmv > outstanding_principal (underwater = 0)
+def testUnderwaterZero : DischargeIndebtedness := {
+  amount := 50000,
+  category := DischargeCategory.QualifiedRealPropertyBusiness,
+  year := exampleYear,
+  outstanding_principal := 100000,
+  property_fmv := 120000  -- FMV > principal, so limitA = max(0, 100000-120000) = 0
+}
+
+def testUnderwaterZeroStatus : TaxpayerStatus := {
+  insolvency_amount := 60000,
+  is_c_corporation := false,
+  filing_status := FilingStatus.Single,
+  nol := 0,
+  general_business_credit := 0,
+  minimum_tax_credit := 0,
+  capital_loss_carryover := 0,
+  basis_of_property := 0,
+  passive_activity_loss_carryover := 0,
+  foreign_tax_credit_carryover := 0,
+  depreciable_real_property_basis := 80000
+}
+
+-- Expected: 0 (limitA is 0 because property value exceeds debt)
+#eval excludedAmount testUnderwaterZero testUnderwaterZeroStatus exampleElections
+
+/-
+NEW: Verification theorems for QualifiedRealPropertyBusiness fix
+-/
+
+/--
+Theorem: C corporations are ineligible for QualifiedRealPropertyBusiness exclusion.
+IRC §108(a)(1)(D): "in the case of a taxpayer OTHER THAN A C CORPORATION"
+-/
+theorem c_corp_ineligible_qrpb (d : DischargeIndebtedness) (s : TaxpayerStatus) (e : TaxpayerElections) :
+  d.category = DischargeCategory.QualifiedRealPropertyBusiness →
+  s.is_c_corporation = true →
+  excludedAmount d s e = 0 := by
+  intro h_cat h_ccorp
+  unfold excludedAmount
+  simp [h_cat, h_ccorp]
+
+/--
+Theorem: Non-C corporations' QualifiedRealPropertyBusiness exclusion is limited by
+both §108(c)(2) limitations (principal-FMV and depreciable basis).
+-/
+theorem non_c_corp_qrpb_limited (d : DischargeIndebtedness) (s : TaxpayerStatus) (e : TaxpayerElections) :
+  d.category = DischargeCategory.QualifiedRealPropertyBusiness →
+  s.is_c_corporation = false →
+  excludedAmount d s e ≤ d.amount ∧
+  excludedAmount d s e ≤ max 0 (d.outstanding_principal - d.property_fmv) ∧
+  excludedAmount d s e ≤ s.depreciable_real_property_basis := by
+  intro h_cat h_not_ccorp
+  unfold excludedAmount
+  simp [h_cat, h_not_ccorp]
+  constructor
+  · apply Int.min_le_left
+  constructor
+  · apply le_trans
+    · apply Int.min_le_right
+    · apply Int.min_le_left
+  · apply le_trans
+    · apply Int.min_le_right
+    · apply Int.min_le_right
 
 /-
 Theorem stating that if the excluded amount is fully absorbed by the NOL, then the General Business Credit is not reduced, assuming non-negative values.
