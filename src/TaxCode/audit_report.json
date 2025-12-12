@@ -1,0 +1,97 @@
+[
+  {
+    "section": "108",
+    "score": 7,
+    "status": "GOOD",
+    "critical_issues": [],
+    "major_issues": [
+      "Missing subsection (c) - Qualified principal residence exceptions and provisions beyond 2026 not fully modeled",
+      "Missing subsection (d)(7) - Real property business indebtedness election mechanics not modeled",
+      "Missing the basis reduction election under §108(b)(5) to apply reductions to depreciable property basis first",
+      "QualifiedPrincipalResidence category uses simplified date logic - actual statute has complex acquisition indebtedness limit ($750,000) and discharge timing rules",
+      "No modeling of S corporation, partnership, or C corporation specific rules from subsections (d) and (e)"
+    ],
+    "minor_issues": [
+      "TaxpayerElections structure is minimal - only has one boolean for insolvency over principal residence",
+      "No modeling of §108(b)(4)(A) special ordering elections",
+      "Missing the requirement that qualified farm indebtedness must be incurred directly in farming operations (50% gross receipts test not modeled)",
+      "QualifiedRealPropertyBusiness lacks the detailed qualification requirements (e.g., debt secured by real property used in trade or business)",
+      "Attribute reduction does not handle the special rule for S corporations or partnerships",
+      "No validation that 'written_arrangement_before_2026' actually represents a written agreement to discharge"
+    ],
+    "strengths": [
+      "All theorems proven without 'sorry' - code is formally verified",
+      "Core exclusion logic for Title 11 and Insolvency is correctly implemented",
+      "Attribute reduction waterfall correctly implements the 7-step sequence from §108(b)(2)",
+      "Credit reductions correctly apply 33 1/3 cents per dollar formula (divide by 3 logic)",
+      "Insolvency limitation correctly uses min(discharge_amount, insolvency_amount)",
+      "Comprehensive examples with #eval demonstrating correct arithmetic",
+      "Good separation of concerns with distinct structures for DischargeIndebtedness, TaxpayerStatus, and TaxpayerElections",
+      "Type safety through TaxYear validation (year >= 1913)"
+    ],
+    "recommendation": "FIX",
+    "summary": "Section 108 implementation covers the core discharge of indebtedness exclusions and attribute reduction rules accurately. The main calculations are correct and formally verified. However, it lacks critical provisions like the basis reduction election, complete qualified principal residence indebtedness rules (acquisition debt limits, timing), and entity-specific rules. The code is usable for basic Title 11 and insolvency scenarios but needs enhancement for real-world comprehensive tax planning."
+  },
+  {
+    "section": "121",
+    "score": 8,
+    "status": "GOOD",
+    "critical_issues": [],
+    "major_issues": [
+      "Missing subsection (c) - reduced exclusion for failure to meet requirements due to unforeseen circumstances (health, employment, etc.) is marked as TODO in comments but not implemented",
+      "Missing subsection (d)(5)-(10) - special rules for sales involving joint returns, deceased spouses, and divorced/legally separated individuals are partially implemented",
+      "Joint return requirements in §121(b)(2)(A) have complex ownership attribution rules not fully captured",
+      "Missing the proper calculation for acquisition indebtedness that qualifies under subsection (b)(4)"
+    ],
+    "minor_issues": [
+      "DATE_2009_01_01 is set to Day := 0 which is arbitrary and could cause confusion in real usage",
+      "checkFrequencyLimit uses 'any' which checks if ANY prior exclusion was within 2 years - should probably check if there is NO prior exclusion within 2 years for clarity",
+      "The nonqualified use ratio calculation is complex but lacks documentation explaining the exception zone logic",
+      "Missing validation that ownership and use periods are actually for 'principal residence' vs other uses",
+      "spouseDeathDate handling in QualifyingWidower status could be more robust",
+      "No modeling of divorced spouse rules where property transferred in divorce is treated as owned/used by receiving spouse during marriage"
+    ],
+    "strengths": [
+      "All theorems proven without 'sorry' - fully verified code",
+      "Ownership and use tests correctly implement '2 out of 5 years' lookback period (730 days out of 1825 days)",
+      "Joint return requirements properly check ownership (either spouse), use (both spouses), and frequency (neither spouse)",
+      "Exclusion limits correctly distinguish $250,000 vs $500,000 based on filing status and joint return requirements",
+      "Nonqualified use ratio calculation implements the 2009 exception properly - only post-2009 periods count, and excludes the final 5 years after last use",
+      "Time period intersection logic is mathematically sound",
+      "Theorems prove that excluded gain does not exceed the statutory limit or total gain",
+      "Complex rational number arithmetic for nonqualified use properly uses Rat.divInt and floor functions"
+    ],
+    "recommendation": "FIX",
+    "summary": "Section 121 implementation is mathematically sophisticated and correctly implements the core principal residence exclusion rules including ownership/use tests, exclusion limits, joint return requirements, and the complex nonqualified use calculations. The code is formally verified with sound theorems. However, it lacks the reduced exclusion provisions for unforeseen circumstances (subsection c) and some special rules for divorced/deceased spouse scenarios. It's highly usable for standard principal residence sales but needs enhancements for edge cases."
+  },
+  {
+    "section": "301",
+    "score": 9,
+    "status": "EXCELLENT",
+    "critical_issues": [],
+    "major_issues": [],
+    "minor_issues": [
+      "Missing subsection (f) - special rules cross-references (redemptions §302, liquidations Part II, reorganizations Part III) are only noted in comments, not modeled",
+      "The isTwentyPercentCorporateShareholder function models §301(e)(2) but the broader §301(e) impact on earnings and profits calculation is not fully implemented",
+      "No modeling of §301(e)(1) which affects how §312 is applied for 20% corporate shareholders",
+      "CorporateShareholderProfile uses Nat for percentages (0-100) but no validation that values don't exceed 100",
+      "Section 318 constructive ownership rules referenced in §301(e)(2) are not implemented - assumes direct ownership only",
+      "Missing the detailed mechanics of how distributions affect earnings and profits under §312"
+    ],
+    "strengths": [
+      "All theorems proven without 'sorry' - code is formally verified",
+      "Correctly implements §301(b) amount distributed calculation: money + FMV of property - liabilities",
+      "Properly applies liability reduction from both assumed liabilities and liabilities subject to property",
+      "Amount distributed correctly cannot go below zero per §301(b)(2)",
+      "Taxable amount breakdown perfectly implements §301(c) three-tier treatment: (1) dividend to gross income, (2) return of capital reducing basis, (3) capital gain on excess",
+      "Includes the historical §301(c)(3)(B) exemption for pre-1913 increase in value",
+      "Basis of property received correctly set to FMV per §301(d)",
+      "Mathematical proof (decomposition_lemma_v2) verifies that dividend + applied + gain + exempt = total amount distributed",
+      "20% corporate shareholder definition correctly captures voting power OR value thresholds AND deduction entitlement",
+      "Comprehensive example with realistic values demonstrates correct calculation",
+      "Clean separation of concerns with distinct structures for Property, Stock, Distribution, and TaxableAmount"
+    ],
+    "recommendation": "ACCEPT",
+    "summary": "Section 301 implementation is excellent and accurately captures the core distribution mechanics. The amount distributed calculation, liability reductions, and three-tier taxable treatment are all correctly implemented and formally verified. The theorems prove mathematical correctness of the decomposition. While it lacks some advanced provisions like §312 earnings and profits coordination and §318 constructive ownership, the implemented provisions are legally accurate and immediately usable for standard corporate distribution analysis."
+  }
+]
