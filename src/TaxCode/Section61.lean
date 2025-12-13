@@ -539,11 +539,66 @@ This file formalizes IRC §61 (Gross income defined).
    current is this?
 -/
 
--- TODO: Add type definitions
 
--- TODO: Add main functions
+inductive IncomeSource where
+  | compensationForServices : Currency → IncomeSource
+  | grossIncomeFromBusiness : Currency → IncomeSource
+  | gainsFromProperty : Currency → IncomeSource
+  | interest : Currency → IncomeSource
+  | rents : Currency → IncomeSource
+  | royalties : Currency → IncomeSource
+  | dividends : Currency → IncomeSource
+  | annuities : Currency → IncomeSource
+  | lifeInsuranceEndowment : Currency → IncomeSource
+  | pensions : Currency → IncomeSource
+  | dischargeOfIndebtedness : Currency → IncomeSource
+  | partnershipDistributiveShare : Currency → IncomeSource
+  | incomeInRespectOfDecedent : Currency → IncomeSource
+  | estateOrTrustIncome : Currency → IncomeSource
 
--- TODO: Add theorems to prove
+def IncomeSource.amount : IncomeSource → Currency
+  | .compensationForServices c => c
+  | .grossIncomeFromBusiness c => c
+  | .gainsFromProperty c => c
+  | .interest c => c
+  | .rents c => c
+  | .royalties c => c
+  | .dividends c => c
+  | .annuities c => c
+  | .lifeInsuranceEndowment c => c
+  | .pensions c => c
+  | .dischargeOfIndebtedness c => c
+  | .partnershipDistributiveShare c => c
+  | .incomeInRespectOfDecedent c => c
+  | .estateOrTrustIncome c => c
 
--- Example usage
-#check placeholder
+structure GrossIncomeInput where
+  sources : List IncomeSource
+
+def calculateGrossIncome (input : GrossIncomeInput) : Currency :=
+  input.sources.foldl (fun acc s => acc + s.amount) 0
+
+theorem gross_income_nonneg (input : GrossIncomeInput)
+  (h : ∀ s ∈ input.sources, s.amount ≥ 0) : calculateGrossIncome input ≥ 0 := by
+  unfold calculateGrossIncome
+  sorry
+
+theorem additivity (sources1 sources2 : List IncomeSource) :
+  calculateGrossIncome {sources := sources1 ++ sources2} =
+  calculateGrossIncome {sources := sources1} + calculateGrossIncome {sources := sources2} := by
+  unfold calculateGrossIncome
+  sorry
+
+theorem gross_income_empty : calculateGrossIncome {sources := []} = 0 := by
+  unfold calculateGrossIncome
+  rfl
+
+def exampleInput : GrossIncomeInput := {
+  sources := [
+    IncomeSource.compensationForServices 50000,
+    IncomeSource.interest 1000,
+    IncomeSource.dividends 2000
+  ]
+}
+
+#eval calculateGrossIncome exampleInput

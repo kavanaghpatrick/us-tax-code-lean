@@ -1032,11 +1032,72 @@ This file formalizes IRC §63 (Taxable income defined).
    current is this?
 -/
 
--- TODO: Add type definitions
 
--- TODO: Add main functions
+structure TaxableIncomeInput where
+  adjustedGrossIncome : Currency
+  itemizedDeductions : Option Currency
+  isAged : Bool
+  isBlind : Bool
+  spouseAged : Option Bool
+  spouseBlind : Option Bool
+  isDependent : Bool
+  filingStatus : FilingStatus
+  taxYear : TaxYear
 
--- TODO: Add theorems to prove
+def getBasicStandardDeduction (fs : FilingStatus) (ty : TaxYear) : Currency :=
+  if ty.year = 2024 then
+    match fs with
+    | .Single => 14600
+    | .MarriedFilingJointly => 29200
+    | .MarriedFilingSeparately => 14600
+    | .HeadOfHousehold => 21900
+    | .QualifyingWidower => 29200
+  else
+    0  -- Placeholder for non-2024 years (MVP)
 
--- Example usage
-#check placeholder
+def getAdditionalStandardDeduction (fs : FilingStatus) (ty : TaxYear) (isAged : Bool) (isBlind : Bool) (spouseAged : Option Bool) (spouseBlind : Option Bool) : Currency :=
+  if ty.year = 2024 then
+    let per : Currency := match fs with
+      | .Single | .HeadOfHousehold => 1950
+      | _ => 1550  -- MFJ, MFS, QW (corrected per actual IRC)
+    let taxpayer_count : Nat := (if isAged then 1 else 0) + (if isBlind then 1 else 0)
+    let spouse_count : Nat := if fs = .MarriedFilingJointly then
+        (match spouseAged with | some true => 1 | _ => 0) +
+        (match spouseBlind with | some true => 1 | _ => 0)
+      else 0
+    let total_count : Nat := taxpayer_count + spouse_count
+    per * (total_count : Int)
+  else
+    0  -- Placeholder for non-2024 years (MVP)
+
+def calculateStandardDeduction (input : TaxableIncomeInput) : Currency :=
+  let basic := getBasicStandardDeduction input.filingStatus input.taxYear
+  let additional := getAdditionalStandardDeduction input.filingStatus input.taxYear input.isAged input.isBlind input.spouseAged input.spouseBlind
+  basic + additional
+
+def calculateTaxableIncome (input : TaxableIncomeInput) : Currency :=
+  let agi := input.adjustedGrossIncome
+  let deductions := match input.itemizedDeductions with
+    | none => calculateStandardDeduction input
+    | some d => d
+  max 0 (agi - deductions)
+
+-- Theorems (with sorry for MVP; assumes Currency instances for Ord, Sub, etc., and non-negative inputs)
+
+theorem taxable_le_agi (input : TaxableIncomeInput) (h : input.adjustedGrossIncome ≥ 0) : calculateTaxableIncome input ≤ input.adjustedGrossIncome := sorry
+
+theorem taxable_nonneg (input : TaxableIncomeInput) : calculateTaxableIncome input ≥ 0 := sorry
+
+theorem standard_deduction_single_2024 :
+  let input : TaxableIncomeInput := {
+    adjustedGrossIncome := 0,
+    itemizedDeductions := none,
+    isAged := false,
+    isBlind := false,
+    spouseAged := none,
+    spouseBlind := none,
+    isDependent := false,
+    filingStatus := .Single,
+    taxYear := ⟨2024, by decide⟩
+  }
+  calculateStandardDeduction input = 14600 := sorry

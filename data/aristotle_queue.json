@@ -62,9 +62,11 @@
       "time_taken_seconds": 2745
     },
     "199": {
-      "status": "failed",
-      "error": "Request failed: Server disconnected without sending a response.",
-      "failed_at": "2025-12-12 06:21:50"
+      "status": "complete",
+      "project_id": "4cce11fa-6891-49c7-af2a-c9cf8011d7e1",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section199.lean",
+      "completed_at": "2025-12-12 18:49:41",
+      "time_taken_seconds": 1098
     },
     "162": {
       "status": "complete",
@@ -117,24 +119,32 @@
       "failed_at": "2025-12-12 17:27:06"
     },
     "174": {
-      "status": "submitted",
+      "status": "complete",
       "project_id": "1c54f0c6-68bd-4443-a5d7-6716d36f5381",
-      "submitted_at": "2025-12-12 17:27:19"
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section174.lean",
+      "completed_at": "2025-12-12 18:14:48",
+      "time_taken_seconds": 2852
     },
     "179": {
-      "status": "failed",
-      "error": "Request failed: Server disconnected without sending a response.",
-      "failed_at": "2025-12-12 06:37:01"
+      "status": "complete",
+      "project_id": "2e604c5f-dfe0-4942-bebb-ac0618b5f526",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section179.lean",
+      "completed_at": "2025-12-12 18:31:12",
+      "time_taken_seconds": 973
     },
     "274": {
-      "status": "failed",
-      "error": "Request failed: Server disconnected without sending a response.",
-      "failed_at": "2025-12-12 06:38:40"
+      "status": "complete",
+      "project_id": "dd867586-9834-4d5f-9a10-657ef50ec68a",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section274.lean",
+      "completed_at": "2025-12-12 19:08:47",
+      "time_taken_seconds": 1095
     },
     "469": {
-      "status": "failed",
-      "error": "Request failed: Server disconnected without sending a response.",
-      "failed_at": "2025-12-12 06:39:00"
+      "status": "complete",
+      "project_id": "9efda9df-596f-429d-937a-e6e020102750",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section469.lean",
+      "completed_at": "2025-12-12 19:44:53",
+      "time_taken_seconds": 1399
     },
     "21": {
       "status": "complete",
@@ -200,54 +210,62 @@
       "time_taken_seconds": 1157
     },
     "1001": {
-      "status": "failed",
-      "error": "Request failed: Server disconnected without sending a response.",
-      "failed_at": "2025-12-12 06:43:47"
+      "status": "complete",
+      "project_id": "d1134232-f680-4428-97ef-64b4d1970ca1",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section1001.lean",
+      "completed_at": "2025-12-12 20:13:29",
+      "time_taken_seconds": 1706
     },
     "1011": {
-      "status": "failed",
-      "error": "Request failed: Server disconnected without sending a response.",
-      "failed_at": "2025-12-12 06:44:07"
+      "status": "complete",
+      "project_id": "656224d3-4d8b-46a3-a1c1-97b877b5c86d",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section1011.lean",
+      "completed_at": "2025-12-12 20:17:49",
+      "time_taken_seconds": 249
     },
     "1012": {
-      "status": "failed",
-      "error": "Request failed: Server disconnected without sending a response.",
-      "failed_at": "2025-12-12 06:44:27"
+      "status": "complete",
+      "project_id": "8f37cf07-fe0f-4449-b1c4-f1690eb47d02",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section1012.lean",
+      "completed_at": "2025-12-12 20:28:11",
+      "time_taken_seconds": 611
     },
     "1014": {
       "status": "failed",
-      "error": "Request failed: Server disconnected without sending a response.",
-      "failed_at": "2025-12-12 06:44:48"
+      "error": "[Errno 32] Broken pipe",
+      "failed_at": "2025-12-12 20:39:44"
     },
     "1015": {
-      "status": "failed",
-      "error": "Request failed: Server disconnected without sending a response.",
-      "failed_at": "2025-12-12 07:48:06"
+      "status": "complete",
+      "project_id": "75ecd939-33af-4ede-acf1-d98e6eba153c",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section1015.lean",
+      "completed_at": "2025-12-12 21:17:21",
+      "time_taken_seconds": 2247
     },
     "1031": {
       "status": "failed",
-      "error": "Request failed: Server disconnected without sending a response.",
-      "failed_at": "2025-12-12 07:48:26"
+      "error": "Request failed: [Errno 8] nodename nor servname provided, or not known",
+      "failed_at": "2025-12-12 21:22:48"
     },
     "1202": {
       "status": "failed",
-      "error": "Request failed: Server disconnected without sending a response.",
-      "failed_at": "2025-12-12 07:48:46"
+      "error": "Request failed: [Errno 8] nodename nor servname provided, or not known",
+      "failed_at": "2025-12-12 21:22:58"
     },
     "1221": {
       "status": "failed",
-      "error": "Request failed: ",
-      "failed_at": "2025-12-12 07:49:06"
+      "error": "Request failed: [Errno 8] nodename nor servname provided, or not known",
+      "failed_at": "2025-12-12 21:23:08"
     },
     "1222": {
       "status": "failed",
-      "error": "Request failed: Server disconnected without sending a response.",
-      "failed_at": "2025-12-12 07:49:27"
+      "error": "Request failed: [Errno 8] nodename nor servname provided, or not known",
+      "failed_at": "2025-12-12 21:23:18"
     },
     "1231": {
       "status": "failed",
-      "error": "Request failed: Server disconnected without sending a response.",
-      "failed_at": "2025-12-12 07:49:47"
+      "error": "Request failed: [Errno 8] nodename nor servname provided, or not known",
+      "failed_at": "2025-12-12 21:23:28"
     },
     "11": {
       "status": "complete",
@@ -259,7 +277,7 @@
     "267": {
       "status": "failed",
       "error": "Request failed: ",
-      "failed_at": "2025-12-12 07:50:27"
+      "failed_at": "2025-12-12 18:50:22"
     },
     "301": {
       "status": "complete",
@@ -270,13 +288,15 @@
     },
     "302": {
       "status": "failed",
-      "error": "Request failed: Server disconnected without sending a response.",
-      "failed_at": "2025-12-12 08:28:51"
+      "error": "[Errno 32] Broken pipe",
+      "failed_at": "2025-12-12 19:13:03"
     },
     "311": {
-      "status": "failed",
-      "error": "Request failed: Server disconnected without sending a response.",
-      "failed_at": "2025-12-12 08:29:11"
+      "status": "complete",
+      "project_id": "7141f917-fce8-4e2d-9ec1-949f22d504e9",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section311.lean",
+      "completed_at": "2025-12-12 19:21:24",
+      "time_taken_seconds": 490
     },
     "482": {
       "status": "submitted",
@@ -291,5 +311,5 @@
     "failed": 0,
     "timeout": 0
   },
-  "last_updated": "2025-12-12 17:27:19"
+  "last_updated": "2025-12-12 21:23:28"
 }

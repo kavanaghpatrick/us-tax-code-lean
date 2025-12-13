@@ -394,7 +394,8 @@ Theorem stating that the original `calculateDepreciationSchedule` is equivalent 
 -/
 theorem calculateDepreciationSchedule_eq_prime (p : Property) (yearProperties : List Property) :
   calculateDepreciationSchedule p yearProperties = calculateDepreciationSchedule' p yearProperties := by
-    exact?
+    unfold calculateDepreciationSchedule calculateDepreciationSchedule'
+    rfl
 
 /-
 Theorem stating that every depreciation entry in the schedule is non-negative, given that the property basis is non-negative and the date is valid. Uses the refactored loop and helper lemmas.
