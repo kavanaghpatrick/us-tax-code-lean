@@ -138,13 +138,14 @@ inductive AllocationReason
   deriving DecidableEq, Repr
 
 -- Checks if the reallocation is valid (i.e., involves the same organizations)
+-- Fix for GitHub issue #36: Check same set of organization IDs, not just length
+-- A valid reallocation must preserve taxpayer identity (same organizations, different allocations)
 def isValidReallocation (original : List Organization) (proposed : List Organization) : Bool :=
   let originalIds := original.map Organization.id
   let proposedIds := proposed.map Organization.id
-  -- Sort or set equality would be better, but for now just checking length and containment or simple equality of IDs if order is preserved
-  -- Let's assume order might change, so we check if they are permutations.
-  -- For simplicity in this formalization, let's assume the proposed allocation preserves the list order or we just check length for now to avoid complex List logic dependencies.
-  original.length == proposed.length -- Simplified check
+  -- Check that both lists contain the same set of organization IDs
+  -- This ensures we're reallocating among the SAME taxpayers, not substituting different entities
+  originalIds.toFinset == proposedIds.toFinset
 
 -- IRC §482: Secretary may distribute, apportion, or allocate ... if necessary
 def applySection482 (group : ControlGroup) (proposed_allocation : List Organization) (reason : AllocationReason) : List Organization :=
