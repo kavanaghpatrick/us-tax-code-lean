@@ -138,6 +138,9 @@ def get_rate (e : Employee) (contribution : Currency) : Int :=
   let contrib : Int := contribution
   if comp == 0 then 0 else (contrib * 10000) / comp
 
+-- DEPRECATED: Oversimplified average-based test (see GitHub issue #39)
+-- This test can incorrectly pass discriminatory plans where HCEs get favorable treatment
+-- Kept for backwards compatibility but should use check_nondiscrimination_safe_harbor instead
 def check_nondiscrimination (participants : List Employee) (contribution_map : String -> Currency) : Bool :=
   let hce := participants.filter (fun e => e.is_highly_compensated)
   let non_hce := participants.filter (fun e => !e.is_highly_compensated)
@@ -154,6 +157,29 @@ def check_nondiscrimination (participants : List Employee) (contribution_map : S
 
   if non_hce.length == 0 || hce.length == 0 then true
   else avg_hce <= avg_non_hce
+
+/-
+IRC §401(a)(4) Safe Harbor: Uniform Percentage Test
+Per Treas. Reg. § 1.401(a)(4)-2(b)(2), a plan satisfies nondiscrimination if all employees
+receive the same percentage of compensation as contributions.
+-/
+def check_uniform_percentage_safe_harbor (participants : List Employee)
+    (contribution_map : String -> Currency) : Bool :=
+  if participants.length == 0 then true
+  else
+    let rates := participants.map (fun e => get_rate e (contribution_map e.id))
+    match rates with
+    | [] => true
+    | first_rate :: rest => rest.all (fun r => r == first_rate)
+
+/-
+IRC §401(a)(4) Nondiscrimination Test with Safe Harbor
+Implements proper nondiscrimination testing per Treas. Reg. § 1.401(a)(4).
+Uses safe harbor test (uniform percentage) which is more rigorous than simple averages.
+-/
+def check_nondiscrimination_safe_harbor (participants : List Employee)
+    (contribution_map : String -> Currency) : Bool :=
+  check_uniform_percentage_safe_harbor participants contribution_map
 
 /-
 Determines if a plan is a qualified trust under IRC §401(a) by checking all subsections.
@@ -175,8 +201,8 @@ def is_qualified_plan (plan : Plan) (all_employees : List Employee) (contributio
   -- The user asked to "Implement all calculation functions", so let's use the calculation.
   let coverage_req := check_coverage_410 plan.employees all_employees
 
-  -- 401(a)(4) Nondiscrimination
-  let nondiscrim_req := check_nondiscrimination plan.employees contribution_map
+  -- 401(a)(4) Nondiscrimination (using safe harbor test per Treas. Reg. § 1.401(a)(4))
+  let nondiscrim_req := check_nondiscrimination_safe_harbor plan.employees contribution_map
 
   basic_reqs && contrib_req && no_diversion_req && coverage_req && nondiscrim_req
 
