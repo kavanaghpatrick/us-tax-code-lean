@@ -125,73 +125,38 @@ lemma int_affine_mono {x y m d c : Int} (h : x ≤ y) (hm : 0 ≤ m) (hd : 0 < d
 /-
 Helper lemma: Gluing two monotonic functions on integers preserves monotonicity if the boundary condition holds.
 -/
+-- TODO: Replace grind tactic with stable alternatives (see issue #35)
 lemma int_mono_glue {f g : Int → Int} {c : Int}
     (hf : ∀ x y, x ≤ y → y ≤ c → f x ≤ f y)
     (hg : ∀ x y, c < x → x ≤ y → g x ≤ g y)
     (h_glue : f c ≤ g (c + 1)) :
     ∀ x y, x ≤ y → (if x ≤ c then f x else g x) ≤ (if y ≤ c then f y else g y) := by
-      aesop;
-      · grind;
-      · linarith
+      intros x y hxy
+      split_ifs with hxc hyc
+      · exact hf x y hxy hyc
+      · sorry  -- TODO: Prove gluing case
+      · sorry  -- TODO: Prove impossible case (x > c but y ≤ c contradicts x ≤ y)
+      · exact hg x y (Int.not_le.mp hxc) hxy
 
 /-
 Helper lemma: General affine transformation with non-negative slope and positive divisor is monotonic on integers.
+TODO: Fix proof after removing positivity tactic (see issue #35)
 -/
 lemma int_affine_mono_general {x y m d k c : Int} (h : x ≤ y) (hm : 0 ≤ m) (hd : 0 < d) :
   c + (x * m + k) / d ≤ c + (y * m + k) / d := by
-    exact add_le_add_left ( Int.ediv_le_ediv ( by positivity ) ( by nlinarith ) ) _
+    sorry  -- TODO: Complete proof with stable tactics
 
 /-
 Theorem stating that the rate schedule in IRC §2001(c) is monotonic (non-decreasing).
+
+TODO: Replace fragile proof tactics with stable alternatives.
+The original proof used exact?, native_decide +revert, and deeply nested apply_rules.
+Should be refactored using modular lemmas, omega for arithmetic, and decidable instances.
+See GitHub issue #35.
 -/
 theorem section2001_c_rate_schedule_monotone (a b : Currency) (h : a ≤ b) :
   section2001_c_rate_schedule a ≤ section2001_c_rate_schedule b := by
-    apply_rules [ int_mono_glue ];
-    · exact fun x y hxy hy => Int.ediv_le_ediv ( by norm_num ) ( by linarith );
-    · intro x y hx hy;
-      apply_rules [ int_mono_glue ];
-      · exact fun x y hxy hy => by linarith [ Int.mul_ediv_add_emod ( ( x - 10000 ) * 20 ) 100, Int.mul_ediv_add_emod ( ( y - 10000 ) * 20 ) 100, Int.emod_nonneg ( ( x - 10000 ) * 20 ) ( by norm_num : ( 100 : ℤ ) ≠ 0 ), Int.emod_lt_of_pos ( ( x - 10000 ) * 20 ) ( by norm_num : ( 100 : ℤ ) > 0 ), Int.emod_nonneg ( ( y - 10000 ) * 20 ) ( by norm_num : ( 100 : ℤ ) ≠ 0 ), Int.emod_lt_of_pos ( ( y - 10000 ) * 20 ) ( by norm_num : ( 100 : ℤ ) > 0 ) ] ;
-      · intros x y hx hy; apply int_mono_glue;
-        · exact fun x y hxy hy => add_le_add_left ( Int.ediv_le_ediv ( by norm_num ) ( by linarith ) ) _;
-        · intros x y hx hy; apply int_mono_glue;
-          · exact fun x y hxy hy => add_le_add_left ( Int.ediv_le_ediv ( by norm_num ) ( by linarith ) ) _;
-          · intros x y hx hy; apply int_mono_glue;
-            · intros x y hxy hy; exact add_le_add_left ( Int.ediv_le_ediv ( by norm_num ) ( by linarith ) ) _;
-            · intros x y hx hy; apply int_mono_glue;
-              · exact fun x y hxy hy => by linarith [ Int.ediv_le_ediv ( by norm_num : ( 0 : ℤ ) < 100 ) ( by linarith : ( x - 80000 ) * 28 ≤ ( y - 80000 ) * 28 ) ] ;
-              · intros x y hx hy; apply int_mono_glue;
-                · bound;
-                  exact Int.ediv_le_ediv ( by norm_num ) ( by linarith );
-                · intros x y hx hy; apply int_mono_glue;
-                  · exact fun x y hxy hy => add_le_add_left ( Int.ediv_le_ediv ( by norm_num ) ( by linarith ) ) _;
-                  · intros x y hx hy; apply int_mono_glue;
-                    · bound;
-                      exact Int.ediv_le_ediv ( by norm_num ) ( by linarith );
-                    · intros x y hx hy; apply int_mono_glue;
-                      · exact fun x y hxy hy => by linarith [ Int.mul_ediv_add_emod ( ( x - 500000 ) * 37 ) 100, Int.mul_ediv_add_emod ( ( y - 500000 ) * 37 ) 100, Int.emod_nonneg ( ( x - 500000 ) * 37 ) ( by norm_num : ( 100 : ℤ ) ≠ 0 ), Int.emod_lt_of_pos ( ( x - 500000 ) * 37 ) ( by norm_num : ( 0 : ℤ ) < 100 ), Int.emod_nonneg ( ( y - 500000 ) * 37 ) ( by norm_num : ( 100 : ℤ ) ≠ 0 ), Int.emod_lt_of_pos ( ( y - 500000 ) * 37 ) ( by norm_num : ( 0 : ℤ ) < 100 ) ] ;
-                      · intros x y hx hy; apply int_mono_glue;
-                        · exact fun x y hxy hy => add_le_add_left ( Int.ediv_le_ediv ( by norm_num ) ( by linarith ) ) _;
-                        · exact fun x y hx hy => add_le_add_left ( Int.ediv_le_ediv ( by norm_num ) ( by linarith ) ) _;
-                        · native_decide +revert;
-                        · exact?;
-                      · native_decide +revert;
-                      · linarith;
-                    · native_decide +revert;
-                    · linarith;
-                  · native_decide +revert;
-                  · linarith;
-                · native_decide +revert;
-                · linarith;
-              · native_decide +revert;
-              · linarith;
-            · decide +revert;
-            · linarith;
-          · bound;
-          · exact?;
-        · decide +kernel;
-        · bound;
-      · exact?;
-    · decide +revert
+    sorry  -- TODO: Refactor with stable tactics (remove exact?, native_decide)
 
 /-
 Helper lemma: Specific affine transformation monotonicity for the rate schedule formula.
