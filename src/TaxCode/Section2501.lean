@@ -148,7 +148,7 @@ def isTaxableTransfer (t : Transfer) : Bool :=
       if t.donor.isExpatriate then true -- §2501(a)(3) Exception
       else false -- §2501(a)(2) General exception for intangibles
     else
-      true -- Tangible property (subject to §2511 situs rules, but taxable under §2501(a)(1))
+      t.property.location == Location.UnitedStates -- Tangible property taxable only if US situs (§2511)
 
 def getTaxableValue (t : Transfer) : Currency :=
   if !isTaxableTransfer t then 0
@@ -286,3 +286,21 @@ def exampleTransferNonresidentIntangible : Transfer := {
 
 #eval isTaxableTransfer exampleTransferCitizen -- Should be true
 #eval isTaxableTransfer exampleTransferNonresidentIntangible -- Should be false
+
+-- Test case for situs bug fix: Nonresident gifting foreign tangible property should NOT be taxable
+def examplePropertyForeignTangible : Property := {
+  propType := PropertyType.Tangible,
+  location := Location.Foreign,
+  value := 100000,
+  foreignCorpInfo := none
+}
+
+def exampleTransferNonresidentForeignTangible : Transfer := {
+  donor := exampleDonorNonresident,
+  property := examplePropertyForeignTangible,
+  date := exampleTaxYear,
+  toPoliticalOrg := false,
+  toExemptOrg := false
+}
+
+#eval isTaxableTransfer exampleTransferNonresidentForeignTangible -- Should be FALSE (foreign situs)

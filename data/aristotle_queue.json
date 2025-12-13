@@ -1,9 +1,11 @@
 {
   "sections": {
     "71": {
-      "status": "submitted",
+      "status": "complete",
       "project_id": "df2ca0b6-0052-463a-991b-571d26520ed5",
-      "submitted_at": "2025-12-12 00:18:41"
+      "submitted_at": "2025-12-12 00:18:41",
+      "completed_at": "2025-12-13 12:29:02",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section71.lean"
     },
     "1": {
       "status": "complete",
@@ -299,9 +301,47 @@
       "time_taken_seconds": 490
     },
     "482": {
-      "status": "submitted",
+      "status": "complete",
       "project_id": "f5a78caf-492a-4e19-b38e-6665b939d2aa",
-      "submitted_at": "2025-12-12 08:29:27"
+      "submitted_at": "2025-12-12 08:29:27",
+      "completed_at": "2025-12-13 12:29:02",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section482.lean"
+    },
+    "151": {
+      "status": "complete",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section151.lean",
+      "completed_at": "2025-12-13 12:29:02",
+      "note": "Discovered in filesystem - not tracked in original queue"
+    },
+    "152": {
+      "status": "complete",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section152.lean",
+      "completed_at": "2025-12-13 12:29:02",
+      "note": "Discovered in filesystem - not tracked in original queue"
+    },
+    "401": {
+      "status": "complete",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section401.lean",
+      "completed_at": "2025-12-13 12:29:02",
+      "note": "Discovered in filesystem - not tracked in original queue"
+    },
+    "408": {
+      "status": "complete",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section408.lean",
+      "completed_at": "2025-12-13 12:29:02",
+      "note": "Discovered in filesystem - not tracked in original queue"
+    },
+    "2001": {
+      "status": "complete",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section2001.lean",
+      "completed_at": "2025-12-13 12:29:02",
+      "note": "Discovered in filesystem - not tracked in original queue"
+    },
+    "2501": {
+      "status": "complete",
+      "solution_path": "/Users/patrickkavanagh/aristotle_legal/src/TaxCode/Section2501.lean",
+      "completed_at": "2025-12-13 12:29:02",
+      "note": "Discovered in filesystem - not tracked in original queue"
     }
   },
   "metrics": {
@@ -311,5 +351,5 @@
     "failed": 0,
     "timeout": 0
   },
-  "last_updated": "2025-12-12 21:23:28"
+  "last_updated": "2025-12-13 12:29:02"
 }
