@@ -40,7 +40,7 @@ noncomputable section
 Definitions for Currency, TaxYear, FilingStatus, Property, Corporation, Shareholder, and Distribution as required for IRC Section 311. Using `abbrev` for Currency to avoid instance synthesis issues.
 -/
 -- Common definitions
-abbrev Currency := Int
+def Currency := Int
 
 structure TaxYear where
   year : Nat
@@ -48,12 +48,14 @@ structure TaxYear where
   deriving DecidableEq, Repr
 
 inductive FilingStatus
-  | Single
-  | MarriedFilingJointly
-  | MarriedFilingSeparately
-  | HeadOfHousehold
-  | QualifyingWidower
-  deriving DecidableEq, Repr
+  | Single                         -- IRC §1(c)
+  | MarriedFilingJointly          -- IRC §1(a)
+  | MarriedFilingSeparately       -- IRC §1(d)
+  | HeadOfHousehold               -- IRC §1(b)
+  | QualifyingWidower             -- IRC §2(b)
+  | Estate                         -- IRC §1(e)(1)
+  | Trust                          -- IRC §1(e)(2)
+  deriving Repr, DecidableEq, Inhabited
 
 -- Basic entities for Section 311
 structure Property where

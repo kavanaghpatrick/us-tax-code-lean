@@ -41,12 +41,14 @@ structure TaxYear where
   deriving DecidableEq
 
 inductive FilingStatus
-  | Single
-  | MarriedFilingJointly
-  | MarriedFilingSeparately
-  | HeadOfHousehold
-  | QualifyingWidower
-  deriving DecidableEq, Repr
+  | Single                         -- IRC §1(c)
+  | MarriedFilingJointly          -- IRC §1(a)
+  | MarriedFilingSeparately       -- IRC §1(d)
+  | HeadOfHousehold               -- IRC §1(b)
+  | QualifyingWidower             -- IRC §2(b)
+  | Estate                         -- IRC §1(e)(1)
+  | Trust                          -- IRC §1(e)(2)
+  deriving Repr, DecidableEq, Inhabited
 
 /-
 Definitions for PropertyClass, DepreciationMethod, Convention, and the recoveryPeriod function. Note that ResidentialRental is 27.5 years, which poses a challenge for Nat. I will use 28 for now and fix it later or switch to a rational representation if needed, but the user asked for `Currency := Int` and `TaxYear.year : Nat`, suggesting integer arithmetic might be preferred or I should use a scaled integer. However, for recovery period, it's a duration. Let's stick to the user's request for precise arithmetic. 27.5 years is 55 half-years. Maybe I should represent recovery period in months or half-years? The user said "Use precise arithmetic (avoid approximations)". 27.5 is exact. I will use `Rat` (Rational) for recovery period or just return `27.5` if I change the return type. But `Currency` is `Int`.

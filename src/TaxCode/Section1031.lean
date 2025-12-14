@@ -2,7 +2,7 @@ import Lean
 
 namespace Common.Basic
 
-abbrev Currency := Int
+def Currency := Int
 
 abbrev TaxYear := Nat
 

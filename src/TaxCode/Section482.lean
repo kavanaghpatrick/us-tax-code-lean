@@ -47,12 +47,14 @@ structure TaxYear where
   deriving DecidableEq
 
 inductive FilingStatus
-  | Single
-  | MarriedFilingJointly
-  | MarriedFilingSeparately
-  | HeadOfHousehold
-  | QualifyingWidower
-  deriving DecidableEq, Repr
+  | Single                         -- IRC §1(c)
+  | MarriedFilingJointly          -- IRC §1(a)
+  | MarriedFilingSeparately       -- IRC §1(d)
+  | HeadOfHousehold               -- IRC §1(b)
+  | QualifyingWidower             -- IRC §2(b)
+  | Estate                         -- IRC §1(e)(1)
+  | Trust                          -- IRC §1(e)(2)
+  deriving Repr, DecidableEq, Inhabited
 
 /-
 Definitions for Organization and ControlGroup to model the entities in IRC §482. An Organization has income, deductions, credits, and allowances. A ControlGroup consists of two or more organizations controlled by the same interests.

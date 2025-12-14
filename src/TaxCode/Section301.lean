@@ -48,12 +48,14 @@ structure TaxYear where
   deriving DecidableEq
 
 inductive FilingStatus
-  | Single
-  | MarriedFilingJointly
-  | MarriedFilingSeparately
-  | HeadOfHousehold
-  | QualifyingWidower
-  deriving DecidableEq, Repr
+  | Single                         -- IRC §1(c)
+  | MarriedFilingJointly          -- IRC §1(a)
+  | MarriedFilingSeparately       -- IRC §1(d)
+  | HeadOfHousehold               -- IRC §1(b)
+  | QualifyingWidower             -- IRC §2(b)
+  | Estate                         -- IRC §1(e)(1)
+  | Trust                          -- IRC §1(e)(2)
+  deriving Repr, DecidableEq, Inhabited
 
 /-
 Defining Property, Stock, and Distribution structures to hold the data required for Section 301 calculations. Removed Repr to avoid synthesis issues.

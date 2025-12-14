@@ -42,12 +42,14 @@ structure TaxYear where
   deriving DecidableEq
 
 inductive FilingStatus
-  | Single
-  | MarriedFilingJointly
-  | MarriedFilingSeparately
-  | HeadOfHousehold
-  | QualifyingWidower
-  deriving DecidableEq, Repr
+  | Single                         -- IRC §1(c)
+  | MarriedFilingJointly          -- IRC §1(a)
+  | MarriedFilingSeparately       -- IRC §1(d)
+  | HeadOfHousehold               -- IRC §1(b)
+  | QualifyingWidower             -- IRC §2(b)
+  | Estate                         -- IRC §1(e)(1)
+  | Trust                          -- IRC §1(e)(2)
+  deriving Repr, DecidableEq, Inhabited
 
 /-
 Provide necessary typeclass instances for Currency since it was defined as a def (opaque alias) of Int.
