@@ -56,7 +56,17 @@ def example_stock_sale : PropertyGain :=
 theorem ordinary_income_nonnegative (gains : List PropertyGain)
     (h : ∀ g ∈ gains, (g.amount : Int) ≥ 0) :
     calculateOrdinaryIncome gains ≥ 0 := by
-  sorry
+  unfold calculateOrdinaryIncome
+  induction gains with
+  | nil => simp [List.foldl]
+  | cons head tail ih =>
+    simp only [List.foldl]
+    split_ifs with hord
+    · have h_head : (head.amount : Int) ≥ 0 := h head (List.mem_cons_self _ _)
+      have h_tail : ∀ g ∈ tail, (g.amount : Int) ≥ 0 := fun g hg => h g (List.mem_cons_of_mem _ hg)
+      have ih' := ih h_tail
+      omega
+    · exact ih (fun g hg => h g (List.mem_cons_of_mem _ hg))
 
 -- Theorem: Capital asset gains don't contribute to ordinary income
 theorem capital_gains_excluded (g : PropertyGain)

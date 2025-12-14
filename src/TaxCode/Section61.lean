@@ -581,13 +581,22 @@ def calculateGrossIncome (input : GrossIncomeInput) : Currency :=
 theorem gross_income_nonneg (input : GrossIncomeInput)
   (h : ∀ s ∈ input.sources, s.amount ≥ 0) : calculateGrossIncome input ≥ 0 := by
   unfold calculateGrossIncome
-  sorry
+  induction input.sources with
+  | nil => simp [List.foldl]
+  | cons head tail ih =>
+    simp only [List.foldl]
+    have h_head : head.amount ≥ 0 := h head (List.mem_cons_self _ _)
+    have h_tail : ∀ s ∈ tail, s.amount ≥ 0 := fun s hs => h s (List.mem_cons_of_mem _ hs)
+    omega
 
 theorem additivity (sources1 sources2 : List IncomeSource) :
   calculateGrossIncome {sources := sources1 ++ sources2} =
   calculateGrossIncome {sources := sources1} + calculateGrossIncome {sources := sources2} := by
   unfold calculateGrossIncome
-  sorry
+  simp only [List.foldl_append]
+  induction sources1 with
+  | nil => simp [List.foldl]
+  | cons head tail ih => simp [List.foldl, ih]
 
 theorem gross_income_empty : calculateGrossIncome {sources := []} = 0 := by
   unfold calculateGrossIncome

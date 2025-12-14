@@ -1,0 +1,7520 @@
+{
+  "timestamp": "2025-12-14 01:31:47",
+  "summary": {
+    "RETRY": 9,
+    "STUB": 695,
+    "COMPLETE": 33,
+    "NEEDS_THEOREMS": 1,
+    "SORRY": 9,
+    "REVIEW": 1
+  },
+  "files": [
+    {
+      "file": "Section1.lean",
+      "section": 1,
+      "priority": 10,
+      "lines": 496,
+      "size_kb": 24.962890625,
+      "category": "RETRY",
+      "reason": "Previously failed, needs retry"
+    },
+    {
+      "file": "Section1000.lean",
+      "section": 1000,
+      "priority": 10,
+      "lines": 36,
+      "size_kb": 0.5791015625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1001.lean",
+      "section": 1001,
+      "priority": 5,
+      "lines": 200,
+      "size_kb": 6.72265625,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section1002.lean",
+      "section": 1002,
+      "priority": 5,
+      "lines": 49,
+      "size_kb": 1.279296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section101.lean",
+      "section": 101,
+      "priority": 4,
+      "lines": 244,
+      "size_kb": 9.8857421875,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section1011.lean",
+      "section": 1011,
+      "priority": 5,
+      "lines": 154,
+      "size_kb": 5.8134765625,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section1012.lean",
+      "section": 1012,
+      "priority": 5,
+      "lines": 341,
+      "size_kb": 11.43359375,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section1013.lean",
+      "section": 1013,
+      "priority": 5,
+      "lines": 41,
+      "size_kb": 0.837890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1014.lean",
+      "section": 1014,
+      "priority": 5,
+      "lines": 316,
+      "size_kb": 12.7490234375,
+      "category": "COMPLETE",
+      "reason": "Aristotle-generated with proofs"
+    },
+    {
+      "file": "Section1015.lean",
+      "section": 1015,
+      "priority": 5,
+      "lines": 278,
+      "size_kb": 9.7822265625,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section1016.lean",
+      "section": 1016,
+      "priority": 5,
+      "lines": 1891,
+      "size_kb": 69.533203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1017.lean",
+      "section": 1017,
+      "priority": 5,
+      "lines": 373,
+      "size_kb": 12.59375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1018.lean",
+      "section": 1018,
+      "priority": 5,
+      "lines": 60,
+      "size_kb": 1.3212890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1019.lean",
+      "section": 1019,
+      "priority": 5,
+      "lines": 66,
+      "size_kb": 1.939453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section102.lean",
+      "section": 102,
+      "priority": 4,
+      "lines": 87,
+      "size_kb": 2.4599609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1020.lean",
+      "section": 1020,
+      "priority": 5,
+      "lines": 47,
+      "size_kb": 1.0166015625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1021.lean",
+      "section": 1021,
+      "priority": 5,
+      "lines": 41,
+      "size_kb": 0.7548828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1022.lean",
+      "section": 1022,
+      "priority": 5,
+      "lines": 74,
+      "size_kb": 1.9140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1023.lean",
+      "section": 1023,
+      "priority": 5,
+      "lines": 212,
+      "size_kb": 5.1669921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1024.lean",
+      "section": 1024,
+      "priority": 5,
+      "lines": 36,
+      "size_kb": 0.60546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section103.lean",
+      "section": 103,
+      "priority": 4,
+      "lines": 410,
+      "size_kb": 13.3388671875,
+      "category": "RETRY",
+      "reason": "Previously failed, needs retry",
+      "sorry_count": 6
+    },
+    {
+      "file": "Section1031.lean",
+      "section": 1031,
+      "priority": 5,
+      "lines": 41,
+      "size_kb": 0.955078125,
+      "category": "NEEDS_THEOREMS",
+      "reason": "Has functions but no theorems"
+    },
+    {
+      "file": "Section1032.lean",
+      "section": 1032,
+      "priority": 5,
+      "lines": 97,
+      "size_kb": 2.76171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1033.lean",
+      "section": 1033,
+      "priority": 5,
+      "lines": 881,
+      "size_kb": 39.6220703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1034.lean",
+      "section": 1034,
+      "priority": 5,
+      "lines": 122,
+      "size_kb": 2.283203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1035.lean",
+      "section": 1035,
+      "priority": 5,
+      "lines": 211,
+      "size_kb": 7.7255859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1036.lean",
+      "section": 1036,
+      "priority": 5,
+      "lines": 77,
+      "size_kb": 2.005859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1037.lean",
+      "section": 1037,
+      "priority": 5,
+      "lines": 156,
+      "size_kb": 6.0654296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1038.lean",
+      "section": 1038,
+      "priority": 5,
+      "lines": 260,
+      "size_kb": 12.19921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1039.lean",
+      "section": 1039,
+      "priority": 5,
+      "lines": 64,
+      "size_kb": 1.6005859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section104.lean",
+      "section": 104,
+      "priority": 4,
+      "lines": 493,
+      "size_kb": 17.0205078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1040.lean",
+      "section": 1040,
+      "priority": 5,
+      "lines": 240,
+      "size_kb": 8.966796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1041.lean",
+      "section": 1041,
+      "priority": 5,
+      "lines": 174,
+      "size_kb": 5.3642578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1042.lean",
+      "section": 1042,
+      "priority": 5,
+      "lines": 847,
+      "size_kb": 28.984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1043.lean",
+      "section": 1043,
+      "priority": 5,
+      "lines": 248,
+      "size_kb": 8.21484375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1044.lean",
+      "section": 1044,
+      "priority": 5,
+      "lines": 60,
+      "size_kb": 1.361328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1045.lean",
+      "section": 1045,
+      "priority": 5,
+      "lines": 121,
+      "size_kb": 4.0009765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section105.lean",
+      "section": 105,
+      "priority": 4,
+      "lines": 913,
+      "size_kb": 30.240234375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1051.lean",
+      "section": 1051,
+      "priority": 5,
+      "lines": 55,
+      "size_kb": 1.33203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1052.lean",
+      "section": 1052,
+      "priority": 5,
+      "lines": 110,
+      "size_kb": 3.6494140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1053.lean",
+      "section": 1053,
+      "priority": 5,
+      "lines": 74,
+      "size_kb": 1.75,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1054.lean",
+      "section": 1054,
+      "priority": 5,
+      "lines": 66,
+      "size_kb": 1.681640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1055.lean",
+      "section": 1055,
+      "priority": 5,
+      "lines": 117,
+      "size_kb": 4.060546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1056.lean",
+      "section": 1056,
+      "priority": 5,
+      "lines": 65,
+      "size_kb": 1.47265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1057.lean",
+      "section": 1057,
+      "priority": 5,
+      "lines": 50,
+      "size_kb": 1.0537109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1058.lean",
+      "section": 1058,
+      "priority": 5,
+      "lines": 82,
+      "size_kb": 2.7861328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1059.lean",
+      "section": 1059,
+      "priority": 5,
+      "lines": 741,
+      "size_kb": 27.810546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section106.lean",
+      "section": 106,
+      "priority": 4,
+      "lines": 651,
+      "size_kb": 20.771484375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1060.lean",
+      "section": 1060,
+      "priority": 5,
+      "lines": 237,
+      "size_kb": 7.7744140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1061.lean",
+      "section": 1061,
+      "priority": 5,
+      "lines": 186,
+      "size_kb": 6.453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1062.lean",
+      "section": 1062,
+      "priority": 5,
+      "lines": 176,
+      "size_kb": 7.68359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1063.lean",
+      "section": 1063,
+      "priority": 5,
+      "lines": 180,
+      "size_kb": 3.849609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section107.lean",
+      "section": 107,
+      "priority": 4,
+      "lines": 96,
+      "size_kb": 2.5390625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1071.lean",
+      "section": 1071,
+      "priority": 5,
+      "lines": 99,
+      "size_kb": 3.140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section108.lean",
+      "section": 108,
+      "priority": 4,
+      "lines": 485,
+      "size_kb": 17.2626953125,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section1081.lean",
+      "section": 1081,
+      "priority": 5,
+      "lines": 107,
+      "size_kb": 2.5927734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section109.lean",
+      "section": 109,
+      "priority": 4,
+      "lines": 41,
+      "size_kb": 0.9619140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1091.lean",
+      "section": 1091,
+      "priority": 5,
+      "lines": 175,
+      "size_kb": 7.263671875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1092.lean",
+      "section": 1092,
+      "priority": 5,
+      "lines": 1465,
+      "size_kb": 45.3466796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section11.lean",
+      "section": 11,
+      "priority": 10,
+      "lines": 173,
+      "size_kb": 5.447265625,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section110.lean",
+      "section": 110,
+      "priority": 4,
+      "lines": 127,
+      "size_kb": 3.6318359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1101.lean",
+      "section": 1101,
+      "priority": 10,
+      "lines": 105,
+      "size_kb": 2.498046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section111.lean",
+      "section": 111,
+      "priority": 4,
+      "lines": 162,
+      "size_kb": 5.75390625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1111.lean",
+      "section": 1111,
+      "priority": 10,
+      "lines": 42,
+      "size_kb": 0.943359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section112.lean",
+      "section": 112,
+      "priority": 4,
+      "lines": 718,
+      "size_kb": 25.98046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section113.lean",
+      "section": 113,
+      "priority": 4,
+      "lines": 54,
+      "size_kb": 1.4296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section114.lean",
+      "section": 114,
+      "priority": 4,
+      "lines": 135,
+      "size_kb": 3.70703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section115.lean",
+      "section": 115,
+      "priority": 4,
+      "lines": 153,
+      "size_kb": 5.7705078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section116.lean",
+      "section": 116,
+      "priority": 4,
+      "lines": 98,
+      "size_kb": 1.9111328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section117.lean",
+      "section": 117,
+      "priority": 4,
+      "lines": 659,
+      "size_kb": 21.2587890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section118.lean",
+      "section": 118,
+      "priority": 4,
+      "lines": 379,
+      "size_kb": 15.576171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section119.lean",
+      "section": 119,
+      "priority": 4,
+      "lines": 458,
+      "size_kb": 15.33203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section12.lean",
+      "section": 12,
+      "priority": 10,
+      "lines": 233,
+      "size_kb": 6.2021484375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section120.lean",
+      "section": 120,
+      "priority": 4,
+      "lines": 127,
+      "size_kb": 2.6923828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1201.lean",
+      "section": 1201,
+      "priority": 10,
+      "lines": 151,
+      "size_kb": 3.037109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1202.lean",
+      "section": 1202,
+      "priority": 10,
+      "lines": 1142,
+      "size_kb": 43.3916015625,
+      "category": "RETRY",
+      "reason": "Previously failed, needs retry"
+    },
+    {
+      "file": "Section121.lean",
+      "section": 121,
+      "priority": 4,
+      "lines": 330,
+      "size_kb": 12.4248046875,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section1211.lean",
+      "section": 1211,
+      "priority": 10,
+      "lines": 148,
+      "size_kb": 4.5712890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1212.lean",
+      "section": 1212,
+      "priority": 10,
+      "lines": 724,
+      "size_kb": 28.6015625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section122.lean",
+      "section": 122,
+      "priority": 4,
+      "lines": 172,
+      "size_kb": 4.8310546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1221.lean",
+      "section": 1221,
+      "priority": 10,
+      "lines": 154,
+      "size_kb": 5.763671875,
+      "category": "COMPLETE",
+      "reason": "Has implementation and proofs"
+    },
+    {
+      "file": "Section1222.lean",
+      "section": 1222,
+      "priority": 10,
+      "lines": 22,
+      "size_kb": 0.6005859375,
+      "category": "STUB",
+      "reason": "Has 0 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1223.lean",
+      "section": 1223,
+      "priority": 10,
+      "lines": 571,
+      "size_kb": 21.2421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section123.lean",
+      "section": 123,
+      "priority": 4,
+      "lines": 73,
+      "size_kb": 2.3388671875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1231.lean",
+      "section": 1231,
+      "priority": 10,
+      "lines": 21,
+      "size_kb": 0.5771484375,
+      "category": "STUB",
+      "reason": "Has 0 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1232.lean",
+      "section": 1232,
+      "priority": 10,
+      "lines": 126,
+      "size_kb": 2.66796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1233.lean",
+      "section": 1233,
+      "priority": 10,
+      "lines": 450,
+      "size_kb": 15.9765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1234.lean",
+      "section": 1234,
+      "priority": 10,
+      "lines": 360,
+      "size_kb": 10.072265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1235.lean",
+      "section": 1235,
+      "priority": 10,
+      "lines": 234,
+      "size_kb": 7.2421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1236.lean",
+      "section": 1236,
+      "priority": 10,
+      "lines": 245,
+      "size_kb": 6.833984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1237.lean",
+      "section": 1237,
+      "priority": 10,
+      "lines": 331,
+      "size_kb": 14.357421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1238.lean",
+      "section": 1238,
+      "priority": 10,
+      "lines": 62,
+      "size_kb": 1.546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1239.lean",
+      "section": 1239,
+      "priority": 10,
+      "lines": 365,
+      "size_kb": 12.2421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section124.lean",
+      "section": 124,
+      "priority": 4,
+      "lines": 63,
+      "size_kb": 1.5439453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1240.lean",
+      "section": 1240,
+      "priority": 10,
+      "lines": 50,
+      "size_kb": 1.2099609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1241.lean",
+      "section": 1241,
+      "priority": 10,
+      "lines": 41,
+      "size_kb": 1.0458984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1242.lean",
+      "section": 1242,
+      "priority": 10,
+      "lines": 99,
+      "size_kb": 2.533203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1243.lean",
+      "section": 1243,
+      "priority": 10,
+      "lines": 128,
+      "size_kb": 3.099609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1244.lean",
+      "section": 1244,
+      "priority": 10,
+      "lines": 349,
+      "size_kb": 10.7998046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1245.lean",
+      "section": 1245,
+      "priority": 10,
+      "lines": 1234,
+      "size_kb": 36.029296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1246.lean",
+      "section": 1246,
+      "priority": 10,
+      "lines": 122,
+      "size_kb": 2.818359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1248.lean",
+      "section": 1248,
+      "priority": 10,
+      "lines": 879,
+      "size_kb": 34.3466796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1249.lean",
+      "section": 1249,
+      "priority": 10,
+      "lines": 141,
+      "size_kb": 3.5517578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section125.lean",
+      "section": 125,
+      "priority": 4,
+      "lines": 1422,
+      "size_kb": 51.34765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1250.lean",
+      "section": 1250,
+      "priority": 10,
+      "lines": 1600,
+      "size_kb": 55.068359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1251.lean",
+      "section": 1251,
+      "priority": 10,
+      "lines": 82,
+      "size_kb": 1.7578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1252.lean",
+      "section": 1252,
+      "priority": 10,
+      "lines": 233,
+      "size_kb": 6.3720703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1253.lean",
+      "section": 1253,
+      "priority": 10,
+      "lines": 314,
+      "size_kb": 9.4111328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1254.lean",
+      "section": 1254,
+      "priority": 10,
+      "lines": 288,
+      "size_kb": 7.6708984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1255.lean",
+      "section": 1255,
+      "priority": 10,
+      "lines": 244,
+      "size_kb": 6.8447265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1256.lean",
+      "section": 1256,
+      "priority": 10,
+      "lines": 1257,
+      "size_kb": 44.5029296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1257.lean",
+      "section": 1257,
+      "priority": 10,
+      "lines": 170,
+      "size_kb": 4.4755859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1258.lean",
+      "section": 1258,
+      "priority": 10,
+      "lines": 260,
+      "size_kb": 7.9697265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1259.lean",
+      "section": 1259,
+      "priority": 10,
+      "lines": 368,
+      "size_kb": 11.64453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section126.lean",
+      "section": 126,
+      "priority": 4,
+      "lines": 272,
+      "size_kb": 8.912109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1260.lean",
+      "section": 1260,
+      "priority": 10,
+      "lines": 250,
+      "size_kb": 9.431640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section127.lean",
+      "section": 127,
+      "priority": 4,
+      "lines": 874,
+      "size_kb": 27.5869140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1271.lean",
+      "section": 1271,
+      "priority": 10,
+      "lines": 839,
+      "size_kb": 31.966796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1272.lean",
+      "section": 1272,
+      "priority": 10,
+      "lines": 415,
+      "size_kb": 12.0419921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1273.lean",
+      "section": 1273,
+      "priority": 10,
+      "lines": 240,
+      "size_kb": 6.080078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1274.lean",
+      "section": 1274,
+      "priority": 10,
+      "lines": 517,
+      "size_kb": 17.033203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1275.lean",
+      "section": 1275,
+      "priority": 10,
+      "lines": 363,
+      "size_kb": 10.78125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1276.lean",
+      "section": 1276,
+      "priority": 10,
+      "lines": 415,
+      "size_kb": 12.1259765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1277.lean",
+      "section": 1277,
+      "priority": 10,
+      "lines": 307,
+      "size_kb": 9.14453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1278.lean",
+      "section": 1278,
+      "priority": 10,
+      "lines": 421,
+      "size_kb": 11.6748046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section128.lean",
+      "section": 128,
+      "priority": 4,
+      "lines": 151,
+      "size_kb": 3.5947265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1281.lean",
+      "section": 1281,
+      "priority": 10,
+      "lines": 194,
+      "size_kb": 5.734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1282.lean",
+      "section": 1282,
+      "priority": 10,
+      "lines": 137,
+      "size_kb": 4.09765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1283.lean",
+      "section": 1283,
+      "priority": 10,
+      "lines": 195,
+      "size_kb": 5.4912109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1286.lean",
+      "section": 1286,
+      "priority": 10,
+      "lines": 519,
+      "size_kb": 14.1552734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1287.lean",
+      "section": 1287,
+      "priority": 10,
+      "lines": 99,
+      "size_kb": 2.35546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1288.lean",
+      "section": 1288,
+      "priority": 10,
+      "lines": 113,
+      "size_kb": 2.9375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section129.lean",
+      "section": 129,
+      "priority": 4,
+      "lines": 925,
+      "size_kb": 30.5869140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1291.lean",
+      "section": 1291,
+      "priority": 10,
+      "lines": 676,
+      "size_kb": 24.59765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1293.lean",
+      "section": 1293,
+      "priority": 10,
+      "lines": 265,
+      "size_kb": 10.564453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1294.lean",
+      "section": 1294,
+      "priority": 10,
+      "lines": 201,
+      "size_kb": 7.7470703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1295.lean",
+      "section": 1295,
+      "priority": 10,
+      "lines": 159,
+      "size_kb": 5.6962890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1296.lean",
+      "section": 1296,
+      "priority": 10,
+      "lines": 371,
+      "size_kb": 16.0849609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1297.lean",
+      "section": 1297,
+      "priority": 10,
+      "lines": 468,
+      "size_kb": 17.9716796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1298.lean",
+      "section": 1298,
+      "priority": 10,
+      "lines": 563,
+      "size_kb": 21.478515625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section130.lean",
+      "section": 130,
+      "priority": 4,
+      "lines": 204,
+      "size_kb": 6.7822265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1301.lean",
+      "section": 1301,
+      "priority": 10,
+      "lines": 460,
+      "size_kb": 10.1572265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section131.lean",
+      "section": 131,
+      "priority": 4,
+      "lines": 230,
+      "size_kb": 7.6435546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1311.lean",
+      "section": 1311,
+      "priority": 10,
+      "lines": 128,
+      "size_kb": 4.953125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1312.lean",
+      "section": 1312,
+      "priority": 10,
+      "lines": 186,
+      "size_kb": 5.9267578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1313.lean",
+      "section": 1313,
+      "priority": 10,
+      "lines": 103,
+      "size_kb": 2.9365234375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1314.lean",
+      "section": 1314,
+      "priority": 10,
+      "lines": 175,
+      "size_kb": 7.005859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1315.lean",
+      "section": 1315,
+      "priority": 10,
+      "lines": 49,
+      "size_kb": 1.17578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section132.lean",
+      "section": 132,
+      "priority": 4,
+      "lines": 1625,
+      "size_kb": 52.1005859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1321.lean",
+      "section": 1321,
+      "priority": 10,
+      "lines": 47,
+      "size_kb": 1.173828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section133.lean",
+      "section": 133,
+      "priority": 4,
+      "lines": 254,
+      "size_kb": 11.1943359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1331.lean",
+      "section": 1331,
+      "priority": 10,
+      "lines": 71,
+      "size_kb": 2.0537109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section134.lean",
+      "section": 134,
+      "priority": 4,
+      "lines": 306,
+      "size_kb": 8.744140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1341.lean",
+      "section": 1341,
+      "priority": 10,
+      "lines": 212,
+      "size_kb": 9.4208984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1342.lean",
+      "section": 1342,
+      "priority": 10,
+      "lines": 49,
+      "size_kb": 1.2509765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1346.lean",
+      "section": 1346,
+      "priority": 10,
+      "lines": 49,
+      "size_kb": 1.1904296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1347.lean",
+      "section": 1347,
+      "priority": 10,
+      "lines": 66,
+      "size_kb": 1.6640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1348.lean",
+      "section": 1348,
+      "priority": 10,
+      "lines": 105,
+      "size_kb": 2.4580078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section135.lean",
+      "section": 135,
+      "priority": 4,
+      "lines": 613,
+      "size_kb": 20.490234375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1351.lean",
+      "section": 1351,
+      "priority": 10,
+      "lines": 307,
+      "size_kb": 13.029296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1352.lean",
+      "section": 1352,
+      "priority": 10,
+      "lines": 68,
+      "size_kb": 1.4541015625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1353.lean",
+      "section": 1353,
+      "priority": 10,
+      "lines": 128,
+      "size_kb": 3.6650390625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1354.lean",
+      "section": 1354,
+      "priority": 10,
+      "lines": 153,
+      "size_kb": 4.7119140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1355.lean",
+      "section": 1355,
+      "priority": 10,
+      "lines": 478,
+      "size_kb": 14.869140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1356.lean",
+      "section": 1356,
+      "priority": 10,
+      "lines": 198,
+      "size_kb": 5.052734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1357.lean",
+      "section": 1357,
+      "priority": 10,
+      "lines": 119,
+      "size_kb": 3.2861328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1358.lean",
+      "section": 1358,
+      "priority": 10,
+      "lines": 98,
+      "size_kb": 2.5419921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1359.lean",
+      "section": 1359,
+      "priority": 10,
+      "lines": 110,
+      "size_kb": 3.693359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section136.lean",
+      "section": 136,
+      "priority": 4,
+      "lines": 155,
+      "size_kb": 4.873046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1361.lean",
+      "section": 1361,
+      "priority": 10,
+      "lines": 1591,
+      "size_kb": 53.33203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1362.lean",
+      "section": 1362,
+      "priority": 10,
+      "lines": 730,
+      "size_kb": 28.279296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1363.lean",
+      "section": 1363,
+      "priority": 10,
+      "lines": 369,
+      "size_kb": 11.5849609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1366.lean",
+      "section": 1366,
+      "priority": 10,
+      "lines": 366,
+      "size_kb": 14.8095703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1367.lean",
+      "section": 1367,
+      "priority": 10,
+      "lines": 314,
+      "size_kb": 10.5908203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1368.lean",
+      "section": 1368,
+      "priority": 10,
+      "lines": 317,
+      "size_kb": 11.046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section137.lean",
+      "section": 137,
+      "priority": 4,
+      "lines": 514,
+      "size_kb": 16.2451171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1371.lean",
+      "section": 1371,
+      "priority": 10,
+      "lines": 354,
+      "size_kb": 10.951171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1372.lean",
+      "section": 1372,
+      "priority": 10,
+      "lines": 127,
+      "size_kb": 3.12109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1373.lean",
+      "section": 1373,
+      "priority": 10,
+      "lines": 89,
+      "size_kb": 2.0087890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1374.lean",
+      "section": 1374,
+      "priority": 10,
+      "lines": 654,
+      "size_kb": 24.251953125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1375.lean",
+      "section": 1375,
+      "priority": 10,
+      "lines": 301,
+      "size_kb": 9.3642578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1377.lean",
+      "section": 1377,
+      "priority": 10,
+      "lines": 221,
+      "size_kb": 7.3466796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1378.lean",
+      "section": 1378,
+      "priority": 10,
+      "lines": 212,
+      "size_kb": 6.8994140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1379.lean",
+      "section": 1379,
+      "priority": 10,
+      "lines": 179,
+      "size_kb": 4.5361328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section138.lean",
+      "section": 138,
+      "priority": 4,
+      "lines": 256,
+      "size_kb": 7.7080078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1381.lean",
+      "section": 1381,
+      "priority": 10,
+      "lines": 163,
+      "size_kb": 4.4013671875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1382.lean",
+      "section": 1382,
+      "priority": 10,
+      "lines": 249,
+      "size_kb": 10.7734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1383.lean",
+      "section": 1383,
+      "priority": 10,
+      "lines": 129,
+      "size_kb": 4.6103515625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1385.lean",
+      "section": 1385,
+      "priority": 10,
+      "lines": 206,
+      "size_kb": 5.9326171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1388.lean",
+      "section": 1388,
+      "priority": 10,
+      "lines": 508,
+      "size_kb": 21.8935546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section139.lean",
+      "section": 139,
+      "priority": 4,
+      "lines": 263,
+      "size_kb": 8.7822265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1391.lean",
+      "section": 1391,
+      "priority": 10,
+      "lines": 705,
+      "size_kb": 24.05859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1392.lean",
+      "section": 1392,
+      "priority": 10,
+      "lines": 226,
+      "size_kb": 6.4296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1393.lean",
+      "section": 1393,
+      "priority": 10,
+      "lines": 158,
+      "size_kb": 3.5361328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1394.lean",
+      "section": 1394,
+      "priority": 10,
+      "lines": 517,
+      "size_kb": 18.759765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1396.lean",
+      "section": 1396,
+      "priority": 10,
+      "lines": 238,
+      "size_kb": 8.0712890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1397.lean",
+      "section": 1397,
+      "priority": 10,
+      "lines": 95,
+      "size_kb": 2.845703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1398.lean",
+      "section": 1398,
+      "priority": 10,
+      "lines": 328,
+      "size_kb": 14.4609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1399.lean",
+      "section": 1399,
+      "priority": 10,
+      "lines": 44,
+      "size_kb": 0.9931640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section140.lean",
+      "section": 140,
+      "priority": 10,
+      "lines": 423,
+      "size_kb": 10.7119140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1400.lean",
+      "section": 1400,
+      "priority": 10,
+      "lines": 313,
+      "size_kb": 6.3076171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1401.lean",
+      "section": 1401,
+      "priority": 10,
+      "lines": 1605,
+      "size_kb": 65.34375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1402.lean",
+      "section": 1402,
+      "priority": 10,
+      "lines": 2603,
+      "size_kb": 113.99609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1403.lean",
+      "section": 1403,
+      "priority": 10,
+      "lines": 104,
+      "size_kb": 2.1767578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section141.lean",
+      "section": 141,
+      "priority": 10,
+      "lines": 5374,
+      "size_kb": 197.4208984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1411.lean",
+      "section": 1411,
+      "priority": 10,
+      "lines": 169,
+      "size_kb": 5.4990234375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section142.lean",
+      "section": 142,
+      "priority": 10,
+      "lines": 1966,
+      "size_kb": 69.603515625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section143.lean",
+      "section": 143,
+      "priority": 10,
+      "lines": 2078,
+      "size_kb": 74.4150390625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section144.lean",
+      "section": 144,
+      "priority": 10,
+      "lines": 1042,
+      "size_kb": 38.4697265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1441.lean",
+      "section": 1441,
+      "priority": 10,
+      "lines": 772,
+      "size_kb": 29.130859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1442.lean",
+      "section": 1442,
+      "priority": 10,
+      "lines": 333,
+      "size_kb": 12.849609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1443.lean",
+      "section": 1443,
+      "priority": 10,
+      "lines": 97,
+      "size_kb": 2.533203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1444.lean",
+      "section": 1444,
+      "priority": 10,
+      "lines": 82,
+      "size_kb": 2.119140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1445.lean",
+      "section": 1445,
+      "priority": 10,
+      "lines": 800,
+      "size_kb": 29.0068359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1446.lean",
+      "section": 1446,
+      "priority": 10,
+      "lines": 297,
+      "size_kb": 11.3203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section145.lean",
+      "section": 145,
+      "priority": 10,
+      "lines": 515,
+      "size_kb": 14.818359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1451.lean",
+      "section": 1451,
+      "priority": 10,
+      "lines": 52,
+      "size_kb": 1.2431640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section146.lean",
+      "section": 146,
+      "priority": 10,
+      "lines": 835,
+      "size_kb": 28.4873046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1461.lean",
+      "section": 1461,
+      "priority": 10,
+      "lines": 64,
+      "size_kb": 1.697265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1462.lean",
+      "section": 1462,
+      "priority": 10,
+      "lines": 41,
+      "size_kb": 0.99609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1463.lean",
+      "section": 1463,
+      "priority": 10,
+      "lines": 78,
+      "size_kb": 2.30078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1464.lean",
+      "section": 1464,
+      "priority": 10,
+      "lines": 43,
+      "size_kb": 0.97265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1465.lean",
+      "section": 1465,
+      "priority": 10,
+      "lines": 49,
+      "size_kb": 1.17578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section147.lean",
+      "section": 147,
+      "priority": 10,
+      "lines": 837,
+      "size_kb": 29.91796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1471.lean",
+      "section": 1471,
+      "priority": 10,
+      "lines": 438,
+      "size_kb": 15.8740234375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1472.lean",
+      "section": 1472,
+      "priority": 10,
+      "lines": 120,
+      "size_kb": 3.48828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1473.lean",
+      "section": 1473,
+      "priority": 10,
+      "lines": 155,
+      "size_kb": 4.59375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1474.lean",
+      "section": 1474,
+      "priority": 10,
+      "lines": 117,
+      "size_kb": 4.3173828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section148.lean",
+      "section": 148,
+      "priority": 10,
+      "lines": 1346,
+      "size_kb": 54.3740234375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section149.lean",
+      "section": 149,
+      "priority": 10,
+      "lines": 1025,
+      "size_kb": 33.4912109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1491.lean",
+      "section": 1491,
+      "priority": 10,
+      "lines": 85,
+      "size_kb": 1.6943359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1493.lean",
+      "section": 1493,
+      "priority": 10,
+      "lines": 50,
+      "size_kb": 1.1669921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1494.lean",
+      "section": 1494,
+      "priority": 10,
+      "lines": 60,
+      "size_kb": 1.2099609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section15.lean",
+      "section": 15,
+      "priority": 10,
+      "lines": 392,
+      "size_kb": 12.09765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section150.lean",
+      "section": 150,
+      "priority": 10,
+      "lines": 501,
+      "size_kb": 20.4833984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1501.lean",
+      "section": 1501,
+      "priority": 10,
+      "lines": 48,
+      "size_kb": 1.5986328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1502.lean",
+      "section": 1502,
+      "priority": 10,
+      "lines": 175,
+      "size_kb": 8.79296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1503.lean",
+      "section": 1503,
+      "priority": 10,
+      "lines": 725,
+      "size_kb": 25.3125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1504.lean",
+      "section": 1504,
+      "priority": 10,
+      "lines": 1018,
+      "size_kb": 39.099609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1505.lean",
+      "section": 1505,
+      "priority": 10,
+      "lines": 43,
+      "size_kb": 0.8984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section151.lean",
+      "section": 151,
+      "priority": 10,
+      "lines": 22,
+      "size_kb": 0.482421875,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section152.lean",
+      "section": 152,
+      "priority": 10,
+      "lines": 1044,
+      "size_kb": 34.982421875,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section153.lean",
+      "section": 153,
+      "priority": 10,
+      "lines": 153,
+      "size_kb": 3.90625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1551.lean",
+      "section": 1551,
+      "priority": 10,
+      "lines": 101,
+      "size_kb": 2.2490234375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1552.lean",
+      "section": 1552,
+      "priority": 10,
+      "lines": 97,
+      "size_kb": 3.8857421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1561.lean",
+      "section": 1561,
+      "priority": 10,
+      "lines": 462,
+      "size_kb": 16.318359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1562.lean",
+      "section": 1562,
+      "priority": 10,
+      "lines": 75,
+      "size_kb": 2.1591796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1563.lean",
+      "section": 1563,
+      "priority": 10,
+      "lines": 507,
+      "size_kb": 24.5849609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section1564.lean",
+      "section": 1564,
+      "priority": 10,
+      "lines": 63,
+      "size_kb": 1.638671875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section161.lean",
+      "section": 161,
+      "priority": 2,
+      "lines": 63,
+      "size_kb": 1.3583984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section162.lean",
+      "section": 162,
+      "priority": 2,
+      "lines": 313,
+      "size_kb": 11.1123046875,
+      "category": "SORRY",
+      "reason": "Has 3 sorry markers - needs proof completion",
+      "sorry_count": 3
+    },
+    {
+      "file": "Section163.lean",
+      "section": 163,
+      "priority": 2,
+      "lines": 262,
+      "size_kb": 10.33984375,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section164.lean",
+      "section": 164,
+      "priority": 2,
+      "lines": 359,
+      "size_kb": 13.8701171875,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section165.lean",
+      "section": 165,
+      "priority": 2,
+      "lines": 1692,
+      "size_kb": 66.2685546875,
+      "category": "RETRY",
+      "reason": "Previously failed, needs retry"
+    },
+    {
+      "file": "Section166.lean",
+      "section": 166,
+      "priority": 2,
+      "lines": 166,
+      "size_kb": 5.388671875,
+      "category": "REVIEW",
+      "reason": "Ambiguous - needs Grok review",
+      "has_structures": true,
+      "has_functions": false,
+      "has_theorems": true
+    },
+    {
+      "file": "Section167.lean",
+      "section": 167,
+      "priority": 2,
+      "lines": 342,
+      "size_kb": 14.08984375,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section168.lean",
+      "section": 168,
+      "priority": 2,
+      "lines": 497,
+      "size_kb": 21.4970703125,
+      "category": "SORRY",
+      "reason": "Has 1 sorry markers - needs proof completion",
+      "sorry_count": 1
+    },
+    {
+      "file": "Section169.lean",
+      "section": 169,
+      "priority": 2,
+      "lines": 417,
+      "size_kb": 16.107421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section170.lean",
+      "section": 170,
+      "priority": 2,
+      "lines": 5207,
+      "size_kb": 209.3935546875,
+      "category": "RETRY",
+      "reason": "Previously failed, needs retry"
+    },
+    {
+      "file": "Section171.lean",
+      "section": 171,
+      "priority": 2,
+      "lines": 562,
+      "size_kb": 19.58984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section172.lean",
+      "section": 172,
+      "priority": 2,
+      "lines": 2959,
+      "size_kb": 109.318359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section173.lean",
+      "section": 173,
+      "priority": 2,
+      "lines": 161,
+      "size_kb": 4.771484375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section174.lean",
+      "section": 174,
+      "priority": 2,
+      "lines": 193,
+      "size_kb": 7.4541015625,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section175.lean",
+      "section": 175,
+      "priority": 2,
+      "lines": 303,
+      "size_kb": 13.1728515625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section176.lean",
+      "section": 176,
+      "priority": 2,
+      "lines": 43,
+      "size_kb": 1.28125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section177.lean",
+      "section": 177,
+      "priority": 2,
+      "lines": 78,
+      "size_kb": 2.146484375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section178.lean",
+      "section": 178,
+      "priority": 2,
+      "lines": 145,
+      "size_kb": 5.232421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section179.lean",
+      "section": 179,
+      "priority": 2,
+      "lines": 296,
+      "size_kb": 10.462890625,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section180.lean",
+      "section": 180,
+      "priority": 2,
+      "lines": 82,
+      "size_kb": 2.54296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section181.lean",
+      "section": 181,
+      "priority": 2,
+      "lines": 603,
+      "size_kb": 17.7763671875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section182.lean",
+      "section": 182,
+      "priority": 2,
+      "lines": 66,
+      "size_kb": 1.4453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section183.lean",
+      "section": 183,
+      "priority": 2,
+      "lines": 223,
+      "size_kb": 8.2158203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section184.lean",
+      "section": 184,
+      "priority": 2,
+      "lines": 70,
+      "size_kb": 1.64453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section185.lean",
+      "section": 185,
+      "priority": 2,
+      "lines": 88,
+      "size_kb": 2.2138671875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section186.lean",
+      "section": 186,
+      "priority": 2,
+      "lines": 161,
+      "size_kb": 5.431640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section187.lean",
+      "section": 187,
+      "priority": 2,
+      "lines": 60,
+      "size_kb": 1.5234375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section188.lean",
+      "section": 188,
+      "priority": 2,
+      "lines": 70,
+      "size_kb": 1.6767578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section189.lean",
+      "section": 189,
+      "priority": 2,
+      "lines": 95,
+      "size_kb": 2.3798828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section190.lean",
+      "section": 190,
+      "priority": 2,
+      "lines": 190,
+      "size_kb": 5.974609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section191.lean",
+      "section": 191,
+      "priority": 2,
+      "lines": 72,
+      "size_kb": 1.5908203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section192.lean",
+      "section": 192,
+      "priority": 2,
+      "lines": 266,
+      "size_kb": 9.078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section193.lean",
+      "section": 193,
+      "priority": 2,
+      "lines": 153,
+      "size_kb": 4.2822265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section194.lean",
+      "section": 194,
+      "priority": 2,
+      "lines": 289,
+      "size_kb": 11.125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section195.lean",
+      "section": 195,
+      "priority": 2,
+      "lines": 228,
+      "size_kb": 7.5517578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section196.lean",
+      "section": 196,
+      "priority": 2,
+      "lines": 557,
+      "size_kb": 16.87109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section197.lean",
+      "section": 197,
+      "priority": 2,
+      "lines": 500,
+      "size_kb": 20.7685546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section198.lean",
+      "section": 198,
+      "priority": 2,
+      "lines": 313,
+      "size_kb": 10.03125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section199.lean",
+      "section": 199,
+      "priority": 2,
+      "lines": 166,
+      "size_kb": 6.08984375,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section2.lean",
+      "section": 2,
+      "priority": 10,
+      "lines": 443,
+      "size_kb": 14.1689453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2001.lean",
+      "section": 2001,
+      "priority": 8,
+      "lines": 196,
+      "size_kb": 7.0224609375,
+      "category": "SORRY",
+      "reason": "Has 4 sorry markers - needs proof completion",
+      "sorry_count": 4
+    },
+    {
+      "file": "Section2002.lean",
+      "section": 2002,
+      "priority": 8,
+      "lines": 88,
+      "size_kb": 1.9736328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2010.lean",
+      "section": 2010,
+      "priority": 8,
+      "lines": 397,
+      "size_kb": 13.990234375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2011.lean",
+      "section": 2011,
+      "priority": 8,
+      "lines": 89,
+      "size_kb": 1.8740234375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2012.lean",
+      "section": 2012,
+      "priority": 8,
+      "lines": 248,
+      "size_kb": 9.3310546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2013.lean",
+      "section": 2013,
+      "priority": 8,
+      "lines": 253,
+      "size_kb": 9.751953125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2014.lean",
+      "section": 2014,
+      "priority": 8,
+      "lines": 212,
+      "size_kb": 9.19921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2015.lean",
+      "section": 2015,
+      "priority": 8,
+      "lines": 83,
+      "size_kb": 2.67578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2016.lean",
+      "section": 2016,
+      "priority": 8,
+      "lines": 103,
+      "size_kb": 3.181640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2031.lean",
+      "section": 2031,
+      "priority": 8,
+      "lines": 442,
+      "size_kb": 16.0595703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2032.lean",
+      "section": 2032,
+      "priority": 8,
+      "lines": 179,
+      "size_kb": 7.650390625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2033.lean",
+      "section": 2033,
+      "priority": 8,
+      "lines": 64,
+      "size_kb": 1.439453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2034.lean",
+      "section": 2034,
+      "priority": 8,
+      "lines": 64,
+      "size_kb": 1.5009765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2035.lean",
+      "section": 2035,
+      "priority": 8,
+      "lines": 272,
+      "size_kb": 9.9072265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2036.lean",
+      "section": 2036,
+      "priority": 8,
+      "lines": 276,
+      "size_kb": 9.8681640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2037.lean",
+      "section": 2037,
+      "priority": 8,
+      "lines": 105,
+      "size_kb": 3.65234375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2038.lean",
+      "section": 2038,
+      "priority": 8,
+      "lines": 138,
+      "size_kb": 5.732421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2039.lean",
+      "section": 2039,
+      "priority": 8,
+      "lines": 495,
+      "size_kb": 19.1865234375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2040.lean",
+      "section": 2040,
+      "priority": 8,
+      "lines": 198,
+      "size_kb": 7.9111328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2041.lean",
+      "section": 2041,
+      "priority": 8,
+      "lines": 188,
+      "size_kb": 8.16015625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2042.lean",
+      "section": 2042,
+      "priority": 8,
+      "lines": 69,
+      "size_kb": 2.5478515625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2043.lean",
+      "section": 2043,
+      "priority": 8,
+      "lines": 76,
+      "size_kb": 2.6787109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2044.lean",
+      "section": 2044,
+      "priority": 8,
+      "lines": 104,
+      "size_kb": 2.693359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2045.lean",
+      "section": 2045,
+      "priority": 8,
+      "lines": 78,
+      "size_kb": 1.6962890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2046.lean",
+      "section": 2046,
+      "priority": 8,
+      "lines": 60,
+      "size_kb": 1.197265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2051.lean",
+      "section": 2051,
+      "priority": 8,
+      "lines": 69,
+      "size_kb": 1.4716796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2052.lean",
+      "section": 2052,
+      "priority": 8,
+      "lines": 50,
+      "size_kb": 1.2470703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2053.lean",
+      "section": 2053,
+      "priority": 8,
+      "lines": 344,
+      "size_kb": 14.4677734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2054.lean",
+      "section": 2054,
+      "priority": 8,
+      "lines": 41,
+      "size_kb": 0.9599609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2055.lean",
+      "section": 2055,
+      "priority": 8,
+      "lines": 1100,
+      "size_kb": 46.373046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2056.lean",
+      "section": 2056,
+      "priority": 8,
+      "lines": 885,
+      "size_kb": 36.9423828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2057.lean",
+      "section": 2057,
+      "priority": 8,
+      "lines": 120,
+      "size_kb": 2.6796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2058.lean",
+      "section": 2058,
+      "priority": 8,
+      "lines": 76,
+      "size_kb": 2.9375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section21.lean",
+      "section": 21,
+      "priority": 3,
+      "lines": 240,
+      "size_kb": 8.83203125,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section2101.lean",
+      "section": 2101,
+      "priority": 8,
+      "lines": 216,
+      "size_kb": 6.1015625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2102.lean",
+      "section": 2102,
+      "priority": 8,
+      "lines": 206,
+      "size_kb": 7.345703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2103.lean",
+      "section": 2103,
+      "priority": 8,
+      "lines": 43,
+      "size_kb": 0.9765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2104.lean",
+      "section": 2104,
+      "priority": 8,
+      "lines": 263,
+      "size_kb": 7.21875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2105.lean",
+      "section": 2105,
+      "priority": 8,
+      "lines": 259,
+      "size_kb": 9.998046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2106.lean",
+      "section": 2106,
+      "priority": 8,
+      "lines": 391,
+      "size_kb": 15.8349609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2107.lean",
+      "section": 2107,
+      "priority": 8,
+      "lines": 261,
+      "size_kb": 11.8291015625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2108.lean",
+      "section": 2108,
+      "priority": 8,
+      "lines": 106,
+      "size_kb": 4.423828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section211.lean",
+      "section": 211,
+      "priority": 10,
+      "lines": 68,
+      "size_kb": 1.416015625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section212.lean",
+      "section": 212,
+      "priority": 10,
+      "lines": 57,
+      "size_kb": 1.5849609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section213.lean",
+      "section": 213,
+      "priority": 10,
+      "lines": 796,
+      "size_kb": 29.30078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section214.lean",
+      "section": 214,
+      "priority": 10,
+      "lines": 74,
+      "size_kb": 1.767578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section215.lean",
+      "section": 215,
+      "priority": 10,
+      "lines": 66,
+      "size_kb": 1.6806640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section216.lean",
+      "section": 216,
+      "priority": 10,
+      "lines": 629,
+      "size_kb": 25.029296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section217.lean",
+      "section": 217,
+      "priority": 10,
+      "lines": 461,
+      "size_kb": 18.8271484375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section218.lean",
+      "section": 218,
+      "priority": 10,
+      "lines": 71,
+      "size_kb": 1.5498046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section219.lean",
+      "section": 219,
+      "priority": 10,
+      "lines": 1954,
+      "size_kb": 71.2421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section22.lean",
+      "section": 22,
+      "priority": 3,
+      "lines": 572,
+      "size_kb": 22.3310546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section220.lean",
+      "section": 220,
+      "priority": 10,
+      "lines": 1424,
+      "size_kb": 49.6142578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2201.lean",
+      "section": 2201,
+      "priority": 8,
+      "lines": 233,
+      "size_kb": 8.359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2202.lean",
+      "section": 2202,
+      "priority": 8,
+      "lines": 62,
+      "size_kb": 1.525390625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2203.lean",
+      "section": 2203,
+      "priority": 8,
+      "lines": 47,
+      "size_kb": 1.0390625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2204.lean",
+      "section": 2204,
+      "priority": 8,
+      "lines": 189,
+      "size_kb": 7.7021484375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2205.lean",
+      "section": 2205,
+      "priority": 8,
+      "lines": 43,
+      "size_kb": 1.4697265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2206.lean",
+      "section": 2206,
+      "priority": 8,
+      "lines": 70,
+      "size_kb": 2.2255859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2207.lean",
+      "section": 2207,
+      "priority": 8,
+      "lines": 68,
+      "size_kb": 2.609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2208.lean",
+      "section": 2208,
+      "priority": 8,
+      "lines": 55,
+      "size_kb": 1.6240234375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2209.lean",
+      "section": 2209,
+      "priority": 8,
+      "lines": 57,
+      "size_kb": 1.720703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section221.lean",
+      "section": 221,
+      "priority": 10,
+      "lines": 561,
+      "size_kb": 18.22265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2210.lean",
+      "section": 2210,
+      "priority": 8,
+      "lines": 76,
+      "size_kb": 1.93359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section222.lean",
+      "section": 222,
+      "priority": 10,
+      "lines": 152,
+      "size_kb": 2.8955078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section223.lean",
+      "section": 223,
+      "priority": 10,
+      "lines": 1224,
+      "size_kb": 43.5556640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section224.lean",
+      "section": 224,
+      "priority": 10,
+      "lines": 168,
+      "size_kb": 5.9638671875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section225.lean",
+      "section": 225,
+      "priority": 10,
+      "lines": 130,
+      "size_kb": 3.83984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section226.lean",
+      "section": 226,
+      "priority": 10,
+      "lines": 241,
+      "size_kb": 5.375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section23.lean",
+      "section": 23,
+      "priority": 3,
+      "lines": 1003,
+      "size_kb": 33.951171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section24.lean",
+      "section": 24,
+      "priority": 3,
+      "lines": 374,
+      "size_kb": 13.4365234375,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section241.lean",
+      "section": 241,
+      "priority": 10,
+      "lines": 40,
+      "size_kb": 0.861328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section242.lean",
+      "section": 242,
+      "priority": 10,
+      "lines": 58,
+      "size_kb": 1.462890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section243.lean",
+      "section": 243,
+      "priority": 10,
+      "lines": 753,
+      "size_kb": 25.9453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section244.lean",
+      "section": 244,
+      "priority": 10,
+      "lines": 93,
+      "size_kb": 2.154296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section245.lean",
+      "section": 245,
+      "priority": 10,
+      "lines": 671,
+      "size_kb": 24.6484375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section246.lean",
+      "section": 246,
+      "priority": 10,
+      "lines": 908,
+      "size_kb": 31.10546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section247.lean",
+      "section": 247,
+      "priority": 10,
+      "lines": 263,
+      "size_kb": 9.1962890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section248.lean",
+      "section": 248,
+      "priority": 10,
+      "lines": 154,
+      "size_kb": 4.58984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section249.lean",
+      "section": 249,
+      "priority": 10,
+      "lines": 166,
+      "size_kb": 5.6494140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section25.lean",
+      "section": 25,
+      "priority": 3,
+      "lines": 197,
+      "size_kb": 7.0419921875,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section250.lean",
+      "section": 250,
+      "priority": 10,
+      "lines": 428,
+      "size_kb": 13.400390625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2501.lean",
+      "section": 2501,
+      "priority": 8,
+      "lines": 306,
+      "size_kb": 9.6201171875,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section2502.lean",
+      "section": 2502,
+      "priority": 8,
+      "lines": 240,
+      "size_kb": 7.1953125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2503.lean",
+      "section": 2503,
+      "priority": 8,
+      "lines": 406,
+      "size_kb": 14.177734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2504.lean",
+      "section": 2504,
+      "priority": 8,
+      "lines": 249,
+      "size_kb": 8.9775390625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2505.lean",
+      "section": 2505,
+      "priority": 8,
+      "lines": 267,
+      "size_kb": 8.1591796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2511.lean",
+      "section": 2511,
+      "priority": 8,
+      "lines": 136,
+      "size_kb": 4.009765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2512.lean",
+      "section": 2512,
+      "priority": 8,
+      "lines": 98,
+      "size_kb": 2.337890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2513.lean",
+      "section": 2513,
+      "priority": 8,
+      "lines": 145,
+      "size_kb": 6.154296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2514.lean",
+      "section": 2514,
+      "priority": 8,
+      "lines": 151,
+      "size_kb": 6.5849609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2515.lean",
+      "section": 2515,
+      "priority": 8,
+      "lines": 90,
+      "size_kb": 1.9619140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2516.lean",
+      "section": 2516,
+      "priority": 8,
+      "lines": 69,
+      "size_kb": 1.994140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2517.lean",
+      "section": 2517,
+      "priority": 8,
+      "lines": 90,
+      "size_kb": 1.7919921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2518.lean",
+      "section": 2518,
+      "priority": 8,
+      "lines": 173,
+      "size_kb": 4.810546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2519.lean",
+      "section": 2519,
+      "priority": 8,
+      "lines": 101,
+      "size_kb": 2.9248046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2521.lean",
+      "section": 2521,
+      "priority": 8,
+      "lines": 40,
+      "size_kb": 1.076171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2522.lean",
+      "section": 2522,
+      "priority": 8,
+      "lines": 531,
+      "size_kb": 21.849609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2523.lean",
+      "section": 2523,
+      "priority": 8,
+      "lines": 501,
+      "size_kb": 21.6005859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2524.lean",
+      "section": 2524,
+      "priority": 8,
+      "lines": 44,
+      "size_kb": 0.869140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section26.lean",
+      "section": 26,
+      "priority": 3,
+      "lines": 1096,
+      "size_kb": 33.6123046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2601.lean",
+      "section": 2601,
+      "priority": 8,
+      "lines": 350,
+      "size_kb": 12.0966796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2602.lean",
+      "section": 2602,
+      "priority": 8,
+      "lines": 139,
+      "size_kb": 3.951171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2603.lean",
+      "section": 2603,
+      "priority": 8,
+      "lines": 100,
+      "size_kb": 2.8203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2604.lean",
+      "section": 2604,
+      "priority": 8,
+      "lines": 61,
+      "size_kb": 1.390625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section261.lean",
+      "section": 261,
+      "priority": 10,
+      "lines": 40,
+      "size_kb": 0.8408203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2611.lean",
+      "section": 2611,
+      "priority": 8,
+      "lines": 134,
+      "size_kb": 3.6220703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2612.lean",
+      "section": 2612,
+      "priority": 8,
+      "lines": 191,
+      "size_kb": 6.4306640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2613.lean",
+      "section": 2613,
+      "priority": 8,
+      "lines": 194,
+      "size_kb": 4.9814453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2614.lean",
+      "section": 2614,
+      "priority": 8,
+      "lines": 62,
+      "size_kb": 1.0517578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section262.lean",
+      "section": 262,
+      "priority": 10,
+      "lines": 69,
+      "size_kb": 1.8232421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2621.lean",
+      "section": 2621,
+      "priority": 8,
+      "lines": 107,
+      "size_kb": 2.7548828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2622.lean",
+      "section": 2622,
+      "priority": 8,
+      "lines": 89,
+      "size_kb": 2.12890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2623.lean",
+      "section": 2623,
+      "priority": 8,
+      "lines": 61,
+      "size_kb": 1.2568359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2624.lean",
+      "section": 2624,
+      "priority": 8,
+      "lines": 77,
+      "size_kb": 2.107421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section263.lean",
+      "section": 263,
+      "priority": 10,
+      "lines": 1048,
+      "size_kb": 33.54296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2631.lean",
+      "section": 2631,
+      "priority": 8,
+      "lines": 150,
+      "size_kb": 4.20703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2632.lean",
+      "section": 2632,
+      "priority": 8,
+      "lines": 328,
+      "size_kb": 12.2578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section264.lean",
+      "section": 264,
+      "priority": 10,
+      "lines": 651,
+      "size_kb": 25.783203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2641.lean",
+      "section": 2641,
+      "priority": 8,
+      "lines": 98,
+      "size_kb": 2.0341796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2642.lean",
+      "section": 2642,
+      "priority": 8,
+      "lines": 587,
+      "size_kb": 23.3046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section265.lean",
+      "section": 265,
+      "priority": 10,
+      "lines": 910,
+      "size_kb": 31.669921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2651.lean",
+      "section": 2651,
+      "priority": 8,
+      "lines": 180,
+      "size_kb": 6.83984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2652.lean",
+      "section": 2652,
+      "priority": 8,
+      "lines": 259,
+      "size_kb": 7.0947265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2653.lean",
+      "section": 2653,
+      "priority": 8,
+      "lines": 109,
+      "size_kb": 2.8798828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2654.lean",
+      "section": 2654,
+      "priority": 8,
+      "lines": 215,
+      "size_kb": 6.541015625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section266.lean",
+      "section": 266,
+      "priority": 10,
+      "lines": 53,
+      "size_kb": 1.1669921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2661.lean",
+      "section": 2661,
+      "priority": 8,
+      "lines": 68,
+      "size_kb": 1.7958984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2662.lean",
+      "section": 2662,
+      "priority": 8,
+      "lines": 97,
+      "size_kb": 2.6640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2663.lean",
+      "section": 2663,
+      "priority": 8,
+      "lines": 93,
+      "size_kb": 2.30078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2664.lean",
+      "section": 2664,
+      "priority": 8,
+      "lines": 57,
+      "size_kb": 1.36328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section267.lean",
+      "section": 267,
+      "priority": 10,
+      "lines": 825,
+      "size_kb": 32.7099609375,
+      "category": "RETRY",
+      "reason": "Previously failed, needs retry"
+    },
+    {
+      "file": "Section268.lean",
+      "section": 268,
+      "priority": 10,
+      "lines": 41,
+      "size_kb": 1.04296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section269.lean",
+      "section": 269,
+      "priority": 10,
+      "lines": 163,
+      "size_kb": 6.080078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section27.lean",
+      "section": 27,
+      "priority": 3,
+      "lines": 120,
+      "size_kb": 3.6162109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section270.lean",
+      "section": 270,
+      "priority": 10,
+      "lines": 52,
+      "size_kb": 1.2060546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2701.lean",
+      "section": 2701,
+      "priority": 8,
+      "lines": 649,
+      "size_kb": 24.431640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2702.lean",
+      "section": 2702,
+      "priority": 8,
+      "lines": 177,
+      "size_kb": 6.005859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2703.lean",
+      "section": 2703,
+      "priority": 8,
+      "lines": 60,
+      "size_kb": 1.6298828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2704.lean",
+      "section": 2704,
+      "priority": 8,
+      "lines": 157,
+      "size_kb": 5.15625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section271.lean",
+      "section": 271,
+      "priority": 10,
+      "lines": 106,
+      "size_kb": 3.26171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section272.lean",
+      "section": 272,
+      "priority": 10,
+      "lines": 76,
+      "size_kb": 2.2080078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section273.lean",
+      "section": 273,
+      "priority": 10,
+      "lines": 68,
+      "size_kb": 1.5859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section274.lean",
+      "section": 274,
+      "priority": 10,
+      "lines": 300,
+      "size_kb": 10.7744140625,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section275.lean",
+      "section": 275,
+      "priority": 10,
+      "lines": 429,
+      "size_kb": 12.248046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section276.lean",
+      "section": 276,
+      "priority": 10,
+      "lines": 164,
+      "size_kb": 4.90234375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section277.lean",
+      "section": 277,
+      "priority": 10,
+      "lines": 165,
+      "size_kb": 5.2880859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section278.lean",
+      "section": 278,
+      "priority": 10,
+      "lines": 91,
+      "size_kb": 2.2705078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section279.lean",
+      "section": 279,
+      "priority": 10,
+      "lines": 371,
+      "size_kb": 16.8701171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section28.lean",
+      "section": 28,
+      "priority": 3,
+      "lines": 42,
+      "size_kb": 0.6484375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section280.lean",
+      "section": 280,
+      "priority": 10,
+      "lines": 89,
+      "size_kb": 2.220703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section2801.lean",
+      "section": 2801,
+      "priority": 8,
+      "lines": 179,
+      "size_kb": 6.0107421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section281.lean",
+      "section": 281,
+      "priority": 10,
+      "lines": 236,
+      "size_kb": 8.4384765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section29.lean",
+      "section": 29,
+      "priority": 3,
+      "lines": 37,
+      "size_kb": 0.595703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section291.lean",
+      "section": 291,
+      "priority": 10,
+      "lines": 766,
+      "size_kb": 27.212890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section3.lean",
+      "section": 3,
+      "priority": 10,
+      "lines": 402,
+      "size_kb": 12.8486328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section30.lean",
+      "section": 30,
+      "priority": 3,
+      "lines": 118,
+      "size_kb": 2.2294921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section301.lean",
+      "section": 301,
+      "priority": 6,
+      "lines": 227,
+      "size_kb": 8.38671875,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section302.lean",
+      "section": 302,
+      "priority": 6,
+      "lines": 521,
+      "size_kb": 19.7431640625,
+      "category": "RETRY",
+      "reason": "Previously failed, needs retry"
+    },
+    {
+      "file": "Section303.lean",
+      "section": 303,
+      "priority": 6,
+      "lines": 221,
+      "size_kb": 10.70703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section304.lean",
+      "section": 304,
+      "priority": 6,
+      "lines": 861,
+      "size_kb": 27.0302734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section305.lean",
+      "section": 305,
+      "priority": 6,
+      "lines": 655,
+      "size_kb": 18.26171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section306.lean",
+      "section": 306,
+      "priority": 6,
+      "lines": 466,
+      "size_kb": 15.564453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section307.lean",
+      "section": 307,
+      "priority": 6,
+      "lines": 80,
+      "size_kb": 2.6650390625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section31.lean",
+      "section": 31,
+      "priority": 3,
+      "lines": 376,
+      "size_kb": 7.6494140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section311.lean",
+      "section": 311,
+      "priority": 6,
+      "lines": 191,
+      "size_kb": 6.236328125,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section312.lean",
+      "section": 312,
+      "priority": 6,
+      "lines": 1444,
+      "size_kb": 52.0732421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section316.lean",
+      "section": 316,
+      "priority": 6,
+      "lines": 295,
+      "size_kb": 8.73046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section317.lean",
+      "section": 317,
+      "priority": 6,
+      "lines": 54,
+      "size_kb": 1.1875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section318.lean",
+      "section": 318,
+      "priority": 6,
+      "lines": 332,
+      "size_kb": 11.71484375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section32.lean",
+      "section": 32,
+      "priority": 3,
+      "lines": 484,
+      "size_kb": 18.76953125,
+      "category": "SORRY",
+      "reason": "Has 8 sorry markers - needs proof completion",
+      "sorry_count": 8
+    },
+    {
+      "file": "Section33.lean",
+      "section": 33,
+      "priority": 3,
+      "lines": 88,
+      "size_kb": 2.412109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section3301.lean",
+      "section": 3301,
+      "priority": 10,
+      "lines": 437,
+      "size_kb": 11.578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section3302.lean",
+      "section": 3302,
+      "priority": 10,
+      "lines": 1378,
+      "size_kb": 47.8876953125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section3303.lean",
+      "section": 3303,
+      "priority": 10,
+      "lines": 644,
+      "size_kb": 19.89453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section3304.lean",
+      "section": 3304,
+      "priority": 10,
+      "lines": 8271,
+      "size_kb": 276.552734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section3305.lean",
+      "section": 3305,
+      "priority": 10,
+      "lines": 374,
+      "size_kb": 13.404296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section3306.lean",
+      "section": 3306,
+      "priority": 10,
+      "lines": 2997,
+      "size_kb": 96.30078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section3307.lean",
+      "section": 3307,
+      "priority": 10,
+      "lines": 60,
+      "size_kb": 1.2177734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section3308.lean",
+      "section": 3308,
+      "priority": 10,
+      "lines": 81,
+      "size_kb": 2.2001953125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section3309.lean",
+      "section": 3309,
+      "priority": 10,
+      "lines": 372,
+      "size_kb": 12.8623046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section331.lean",
+      "section": 331,
+      "priority": 6,
+      "lines": 135,
+      "size_kb": 4.21484375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section3310.lean",
+      "section": 3310,
+      "priority": 10,
+      "lines": 127,
+      "size_kb": 4.3095703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section3311.lean",
+      "section": 3311,
+      "priority": 10,
+      "lines": 121,
+      "size_kb": 3.123046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section332.lean",
+      "section": 332,
+      "priority": 6,
+      "lines": 286,
+      "size_kb": 12.6533203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section3321.lean",
+      "section": 3321,
+      "priority": 10,
+      "lines": 223,
+      "size_kb": 5.85546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section3322.lean",
+      "section": 3322,
+      "priority": 10,
+      "lines": 138,
+      "size_kb": 3.6298828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section3323.lean",
+      "section": 3323,
+      "priority": 10,
+      "lines": 54,
+      "size_kb": 0.9248046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section333.lean",
+      "section": 333,
+      "priority": 6,
+      "lines": 70,
+      "size_kb": 1.7919921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section334.lean",
+      "section": 334,
+      "priority": 6,
+      "lines": 315,
+      "size_kb": 15.265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section336.lean",
+      "section": 336,
+      "priority": 6,
+      "lines": 593,
+      "size_kb": 27.4755859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section337.lean",
+      "section": 337,
+      "priority": 6,
+      "lines": 270,
+      "size_kb": 8.8701171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section338.lean",
+      "section": 338,
+      "priority": 6,
+      "lines": 1241,
+      "size_kb": 41.1640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section34.lean",
+      "section": 34,
+      "priority": 3,
+      "lines": 501,
+      "size_kb": 13.0556640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section341.lean",
+      "section": 341,
+      "priority": 6,
+      "lines": 139,
+      "size_kb": 2.78125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section342.lean",
+      "section": 342,
+      "priority": 6,
+      "lines": 49,
+      "size_kb": 1.197265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section346.lean",
+      "section": 346,
+      "priority": 6,
+      "lines": 113,
+      "size_kb": 4.9853515625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section35.lean",
+      "section": 35,
+      "priority": 3,
+      "lines": 1353,
+      "size_kb": 48.880859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section351.lean",
+      "section": 351,
+      "priority": 6,
+      "lines": 680,
+      "size_kb": 24.85546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section354.lean",
+      "section": 354,
+      "priority": 6,
+      "lines": 353,
+      "size_kb": 11.5576171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section355.lean",
+      "section": 355,
+      "priority": 6,
+      "lines": 1289,
+      "size_kb": 50.056640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section356.lean",
+      "section": 356,
+      "priority": 6,
+      "lines": 279,
+      "size_kb": 7.8515625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section357.lean",
+      "section": 357,
+      "priority": 6,
+      "lines": 333,
+      "size_kb": 11.6455078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section358.lean",
+      "section": 358,
+      "priority": 6,
+      "lines": 451,
+      "size_kb": 14.1396484375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section36.lean",
+      "section": 36,
+      "priority": 3,
+      "lines": 622,
+      "size_kb": 20.15234375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section361.lean",
+      "section": 361,
+      "priority": 6,
+      "lines": 235,
+      "size_kb": 9.625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section362.lean",
+      "section": 362,
+      "priority": 6,
+      "lines": 302,
+      "size_kb": 11.3251953125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section363.lean",
+      "section": 363,
+      "priority": 6,
+      "lines": 49,
+      "size_kb": 1.25,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section367.lean",
+      "section": 367,
+      "priority": 6,
+      "lines": 747,
+      "size_kb": 29.2275390625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section368.lean",
+      "section": 368,
+      "priority": 6,
+      "lines": 959,
+      "size_kb": 38.6142578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section37.lean",
+      "section": 37,
+      "priority": 3,
+      "lines": 102,
+      "size_kb": 1.7861328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section370.lean",
+      "section": 370,
+      "priority": 6,
+      "lines": 81,
+      "size_kb": 2.0888671875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section373.lean",
+      "section": 373,
+      "priority": 6,
+      "lines": 52,
+      "size_kb": 1.248046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section374.lean",
+      "section": 374,
+      "priority": 6,
+      "lines": 83,
+      "size_kb": 1.9306640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section38.lean",
+      "section": 38,
+      "priority": 3,
+      "lines": 260,
+      "size_kb": 10.4462890625,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section381.lean",
+      "section": 381,
+      "priority": 6,
+      "lines": 1132,
+      "size_kb": 50.421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section382.lean",
+      "section": 382,
+      "priority": 6,
+      "lines": 2148,
+      "size_kb": 76.173828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section383.lean",
+      "section": 383,
+      "priority": 6,
+      "lines": 376,
+      "size_kb": 17.51171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section384.lean",
+      "section": 384,
+      "priority": 6,
+      "lines": 358,
+      "size_kb": 12.13671875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section385.lean",
+      "section": 385,
+      "priority": 6,
+      "lines": 122,
+      "size_kb": 4.318359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section386.lean",
+      "section": 386,
+      "priority": 6,
+      "lines": 61,
+      "size_kb": 1.4560546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section39.lean",
+      "section": 39,
+      "priority": 3,
+      "lines": 620,
+      "size_kb": 19.046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section391.lean",
+      "section": 391,
+      "priority": 6,
+      "lines": 67,
+      "size_kb": 1.845703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section4.lean",
+      "section": 4,
+      "priority": 10,
+      "lines": 68,
+      "size_kb": 1.443359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section40.lean",
+      "section": 40,
+      "priority": 3,
+      "lines": 1602,
+      "size_kb": 49.48828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section401.lean",
+      "section": 401,
+      "priority": 7,
+      "lines": 266,
+      "size_kb": 10.431640625,
+      "category": "SORRY",
+      "reason": "Has 1 sorry markers - needs proof completion",
+      "sorry_count": 1
+    },
+    {
+      "file": "Section402.lean",
+      "section": 402,
+      "priority": 7,
+      "lines": 3951,
+      "size_kb": 151.9365234375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section403.lean",
+      "section": 403,
+      "priority": 7,
+      "lines": 2379,
+      "size_kb": 92.396484375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section404.lean",
+      "section": 404,
+      "priority": 7,
+      "lines": 2718,
+      "size_kb": 117.0966796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section405.lean",
+      "section": 405,
+      "priority": 7,
+      "lines": 132,
+      "size_kb": 3.546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section406.lean",
+      "section": 406,
+      "priority": 7,
+      "lines": 527,
+      "size_kb": 20.4482421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section407.lean",
+      "section": 407,
+      "priority": 7,
+      "lines": 451,
+      "size_kb": 17.2744140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section408.lean",
+      "section": 408,
+      "priority": 7,
+      "lines": 322,
+      "size_kb": 10.8798828125,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section409.lean",
+      "section": 409,
+      "priority": 7,
+      "lines": 1491,
+      "size_kb": 61.013671875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section41.lean",
+      "section": 41,
+      "priority": 3,
+      "lines": 189,
+      "size_kb": 8.1181640625,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section410.lean",
+      "section": 410,
+      "priority": 7,
+      "lines": 1120,
+      "size_kb": 44.0,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section411.lean",
+      "section": 411,
+      "priority": 7,
+      "lines": 3297,
+      "size_kb": 126.712890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section412.lean",
+      "section": 412,
+      "priority": 7,
+      "lines": 1780,
+      "size_kb": 72.7509765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section413.lean",
+      "section": 413,
+      "priority": 7,
+      "lines": 506,
+      "size_kb": 25.77734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section414.lean",
+      "section": 414,
+      "priority": 7,
+      "lines": 5007,
+      "size_kb": 196.9736328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section415.lean",
+      "section": 415,
+      "priority": 7,
+      "lines": 3032,
+      "size_kb": 126.810546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section416.lean",
+      "section": 416,
+      "priority": 7,
+      "lines": 990,
+      "size_kb": 36.171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section417.lean",
+      "section": 417,
+      "priority": 7,
+      "lines": 878,
+      "size_kb": 35.4755859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section418.lean",
+      "section": 418,
+      "priority": 7,
+      "lines": 91,
+      "size_kb": 2.171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section419.lean",
+      "section": 419,
+      "priority": 7,
+      "lines": 457,
+      "size_kb": 14.595703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section42.lean",
+      "section": 42,
+      "priority": 3,
+      "lines": 4394,
+      "size_kb": 195.193359375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section420.lean",
+      "section": 420,
+      "priority": 7,
+      "lines": 1622,
+      "size_kb": 61.912109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section421.lean",
+      "section": 421,
+      "priority": 7,
+      "lines": 330,
+      "size_kb": 12.8232421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section422.lean",
+      "section": 422,
+      "priority": 7,
+      "lines": 503,
+      "size_kb": 19.6416015625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section423.lean",
+      "section": 423,
+      "priority": 7,
+      "lines": 343,
+      "size_kb": 13.7138671875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section424.lean",
+      "section": 424,
+      "priority": 7,
+      "lines": 469,
+      "size_kb": 16.6982421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section425.lean",
+      "section": 425,
+      "priority": 7,
+      "lines": 36,
+      "size_kb": 0.59765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section43.lean",
+      "section": 43,
+      "priority": 3,
+      "lines": 399,
+      "size_kb": 13.001953125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section430.lean",
+      "section": 430,
+      "priority": 7,
+      "lines": 2666,
+      "size_kb": 121.2177734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section431.lean",
+      "section": 431,
+      "priority": 7,
+      "lines": 728,
+      "size_kb": 38.2109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section432.lean",
+      "section": 432,
+      "priority": 7,
+      "lines": 2260,
+      "size_kb": 124.009765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section433.lean",
+      "section": 433,
+      "priority": 7,
+      "lines": 890,
+      "size_kb": 38.935546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section436.lean",
+      "section": 436,
+      "priority": 7,
+      "lines": 629,
+      "size_kb": 28.240234375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section44.lean",
+      "section": 44,
+      "priority": 3,
+      "lines": 210,
+      "size_kb": 7.6171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section441.lean",
+      "section": 441,
+      "priority": 7,
+      "lines": 389,
+      "size_kb": 13.0927734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section442.lean",
+      "section": 442,
+      "priority": 7,
+      "lines": 64,
+      "size_kb": 1.3525390625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section443.lean",
+      "section": 443,
+      "priority": 7,
+      "lines": 502,
+      "size_kb": 16.041015625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section444.lean",
+      "section": 444,
+      "priority": 7,
+      "lines": 290,
+      "size_kb": 8.3974609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section446.lean",
+      "section": 446,
+      "priority": 7,
+      "lines": 106,
+      "size_kb": 3.3408203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section447.lean",
+      "section": 447,
+      "priority": 7,
+      "lines": 648,
+      "size_kb": 25.87109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section448.lean",
+      "section": 448,
+      "priority": 7,
+      "lines": 375,
+      "size_kb": 16.57421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section45.lean",
+      "section": 45,
+      "priority": 3,
+      "lines": 2719,
+      "size_kb": 97.814453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section451.lean",
+      "section": 451,
+      "priority": 7,
+      "lines": 1322,
+      "size_kb": 50.2744140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section452.lean",
+      "section": 452,
+      "priority": 7,
+      "lines": 62,
+      "size_kb": 1.40625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section453.lean",
+      "section": 453,
+      "priority": 7,
+      "lines": 1407,
+      "size_kb": 50.9716796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section454.lean",
+      "section": 454,
+      "priority": 7,
+      "lines": 94,
+      "size_kb": 4.962890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section455.lean",
+      "section": 455,
+      "priority": 7,
+      "lines": 162,
+      "size_kb": 6.4111328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section456.lean",
+      "section": 456,
+      "priority": 7,
+      "lines": 182,
+      "size_kb": 7.6142578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section457.lean",
+      "section": 457,
+      "priority": 7,
+      "lines": 2010,
+      "size_kb": 65.3349609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section458.lean",
+      "section": 458,
+      "priority": 7,
+      "lines": 265,
+      "size_kb": 9.580078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section46.lean",
+      "section": 46,
+      "priority": 3,
+      "lines": 2457,
+      "size_kb": 89.291015625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section460.lean",
+      "section": 460,
+      "priority": 7,
+      "lines": 1217,
+      "size_kb": 46.7021484375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section461.lean",
+      "section": 461,
+      "priority": 7,
+      "lines": 1445,
+      "size_kb": 55.0380859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section462.lean",
+      "section": 462,
+      "priority": 7,
+      "lines": 62,
+      "size_kb": 1.421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section463.lean",
+      "section": 463,
+      "priority": 7,
+      "lines": 125,
+      "size_kb": 3.244140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section464.lean",
+      "section": 464,
+      "priority": 7,
+      "lines": 377,
+      "size_kb": 12.1103515625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section465.lean",
+      "section": 465,
+      "priority": 7,
+      "lines": 1129,
+      "size_kb": 42.423828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section466.lean",
+      "section": 466,
+      "priority": 7,
+      "lines": 90,
+      "size_kb": 2.3662109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section467.lean",
+      "section": 467,
+      "priority": 7,
+      "lines": 517,
+      "size_kb": 20.55859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section468.lean",
+      "section": 468,
+      "priority": 7,
+      "lines": 344,
+      "size_kb": 12.2958984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section469.lean",
+      "section": 469,
+      "priority": 7,
+      "lines": 253,
+      "size_kb": 10.572265625,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section47.lean",
+      "section": 47,
+      "priority": 3,
+      "lines": 1016,
+      "size_kb": 38.8056640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section470.lean",
+      "section": 470,
+      "priority": 7,
+      "lines": 447,
+      "size_kb": 14.966796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section471.lean",
+      "section": 471,
+      "priority": 7,
+      "lines": 212,
+      "size_kb": 7.0712890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section472.lean",
+      "section": 472,
+      "priority": 7,
+      "lines": 165,
+      "size_kb": 7.552734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section473.lean",
+      "section": 473,
+      "priority": 7,
+      "lines": 226,
+      "size_kb": 7.623046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section474.lean",
+      "section": 474,
+      "priority": 7,
+      "lines": 196,
+      "size_kb": 6.58203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section475.lean",
+      "section": 475,
+      "priority": 7,
+      "lines": 625,
+      "size_kb": 23.0390625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section48.lean",
+      "section": 48,
+      "priority": 3,
+      "lines": 4313,
+      "size_kb": 166.998046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section481.lean",
+      "section": 481,
+      "priority": 7,
+      "lines": 308,
+      "size_kb": 13.5166015625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section482.lean",
+      "section": 482,
+      "priority": 7,
+      "lines": 221,
+      "size_kb": 9.7783203125,
+      "category": "RETRY",
+      "reason": "Previously failed, needs retry"
+    },
+    {
+      "file": "Section483.lean",
+      "section": 483,
+      "priority": 7,
+      "lines": 401,
+      "size_kb": 16.58984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section49.lean",
+      "section": 49,
+      "priority": 3,
+      "lines": 706,
+      "size_kb": 27.99609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section5.lean",
+      "section": 5,
+      "priority": 10,
+      "lines": 389,
+      "size_kb": 11.0244140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section50.lean",
+      "section": 50,
+      "priority": 3,
+      "lines": 707,
+      "size_kb": 29.0546875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section501.lean",
+      "section": 501,
+      "priority": 10,
+      "lines": 3540,
+      "size_kb": 150.212890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section502.lean",
+      "section": 502,
+      "priority": 10,
+      "lines": 81,
+      "size_kb": 2.1845703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section503.lean",
+      "section": 503,
+      "priority": 10,
+      "lines": 429,
+      "size_kb": 18.1279296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section504.lean",
+      "section": 504,
+      "priority": 10,
+      "lines": 129,
+      "size_kb": 4.3671875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section505.lean",
+      "section": 505,
+      "priority": 10,
+      "lines": 415,
+      "size_kb": 16.5625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section506.lean",
+      "section": 506,
+      "priority": 10,
+      "lines": 109,
+      "size_kb": 4.0625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section507.lean",
+      "section": 507,
+      "priority": 10,
+      "lines": 291,
+      "size_kb": 12.390625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section508.lean",
+      "section": 508,
+      "priority": 10,
+      "lines": 270,
+      "size_kb": 10.6572265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section509.lean",
+      "section": 509,
+      "priority": 10,
+      "lines": 376,
+      "size_kb": 14.974609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section51.lean",
+      "section": 51,
+      "priority": 3,
+      "lines": 2599,
+      "size_kb": 88.267578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section511.lean",
+      "section": 511,
+      "priority": 10,
+      "lines": 356,
+      "size_kb": 12.0537109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section512.lean",
+      "section": 512,
+      "priority": 10,
+      "lines": 1911,
+      "size_kb": 81.7080078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section513.lean",
+      "section": 513,
+      "priority": 10,
+      "lines": 638,
+      "size_kb": 24.1904296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section514.lean",
+      "section": 514,
+      "priority": 10,
+      "lines": 1172,
+      "size_kb": 51.06640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section515.lean",
+      "section": 515,
+      "priority": 10,
+      "lines": 42,
+      "size_kb": 1.1689453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section52.lean",
+      "section": 52,
+      "priority": 3,
+      "lines": 330,
+      "size_kb": 11.087890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section521.lean",
+      "section": 521,
+      "priority": 10,
+      "lines": 130,
+      "size_kb": 5.4013671875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section522.lean",
+      "section": 522,
+      "priority": 10,
+      "lines": 51,
+      "size_kb": 1.208984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section526.lean",
+      "section": 526,
+      "priority": 10,
+      "lines": 38,
+      "size_kb": 1.080078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section527.lean",
+      "section": 527,
+      "priority": 10,
+      "lines": 1105,
+      "size_kb": 40.599609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section528.lean",
+      "section": 528,
+      "priority": 10,
+      "lines": 333,
+      "size_kb": 11.24609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section529.lean",
+      "section": 529,
+      "priority": 10,
+      "lines": 1378,
+      "size_kb": 52.783203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section53.lean",
+      "section": 53,
+      "priority": 3,
+      "lines": 758,
+      "size_kb": 23.869140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section530.lean",
+      "section": 530,
+      "priority": 10,
+      "lines": 671,
+      "size_kb": 29.1376953125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section531.lean",
+      "section": 531,
+      "priority": 10,
+      "lines": 161,
+      "size_kb": 4.2333984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section532.lean",
+      "section": 532,
+      "priority": 10,
+      "lines": 155,
+      "size_kb": 4.3232421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section533.lean",
+      "section": 533,
+      "priority": 10,
+      "lines": 48,
+      "size_kb": 1.3203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section534.lean",
+      "section": 534,
+      "priority": 10,
+      "lines": 119,
+      "size_kb": 4.611328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section535.lean",
+      "section": 535,
+      "priority": 10,
+      "lines": 643,
+      "size_kb": 22.8466796875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section536.lean",
+      "section": 536,
+      "priority": 10,
+      "lines": 41,
+      "size_kb": 0.873046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section537.lean",
+      "section": 537,
+      "priority": 10,
+      "lines": 206,
+      "size_kb": 6.294921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section54.lean",
+      "section": 54,
+      "priority": 3,
+      "lines": 128,
+      "size_kb": 2.478515625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section541.lean",
+      "section": 541,
+      "priority": 10,
+      "lines": 216,
+      "size_kb": 5.37890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section542.lean",
+      "section": 542,
+      "priority": 10,
+      "lines": 637,
+      "size_kb": 24.7041015625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section543.lean",
+      "section": 543,
+      "priority": 10,
+      "lines": 1107,
+      "size_kb": 41.41015625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section544.lean",
+      "section": 544,
+      "priority": 10,
+      "lines": 143,
+      "size_kb": 6.037109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section545.lean",
+      "section": 545,
+      "priority": 10,
+      "lines": 514,
+      "size_kb": 20.517578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section546.lean",
+      "section": 546,
+      "priority": 10,
+      "lines": 43,
+      "size_kb": 0.8828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section547.lean",
+      "section": 547,
+      "priority": 10,
+      "lines": 167,
+      "size_kb": 6.87109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section55.lean",
+      "section": 55,
+      "priority": 10,
+      "lines": 166,
+      "size_kb": 5.861328125,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section551.lean",
+      "section": 551,
+      "priority": 10,
+      "lines": 212,
+      "size_kb": 4.6640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section56.lean",
+      "section": 56,
+      "priority": 10,
+      "lines": 287,
+      "size_kb": 10.4384765625,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section561.lean",
+      "section": 561,
+      "priority": 10,
+      "lines": 97,
+      "size_kb": 2.404296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section562.lean",
+      "section": 562,
+      "priority": 10,
+      "lines": 301,
+      "size_kb": 13.2978515625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section563.lean",
+      "section": 563,
+      "priority": 10,
+      "lines": 142,
+      "size_kb": 4.986328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section564.lean",
+      "section": 564,
+      "priority": 10,
+      "lines": 81,
+      "size_kb": 3.134765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section565.lean",
+      "section": 565,
+      "priority": 10,
+      "lines": 82,
+      "size_kb": 4.2041015625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section57.lean",
+      "section": 57,
+      "priority": 10,
+      "lines": 775,
+      "size_kb": 24.708984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section58.lean",
+      "section": 58,
+      "priority": 10,
+      "lines": 349,
+      "size_kb": 9.3623046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section581.lean",
+      "section": 581,
+      "priority": 10,
+      "lines": 73,
+      "size_kb": 1.890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section582.lean",
+      "section": 582,
+      "priority": 10,
+      "lines": 397,
+      "size_kb": 13.876953125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section583.lean",
+      "section": 583,
+      "priority": 10,
+      "lines": 50,
+      "size_kb": 1.3779296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section584.lean",
+      "section": 584,
+      "priority": 10,
+      "lines": 589,
+      "size_kb": 19.9287109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section585.lean",
+      "section": 585,
+      "priority": 10,
+      "lines": 484,
+      "size_kb": 17.4306640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section586.lean",
+      "section": 586,
+      "priority": 10,
+      "lines": 59,
+      "size_kb": 1.3427734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section59.lean",
+      "section": 59,
+      "priority": 10,
+      "lines": 180,
+      "size_kb": 6.443359375,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section591.lean",
+      "section": 591,
+      "priority": 10,
+      "lines": 89,
+      "size_kb": 2.5478515625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section592.lean",
+      "section": 592,
+      "priority": 10,
+      "lines": 54,
+      "size_kb": 1.3876953125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section593.lean",
+      "section": 593,
+      "priority": 10,
+      "lines": 983,
+      "size_kb": 40.6533203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section594.lean",
+      "section": 594,
+      "priority": 10,
+      "lines": 113,
+      "size_kb": 3.5556640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section595.lean",
+      "section": 595,
+      "priority": 10,
+      "lines": 83,
+      "size_kb": 2.283203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section597.lean",
+      "section": 597,
+      "priority": 10,
+      "lines": 425,
+      "size_kb": 13.8779296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section61.lean",
+      "section": 61,
+      "priority": 1,
+      "lines": 605,
+      "size_kb": 20.7021484375,
+      "category": "SORRY",
+      "reason": "Has 2 sorry markers - needs proof completion",
+      "sorry_count": 2
+    },
+    {
+      "file": "Section62.lean",
+      "section": 62,
+      "priority": 1,
+      "lines": 231,
+      "size_kb": 8.7138671875,
+      "category": "COMPLETE",
+      "reason": "Marked complete in queue"
+    },
+    {
+      "file": "Section63.lean",
+      "section": 63,
+      "priority": 1,
+      "lines": 1104,
+      "size_kb": 38.904296875,
+      "category": "SORRY",
+      "reason": "Has 4 sorry markers - needs proof completion",
+      "sorry_count": 4
+    },
+    {
+      "file": "Section64.lean",
+      "section": 64,
+      "priority": 1,
+      "lines": 66,
+      "size_kb": 2.3896484375,
+      "category": "SORRY",
+      "reason": "Has 1 sorry markers - needs proof completion",
+      "sorry_count": 1
+    },
+    {
+      "file": "Section65.lean",
+      "section": 65,
+      "priority": 1,
+      "lines": 61,
+      "size_kb": 2.005859375,
+      "category": "SORRY",
+      "reason": "Has 1 sorry markers - needs proof completion",
+      "sorry_count": 1
+    },
+    {
+      "file": "Section66.lean",
+      "section": 66,
+      "priority": 1,
+      "lines": 194,
+      "size_kb": 6.2822265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section67.lean",
+      "section": 67,
+      "priority": 1,
+      "lines": 413,
+      "size_kb": 14.3974609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section68.lean",
+      "section": 68,
+      "priority": 1,
+      "lines": 242,
+      "size_kb": 6.8984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section71.lean",
+      "section": 71,
+      "priority": 1,
+      "lines": 162,
+      "size_kb": 5.73046875,
+      "category": "RETRY",
+      "reason": "Previously failed, needs retry"
+    },
+    {
+      "file": "Section72.lean",
+      "section": 72,
+      "priority": 1,
+      "lines": 4953,
+      "size_kb": 197.8837890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section73.lean",
+      "section": 73,
+      "priority": 1,
+      "lines": 62,
+      "size_kb": 1.4833984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section74.lean",
+      "section": 74,
+      "priority": 1,
+      "lines": 297,
+      "size_kb": 9.4677734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section75.lean",
+      "section": 75,
+      "priority": 1,
+      "lines": 137,
+      "size_kb": 5.26953125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section76.lean",
+      "section": 76,
+      "priority": 1,
+      "lines": 41,
+      "size_kb": 0.9697265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section77.lean",
+      "section": 77,
+      "priority": 1,
+      "lines": 60,
+      "size_kb": 1.4853515625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section78.lean",
+      "section": 78,
+      "priority": 1,
+      "lines": 182,
+      "size_kb": 5.48828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section79.lean",
+      "section": 79,
+      "priority": 1,
+      "lines": 718,
+      "size_kb": 22.8603515625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section80.lean",
+      "section": 80,
+      "priority": 1,
+      "lines": 134,
+      "size_kb": 4.6171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section801.lean",
+      "section": 801,
+      "priority": 10,
+      "lines": 827,
+      "size_kb": 35.0263671875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section803.lean",
+      "section": 803,
+      "priority": 10,
+      "lines": 122,
+      "size_kb": 2.9521484375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section804.lean",
+      "section": 804,
+      "priority": 10,
+      "lines": 139,
+      "size_kb": 3.2548828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section805.lean",
+      "section": 805,
+      "priority": 10,
+      "lines": 614,
+      "size_kb": 20.5078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section806.lean",
+      "section": 806,
+      "priority": 10,
+      "lines": 80,
+      "size_kb": 1.890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section807.lean",
+      "section": 807,
+      "priority": 10,
+      "lines": 756,
+      "size_kb": 32.0302734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section808.lean",
+      "section": 808,
+      "priority": 10,
+      "lines": 303,
+      "size_kb": 9.736328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section809.lean",
+      "section": 809,
+      "priority": 10,
+      "lines": 134,
+      "size_kb": 2.689453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section81.lean",
+      "section": 81,
+      "priority": 1,
+      "lines": 72,
+      "size_kb": 1.5078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section810.lean",
+      "section": 810,
+      "priority": 10,
+      "lines": 80,
+      "size_kb": 1.7587890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section811.lean",
+      "section": 811,
+      "priority": 10,
+      "lines": 221,
+      "size_kb": 7.3037109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section812.lean",
+      "section": 812,
+      "priority": 10,
+      "lines": 335,
+      "size_kb": 10.1005859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section813.lean",
+      "section": 813,
+      "priority": 10,
+      "lines": 71,
+      "size_kb": 1.689453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section814.lean",
+      "section": 814,
+      "priority": 10,
+      "lines": 198,
+      "size_kb": 11.1064453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section815.lean",
+      "section": 815,
+      "priority": 10,
+      "lines": 128,
+      "size_kb": 2.51953125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section816.lean",
+      "section": 816,
+      "priority": 10,
+      "lines": 338,
+      "size_kb": 10.9921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section817.lean",
+      "section": 817,
+      "priority": 10,
+      "lines": 466,
+      "size_kb": 18.7783203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section818.lean",
+      "section": 818,
+      "priority": 10,
+      "lines": 712,
+      "size_kb": 22.291015625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section82.lean",
+      "section": 82,
+      "priority": 1,
+      "lines": 104,
+      "size_kb": 2.7763671875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section83.lean",
+      "section": 83,
+      "priority": 1,
+      "lines": 761,
+      "size_kb": 31.69921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section831.lean",
+      "section": 831,
+      "priority": 10,
+      "lines": 619,
+      "size_kb": 21.328125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section832.lean",
+      "section": 832,
+      "priority": 10,
+      "lines": 1357,
+      "size_kb": 62.849609375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section833.lean",
+      "section": 833,
+      "priority": 10,
+      "lines": 517,
+      "size_kb": 18.462890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section834.lean",
+      "section": 834,
+      "priority": 10,
+      "lines": 369,
+      "size_kb": 15.626953125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section835.lean",
+      "section": 835,
+      "priority": 10,
+      "lines": 175,
+      "size_kb": 6.501953125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section84.lean",
+      "section": 84,
+      "priority": 1,
+      "lines": 107,
+      "size_kb": 2.779296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section841.lean",
+      "section": 841,
+      "priority": 10,
+      "lines": 164,
+      "size_kb": 4.8330078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section842.lean",
+      "section": 842,
+      "priority": 10,
+      "lines": 362,
+      "size_kb": 13.6396484375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section843.lean",
+      "section": 843,
+      "priority": 10,
+      "lines": 70,
+      "size_kb": 1.9248046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section844.lean",
+      "section": 844,
+      "priority": 10,
+      "lines": 78,
+      "size_kb": 1.6748046875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section845.lean",
+      "section": 845,
+      "priority": 10,
+      "lines": 108,
+      "size_kb": 3.369140625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section846.lean",
+      "section": 846,
+      "priority": 10,
+      "lines": 535,
+      "size_kb": 17.765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section847.lean",
+      "section": 847,
+      "priority": 10,
+      "lines": 68,
+      "size_kb": 1.427734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section848.lean",
+      "section": 848,
+      "priority": 10,
+      "lines": 471,
+      "size_kb": 16.955078125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section85.lean",
+      "section": 85,
+      "priority": 1,
+      "lines": 324,
+      "size_kb": 9.9267578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section851.lean",
+      "section": 851,
+      "priority": 10,
+      "lines": 873,
+      "size_kb": 37.681640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section852.lean",
+      "section": 852,
+      "priority": 10,
+      "lines": 1877,
+      "size_kb": 75.880859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section853.lean",
+      "section": 853,
+      "priority": 10,
+      "lines": 251,
+      "size_kb": 8.1044921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section854.lean",
+      "section": 854,
+      "priority": 10,
+      "lines": 664,
+      "size_kb": 21.4169921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section855.lean",
+      "section": 855,
+      "priority": 10,
+      "lines": 242,
+      "size_kb": 8.1064453125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section856.lean",
+      "section": 856,
+      "priority": 10,
+      "lines": 3306,
+      "size_kb": 135.1083984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section857.lean",
+      "section": 857,
+      "priority": 10,
+      "lines": 2218,
+      "size_kb": 89.4228515625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section858.lean",
+      "section": 858,
+      "priority": 10,
+      "lines": 169,
+      "size_kb": 4.982421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section859.lean",
+      "section": 859,
+      "priority": 10,
+      "lines": 155,
+      "size_kb": 3.794921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section86.lean",
+      "section": 86,
+      "priority": 1,
+      "lines": 727,
+      "size_kb": 21.3427734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section860.lean",
+      "section": 860,
+      "priority": 10,
+      "lines": 392,
+      "size_kb": 13.87890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section861.lean",
+      "section": 861,
+      "priority": 9,
+      "lines": 1618,
+      "size_kb": 64.53515625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section862.lean",
+      "section": 862,
+      "priority": 9,
+      "lines": 305,
+      "size_kb": 9.9013671875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section863.lean",
+      "section": 863,
+      "priority": 9,
+      "lines": 441,
+      "size_kb": 16.7294921875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section864.lean",
+      "section": 864,
+      "priority": 9,
+      "lines": 1823,
+      "size_kb": 76.2109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section865.lean",
+      "section": 865,
+      "priority": 9,
+      "lines": 750,
+      "size_kb": 23.662109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section87.lean",
+      "section": 87,
+      "priority": 1,
+      "lines": 126,
+      "size_kb": 3.3134765625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section871.lean",
+      "section": 871,
+      "priority": 9,
+      "lines": 2382,
+      "size_kb": 87.4755859375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section872.lean",
+      "section": 872,
+      "priority": 9,
+      "lines": 269,
+      "size_kb": 9.79296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section873.lean",
+      "section": 873,
+      "priority": 9,
+      "lines": 168,
+      "size_kb": 5.9208984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section874.lean",
+      "section": 874,
+      "priority": 9,
+      "lines": 188,
+      "size_kb": 5.4677734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section875.lean",
+      "section": 875,
+      "priority": 9,
+      "lines": 68,
+      "size_kb": 1.912109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section876.lean",
+      "section": 876,
+      "priority": 9,
+      "lines": 85,
+      "size_kb": 2.376953125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section877.lean",
+      "section": 877,
+      "priority": 9,
+      "lines": 704,
+      "size_kb": 32.8173828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section878.lean",
+      "section": 878,
+      "priority": 9,
+      "lines": 70,
+      "size_kb": 1.71875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section879.lean",
+      "section": 879,
+      "priority": 9,
+      "lines": 160,
+      "size_kb": 4.7392578125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section88.lean",
+      "section": 88,
+      "priority": 1,
+      "lines": 92,
+      "size_kb": 2.48828125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section881.lean",
+      "section": 881,
+      "priority": 9,
+      "lines": 673,
+      "size_kb": 27.904296875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section882.lean",
+      "section": 882,
+      "priority": 9,
+      "lines": 418,
+      "size_kb": 15.4482421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section883.lean",
+      "section": 883,
+      "priority": 9,
+      "lines": 265,
+      "size_kb": 10.4013671875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section884.lean",
+      "section": 884,
+      "priority": 9,
+      "lines": 506,
+      "size_kb": 20.0732421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section885.lean",
+      "section": 885,
+      "priority": 9,
+      "lines": 114,
+      "size_kb": 3.177734375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section887.lean",
+      "section": 887,
+      "priority": 9,
+      "lines": 161,
+      "size_kb": 5.787109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section89.lean",
+      "section": 89,
+      "priority": 1,
+      "lines": 112,
+      "size_kb": 3.33203125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section891.lean",
+      "section": 891,
+      "priority": 9,
+      "lines": 116,
+      "size_kb": 3.8984375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section892.lean",
+      "section": 892,
+      "priority": 9,
+      "lines": 179,
+      "size_kb": 6.4345703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section893.lean",
+      "section": 893,
+      "priority": 9,
+      "lines": 88,
+      "size_kb": 3.12890625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section894.lean",
+      "section": 894,
+      "priority": 9,
+      "lines": 135,
+      "size_kb": 5.1171875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section895.lean",
+      "section": 895,
+      "priority": 9,
+      "lines": 92,
+      "size_kb": 3.3525390625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section896.lean",
+      "section": 896,
+      "priority": 9,
+      "lines": 111,
+      "size_kb": 6.4931640625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section897.lean",
+      "section": 897,
+      "priority": 9,
+      "lines": 1832,
+      "size_kb": 75.3095703125,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section898.lean",
+      "section": 898,
+      "priority": 9,
+      "lines": 249,
+      "size_kb": 8.62109375,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section90.lean",
+      "section": 90,
+      "priority": 1,
+      "lines": 92,
+      "size_kb": 2.265625,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    },
+    {
+      "file": "Section91.lean",
+      "section": 91,
+      "priority": 10,
+      "lines": 117,
+      "size_kb": 4.232421875,
+      "category": "STUB",
+      "reason": "Has 3 TODO markers, no real implementation"
+    }
+  ],
+  "categories": {
+    "RETRY": [
+      "Section1.lean",
+      "Section103.lean",
+      "Section1202.lean",
+      "Section165.lean",
+      "Section170.lean",
+      "Section267.lean",
+      "Section302.lean",
+      "Section482.lean",
+      "Section71.lean"
+    ],
+    "STUB": [
+      "Section1000.lean",
+      "Section1002.lean",
+      "Section1013.lean",
+      "Section1016.lean",
+      "Section1017.lean",
+      "Section1018.lean",
+      "Section1019.lean",
+      "Section102.lean",
+      "Section1020.lean",
+      "Section1021.lean",
+      "Section1022.lean",
+      "Section1023.lean",
+      "Section1024.lean",
+      "Section1032.lean",
+      "Section1033.lean",
+      "Section1034.lean",
+      "Section1035.lean",
+      "Section1036.lean",
+      "Section1037.lean",
+      "Section1038.lean",
+      "Section1039.lean",
+      "Section104.lean",
+      "Section1040.lean",
+      "Section1041.lean",
+      "Section1042.lean",
+      "Section1043.lean",
+      "Section1044.lean",
+      "Section1045.lean",
+      "Section105.lean",
+      "Section1051.lean",
+      "Section1052.lean",
+      "Section1053.lean",
+      "Section1054.lean",
+      "Section1055.lean",
+      "Section1056.lean",
+      "Section1057.lean",
+      "Section1058.lean",
+      "Section1059.lean",
+      "Section106.lean",
+      "Section1060.lean",
+      "Section1061.lean",
+      "Section1062.lean",
+      "Section1063.lean",
+      "Section107.lean",
+      "Section1071.lean",
+      "Section1081.lean",
+      "Section109.lean",
+      "Section1091.lean",
+      "Section1092.lean",
+      "Section110.lean",
+      "Section1101.lean",
+      "Section111.lean",
+      "Section1111.lean",
+      "Section112.lean",
+      "Section113.lean",
+      "Section114.lean",
+      "Section115.lean",
+      "Section116.lean",
+      "Section117.lean",
+      "Section118.lean",
+      "Section119.lean",
+      "Section12.lean",
+      "Section120.lean",
+      "Section1201.lean",
+      "Section1211.lean",
+      "Section1212.lean",
+      "Section122.lean",
+      "Section1222.lean",
+      "Section1223.lean",
+      "Section123.lean",
+      "Section1231.lean",
+      "Section1232.lean",
+      "Section1233.lean",
+      "Section1234.lean",
+      "Section1235.lean",
+      "Section1236.lean",
+      "Section1237.lean",
+      "Section1238.lean",
+      "Section1239.lean",
+      "Section124.lean",
+      "Section1240.lean",
+      "Section1241.lean",
+      "Section1242.lean",
+      "Section1243.lean",
+      "Section1244.lean",
+      "Section1245.lean",
+      "Section1246.lean",
+      "Section1248.lean",
+      "Section1249.lean",
+      "Section125.lean",
+      "Section1250.lean",
+      "Section1251.lean",
+      "Section1252.lean",
+      "Section1253.lean",
+      "Section1254.lean",
+      "Section1255.lean",
+      "Section1256.lean",
+      "Section1257.lean",
+      "Section1258.lean",
+      "Section1259.lean",
+      "Section126.lean",
+      "Section1260.lean",
+      "Section127.lean",
+      "Section1271.lean",
+      "Section1272.lean",
+      "Section1273.lean",
+      "Section1274.lean",
+      "Section1275.lean",
+      "Section1276.lean",
+      "Section1277.lean",
+      "Section1278.lean",
+      "Section128.lean",
+      "Section1281.lean",
+      "Section1282.lean",
+      "Section1283.lean",
+      "Section1286.lean",
+      "Section1287.lean",
+      "Section1288.lean",
+      "Section129.lean",
+      "Section1291.lean",
+      "Section1293.lean",
+      "Section1294.lean",
+      "Section1295.lean",
+      "Section1296.lean",
+      "Section1297.lean",
+      "Section1298.lean",
+      "Section130.lean",
+      "Section1301.lean",
+      "Section131.lean",
+      "Section1311.lean",
+      "Section1312.lean",
+      "Section1313.lean",
+      "Section1314.lean",
+      "Section1315.lean",
+      "Section132.lean",
+      "Section1321.lean",
+      "Section133.lean",
+      "Section1331.lean",
+      "Section134.lean",
+      "Section1341.lean",
+      "Section1342.lean",
+      "Section1346.lean",
+      "Section1347.lean",
+      "Section1348.lean",
+      "Section135.lean",
+      "Section1351.lean",
+      "Section1352.lean",
+      "Section1353.lean",
+      "Section1354.lean",
+      "Section1355.lean",
+      "Section1356.lean",
+      "Section1357.lean",
+      "Section1358.lean",
+      "Section1359.lean",
+      "Section136.lean",
+      "Section1361.lean",
+      "Section1362.lean",
+      "Section1363.lean",
+      "Section1366.lean",
+      "Section1367.lean",
+      "Section1368.lean",
+      "Section137.lean",
+      "Section1371.lean",
+      "Section1372.lean",
+      "Section1373.lean",
+      "Section1374.lean",
+      "Section1375.lean",
+      "Section1377.lean",
+      "Section1378.lean",
+      "Section1379.lean",
+      "Section138.lean",
+      "Section1381.lean",
+      "Section1382.lean",
+      "Section1383.lean",
+      "Section1385.lean",
+      "Section1388.lean",
+      "Section139.lean",
+      "Section1391.lean",
+      "Section1392.lean",
+      "Section1393.lean",
+      "Section1394.lean",
+      "Section1396.lean",
+      "Section1397.lean",
+      "Section1398.lean",
+      "Section1399.lean",
+      "Section140.lean",
+      "Section1400.lean",
+      "Section1401.lean",
+      "Section1402.lean",
+      "Section1403.lean",
+      "Section141.lean",
+      "Section1411.lean",
+      "Section142.lean",
+      "Section143.lean",
+      "Section144.lean",
+      "Section1441.lean",
+      "Section1442.lean",
+      "Section1443.lean",
+      "Section1444.lean",
+      "Section1445.lean",
+      "Section1446.lean",
+      "Section145.lean",
+      "Section1451.lean",
+      "Section146.lean",
+      "Section1461.lean",
+      "Section1462.lean",
+      "Section1463.lean",
+      "Section1464.lean",
+      "Section1465.lean",
+      "Section147.lean",
+      "Section1471.lean",
+      "Section1472.lean",
+      "Section1473.lean",
+      "Section1474.lean",
+      "Section148.lean",
+      "Section149.lean",
+      "Section1491.lean",
+      "Section1493.lean",
+      "Section1494.lean",
+      "Section15.lean",
+      "Section150.lean",
+      "Section1501.lean",
+      "Section1502.lean",
+      "Section1503.lean",
+      "Section1504.lean",
+      "Section1505.lean",
+      "Section153.lean",
+      "Section1551.lean",
+      "Section1552.lean",
+      "Section1561.lean",
+      "Section1562.lean",
+      "Section1563.lean",
+      "Section1564.lean",
+      "Section161.lean",
+      "Section169.lean",
+      "Section171.lean",
+      "Section172.lean",
+      "Section173.lean",
+      "Section175.lean",
+      "Section176.lean",
+      "Section177.lean",
+      "Section178.lean",
+      "Section180.lean",
+      "Section181.lean",
+      "Section182.lean",
+      "Section183.lean",
+      "Section184.lean",
+      "Section185.lean",
+      "Section186.lean",
+      "Section187.lean",
+      "Section188.lean",
+      "Section189.lean",
+      "Section190.lean",
+      "Section191.lean",
+      "Section192.lean",
+      "Section193.lean",
+      "Section194.lean",
+      "Section195.lean",
+      "Section196.lean",
+      "Section197.lean",
+      "Section198.lean",
+      "Section2.lean",
+      "Section2002.lean",
+      "Section2010.lean",
+      "Section2011.lean",
+      "Section2012.lean",
+      "Section2013.lean",
+      "Section2014.lean",
+      "Section2015.lean",
+      "Section2016.lean",
+      "Section2031.lean",
+      "Section2032.lean",
+      "Section2033.lean",
+      "Section2034.lean",
+      "Section2035.lean",
+      "Section2036.lean",
+      "Section2037.lean",
+      "Section2038.lean",
+      "Section2039.lean",
+      "Section2040.lean",
+      "Section2041.lean",
+      "Section2042.lean",
+      "Section2043.lean",
+      "Section2044.lean",
+      "Section2045.lean",
+      "Section2046.lean",
+      "Section2051.lean",
+      "Section2052.lean",
+      "Section2053.lean",
+      "Section2054.lean",
+      "Section2055.lean",
+      "Section2056.lean",
+      "Section2057.lean",
+      "Section2058.lean",
+      "Section2101.lean",
+      "Section2102.lean",
+      "Section2103.lean",
+      "Section2104.lean",
+      "Section2105.lean",
+      "Section2106.lean",
+      "Section2107.lean",
+      "Section2108.lean",
+      "Section211.lean",
+      "Section212.lean",
+      "Section213.lean",
+      "Section214.lean",
+      "Section215.lean",
+      "Section216.lean",
+      "Section217.lean",
+      "Section218.lean",
+      "Section219.lean",
+      "Section22.lean",
+      "Section220.lean",
+      "Section2201.lean",
+      "Section2202.lean",
+      "Section2203.lean",
+      "Section2204.lean",
+      "Section2205.lean",
+      "Section2206.lean",
+      "Section2207.lean",
+      "Section2208.lean",
+      "Section2209.lean",
+      "Section221.lean",
+      "Section2210.lean",
+      "Section222.lean",
+      "Section223.lean",
+      "Section224.lean",
+      "Section225.lean",
+      "Section226.lean",
+      "Section23.lean",
+      "Section241.lean",
+      "Section242.lean",
+      "Section243.lean",
+      "Section244.lean",
+      "Section245.lean",
+      "Section246.lean",
+      "Section247.lean",
+      "Section248.lean",
+      "Section249.lean",
+      "Section250.lean",
+      "Section2502.lean",
+      "Section2503.lean",
+      "Section2504.lean",
+      "Section2505.lean",
+      "Section2511.lean",
+      "Section2512.lean",
+      "Section2513.lean",
+      "Section2514.lean",
+      "Section2515.lean",
+      "Section2516.lean",
+      "Section2517.lean",
+      "Section2518.lean",
+      "Section2519.lean",
+      "Section2521.lean",
+      "Section2522.lean",
+      "Section2523.lean",
+      "Section2524.lean",
+      "Section26.lean",
+      "Section2601.lean",
+      "Section2602.lean",
+      "Section2603.lean",
+      "Section2604.lean",
+      "Section261.lean",
+      "Section2611.lean",
+      "Section2612.lean",
+      "Section2613.lean",
+      "Section2614.lean",
+      "Section262.lean",
+      "Section2621.lean",
+      "Section2622.lean",
+      "Section2623.lean",
+      "Section2624.lean",
+      "Section263.lean",
+      "Section2631.lean",
+      "Section2632.lean",
+      "Section264.lean",
+      "Section2641.lean",
+      "Section2642.lean",
+      "Section265.lean",
+      "Section2651.lean",
+      "Section2652.lean",
+      "Section2653.lean",
+      "Section2654.lean",
+      "Section266.lean",
+      "Section2661.lean",
+      "Section2662.lean",
+      "Section2663.lean",
+      "Section2664.lean",
+      "Section268.lean",
+      "Section269.lean",
+      "Section27.lean",
+      "Section270.lean",
+      "Section2701.lean",
+      "Section2702.lean",
+      "Section2703.lean",
+      "Section2704.lean",
+      "Section271.lean",
+      "Section272.lean",
+      "Section273.lean",
+      "Section275.lean",
+      "Section276.lean",
+      "Section277.lean",
+      "Section278.lean",
+      "Section279.lean",
+      "Section28.lean",
+      "Section280.lean",
+      "Section2801.lean",
+      "Section281.lean",
+      "Section29.lean",
+      "Section291.lean",
+      "Section3.lean",
+      "Section30.lean",
+      "Section303.lean",
+      "Section304.lean",
+      "Section305.lean",
+      "Section306.lean",
+      "Section307.lean",
+      "Section31.lean",
+      "Section312.lean",
+      "Section316.lean",
+      "Section317.lean",
+      "Section318.lean",
+      "Section33.lean",
+      "Section3301.lean",
+      "Section3302.lean",
+      "Section3303.lean",
+      "Section3304.lean",
+      "Section3305.lean",
+      "Section3306.lean",
+      "Section3307.lean",
+      "Section3308.lean",
+      "Section3309.lean",
+      "Section331.lean",
+      "Section3310.lean",
+      "Section3311.lean",
+      "Section332.lean",
+      "Section3321.lean",
+      "Section3322.lean",
+      "Section3323.lean",
+      "Section333.lean",
+      "Section334.lean",
+      "Section336.lean",
+      "Section337.lean",
+      "Section338.lean",
+      "Section34.lean",
+      "Section341.lean",
+      "Section342.lean",
+      "Section346.lean",
+      "Section35.lean",
+      "Section351.lean",
+      "Section354.lean",
+      "Section355.lean",
+      "Section356.lean",
+      "Section357.lean",
+      "Section358.lean",
+      "Section36.lean",
+      "Section361.lean",
+      "Section362.lean",
+      "Section363.lean",
+      "Section367.lean",
+      "Section368.lean",
+      "Section37.lean",
+      "Section370.lean",
+      "Section373.lean",
+      "Section374.lean",
+      "Section381.lean",
+      "Section382.lean",
+      "Section383.lean",
+      "Section384.lean",
+      "Section385.lean",
+      "Section386.lean",
+      "Section39.lean",
+      "Section391.lean",
+      "Section4.lean",
+      "Section40.lean",
+      "Section402.lean",
+      "Section403.lean",
+      "Section404.lean",
+      "Section405.lean",
+      "Section406.lean",
+      "Section407.lean",
+      "Section409.lean",
+      "Section410.lean",
+      "Section411.lean",
+      "Section412.lean",
+      "Section413.lean",
+      "Section414.lean",
+      "Section415.lean",
+      "Section416.lean",
+      "Section417.lean",
+      "Section418.lean",
+      "Section419.lean",
+      "Section42.lean",
+      "Section420.lean",
+      "Section421.lean",
+      "Section422.lean",
+      "Section423.lean",
+      "Section424.lean",
+      "Section425.lean",
+      "Section43.lean",
+      "Section430.lean",
+      "Section431.lean",
+      "Section432.lean",
+      "Section433.lean",
+      "Section436.lean",
+      "Section44.lean",
+      "Section441.lean",
+      "Section442.lean",
+      "Section443.lean",
+      "Section444.lean",
+      "Section446.lean",
+      "Section447.lean",
+      "Section448.lean",
+      "Section45.lean",
+      "Section451.lean",
+      "Section452.lean",
+      "Section453.lean",
+      "Section454.lean",
+      "Section455.lean",
+      "Section456.lean",
+      "Section457.lean",
+      "Section458.lean",
+      "Section46.lean",
+      "Section460.lean",
+      "Section461.lean",
+      "Section462.lean",
+      "Section463.lean",
+      "Section464.lean",
+      "Section465.lean",
+      "Section466.lean",
+      "Section467.lean",
+      "Section468.lean",
+      "Section47.lean",
+      "Section470.lean",
+      "Section471.lean",
+      "Section472.lean",
+      "Section473.lean",
+      "Section474.lean",
+      "Section475.lean",
+      "Section48.lean",
+      "Section481.lean",
+      "Section483.lean",
+      "Section49.lean",
+      "Section5.lean",
+      "Section50.lean",
+      "Section501.lean",
+      "Section502.lean",
+      "Section503.lean",
+      "Section504.lean",
+      "Section505.lean",
+      "Section506.lean",
+      "Section507.lean",
+      "Section508.lean",
+      "Section509.lean",
+      "Section51.lean",
+      "Section511.lean",
+      "Section512.lean",
+      "Section513.lean",
+      "Section514.lean",
+      "Section515.lean",
+      "Section52.lean",
+      "Section521.lean",
+      "Section522.lean",
+      "Section526.lean",
+      "Section527.lean",
+      "Section528.lean",
+      "Section529.lean",
+      "Section53.lean",
+      "Section530.lean",
+      "Section531.lean",
+      "Section532.lean",
+      "Section533.lean",
+      "Section534.lean",
+      "Section535.lean",
+      "Section536.lean",
+      "Section537.lean",
+      "Section54.lean",
+      "Section541.lean",
+      "Section542.lean",
+      "Section543.lean",
+      "Section544.lean",
+      "Section545.lean",
+      "Section546.lean",
+      "Section547.lean",
+      "Section551.lean",
+      "Section561.lean",
+      "Section562.lean",
+      "Section563.lean",
+      "Section564.lean",
+      "Section565.lean",
+      "Section57.lean",
+      "Section58.lean",
+      "Section581.lean",
+      "Section582.lean",
+      "Section583.lean",
+      "Section584.lean",
+      "Section585.lean",
+      "Section586.lean",
+      "Section591.lean",
+      "Section592.lean",
+      "Section593.lean",
+      "Section594.lean",
+      "Section595.lean",
+      "Section597.lean",
+      "Section66.lean",
+      "Section67.lean",
+      "Section68.lean",
+      "Section72.lean",
+      "Section73.lean",
+      "Section74.lean",
+      "Section75.lean",
+      "Section76.lean",
+      "Section77.lean",
+      "Section78.lean",
+      "Section79.lean",
+      "Section80.lean",
+      "Section801.lean",
+      "Section803.lean",
+      "Section804.lean",
+      "Section805.lean",
+      "Section806.lean",
+      "Section807.lean",
+      "Section808.lean",
+      "Section809.lean",
+      "Section81.lean",
+      "Section810.lean",
+      "Section811.lean",
+      "Section812.lean",
+      "Section813.lean",
+      "Section814.lean",
+      "Section815.lean",
+      "Section816.lean",
+      "Section817.lean",
+      "Section818.lean",
+      "Section82.lean",
+      "Section83.lean",
+      "Section831.lean",
+      "Section832.lean",
+      "Section833.lean",
+      "Section834.lean",
+      "Section835.lean",
+      "Section84.lean",
+      "Section841.lean",
+      "Section842.lean",
+      "Section843.lean",
+      "Section844.lean",
+      "Section845.lean",
+      "Section846.lean",
+      "Section847.lean",
+      "Section848.lean",
+      "Section85.lean",
+      "Section851.lean",
+      "Section852.lean",
+      "Section853.lean",
+      "Section854.lean",
+      "Section855.lean",
+      "Section856.lean",
+      "Section857.lean",
+      "Section858.lean",
+      "Section859.lean",
+      "Section86.lean",
+      "Section860.lean",
+      "Section861.lean",
+      "Section862.lean",
+      "Section863.lean",
+      "Section864.lean",
+      "Section865.lean",
+      "Section87.lean",
+      "Section871.lean",
+      "Section872.lean",
+      "Section873.lean",
+      "Section874.lean",
+      "Section875.lean",
+      "Section876.lean",
+      "Section877.lean",
+      "Section878.lean",
+      "Section879.lean",
+      "Section88.lean",
+      "Section881.lean",
+      "Section882.lean",
+      "Section883.lean",
+      "Section884.lean",
+      "Section885.lean",
+      "Section887.lean",
+      "Section89.lean",
+      "Section891.lean",
+      "Section892.lean",
+      "Section893.lean",
+      "Section894.lean",
+      "Section895.lean",
+      "Section896.lean",
+      "Section897.lean",
+      "Section898.lean",
+      "Section90.lean",
+      "Section91.lean"
+    ],
+    "COMPLETE": [
+      "Section1001.lean",
+      "Section101.lean",
+      "Section1011.lean",
+      "Section1012.lean",
+      "Section1014.lean",
+      "Section1015.lean",
+      "Section108.lean",
+      "Section11.lean",
+      "Section121.lean",
+      "Section1221.lean",
+      "Section151.lean",
+      "Section152.lean",
+      "Section163.lean",
+      "Section164.lean",
+      "Section167.lean",
+      "Section174.lean",
+      "Section179.lean",
+      "Section199.lean",
+      "Section21.lean",
+      "Section24.lean",
+      "Section25.lean",
+      "Section2501.lean",
+      "Section274.lean",
+      "Section301.lean",
+      "Section311.lean",
+      "Section38.lean",
+      "Section408.lean",
+      "Section41.lean",
+      "Section469.lean",
+      "Section55.lean",
+      "Section56.lean",
+      "Section59.lean",
+      "Section62.lean"
+    ],
+    "NEEDS_THEOREMS": [
+      "Section1031.lean"
+    ],
+    "SORRY": [
+      "Section162.lean",
+      "Section168.lean",
+      "Section2001.lean",
+      "Section32.lean",
+      "Section401.lean",
+      "Section61.lean",
+      "Section63.lean",
+      "Section64.lean",
+      "Section65.lean"
+    ],
+    "REVIEW": [
+      "Section166.lean"
+    ]
+  }
+}

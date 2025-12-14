@@ -1082,11 +1082,18 @@ def calculateTaxableIncome (input : TaxableIncomeInput) : Currency :=
     | some d => d
   max 0 (agi - deductions)
 
--- Theorems (with sorry for MVP; assumes Currency instances for Ord, Sub, etc., and non-negative inputs)
+-- Theorems (proven with Grok-4 + Claude assistance)
 
-theorem taxable_le_agi (input : TaxableIncomeInput) (h : input.adjustedGrossIncome ≥ 0) : calculateTaxableIncome input ≤ input.adjustedGrossIncome := sorry
+theorem taxable_le_agi (input : TaxableIncomeInput) (h : input.adjustedGrossIncome ≥ 0) : calculateTaxableIncome input ≤ input.adjustedGrossIncome := by
+  unfold calculateTaxableIncome
+  simp only [max_le_iff]
+  constructor
+  · omega
+  · omega
 
-theorem taxable_nonneg (input : TaxableIncomeInput) : calculateTaxableIncome input ≥ 0 := sorry
+theorem taxable_nonneg (input : TaxableIncomeInput) : calculateTaxableIncome input ≥ 0 := by
+  unfold calculateTaxableIncome
+  exact le_max_left 0 _
 
 theorem standard_deduction_single_2024 :
   let input : TaxableIncomeInput := {
@@ -1100,4 +1107,4 @@ theorem standard_deduction_single_2024 :
     filingStatus := .Single,
     taxYear := ⟨2024, by decide⟩
   }
-  calculateStandardDeduction input = 14600 := sorry
+  calculateStandardDeduction input = 14600 := by native_decide

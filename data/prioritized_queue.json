@@ -1,0 +1,66 @@
+{
+  "generated": "2025-12-14",
+  "analysis_by": "Grok-4 + Claude",
+
+  "summary": {
+    "total_sections": 748,
+    "complete": 33,
+    "needs_action": 715,
+    "quick_local_fixes": 7,
+    "aristotle_proof_complete": 3,
+    "aristotle_resubmit": 5,
+    "aristotle_full_formalization": 695
+  },
+
+  "priority_1_local_fixes": {
+    "description": "Can be fixed locally without Aristotle - simple tactic fixes",
+    "sections": [
+      {"section": 61, "action": "LOCAL_FIX", "sorries": 2, "tactic": "unfold, induction, simp"},
+      {"section": 63, "action": "LOCAL_FIX", "sorries": 4, "tactic": "cases, simp, omega"},
+      {"section": 64, "action": "LOCAL_FIX", "sorries": 1, "tactic": "induction, simp"},
+      {"section": 65, "action": "LOCAL_FIX", "sorries": 1, "tactic": "induction, simp"},
+      {"section": 162, "action": "LOCAL_FIX", "sorries": 3, "tactic": "simp, rw, exact"},
+      {"section": 401, "action": "LOCAL_FIX", "sorries": 1, "tactic": "omega, list tactics"},
+      {"section": 168, "action": "SKIP", "sorries": 1, "reason": "Not critical"}
+    ]
+  },
+
+  "priority_2_aristotle_proof_complete": {
+    "description": "Resubmit to Aristotle for proof completion only (structure exists)",
+    "sections": [
+      {"section": 103, "action": "ARISTOTLE_PROOF_COMPLETE", "sorries": 6},
+      {"section": 32, "action": "ARISTOTLE_RESUBMIT", "sorries": 8, "reason": "Complex rate computations"},
+      {"section": 2001, "action": "ARISTOTLE_RESUBMIT", "sorries": 4, "reason": "Split-if and monotonicity proofs"}
+    ]
+  },
+
+  "priority_3_aristotle_resubmit": {
+    "description": "Failed submissions that need retry with truncated/fixed content",
+    "sections": [
+      {"section": 165, "action": "TRUNCATE_RESUBMIT", "lines": 1691, "error": "URL too long"},
+      {"section": 170, "action": "TRUNCATE_RESUBMIT", "lines": 5206, "error": "Broken pipe"},
+      {"section": 267, "action": "RESUBMIT", "lines": 824, "error": "Empty request"},
+      {"section": 302, "action": "TRUNCATE_RESUBMIT", "lines": 520, "error": "Broken pipe"},
+      {"section": 1202, "action": "RESUBMIT", "lines": 1141, "error": "DNS error"}
+    ]
+  },
+
+  "priority_4_full_formalization": {
+    "description": "Stub files that need complete Aristotle formalization",
+    "count": 695,
+    "batch_order": [
+      {"tier": 1, "range": "61-90", "description": "Core income definitions", "estimated_sections": 30},
+      {"tier": 2, "range": "161-199", "description": "Deductions", "estimated_sections": 39},
+      {"tier": 3, "range": "21-54", "description": "Credits", "estimated_sections": 34},
+      {"tier": 4, "range": "101-140", "description": "Exclusions/Exemptions", "estimated_sections": 40},
+      {"tier": 5, "range": "1001-1099", "description": "Capital gains", "estimated_sections": 99},
+      {"tier": 6, "range": "301-399", "description": "Corporate", "estimated_sections": 99},
+      {"tier": 7, "range": "remaining", "description": "All other sections", "estimated_sections": 354}
+    ]
+  },
+
+  "false_retries_now_complete": {
+    "description": "Sections marked as retry but are actually complete",
+    "sections": [1, 71, 482]
+  }
+}
