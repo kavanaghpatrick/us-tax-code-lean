@@ -3,14 +3,6 @@ This file was edited by Aristotle.
 
 Lean version: leanprover/lean4:v4.24.0
 Mathlib version: f897ebcf72cd16f89ab4577d0c826cd14afaafc7
-This project request had uuid: 3ddb5718-d57b-4a19-b0e5-dbe5629ae6b1
--/
-
-/-
-This file was edited by Aristotle.
-
-Lean version: leanprover/lean4:v4.24.0
-Mathlib version: f897ebcf72cd16f89ab4577d0c826cd14afaafc7
 This project request had uuid: 9c57b528-06cc-4440-a2aa-23f418e8638b
 -/
 
