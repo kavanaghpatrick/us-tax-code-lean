@@ -1,3 +1,9 @@
+/-
+IRC §1031 - Exchange of Real Property Held for Productive Use or Investment
+Like-kind exchanges: No gain or loss recognized on exchange of real property held for
+productive use or investment if exchanged solely for property of like-kind.
+-/
+
 import Lean
 
 namespace Common.Basic
