@@ -1,0 +1,106 @@
+/-
+This file was edited by Aristotle.
+
+Lean version: leanprover/lean4:v4.24.0
+Mathlib version: f897ebcf72cd16f89ab4577d0c826cd14afaafc7
+This project request had uuid: 58ec3c3e-64d8-4f6f-85f5-527186fadc9d
+-/
+
+import Mathlib
+
+
+/- Aristotle failed to load this code into its environment. Double check that the syntax is correct.
+
+unexpected token ';'; expected command
+unexpected identifier; expected 'instance'-/
+set_option linter.mathlibStandardSet false
+
+open scoped BigOperators Real Nat Classical Pointwise
+
+set_option maxHeartbeats 0
+
+set_option maxRecDepth 4000
+
+set_option synthInstance.maxHeartbeats 20000
+
+set_option synthInstance.maxSize 128
+
+set_option relaxedAutoImplicit false
+
+set_option autoImplicit false
+
+noncomputable section
+
+def Currency := Int
+
+structure TaxYear where year : Nat
+
+; h_valid : year ≥ 1913; deriving
+
+DecidableEq, Repr
+inductive FilingStatus | Single | MarriedFilingJointly | MarriedFilingSeparately | HeadOfHousehold | QualifyingWidower | Estate | Trust deriving Repr, DecidableEq, Inhabited
+
+/-!
+# IRC Section 272 - Disposal of coal or domestic iron ore
+
+This file formalizes IRC §272 (Disposal of coal or domestic iron ore).
+
+## References
+- [26 USC §272](https://www.law.cornell.edu/uscode/text/26/272)
+
+## Summary
+   Quick search by citation:
+   Title
+   Section
+   Go!
+   26 U.S. Code § 272 - Disposal of coal or domestic iron ore
+   U.S. Code
+   Notes
+   prev
+   |
+   next
+   Where the disposal of coal or iron ore is covered by section 631, no deduction shall be allowed for
+   expenditures
+   attributable to the making and administering of the contract under which such
+   disposition
+   occurs and to the preservation of the economic
+   interest
+   retained under such contract, except that if in any taxable year such
+   expenditures
+   plus the adjusted depletion basis of the coal or iron ore disposed of in such taxable year exceed the amount realized under such contract, such excess, to the extent not availed of as a reduction of gain under section 1231, shall be a loss deductible under
+   section 165(a).
+   This section shall not apply to any taxable year during which there is no income under the contract.
+   (Aug. 16, 1954, ch. 736,
+   68A Stat. 82
+   ;
+   Pub. L. 88–272, title II, § 227(a)(3)
+   , (b)(3),
+   Feb. 26, 1964
+   ,
+   78 Stat. 98
+   .)
+   Editorial Notes
+   Amendments
+   1964—
+   Pub. L. 88–272
+   inserted “or domestic iron ore” in section catchline, and “or iron ore” wherever appearing in text.
+   Statutory Notes and Related Subsidiaries
+   Effective Date of 1964 Amendment
+   Pub. L. 88–272, title II, § 227(c)
+   ,
+   Feb. 26, 1964
+   ,
+   78 Stat. 98
+   , provided that:
+   “The amendments made by this section [amending this section and sections 631, 1016, 1231, and 1402 and
+   section 411 of Title 42
+   , The Public Health and Welfare] shall apply with respect to amounts received or accrued in taxable years beginning after
+   December 31, 1963
+   , attributable to iron ore mined in such taxable years.”
+   U.S. Code Toolbox
+   Law about... Articles from Wex
+   Table of Popular Names
+   Parallel Table of Authorities
+   How
+   current is this?
+-/

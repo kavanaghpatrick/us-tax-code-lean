@@ -1,0 +1,171 @@
+[
+  {
+    "name": "Executive Compensation Split Strategy",
+    "description": "Circumvent \u00a7162(m) $1M cap by using equity compensation",
+    "sections_used": [
+      162
+    ],
+    "tax_savings": 210000,
+    "exploits_loophole": false,
+    "loophole_type": "statutory_gap",
+    "risk_level": "low",
+    "steps": [
+      "Original plan: $2,000,000 cash compensation",
+      "Deduction limited to: $1,000,000 under \u00a7162(m)",
+      "Lost deduction: $1,000,000",
+      "",
+      "Restructured plan:",
+      "1. Pay $1,000,000 in cash (deductible)",
+      "2. Grant $1,000,000 in stock options",
+      "3. Stock options deductible under different rules (not subject to \u00a7162(m) cap)",
+      "4. Total deduction: $2,000,000",
+      "Tax savings: $210,000 (corporate rate on $1,000,000)"
+    ]
+  },
+  {
+    "name": "Combat Zone + Deferred Compensation Stacking",
+    "description": "Stack \u00a7112 combat pay exclusion with \u00a7457 deferred comp deduction",
+    "sections_used": [
+      112,
+      457
+    ],
+    "tax_savings": 50000,
+    "exploits_loophole": true,
+    "loophole_type": "overlapping_rules",
+    "risk_level": "medium",
+    "steps": [
+      "Scenario: State government employee deployed to combat zone",
+      "",
+      "Step 1: Exclude combat pay under \u00a7112",
+      "  - Salary: $100,000",
+      "  - Combat zone exclusion: $100,000",
+      "  - Taxable income: $0",
+      "",
+      "Step 2: Employer contributes to \u00a7457 deferred comp plan",
+      "  - Contribution: $20,000",
+      "  - Deductible to employer: $20,000",
+      "",
+      "Question: Can employer deduct contribution to plan for excluded income?",
+      "Statutory text unclear on interaction between \u00a7112 and \u00a7457",
+      "",
+      "If allowed: Double benefit (exclusion + deduction)",
+      "Tax savings: ~$50,000 (combined employee exclusion + employer deduction)",
+      "",
+      "\u26a0\ufe0f MEDIUM RISK: IRS would likely issue guidance preventing this"
+    ]
+  },
+  {
+    "name": "Travel Expense Documentation Strategy",
+    "description": "Minimize 'lavish' portion by detailed documentation",
+    "sections_used": [
+      162
+    ],
+    "tax_savings": 1110,
+    "exploits_loophole": false,
+    "loophole_type": "none",
+    "risk_level": "low",
+    "steps": [
+      "Total travel expense: $10,000",
+      "'Lavish or extravagant' portion: $3,000 (not deductible)",
+      "Reasonable portion: $7,000 (deductible)",
+      "",
+      "Optimization:",
+      "1. Maintain detailed receipts showing business necessity",
+      "2. Document why expenses were reasonable (client meetings, etc.)",
+      "3. Compare to industry standards",
+      "4. Result: Reduce 'lavish' classification, increase deduction",
+      "",
+      "This is compliance, not a loophole"
+    ]
+  },
+  {
+    "name": "Circular Reference Ambiguity Argument",
+    "description": "Exploit circular definitions in \u00a7\u00a7103-141-144 to argue bond qualification",
+    "sections_used": [
+      103,
+      141,
+      144
+    ],
+    "tax_savings": 222,
+    "exploits_loophole": true,
+    "loophole_type": "circular_reference",
+    "risk_level": "high",
+    "steps": [
+      "Issue bond that appears to be private activity bond under \u00a7141",
+      "Argue that \u00a7141 definition requires checking \u00a7144 qualification",
+      "Show \u00a7144 qualification refers back to \u00a7103 exemption",
+      "Claim circular chain makes definition ambiguous",
+      "Under tax law canon, ambiguity resolved in favor of taxpayer",
+      "Potential savings: $222 (if argument succeeds)",
+      "\u26a0\ufe0f HIGH RISK: IRS would likely challenge this argument"
+    ]
+  },
+  {
+    "name": "10% Private Use Threshold Gaming",
+    "description": "Structure bond to have exactly 10.0% private use (at threshold, not over)",
+    "sections_used": [
+      103,
+      141
+    ],
+    "tax_savings": 185,
+    "exploits_loophole": true,
+    "loophole_type": "threshold_gaming",
+    "risk_level": "low",
+    "steps": [
+      "Issue state/local bond with proceeds of $1M+",
+      "Structure private business use to be exactly 10.0% (not 10.1%)",
+      "Ensure private security payments also exactly 10.0%",
+      "\u00a7141 test: 'greater than 10%' means 10.0% passes",
+      "Result: Interest remains tax-exempt under \u00a7103",
+      "Tax savings: $185 (37% of $500 interest)"
+    ]
+  },
+  {
+    "name": "Avoid Federal Guarantee (\u00a7149(b) Compliance)",
+    "description": "Structure state bond WITHOUT federal guarantee to maintain exemption",
+    "sections_used": [
+      103,
+      149
+    ],
+    "tax_savings": 185,
+    "exploits_loophole": false,
+    "loophole_type": "none",
+    "risk_level": "low",
+    "steps": [
+      "Issue state/local bond",
+      "Ensure NO federal guarantee (\u00a7149(b) disqualifies)",
+      "Keep private use under 10%",
+      "Maintain proper registration",
+      "Result: Interest $500 is tax-exempt",
+      "This is standard bond structuring, not a loophole"
+    ]
+  },
+  {
+    "name": "Tax-Exempt Interest + Deduction Interaction",
+    "description": "Check if formalization properly handles \u00a7265 disallowance",
+    "sections_used": [
+      103,
+      162,
+      265
+    ],
+    "tax_savings": 0,
+    "exploits_loophole": false,
+    "loophole_type": "potential_gap",
+    "risk_level": "low",
+    "steps": [
+      "Scenario: Taxpayer owns tax-exempt bonds earning $100K interest",
+      "Taxpayer incurs $20K expenses to manage bond portfolio",
+      "",
+      "Question: Can taxpayer deduct the $20K expenses?",
+      "",
+      "\u00a7103: Bond interest is tax-exempt",
+      "\u00a7162: Trade/business expenses are deductible",
+      "\u00a7265: NO deduction for expenses allocable to tax-exempt income",
+      "",
+      "Check: Is \u00a7265 formalized in our codebase?",
+      "If not, formalization may be incomplete",
+      "",
+      "Action item: Search for Section265.lean file"
+    ]
+  }
+]

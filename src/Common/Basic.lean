@@ -94,13 +94,15 @@ instance : DecidableEq TaxYear := fun a b =>
 
 end TaxYear
 
--- Filing Status (IRC §1(a)-(d) and §2(b))
+-- Filing Status (IRC §1(a)-(e) and §2(b))
 inductive FilingStatus
   | Single                         -- IRC §1(c)
   | MarriedFilingJointly          -- IRC §1(a)
   | MarriedFilingSeparately       -- IRC §1(d)
   | HeadOfHousehold               -- IRC §1(b)
   | QualifyingWidower             -- IRC §2(b)
+  | Estate                         -- IRC §1(e)(1)
+  | Trust                          -- IRC §1(e)(2)
   deriving Repr, DecidableEq, Inhabited
 
 -- Taxpayer entity

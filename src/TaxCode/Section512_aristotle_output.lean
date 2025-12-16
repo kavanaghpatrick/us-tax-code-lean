@@ -1,0 +1,635 @@
+/-
+This file was edited by Aristotle.
+
+Lean version: leanprover/lean4:v4.24.0
+Mathlib version: f897ebcf72cd16f89ab4577d0c826cd14afaafc7
+This project request had uuid: bb516cba-f5c0-46ae-b1fd-659ee364994d
+
+Aristotle encountered an error processing this file. The team has been notified.
+
+-/
+
+
+import Mathlib
+
+def Currency := Int
+
+structure TaxYear where
+  year : Nat
+  h_valid : year ≥ 1913
+  deriving DecidableEq
+
+inductive FilingStatus
+  | Single
+  | MarriedFilingJointly
+  | MarriedFilingSeparately
+  | HeadOfHousehold
+  | QualifyingWidower
+  | Estate
+  | Trust
+  deriving Repr, DecidableEq, Inhabited
+
+/-!
+# IRC Section 512 - Unrelated business taxable income
+
+This file formalizes IRC §512 (Unrelated business taxable income).
+
+## References
+- [26 USC §512](https://www.law.cornell.edu/uscode/text/26/512)
+
+## Summary
+   Quick search by citation:
+   Title
+   Section
+   Go!
+   26 U.S. Code § 512 - Unrelated business taxable income
+   U.S. Code
+   Notes
+   prev
+   |
+   next
+   (a)
+   Definition
+   For purposes of this title—
+   (1)
+   General rule
+   Except as otherwise provided in this subsection, the term “
+   unrelated business taxable income
+   ” means the gross income derived by any organization from any
+   unrelated trade or business
+   (as defined in
+   section 513
+   ) regularly carried on by it, less the deductions allowed by this chapter which are directly connected with the carrying on of such trade or business, both computed with the modifications provided in subsection (b).
+   (2)
+   Special rule for foreign organizations
+   In the case of an organization described in
+   section 511
+   which is a foreign organization, the
+   unrelated business taxable income
+   shall be—
+   (A)
+   its
+   unrelated business taxable income
+   which is derived from sources within the United States and which is not effectively connected with the conduct of a trade or business within the United States, plus
+   (B)
+   its
+   unrelated business taxable income
+   which is effectively connected with the conduct of a trade or business within the United States.
+   (3)
+   Special rules applicable to organizations described in paragraph (7), (9), or (17) of section 501(c)
+   (A)
+   General rule
+   In the case of an organization described in paragraph (7), (9), or (17) of section 501(c), the term “
+   unrelated business taxable income
+   ” means the gross income (excluding any
+   exempt function income)
+   , less the deductions allowed by this chapter which are directly connected with the production of the gross income (excluding
+   exempt function income)
+   , both computed with the modifications provided in paragraphs (6), (10), (11), and (12) of subsection (b). For purposes of the preceding sentence, the deductions provided by sections 243 and 245 (relating to dividends received by corporations) shall be treated as not directly connected with the production of gross income.
+   (B)
+   Exempt function income
+   For purposes of subparagraph (A), the term “
+   exempt function income
+   ” means the gross income from
+   dues,
+   fees, charges, or similar amounts paid by members of the organization as consideration for providing such members or their dependents or guests goods, facilities, or services in furtherance of the purposes constituting the basis for the exemption of the organization to which such income is paid. Such term also means all income (other than an amount equal to the gross income derived from any
+   unrelated trade or business
+   regularly carried on by such organization computed as if the organization were subject to paragraph (1)), which is set aside—
+   (i)
+   for a purpose specified in section 170(c)(4), or
+   (ii)
+   in the case of an organization described in paragraph (9) or (17) of section 501(c), to provide for the payment of life, sick, accident, or other benefits,
+   including reasonable costs of administration directly connected with a purpose described in clause (i) or (ii). If during the taxable year, an amount which is attributable to income so set aside is used for a purpose other than that described in clause (i) or (ii), such amount shall be included, under subparagraph (A), in
+   unrelated business taxable income
+   for the taxable year.
+   (C)
+   Applicability to certain corporations described in section 501(c)(2)
+   In the case of a corporation described in section 501(c)(2), the income of which is payable to an organization described in paragraph (7), (9), or (17) of section 501(c), subparagraph (A) shall apply as if such corporation were the organization to which the income is payable. For purposes of the preceding sentence, such corporation shall be treated as having
+   exempt function income
+   for a taxable year only if it files a consolidated return with such organization for such year.
+   (D)
+   Nonrecognition of gain
+   If property used directly in the performance of the exempt function of an organization described in paragraph (7), (9), or (17) of section 501(c) is sold by such organization, and within a period beginning 1 year before the date of such sale, and ending 3 years after such date, other property is purchased and used by such organization directly in the performance of its exempt function, gain (if any) from such sale shall be recognized only to the extent that such organization’s sales price of the old property exceeds the organization’s cost of purchasing the other property. For purposes of this subparagraph, the destruction in whole or in part, theft, seizure, requisition, or condemnation of property, shall be treated as the sale of such property, and rules similar to the rules provided by subsections (b), (c), (e), and (j) of section 1034 (as in effect on the day before the date of the enactment of the
+   Taxpayer Relief Act of 1997
+   ) shall apply.
+   (E)
+   Limitation on amount of setaside in the case of organizations described in paragraph (9) or (17) of section 501(c)
+   (i)
+   In general
+   In the case of any organization described in paragraph (9) or (17) of section 501(c), a set-aside for any purpose specified in clause (ii) of subparagraph (B) may be taken into account under subparagraph (B) only to the extent that such set-aside does not result in an amount of assets set aside for such purpose in excess of the account limit determined under
+   section 419A
+   (without regard to subsection (f)(6) thereof) for the taxable year (not taking into account any reserve described in section 419A(c)(2)(A) for post-retirement medical benefits).
+   (ii)
+   Treatment of existing reserves for post-retirement medical or life insurance benefits
+   (I)
+   Clause (i) shall not apply to any income attributable to an existing
+   reserve for post-retirement medical or life insurance benefits
+   .
+   (II)
+   For purposes of subclause (I), the term “
+   reserve for post-retirement medical or life insurance benefits
+   ” means the greater of the amount of assets set aside for purposes of post-retirement medical or life insurance benefits to be provided to covered employees as of the close of the last plan year ending before the date of the enactment of the
+   Tax Reform Act of 1984
+   or on
+   July 18, 1984
+   .
+   (III)
+   All payments during plan years ending on or after the date of the enactment of the
+   Tax Reform Act of 1984
+   of post-retirement medical benefits or life insurance benefits shall be charged against the reserve referred to in subclause (II). Except to the extent provided in regulations prescribed by the Secretary, all plans of an employer shall be treated as 1 plan for purposes of the preceding sentence.
+   (iii)
+   Treatment of tax exempt organizations
+   This subparagraph shall not apply to any organization if substantially all of the contributions to such organization are made by employers who were exempt from tax under this chapter throughout the 5-taxable year period ending with the taxable year in which the contributions are made.
+   (4)
+   Special rule applicable to organizations described in section 501(c)(19)
+   In the case of an organization described in section 501(c)(19), the term “
+   unrelated business taxable income
+   ” does not include any amount attributable to payments for life, sick, accident, or health insurance with respect to members of such organizations or their dependents which is set aside for the purpose of providing for the payment of insurance benefits or for a purpose specified in
+   section 170(c)(4).
+   If an amount set aside under the preceding sentence is used during the taxable year for a purpose other than a purpose described in the preceding sentence, such amount shall be included, under paragraph (1), in
+   unrelated business taxable income
+   for the taxable year.
+   (5)
+   Definition of payments with respect to securities loans
+   (A)
+   The term “
+   payments with respect to securities loans
+   ” includes all amounts received in respect of a security (as defined in section 1236(c)) transferred by the owner to another person in a transaction to which section 1058 applies (whether or not title to the security remains in the name of the lender) including—
+   (i)
+   amounts in respect of dividends, interest, or other distributions,
+   (ii)
+   fees computed by reference to the period beginning with the transfer of securities by the owner and ending with the transfer of identical securities back to the transferor by the transferee and the fair market value of the security during such period,
+   (iii)
+   income from collateral security for such loan, and
+   (iv)
+   income from the investment of collateral security.
+   (B)
+   Subparagraph (A) shall apply only with respect to securities transferred pursuant to an agreement between the transferor and the transferee which provides for—
+   (i)
+   reasonable procedures to implement the obligation of the transferee to furnish to the transferor, for each business day during such period, collateral with a fair market value not less than the fair market value of the security at the close of business on the preceding business day,
+   (ii)
+   termination of the loan by the transferor upon notice of not more than 5 business days, and
+   (iii)
+   return to the transferor of securities identical to the transferred securities upon termination of the loan.
+   (6)
+   Special rule for organization with more than 1 unrelated trade or business
+   In the case of any organization with more than 1
+   unrelated trade or business
+   —
+   (A)
+   unrelated business taxable income
+   , including for purposes of determining any net operating loss deduction, shall be computed separately with respect to each such trade or business and without regard to subsection (b)(12),
+   (B)
+   the
+   unrelated business taxable income
+   of such organization shall be the sum of the
+   unrelated business taxable income
+   so computed with respect to each such trade or business, less a specific deduction under subsection (b)(12), and
+   (C)
+   for purposes of subparagraph (B),
+   unrelated business taxable income
+   with respect to any such trade or business shall not be less than zero.
+   (b)
+   Modifications
+   The modifications referred to in subsection (a) are the following:
+   (1)
+   There shall be excluded all dividends, interest,
+   payments with respect to securities loans
+   (as defined in subsection (a)(5)), amounts received or accrued as consideration for entering into agreements to make loans, and annuities, and all deductions directly connected with such income.
+   (2)
+   There shall be excluded all royalties (including overriding royalties) whether measured by production or by gross or taxable income from the property, and all deductions directly connected with such income.
+   (3)
+   In the case of rents—
+   (A)
+   Except as provided in subparagraph (B), there shall be excluded—
+   (i)
+   all rents from real property (including property described in
+   section 1245(a)(3)(C)
+   ), and
+   (ii)
+   all rents from personal property (including for purposes of this paragraph as personal property any property described in section 1245(a)(3)(B)) leased with such real property, if the rents attributable to such personal property are an incidental amount of the total rents received or accrued under the lease, determined at the time the personal property is placed in service.
+   (B)
+   Subparagraph (A) shall not apply—
+   (i)
+   if more than 50 percent of the total rent received or accrued under the lease is attributable to personal property described in subparagraph (A)(ii), or
+   (ii)
+   if the determination of the amount of such rent depends in whole or in part on the income or profits derived by any person from the property leased (other than an amount based on a fixed percentage or percentages of receipts or sales).
+   (C)
+   There shall be excluded all deductions directly connected with rents excluded under subparagraph (A).
+   (4)
+   Notwithstanding paragraph (1), (2), (3), or (5), in the case of debt-financed property (as defined in
+   section 514
+   ) there shall be included, as an item of gross income derived from an
+   unrelated trade or business,
+   the amount ascertained under section 514(a)(1), and there shall be allowed, as a deduction, the amount ascertained under section 514(a)(2).
+   (5)
+   There shall be excluded all gains or losses from the sale, exchange, or other
+   disposition
+   of property other than—
+   (A)
+   stock in trade or other property of a kind which would properly be includible in inventory if on hand at the close of the taxable year, or
+   (B)
+   property held primarily for sale to customers in the ordinary course of the trade or business.
+   There shall also be excluded all gains or losses recognized, in connection with the organization’s investment activities, from the lapse or termination of options to buy or sell securities (as defined in
+   section 1236(c)
+   ) or real property and all gains or losses from the forfeiture of good-faith deposits (that are consistent with established business practice) for the purchase, sale, or lease of real property in connection with the organization’s investment activities. This paragraph shall not apply with respect to the cutting of timber which is considered, on the application of section 631, as a sale or exchange of such timber.
+   (6)
+   The net operating loss deduction provided in
+   section 172
+   shall be allowed, except that—
+   (A)
+   the net operating loss for any taxable year, the amount of the net operating loss carryback or carryover to any taxable year, and the net operating loss deduction for any taxable year shall be determined under
+   section 172
+   without taking into account any amount of income or deduction which is excluded under this part in computing the
+   unrelated business taxable income;
+   and
+   (B)
+   the terms “preceding taxable year” and “preceding taxable years” as used in
+   section 172
+   shall not include any taxable year for which the organization was not subject to the provisions of this part.
+   (7)
+   There shall be excluded all income derived from research for (A) the United States, or any of its agencies or instrumentalities, or (B) any State or political subdivision thereof; and there shall be excluded all deductions directly connected with such income.
+   (8)
+   In the case of a college, university, or hospital, there shall be excluded all income derived from research performed for any person, and all deductions directly connected with such income.
+   (9)
+   In the case of an organization operated primarily for purposes of carrying on fundamental research the results of which are freely available to the general public, there shall be excluded all income derived from research performed for any person, and all deductions directly connected with such income.
+   (10)
+   In the case of any organization described in section 511(a), the deduction allowed by section 170 (relating to charitable etc. contributions and gifts) shall be allowed (whether or not directly connected with the carrying on of the trade or business), but shall not exceed 10 percent of the
+   unrelated business taxable income
+   computed without the benefit of this paragraph.
+   (11)
+   In the case of any trust described in section 511(b), the deduction allowed by section 170 (relating to charitable etc. contributions and gifts) shall be allowed (whether or not directly connected with the carrying on of the trade or business), and for such purpose a distribution made by the trust to a beneficiary described in section 170 shall be considered as a gift or contribution. The deduction allowed by this paragraph shall be allowed with the limitations prescribed in section 170(b)(1)(A) and (B) determined with reference to the
+   unrelated business taxable income
+   computed without the benefit of this paragraph (in lieu of with reference to adjusted gross income).
+   (12)
+   Except for purposes of computing the net operating loss under section 172 and paragraph (6), there shall be allowed a specific deduction of $1,000. In the case of a diocese, province of a religious order, or a convention or association of churches, there shall also be allowed, with respect to each parish, individual church, district, or other local unit, a specific deduction equal to the lower of—
+   (A)
+   $1,000, or
+   (B)
+   the gross income derived from any
+   unrelated trade or business
+   regularly carried on by such local unit.
+   (13)
+   Special rules for certain amounts received from controlled entities.—
+   (A)
+   In general.—
+   If an organization (in this paragraph referred to as the “controlling organization”) receives or accrues (directly or indirectly) a
+   specified payment
+   from another entity which it
+   controls
+   (in this paragraph referred to as the “controlled entity”), notwithstanding paragraphs (1), (2), and (3), the controlling organization shall include such payment as an item of gross income derived from an
+   unrelated trade or business
+   to the extent such payment reduces the
+   net unrelated income
+   of the controlled entity (or increases any
+   net unrelated loss
+   of the controlled entity). There shall be allowed all deductions of the controlling organization directly connected with amounts treated as derived from an
+   unrelated trade or business
+   under the preceding sentence.
+   (B)
+   Net unrelated income or loss.—
+   For purposes of this paragraph—
+   (i)
+   Net unrelated income.—
+   The term “
+   net unrelated income
+   ” means—
+   (I)
+   in the case of a controlled entity which is not exempt from tax under section 501(a), the portion of such entity’s taxable income which would be
+   unrelated business taxable income
+   if such entity were exempt from tax under section 501(a) and had the same exempt purposes as the controlling organization, or
+   (II)
+   in the case of a controlled entity which is exempt from tax under section 501(a), the amount of the
+   unrelated business taxable income
+   of the controlled entity.
+   (ii)
+   Net unrelated loss.—
+   The term “
+   net unrelated loss
+   ” means the net operating loss adjusted under rules similar to the rules of clause (i).
+   (C)
+   Specified payment.—
+   For purposes of this paragraph, the term “
+   specified payment
+   ” means any interest, annuity, royalty, or rent.
+   (D)
+   Definition of control.—
+   For purposes of this paragraph—
+   (i)
+   Control.—
+   The term “
+   control
+   ” means—
+   (I)
+   in the case of a corporation, ownership (by vote or value) of more than 50 percent of the stock in such corporation,
+   (II)
+   in the case of a partnership, ownership of more than 50 percent of the profits interests or capital interests in such partnership, or
+   (III)
+   in any other case, ownership of more than 50 percent of the beneficial interests in the entity.
+   (ii)
+   Constructive ownership.—
+   Section 318 (relating to constructive ownership of stock) shall apply for purposes of determining ownership of stock in a corporation. Similar principles shall apply for purposes of determining ownership of interests in any other entity.
+   (E)
+   Paragraph to apply only to certain excess payments.—
+   (i)
+   In general.—
+   Subparagraph (A) shall apply only to the portion of a
+   qualifying specified payment
+   received or accrued by the controlling organization that exceeds the amount which would have been paid or accrued if such payment met the requirements prescribed under section 482.
+   (ii)
+   Addition to tax for valuation misstatements.—
+   The tax imposed by this chapter on the controlling organization shall be increased by an amount equal to 20 percent of the larger of—
+   (I)
+   such excess determined without regard to any amendment or supplement to a return of tax, or
+   (II)
+   such excess determined with regard to all such amendments and supplements.
+   (iii)
+   Qualifying specified payment.—
+   The term “
+   qualifying specified payment
+   ” means a
+   specified payment
+   which is made pursuant to—
+   (I)
+   a binding written contract in effect on the date of the enactment of this subparagraph, or
+   (II)
+   a contract which is a renewal, under substantially similar terms, of a contract described in subclause (I).
+   (F)
+   Related persons.—
+   The Secretary shall prescribe such rules as may be necessary or appropriate to prevent avoidance of the purposes of this paragraph through the use of related persons.
+   [(14)
+   Repealed.
+   Pub. L. 101–508, title XI, § 11801(a)(23)
+   ,
+   Nov. 5, 1990
+   ,
+   104 Stat. 1388–521
+   .]
+   (15)
+   Except as provided in paragraph (4), in the case of a trade or business—
+   (A)
+   which consists of providing services under license issued by a Federal regulatory agency,
+   (B)
+   which is carried on by a religious order or by an educational organization described in
+   section 170(b)(1)(A)(ii)
+   maintained by such religious order, and which was so carried on before
+   May 27, 1959
+   , and
+   (C)
+   less than 10 percent of the net income of which for each taxable year is used for activities which are not related to the purpose constituting the basis for the religious order’s exemption,
+   there shall be excluded all gross income derived from such trade or business and all deductions directly connected with the carrying on of such trade or business, so long as it is established to the satisfaction of the Secretary that the rates or other charges for such services are competitive with rates or other charges charged for similar services by persons not exempt from taxation.
+   (16)
+   (A)
+   Notwithstanding paragraph (5)(B), there shall be excluded all gains or losses from the sale, exchange, or other
+   disposition
+   of any real property described in subparagraph (B) if—
+   (i)
+   such property was acquired by the organization from—
+   (I)
+   a financial institution described in section
+   581
+   or
+   591(a)
+   which is in conservatorship or receivership, or
+   (II)
+   the conservator or receiver of such an institution (or any government agency or corporation succeeding to the rights or interests of the conservator or receiver),
+   (ii)
+   such property is designated by the organization within the 9-month period beginning on the date of its acquisition as property held for sale, except that not more than one-half (by value determined as of such date) of property acquired in a single transaction may be so designated,
+   (iii)
+   such sale, exchange, or
+   disposition
+   occurs before the later of—
+   (I)
+   the date which is 30 months after the date of the acquisition of such property, or
+   (II)
+   the date specified by the Secretary in order to assure an orderly
+   disposition
+   of property held by persons described in subparagraph (A), and
+   (iv)
+   while such property was held by the organization, the aggregate expenditures on improvements and development activities included in the basis of the property are (or were) not in excess of 20 percent of the net selling price of such property.
+   (B)
+   Property is described in this subparagraph if it is real property which—
+   (i)
+   was held by the financial institution at the time it entered into conservatorship or receivership, or
+   (ii)
+   was foreclosure property (as defined in
+   section 514(c)(9)(H)(v)
+   ) which secured indebtedness held by the financial institution at such time.
+   For purposes of this subparagraph, real property includes an interest in a mortgage.
+   (17)
+   Treatment of certain amounts derived from foreign corporations.—
+   (A)
+   In general.—
+   Notwithstanding paragraph (1), any amount included in gross income under
+   section 951(a)(1)(A)
+   shall be included as an item of gross income derived from an
+   unrelated trade or business
+   to the extent the amount so included is attributable to insurance income (as defined in section 953) which, if derived directly by the organization, would be treated as gross income from an
+   unrelated trade or business.
+   There shall be allowed all deductions directly connected with amounts included in gross income under the preceding sentence.
+   (B)
+   Exception.—
+   (i)
+   In general.—
+   Subparagraph (A) shall not apply to income attributable to a policy of insurance or reinsurance with respect to which the person (directly or indirectly) insured is—
+   (I)
+   such organization,
+   (II)
+   an affiliate of such organization which is exempt from tax under section 501(a), or
+   (III)
+   a director or officer of, or an individual who (directly or indirectly) performs services for, such organization or affiliate but only if the insurance covers primarily risks associated with the performance of services in connection with such organization or affiliate.
+   (ii)
+   Affiliate.—
+   For purposes of this subparagraph—
+   (I)
+   In general.—
+   The determination as to whether an entity is an affiliate of an organization shall be made under rules similar to the rules of section 168(h)(4)(B).
+   (II)
+   Special rule.—
+   Two or more organizations (and any affiliates of such organizations) shall be treated as affiliates if such organizations are colleges or universities described in
+   section 170(b)(1)(A)(ii)
+   or organizations described in section 170(b)(1)(A)(iii) and participate in an insurance arrangement that provides for any profits from such arrangement to be returned to the policyholders in their capacity as such.
+   (C)
+   Regulations.—
+   The Secretary shall prescribe such regulations as may be necessary or appropriate to carry out the purposes of this paragraph, including regulations for the application of this paragraph in the case of income paid through 1 or more entities or between 2 or more chains of entities.
+   (18)
+   Treatment of mutual or cooperative electric companies.—
+   In the case of a mutual or cooperative electric company described in section 501(c)(12), there shall be excluded income which is treated as member income under subparagraph (H) thereof.
+   (19)
+   Treatment of gain or loss on sale or exchange of certain brownfield sites.—
+   (A)
+   In general.—
+   Notwithstanding paragraph (5)(B), there shall be excluded any gain or loss from the qualified sale, exchange, or other
+   disposition
+   of any
+   qualifying brownfield property
+   by an
+   eligible taxpayer.
+   (B)
+   Eligible taxpayer.—
+   For purposes of this paragraph—
+   (i)
+   In general.—
+   The term “
+   eligible taxpayer
+   ” means, with respect to a property, any organization exempt from tax under
+   section 501(a)
+   which—
+   (I)
+   acquires from an unrelated person a
+   qualifying brownfield property
+   , and
+   (II)
+   pays or incurs
+   eligible remediation expenditures
+   with respect to such property in an amount which exceeds the greater of $550,000 or 12 percent of the fair market value of the property at the time such property was acquired by the
+   eligible taxpayer,
+   determined as if there was not a presence of a hazardous substance, pollutant, or contaminant on the property which is complicating the expansion, redevelopment, or reuse of the property.
+   (ii)
+   Exception.—
+   Such term shall not include any organization which is—
+   (I)
+   potentially liable under section 107 of the Comprehensive Environmental Response, Compensation, and Liability Act of 1980 with respect to the
+   qualifying brownfield property
+   ,
+   (II)
+   affiliated with any other person which is so potentially liable through any direct or indirect familial relationship or any contractual, corporate, or financial relationship (other than a contractual, corporate, or financial relationship which is created by the instruments by which title to any
+   qualifying brownfield property
+   is conveyed or financed or by a contract of sale of goods or services), or
+   (III)
+   the result of a reorganization of a business entity which was so potentially liable.
+   (C)
+   Qualifying brownfield property.—
+   For purposes of this paragraph—
+   (i)
+   In general.—
+   The term “
+   qualifying brownfield property
+   ” means any real property which is certified, before the taxpayer incurs any
+   eligible remediation expenditures
+   (other than to obtain a Phase I environmental site assessment), by an appropriate State agency (within the meaning of section 198(c)(4)) in the State in which such property is located as a brownfield site within the meaning of section 101(39) of the Comprehensive Environmental Response, Compensation, and Liability Act of 1980 (as in effect on the date of the enactment of this paragraph).
+   (ii)
+   Request for certification.—
+   Any request by an
+   eligible taxpayer
+   for a certification described in clause (i) shall include a sworn statement by the
+   eligible taxpayer
+   and supporting documentation of the presence of a hazardous substance, pollutant, or contaminant on the property which is complicating the expansion, redevelopment, or reuse of the property given the property’s reasonably anticipated future land uses or capacity for uses of the property (including a Phase I environmental site assessment and, if applicable, evidence of the property’s presence on a local, State, or Federal list of brownfields or contaminated property) and other environmental assessments prepared or obtained by the taxpayer.
+   (D)
+   Qualified sale, exchange, or other disposition.—
+   For purposes of this paragraph—
+   (i)
+   In general.—
+   A sale, exchange, or other
+   disposition
+   of property shall be considered as qualified if—
+   (I)
+   such property is transferred by the
+   eligible taxpayer
+   to an unrelated person, and
+   (II)
+   within 1 year of such transfer the
+   eligible taxpayer
+   has received a certification from the
+   Environmental Protection Agency
+   or an appropriate State agency (within the meaning of section 198(c)(4)) in the State in which such property is located that, as a result of the
+   eligible taxpayer’
+   s remediation actions, such property would not be treated as a
+   qualifying brownfield property
+   in the hands of the transferee.
+   For purposes of subclause (II), before issuing such certification, the
+   Environmental Protection Agency
+   or appropriate State agency shall respond to comments received pursuant to clause (ii)(V) in the same form and manner as required under section 117(b) of the Comprehensive Environmental Response, Compensation, and Liability Act of 1980 (as in effect on the date of the enactment of this paragraph).
+   (ii)
+   Request for certification.—
+   Any request by an
+   eligible taxpayer
+   for a certification described in clause (i) shall be made not later than the date of the transfer and shall include a sworn statement by the
+   eligible taxpayer
+   certifying the following:
+   (I)
+   Remedial actions which comply with all applicable or relevant and appropriate requirements (consistent with section 121(d) of the Comprehensive Environmental Response, Compensation, and Liability Act of 1980) have been substantially completed, such that there are no hazardous substances, pollutants, or contaminants which complicate the expansion, redevelopment, or reuse of the property given the property’s reasonably anticipated future land uses or capacity for uses of the property.
+   (II)
+   The reasonably anticipated future land uses or capacity for uses of the property are more economically productive or environmentally beneficial than the uses of the property in existence on the date of the certification described in subparagraph (C)(i). For purposes of the preceding sentence, use of property as a landfill or other hazardous waste facility shall not be considered more economically productive or environmentally beneficial.
+   (III)
+   A remediation plan has been implemented to bring the property into compliance with all applicable local, State, and Federal environmental laws, regulations, and standards and to ensure that the remediation protects human health and the environment.
+   (IV)
+   The remediation plan described in subclause (III), including any physical improvements required to remediate the property, is either complete or substantially complete, and, if substantially complete, sufficient monitoring, funding, institutional
+   controls
+   , and financial assurances have been put in place to ensure the complete remediation of the property in accordance with the remediation plan as soon as is reasonably practicable after the sale, exchange, or other
+   disposition
+   of such property.
+   (V)
+   Public notice and the opportunity for comment on the request for certification was completed before the date of such request. Such notice and opportunity for comment shall be in the same form and manner as required for public participation required under section 117(a) of the Comprehensive Environmental Response, Compensation, and Liability Act of 1980 (as in effect on the date of the enactment of this paragraph). For purposes of this subclause, public notice shall include, at a minimum, publication in a major local newspaper of general circulation.
+   (iii)
+   Attachment to tax returns.—
+   A copy of each of the requests for certification described in clause (ii) of subparagraph (C) and this subparagraph shall be included in the tax return of the
+   eligible taxpayer
+   (and, where applicable, of the
+   qualifying partnership
+   ) for the taxable year during which the transfer occurs.
+   (iv)
+   Substantial completion.—
+   For purposes of this subparagraph, a remedial action is substantially complete when any necessary physical construction is complete, all immediate threats have been eliminated, and all long-term threats are under
+   control
+   .
+   (E)
+   Eligible remediation expenditures.—
+   For purposes of this paragraph—
+   (i)
+   In general.—
+   The term “
+   eligible remediation expenditures
+   ” means, with respect to any
+   qualifying brownfield property,
+   any amount paid or incurred by the
+   eligible taxpayer
+   to an unrelated third person to obtain a Phase I environmental site assessment of the property, and any amount so paid or incurred after the date of the certification described in subparagraph (C)(i) for goods and services necessary to obtain a certification described in subparagraph (D)(i) with respect to such property, including expenditures—
+   (I)
+   to manage, remove,
+   control
+   , contain, abate, or otherwise remediate a hazardous substance, pollutant, or contaminant on the property,
+   (II)
+   to obtain a Phase II environmental site assessment of the property, including any expenditure to monitor, sample, study, assess, or otherwise evaluate the release, threat of release, or presence of a hazardous substance, pollutant, or contaminant on the property,
+   (III)
+   to obtain environmental regulatory certifications and approvals required to manage the remediation and monitoring of the hazardous substance, pollutant, or contaminant on the property, and
+   (IV)
+   regardless of whether it is necessary to obtain a certification described in subparagraph (D)(i)(II), to obtain remediation cost-cap or stop-loss coverage, re-opener or regulatory action coverage, or similar coverage under environmental insurance policies, or financial guarantees required to manage such remediation and monitoring.
+   (ii)
+   Exceptions.—
+   Such term shall not include—
+   (I)
+   any portion of the purchase price paid or incurred by the
+   eligible taxpayer
+   to acquire the
+   qualifying brownfield property
+   ,
+   (II)
+   environmental insurance costs paid or incurred to obtain legal defense coverage, owner/operator liability coverage, lender liability coverage, professional liability coverage, or similar types of coverage,
+   (III)
+   any amount paid or incurred to the extent such amount is reimbursed, funded, or otherwise subsidized by grants provided by the United States, a State, or a political subdivision of a State for use in connection with the property, proceeds of an issue of State or local government obligations used to provide financing for the property the interest of which is exempt from tax under section 103, or subsidized financing provided (directly or indirectly) under a Federal, State, or local program provided in connection with the property, or
+   (IV)
+   any expenditure paid or incurred before the date of the enactment of this paragraph.
+   For purposes of subclause (III), the Secretary may issue guidance regarding the treatment of government-provided funds for purposes of determining
+   eligible remediation expenditures
+   .
+   (F)
+   Determination of gain or loss.—
+   For purposes of this paragraph, the determination of gain or loss shall not include an amount treated as gain which is ordinary income with respect to section 1245 or section 1250 property, including amounts deducted as section 198 expenses which are subject to the recapture rules of section 198(e), if the taxpayer had deducted such amounts in the computation of its
+   unrelated business taxable income
+   .
+   (G)
+   Special rules for partnerships.—
+   (i)
+   In general.—
+   In the case of an
+   eligible taxpayer
+   which is a partner of a
+   qualifying partnership
+   which acquires, remediates, and sells, exchanges, or otherwise disposes of a
+
+-- [Content truncated - key provisions above]
+
+-- TODO: Add type definitions
+-- TODO: Add main functions
+-- TODO: Add theorems to prove

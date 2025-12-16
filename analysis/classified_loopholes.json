@@ -1,0 +1,579 @@
+[
+  {
+    "id": 31,
+    "name": "\u00a7301 vs. \u00a7103: Other Conflict",
+    "description": "\u00a7301 and \u00a7103 may have conflicting rules: taxable vs. exempt",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      301,
+      103
+    ],
+    "loophole_type": "other_conflict",
+    "severity_score": 2,
+    "exploitability_score": 2,
+    "impact_score": 2,
+    "overall_score": 2.0,
+    "estimated_benefit": 5000,
+    "risk_level": "low",
+    "recommended_action": "Document for future reference"
+  },
+  {
+    "id": 32,
+    "name": "\u00a72501 vs. \u00a7103: Other Conflict",
+    "description": "\u00a72501 and \u00a7103 may have conflicting rules: taxable vs. exempt",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      2501,
+      103
+    ],
+    "loophole_type": "other_conflict",
+    "severity_score": 2,
+    "exploitability_score": 2,
+    "impact_score": 2,
+    "overall_score": 2.0,
+    "estimated_benefit": 5000,
+    "risk_level": "low",
+    "recommended_action": "Document for future reference"
+  },
+  {
+    "id": 1,
+    "name": "\u00a7141 vs. \u00a71394: Circular Reference",
+    "description": "\u00a7141 and \u00a71394 are part of circular reference chain - may create ambiguous definitions",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      141,
+      1394
+    ],
+    "loophole_type": "circular_reference",
+    "severity_score": 9,
+    "exploitability_score": 6,
+    "impact_score": 9,
+    "overall_score": 8.1,
+    "estimated_benefit": 10000000,
+    "risk_level": "critical",
+    "recommended_action": "Immediate legislative clarification needed"
+  },
+  {
+    "id": 2,
+    "name": "\u00a7141 vs. \u00a7144: Circular Reference",
+    "description": "\u00a7141 and \u00a7144 are part of circular reference chain - may create ambiguous definitions",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      141,
+      144
+    ],
+    "loophole_type": "circular_reference",
+    "severity_score": 9,
+    "exploitability_score": 6,
+    "impact_score": 9,
+    "overall_score": 8.1,
+    "estimated_benefit": 10000000,
+    "risk_level": "critical",
+    "recommended_action": "Immediate legislative clarification needed"
+  },
+  {
+    "id": 3,
+    "name": "\u00a7141 vs. \u00a7143: Circular Reference",
+    "description": "\u00a7141 and \u00a7143 are part of circular reference chain - may create ambiguous definitions",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      141,
+      143
+    ],
+    "loophole_type": "circular_reference",
+    "severity_score": 9,
+    "exploitability_score": 6,
+    "impact_score": 9,
+    "overall_score": 8.1,
+    "estimated_benefit": 10000000,
+    "risk_level": "critical",
+    "recommended_action": "Immediate legislative clarification needed"
+  },
+  {
+    "id": 4,
+    "name": "\u00a71394 vs. \u00a7144: Circular Reference",
+    "description": "\u00a71394 and \u00a7144 are part of circular reference chain - may create ambiguous definitions",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      1394,
+      144
+    ],
+    "loophole_type": "circular_reference",
+    "severity_score": 9,
+    "exploitability_score": 6,
+    "impact_score": 9,
+    "overall_score": 8.1,
+    "estimated_benefit": 10000000,
+    "risk_level": "critical",
+    "recommended_action": "Immediate legislative clarification needed"
+  },
+  {
+    "id": 5,
+    "name": "\u00a71394 vs. \u00a7143: Circular Reference",
+    "description": "\u00a71394 and \u00a7143 are part of circular reference chain - may create ambiguous definitions",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      1394,
+      143
+    ],
+    "loophole_type": "circular_reference",
+    "severity_score": 9,
+    "exploitability_score": 6,
+    "impact_score": 9,
+    "overall_score": 8.1,
+    "estimated_benefit": 10000000,
+    "risk_level": "critical",
+    "recommended_action": "Immediate legislative clarification needed"
+  },
+  {
+    "id": 6,
+    "name": "\u00a7144 vs. \u00a7143: Circular Reference",
+    "description": "\u00a7144 and \u00a7143 are part of circular reference chain - may create ambiguous definitions",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      144,
+      143
+    ],
+    "loophole_type": "circular_reference",
+    "severity_score": 9,
+    "exploitability_score": 6,
+    "impact_score": 9,
+    "overall_score": 8.1,
+    "estimated_benefit": 10000000,
+    "risk_level": "critical",
+    "recommended_action": "Immediate legislative clarification needed"
+  },
+  {
+    "id": 9,
+    "name": "\u00a7225 vs. \u00a785: Overlapping Rules",
+    "description": "\u00a7225 (Qualified overtime compensation) and \u00a785 (Unemployment compensation) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      225,
+      85
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 10,
+    "name": "\u00a7225 vs. \u00a7404: Overlapping Rules",
+    "description": "\u00a7225 (Qualified overtime compensation) and \u00a7404 (Deduction for contributions of an employer to an employees\u2019 trust or annuity plan and compensation under a deferred-payment plan) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      225,
+      404
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 11,
+    "name": "\u00a7225 vs. \u00a7112: Overlapping Rules",
+    "description": "\u00a7225 (Qualified overtime compensation) and \u00a7112 (Certain combat zone compensation of members of the Armed Forces) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      225,
+      112
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 12,
+    "name": "\u00a7225 vs. \u00a7104: Overlapping Rules",
+    "description": "\u00a7225 (Qualified overtime compensation) and \u00a7104 (Compensation for injuries or sickness) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      225,
+      104
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 13,
+    "name": "\u00a7225 vs. \u00a7893: Overlapping Rules",
+    "description": "\u00a7225 (Qualified overtime compensation) and \u00a7893 (Compensation of employees of foreign governments or international organizations) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      225,
+      893
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 14,
+    "name": "\u00a7225 vs. \u00a7457: Overlapping Rules",
+    "description": "\u00a7225 (Qualified overtime compensation) and \u00a7457 (Deferred compensation plans of State and local governments and tax-exempt organizations) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      225,
+      457
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 15,
+    "name": "\u00a785 vs. \u00a7404: Overlapping Rules",
+    "description": "\u00a785 (Unemployment compensation) and \u00a7404 (Deduction for contributions of an employer to an employees\u2019 trust or annuity plan and compensation under a deferred-payment plan) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      85,
+      404
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 16,
+    "name": "\u00a785 vs. \u00a7112: Overlapping Rules",
+    "description": "\u00a785 (Unemployment compensation) and \u00a7112 (Certain combat zone compensation of members of the Armed Forces) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      85,
+      112
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 17,
+    "name": "\u00a785 vs. \u00a7104: Overlapping Rules",
+    "description": "\u00a785 (Unemployment compensation) and \u00a7104 (Compensation for injuries or sickness) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      85,
+      104
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 18,
+    "name": "\u00a785 vs. \u00a7893: Overlapping Rules",
+    "description": "\u00a785 (Unemployment compensation) and \u00a7893 (Compensation of employees of foreign governments or international organizations) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      85,
+      893
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 19,
+    "name": "\u00a785 vs. \u00a7457: Overlapping Rules",
+    "description": "\u00a785 (Unemployment compensation) and \u00a7457 (Deferred compensation plans of State and local governments and tax-exempt organizations) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      85,
+      457
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 20,
+    "name": "\u00a7404 vs. \u00a7112: Overlapping Rules",
+    "description": "\u00a7404 (Deduction for contributions of an employer to an employees\u2019 trust or annuity plan and compensation under a deferred-payment plan) and \u00a7112 (Certain combat zone compensation of members of the Armed Forces) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      404,
+      112
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 21,
+    "name": "\u00a7404 vs. \u00a7104: Overlapping Rules",
+    "description": "\u00a7404 (Deduction for contributions of an employer to an employees\u2019 trust or annuity plan and compensation under a deferred-payment plan) and \u00a7104 (Compensation for injuries or sickness) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      404,
+      104
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 22,
+    "name": "\u00a7404 vs. \u00a7893: Overlapping Rules",
+    "description": "\u00a7404 (Deduction for contributions of an employer to an employees\u2019 trust or annuity plan and compensation under a deferred-payment plan) and \u00a7893 (Compensation of employees of foreign governments or international organizations) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      404,
+      893
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 23,
+    "name": "\u00a7404 vs. \u00a7457: Overlapping Rules",
+    "description": "\u00a7404 (Deduction for contributions of an employer to an employees\u2019 trust or annuity plan and compensation under a deferred-payment plan) and \u00a7457 (Deferred compensation plans of State and local governments and tax-exempt organizations) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      404,
+      457
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 24,
+    "name": "\u00a7112 vs. \u00a7104: Overlapping Rules",
+    "description": "\u00a7112 (Certain combat zone compensation of members of the Armed Forces) and \u00a7104 (Compensation for injuries or sickness) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      112,
+      104
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 25,
+    "name": "\u00a7112 vs. \u00a7893: Overlapping Rules",
+    "description": "\u00a7112 (Certain combat zone compensation of members of the Armed Forces) and \u00a7893 (Compensation of employees of foreign governments or international organizations) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      112,
+      893
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 26,
+    "name": "\u00a7112 vs. \u00a7457: Overlapping Rules",
+    "description": "\u00a7112 (Certain combat zone compensation of members of the Armed Forces) and \u00a7457 (Deferred compensation plans of State and local governments and tax-exempt organizations) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      112,
+      457
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 27,
+    "name": "\u00a7104 vs. \u00a7893: Overlapping Rules",
+    "description": "\u00a7104 (Compensation for injuries or sickness) and \u00a7893 (Compensation of employees of foreign governments or international organizations) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      104,
+      893
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 28,
+    "name": "\u00a7104 vs. \u00a7457: Overlapping Rules",
+    "description": "\u00a7104 (Compensation for injuries or sickness) and \u00a7457 (Deferred compensation plans of State and local governments and tax-exempt organizations) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      104,
+      457
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 29,
+    "name": "\u00a7893 vs. \u00a7457: Overlapping Rules",
+    "description": "\u00a7893 (Compensation of employees of foreign governments or international organizations) and \u00a7457 (Deferred compensation plans of State and local governments and tax-exempt organizations) both regulate compensation - potential overlap",
+    "source": "contradiction_detector",
+    "sections_involved": [
+      893,
+      457
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 5,
+    "exploitability_score": 4,
+    "impact_score": 5,
+    "overall_score": 4.7,
+    "estimated_benefit": 50000,
+    "risk_level": "medium",
+    "recommended_action": "Monitor for exploitation, issue guidance if needed"
+  },
+  {
+    "id": 7,
+    "name": "Combat Zone + Deferred Compensation Stacking",
+    "description": "Stack \u00a7112 combat pay exclusion with \u00a7457 deferred comp deduction",
+    "source": "tax_optimizer",
+    "sections_involved": [
+      112,
+      457
+    ],
+    "loophole_type": "overlapping_rules",
+    "severity_score": 6,
+    "exploitability_score": 5,
+    "impact_score": 4,
+    "overall_score": 5.1000000000000005,
+    "estimated_benefit": 50000,
+    "risk_level": "high",
+    "recommended_action": "Should be addressed in next guidance cycle"
+  },
+  {
+    "id": 30,
+    "name": "Circular Reference Ambiguity Argument",
+    "description": "Exploit circular definitions in \u00a7\u00a7103-141-144 to argue bond qualification",
+    "source": "tax_optimizer",
+    "sections_involved": [
+      103,
+      141,
+      144
+    ],
+    "loophole_type": "circular_reference",
+    "severity_score": 9,
+    "exploitability_score": 2,
+    "impact_score": 1,
+    "overall_score": 4.5,
+    "estimated_benefit": 222,
+    "risk_level": "medium",
+    "recommended_action": "Monitor and document"
+  },
+  {
+    "id": 8,
+    "name": "10% Private Use Threshold Gaming",
+    "description": "Structure bond to have exactly 10.0% private use (at threshold, not over)",
+    "source": "tax_optimizer",
+    "sections_involved": [
+      103,
+      141
+    ],
+    "loophole_type": "threshold_gaming",
+    "severity_score": 6,
+    "exploitability_score": 8,
+    "impact_score": 1,
+    "overall_score": 5.1000000000000005,
+    "estimated_benefit": 185,
+    "risk_level": "high",
+    "recommended_action": "Should be addressed in next guidance cycle"
+  }
+]

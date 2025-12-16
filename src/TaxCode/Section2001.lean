@@ -136,8 +136,13 @@ lemma int_mono_glue {f g : Int → Int} {c : Int}
       intros x y hxy
       split_ifs with hxc hyc
       · exact hf x y hxy hyc
-      · sorry  -- TODO: Prove gluing case
-      · sorry  -- TODO: Prove impossible case (x > c but y ≤ c contradicts x ≤ y)
+      · -- Gluing case: x ≤ c < y, prove f x ≤ g y
+        have h1 : f x ≤ f c := hf x c hxc (le_refl c)
+        have h2 : c + 1 ≤ y := Int.add_one_le_iff.mpr (Int.not_le.mp hyc)
+        have h3 : g (c + 1) ≤ g y := hg (c + 1) y (by omega) h2
+        omega
+      · -- Impossible: x > c but y ≤ c contradicts x ≤ y
+        omega
       · exact hg x y (Int.not_le.mp hxc) hxy
 
 /-
@@ -146,7 +151,9 @@ TODO: Fix proof after removing positivity tactic (see issue #35)
 -/
 lemma int_affine_mono_general {x y m d k c : Int} (h : x ≤ y) (hm : 0 ≤ m) (hd : 0 < d) :
   c + (x * m + k) / d ≤ c + (y * m + k) / d := by
-    sorry  -- TODO: Complete proof with stable tactics
+    have h1 : x * m ≤ y * m := Int.mul_le_mul_of_nonneg_right h hm
+    have h2 : x * m + k ≤ y * m + k := Int.add_le_add_right h1 k
+    exact Int.add_le_add_left (Int.ediv_le_ediv hd h2) c
 
 /-
 Theorem stating that the rate schedule in IRC §2001(c) is monotonic (non-decreasing).

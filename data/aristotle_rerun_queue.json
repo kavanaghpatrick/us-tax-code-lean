@@ -1,125 +1,66 @@
 {
   "sections": {
+    "1": {
+      "status": "failed",
+      "attempts": 0,
+      "history": [],
+      "error": "You currently already have 5 projects in progress. Please wait for a project to complete before starting a new one."
+    },
+    "103": {
+      "status": "failed",
+      "attempts": 0,
+      "history": [],
+      "error": "You currently already have 5 projects in progress. Please wait for a project to complete before starting a new one."
+    },
+    "71": {
+      "status": "failed",
+      "attempts": 0,
+      "history": [],
+      "error": "'Project' object has no attribute 'solution'"
+    },
+    "482": {
+      "status": "failed",
+      "attempts": 0,
+      "history": [],
+      "error": "'Project' object has no attribute 'solution'"
+    },
     "165": {
-      "status": "queued",
-      "project_id": "671e9e7d-ec1f-410e-a347-290a1cdb7dd8",
-      "submitted": "2025-12-13",
-      "github_issue": 49,
-      "attempts": 1,
-      "history": [
-        {
-          "date": "2025-12-13",
-          "status": "submitted",
-          "note": "Filter-safe prompt - losses calculation rules"
-        }
-      ]
+      "status": "failed",
+      "attempts": 0,
+      "history": [],
+      "error": "URL component 'query' too long"
     },
     "170": {
-      "status": "queued",
-      "project_id": "53a794e2-f06e-4040-9712-5c3e21708a04",
-      "submitted": "2025-12-13",
-      "github_issue": 50,
-      "attempts": 1,
-      "history": [
-        {
-          "date": "2025-12-13",
-          "status": "submitted",
-          "note": "Filter-safe prompt - charitable contributions deduction rules"
-        }
-      ]
-    },
-    "267": {
-      "status": "queued",
-      "project_id": "505fafd5-09cb-49da-9fce-6f2dfed7e9ef",
-      "submitted": "2025-12-13",
-      "github_issue": 51,
-      "attempts": 1,
-      "history": [
-        {
-          "date": "2025-12-13",
-          "status": "submitted",
-          "note": "Filter-safe prompt - related party transaction adjustments"
-        }
-      ]
-    },
-    "302": {
-      "status": "queued",
-      "project_id": "60746c74-8eda-4348-ad51-81f69f43e1f3",
-      "submitted": "2025-12-13",
-      "github_issue": 52,
-      "attempts": 1,
-      "history": [
-        {
-          "date": "2025-12-13",
-          "status": "submitted",
-          "note": "Filter-safe prompt - stock redemption tax treatment rules"
-        }
-      ]
+      "status": "failed",
+      "attempts": 0,
+      "history": [],
+      "error": "URL component 'query' too long"
     },
     "1202": {
-      "status": "queued",
-      "project_id": "6140111c-a431-4c6d-8217-013cccc46559",
-      "submitted": "2025-12-13",
-      "github_issue": 53,
-      "attempts": 1,
-      "history": [
-        {
-          "date": "2025-12-13",
-          "status": "submitted",
-          "note": "Filter-safe prompt - QSBS exclusion computation rules"
-        }
-      ]
+      "status": "failed",
+      "attempts": 0,
+      "history": [],
+      "error": "'Project' object has no attribute 'solution'"
     },
-    "1222": {
-      "status": "queued",
-      "project_id": "d8150a3e-7fec-4ab8-8691-9f8c03548842",
-      "submitted": "2025-12-13",
-      "github_issue": 46,
-      "attempts": 1,
-      "history": [
-        {
-          "date": "2025-12-13",
-          "status": "submitted",
-          "note": "Filter-safe prompt - capital gains/losses term definitions"
-        }
-      ]
+    "267": {
+      "status": "failed",
+      "attempts": 0,
+      "history": [],
+      "error": "'Project' object has no attribute 'solution'"
     },
-    "1231": {
-      "status": "queued",
-      "project_id": "1ca754c8-37d1-420d-9850-03bdaf5f92ee",
-      "submitted": "2025-12-13",
-      "github_issue": 47,
-      "attempts": 1,
-      "history": [
-        {
-          "date": "2025-12-13",
-          "status": "submitted",
-          "note": "Filter-safe prompt - business property gains/losses computation"
-        }
-      ]
-    },
-    "151": {
-      "status": "queued",
-      "project_id": "78b8126d-7650-43ff-8506-71c1da3c6f19",
-      "submitted": "2025-12-13",
-      "github_issue": 48,
-      "attempts": 1,
-      "history": [
-        {
-          "date": "2025-12-13",
-          "status": "submitted",
-          "note": "Filter-safe prompt - personal exemptions (historical, repealed by TCJA)"
-        }
-      ]
+    "302": {
+      "status": "failed",
+      "attempts": 0,
+      "history": [],
+      "error": "'Project' object has no attribute 'solution'"
     }
   },
   "metrics": {
     "pending": 0,
-    "queued": 8,
+    "submitted": 0,
     "complete": 0,
     "failed": 0,
     "timeout": 0
   },
-  "last_updated": "2025-12-13 (current session)",
-  "notes": "All 8 sections submitted with filter-safe prompts to avoid Anthropic content filtering. Monitor with: python3 scripts/aristotle_status.py"
+  "last_updated": "2025-12-13 14:23:06"
 }

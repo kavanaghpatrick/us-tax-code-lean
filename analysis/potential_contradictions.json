@@ -1,0 +1,205 @@
+[
+  {
+    "section1": 301,
+    "section2": 103,
+    "conflict_type": "other_conflict",
+    "description": "\u00a7301 and \u00a7103 may have conflicting rules: taxable vs. exempt",
+    "severity": "low"
+  },
+  {
+    "section1": 2501,
+    "section2": 103,
+    "conflict_type": "other_conflict",
+    "description": "\u00a72501 and \u00a7103 may have conflicting rules: taxable vs. exempt",
+    "severity": "low"
+  },
+  {
+    "section1": 141,
+    "section2": 1394,
+    "conflict_type": "circular_reference",
+    "description": "\u00a7141 and \u00a71394 are part of circular reference chain - may create ambiguous definitions",
+    "severity": "high"
+  },
+  {
+    "section1": 141,
+    "section2": 144,
+    "conflict_type": "circular_reference",
+    "description": "\u00a7141 and \u00a7144 are part of circular reference chain - may create ambiguous definitions",
+    "severity": "high"
+  },
+  {
+    "section1": 141,
+    "section2": 143,
+    "conflict_type": "circular_reference",
+    "description": "\u00a7141 and \u00a7143 are part of circular reference chain - may create ambiguous definitions",
+    "severity": "high"
+  },
+  {
+    "section1": 1394,
+    "section2": 144,
+    "conflict_type": "circular_reference",
+    "description": "\u00a71394 and \u00a7144 are part of circular reference chain - may create ambiguous definitions",
+    "severity": "high"
+  },
+  {
+    "section1": 1394,
+    "section2": 143,
+    "conflict_type": "circular_reference",
+    "description": "\u00a71394 and \u00a7143 are part of circular reference chain - may create ambiguous definitions",
+    "severity": "high"
+  },
+  {
+    "section1": 144,
+    "section2": 143,
+    "conflict_type": "circular_reference",
+    "description": "\u00a7144 and \u00a7143 are part of circular reference chain - may create ambiguous definitions",
+    "severity": "high"
+  },
+  {
+    "section1": 225,
+    "section2": 85,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a7225 (Qualified overtime compensation) and \u00a785 (Unemployment compensation) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 225,
+    "section2": 404,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a7225 (Qualified overtime compensation) and \u00a7404 (Deduction for contributions of an employer to an employees\u2019 trust or annuity plan and compensation under a deferred-payment plan) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 225,
+    "section2": 112,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a7225 (Qualified overtime compensation) and \u00a7112 (Certain combat zone compensation of members of the Armed Forces) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 225,
+    "section2": 104,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a7225 (Qualified overtime compensation) and \u00a7104 (Compensation for injuries or sickness) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 225,
+    "section2": 893,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a7225 (Qualified overtime compensation) and \u00a7893 (Compensation of employees of foreign governments or international organizations) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 225,
+    "section2": 457,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a7225 (Qualified overtime compensation) and \u00a7457 (Deferred compensation plans of State and local governments and tax-exempt organizations) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 85,
+    "section2": 404,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a785 (Unemployment compensation) and \u00a7404 (Deduction for contributions of an employer to an employees\u2019 trust or annuity plan and compensation under a deferred-payment plan) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 85,
+    "section2": 112,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a785 (Unemployment compensation) and \u00a7112 (Certain combat zone compensation of members of the Armed Forces) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 85,
+    "section2": 104,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a785 (Unemployment compensation) and \u00a7104 (Compensation for injuries or sickness) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 85,
+    "section2": 893,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a785 (Unemployment compensation) and \u00a7893 (Compensation of employees of foreign governments or international organizations) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 85,
+    "section2": 457,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a785 (Unemployment compensation) and \u00a7457 (Deferred compensation plans of State and local governments and tax-exempt organizations) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 404,
+    "section2": 112,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a7404 (Deduction for contributions of an employer to an employees\u2019 trust or annuity plan and compensation under a deferred-payment plan) and \u00a7112 (Certain combat zone compensation of members of the Armed Forces) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 404,
+    "section2": 104,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a7404 (Deduction for contributions of an employer to an employees\u2019 trust or annuity plan and compensation under a deferred-payment plan) and \u00a7104 (Compensation for injuries or sickness) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 404,
+    "section2": 893,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a7404 (Deduction for contributions of an employer to an employees\u2019 trust or annuity plan and compensation under a deferred-payment plan) and \u00a7893 (Compensation of employees of foreign governments or international organizations) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 404,
+    "section2": 457,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a7404 (Deduction for contributions of an employer to an employees\u2019 trust or annuity plan and compensation under a deferred-payment plan) and \u00a7457 (Deferred compensation plans of State and local governments and tax-exempt organizations) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 112,
+    "section2": 104,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a7112 (Certain combat zone compensation of members of the Armed Forces) and \u00a7104 (Compensation for injuries or sickness) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 112,
+    "section2": 893,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a7112 (Certain combat zone compensation of members of the Armed Forces) and \u00a7893 (Compensation of employees of foreign governments or international organizations) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 112,
+    "section2": 457,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a7112 (Certain combat zone compensation of members of the Armed Forces) and \u00a7457 (Deferred compensation plans of State and local governments and tax-exempt organizations) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 104,
+    "section2": 893,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a7104 (Compensation for injuries or sickness) and \u00a7893 (Compensation of employees of foreign governments or international organizations) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 104,
+    "section2": 457,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a7104 (Compensation for injuries or sickness) and \u00a7457 (Deferred compensation plans of State and local governments and tax-exempt organizations) both regulate compensation - potential overlap",
+    "severity": "medium"
+  },
+  {
+    "section1": 893,
+    "section2": 457,
+    "conflict_type": "overlapping_rules",
+    "description": "\u00a7893 (Compensation of employees of foreign governments or international organizations) and \u00a7457 (Deferred compensation plans of State and local governments and tax-exempt organizations) both regulate compensation - potential overlap",
+    "severity": "medium"
+  }
+]
