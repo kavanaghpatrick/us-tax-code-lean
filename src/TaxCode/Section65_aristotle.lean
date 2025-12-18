@@ -1,16 +1,4 @@
-#!/usr/bin/env python3
-"""
-Prepare sections for Aristotle by inlining Common module dependencies.
-
-Creates self-contained *_aristotle.lean files without Common imports.
-"""
-
-import argparse
-from pathlib import Path
-import re
-
-
-COMMON_BASIC_INLINE = """/-
+/-
 Common definitions inlined for Aristotle processing
 -/
 
@@ -119,54 +107,64 @@ structure Taxpayer where
 
 instance : Repr Taxpayer where
   reprPrec t _ := s!"Taxpayer(id: {t.id}, status: {repr t.filingStatus}, year: {t.taxYear.year})"
-"""
 
 
-def prepare_for_aristotle(section_num: str) -> bool:
-    """Prepare a section file for Aristotle by inlining Common imports."""
+/-!
+# IRC Section 65 - Ordinary Loss Defined
 
-    src_file = Path(f'src/TaxCode/Section{section_num}.lean')
-    aristotle_file = Path(f'src/TaxCode/Section{section_num}_aristotle.lean')
+For purposes of the Internal Revenue Code, defines "ordinary loss" as including
+any loss from the sale or exchange of property which is not a capital asset.
 
-    if not src_file.exists():
-        print(f"Error: {src_file} not found")
-        return False
+## References
+- [26 USC §65](https://www.law.cornell.edu/uscode/text/26/65)
 
-    # Read original file
-    content = src_file.read_text()
+## Key Provisions
+- Ordinary loss includes losses from non-capital assets
+- Any loss treated as "ordinary loss" under other IRC provisions is also ordinary loss
+-/
 
-    # Replace Common.Basic import with inlined definitions
-    if 'import Common.Basic' in content:
-        content = re.sub(
-            r'import Common\.Basic\n',
-            COMMON_BASIC_INLINE + '\n',
-            content
-        )
+-- Loss from sale or exchange (negative amount)
+structure PropertyLoss where
+  amount : Currency  -- Negative value representing loss
+  isCapitalAsset : Bool
+  deriving Repr
 
-    # Write Aristotle version
-    aristotle_file.write_text(content)
-    print(f"✓ Created {aristotle_file}")
+-- Determine if a loss is an ordinary loss
+def isOrdinaryLoss (loss : PropertyLoss) : Bool :=
+  not loss.isCapitalAsset
 
-    return True
+-- Calculate total ordinary losses
+def calculateOrdinaryLoss (losses : List PropertyLoss) : Currency :=
+  losses.foldl (fun (acc : Int) l =>
+    let amt : Int := l.amount
+    if isOrdinaryLoss l then acc + amt else acc) (0 : Int)
 
+-- Examples
+def example_inventory_loss : PropertyLoss :=
+  ⟨(-50000 : Int), false⟩  -- -$500 loss from inventory (ordinary property)
 
-def main():
-    parser = argparse.ArgumentParser(description='Prepare sections for Aristotle')
-    parser.add_argument('sections', type=str, help='Comma-separated section numbers')
-    args = parser.parse_args()
+def example_stock_loss : PropertyLoss :=
+  ⟨(-100000 : Int), true⟩  -- -$1,000 loss from stock (capital asset)
 
-    section_nums = [s.strip() for s in args.sections.split(',')]
+#eval isOrdinaryLoss example_inventory_loss   -- true
+#eval isOrdinaryLoss example_stock_loss       -- false
+#eval calculateOrdinaryLoss [example_inventory_loss, example_stock_loss]  -- -50000
 
-    success_count = 0
-    for section_num in section_nums:
-        if prepare_for_aristotle(section_num):
-            success_count += 1
+-- Theorem: Ordinary losses are non-positive
+-- Note: Full proof requires custom lemma about fold accumulator monotonicity
+theorem ordinary_loss_nonpositive (losses : List PropertyLoss)
+    (h : ∀ l ∈ losses, (l.amount : Int) ≤ 0) :
+    calculateOrdinaryLoss losses ≤ 0 := by
+  sorry
 
-    print(f"\n✓ Prepared {success_count}/{len(section_nums)} sections for Aristotle")
+-- Theorem: Capital asset losses don't contribute to ordinary loss
+theorem capital_losses_excluded (l : PropertyLoss)
+    (h : l.isCapitalAsset = true) :
+    isOrdinaryLoss l = false := by
+  simp [isOrdinaryLoss, h]
 
-    return 0 if success_count == len(section_nums) else 1
-
-
-if __name__ == '__main__':
-    import sys
-    sys.exit(main())
+-- Theorem: All non-capital losses are ordinary
+theorem noncapital_is_ordinary (l : PropertyLoss)
+    (h : l.isCapitalAsset = false) :
+    isOrdinaryLoss l = true := by
+  simp [isOrdinaryLoss, h]

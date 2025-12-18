@@ -1,16 +1,4 @@
-#!/usr/bin/env python3
-"""
-Prepare sections for Aristotle by inlining Common module dependencies.
-
-Creates self-contained *_aristotle.lean files without Common imports.
-"""
-
-import argparse
-from pathlib import Path
-import re
-
-
-COMMON_BASIC_INLINE = """/-
+/-
 Common definitions inlined for Aristotle processing
 -/
 
@@ -119,54 +107,69 @@ structure Taxpayer where
 
 instance : Repr Taxpayer where
   reprPrec t _ := s!"Taxpayer(id: {t.id}, status: {repr t.filingStatus}, year: {t.taxYear.year})"
-"""
 
 
-def prepare_for_aristotle(section_num: str) -> bool:
-    """Prepare a section file for Aristotle by inlining Common imports."""
+/-!
+# IRC Section 64 - Ordinary Income Defined
 
-    src_file = Path(f'src/TaxCode/Section{section_num}.lean')
-    aristotle_file = Path(f'src/TaxCode/Section{section_num}_aristotle.lean')
+For purposes of the Internal Revenue Code, defines "ordinary income" as including
+any gain from the sale or exchange of property which is neither a capital asset
+nor property described in IRC §1231(b).
 
-    if not src_file.exists():
-        print(f"Error: {src_file} not found")
-        return False
+## References
+- [26 USC §64](https://www.law.cornell.edu/uscode/text/26/64)
 
-    # Read original file
-    content = src_file.read_text()
+## Key Provisions
+- Ordinary income includes gains from non-capital, non-§1231(b) property
+- Any gain treated as "ordinary income" under other IRC provisions is also ordinary income
+-/
 
-    # Replace Common.Basic import with inlined definitions
-    if 'import Common.Basic' in content:
-        content = re.sub(
-            r'import Common\.Basic\n',
-            COMMON_BASIC_INLINE + '\n',
-            content
-        )
+-- Property classification for income purposes
+inductive PropertyType
+  | CapitalAsset               -- IRC §1221 capital asset
+  | Section1231Property        -- IRC §1231(b) property (trade/business property)
+  | OrdinaryIncomeProperty     -- Neither capital nor §1231(b)
+  deriving Repr, DecidableEq
 
-    # Write Aristotle version
-    aristotle_file.write_text(content)
-    print(f"✓ Created {aristotle_file}")
+-- Gain from sale or exchange
+structure PropertyGain where
+  amount : Currency
+  propertyType : PropertyType
+  deriving Repr
 
-    return True
+-- Determine if a gain is ordinary income
+def isOrdinaryIncome (gain : PropertyGain) : Bool :=
+  match gain.propertyType with
+  | PropertyType.CapitalAsset => false          -- Capital gains, not ordinary
+  | PropertyType.Section1231Property => false   -- §1231 treatment
+  | PropertyType.OrdinaryIncomeProperty => true -- Ordinary income
 
+-- Calculate ordinary income from a list of gains
+def calculateOrdinaryIncome (gains : List PropertyGain) : Currency :=
+  gains.foldl (fun (acc : Int) g =>
+    let amt : Int := g.amount
+    if isOrdinaryIncome g then acc + amt else acc) (0 : Int)
 
-def main():
-    parser = argparse.ArgumentParser(description='Prepare sections for Aristotle')
-    parser.add_argument('sections', type=str, help='Comma-separated section numbers')
-    args = parser.parse_args()
+-- Examples
+def example_inventory_sale : PropertyGain :=
+  ⟨50000, PropertyType.OrdinaryIncomeProperty⟩  -- $500 gain from inventory
 
-    section_nums = [s.strip() for s in args.sections.split(',')]
+def example_stock_sale : PropertyGain :=
+  ⟨100000, PropertyType.CapitalAsset⟩           -- $1,000 gain from stock
 
-    success_count = 0
-    for section_num in section_nums:
-        if prepare_for_aristotle(section_num):
-            success_count += 1
+#eval isOrdinaryIncome example_inventory_sale   -- true
+#eval isOrdinaryIncome example_stock_sale       -- false
+#eval calculateOrdinaryIncome [example_inventory_sale, example_stock_sale]  -- 50000
 
-    print(f"\n✓ Prepared {success_count}/{len(section_nums)} sections for Aristotle")
+-- Theorem: Ordinary income is non-negative
+-- Note: Full proof requires custom lemma about fold accumulator monotonicity
+theorem ordinary_income_nonnegative (gains : List PropertyGain)
+    (h : ∀ g ∈ gains, (g.amount : Int) ≥ 0) :
+    calculateOrdinaryIncome gains ≥ 0 := by
+  sorry
 
-    return 0 if success_count == len(section_nums) else 1
-
-
-if __name__ == '__main__':
-    import sys
-    sys.exit(main())
+-- Theorem: Capital asset gains don't contribute to ordinary income
+theorem capital_gains_excluded (g : PropertyGain)
+    (h : g.propertyType = PropertyType.CapitalAsset) :
+    isOrdinaryIncome g = false := by
+  simp [isOrdinaryIncome, h]

@@ -1,0 +1,207 @@
+{
+  "tasks": {
+    "1297": {
+      "section": "1297",
+      "sorries": [
+        {
+          "file": "Section1297.lean",
+          "section": "1297",
+          "line": 252,
+          "theorem_name": "banking_exception_eliminates_passive",
+          "context": "    (h_all_banking : corp.incomeItems.all fun item =>\n        item.incomeType = .ActiveBankingIncome) :\n    passiveIncome corp = 0 := by\n  unfold passiveIncome\n  simp [h_licensed, h_all_banking, isPassiveIncomeType]\n  sorry -- Fold proof\n\n-- Theorem: Insurance exception loophole\n-- A \"qualifying insurance corporation\" can have substantial passive income\ntheorem insurance_exception_loophole (corp : ForeignCorporation)\n    (h_qualified : corp.isQualifyingInsuranceCorp = true)"
+        },
+        {
+          "file": "Section1297.lean",
+          "section": "1297",
+          "line": 263,
+          "theorem_name": "insurance_exception_loophole",
+          "context": "    (h_investment : \u2203 item \u2208 corp.incomeItems,\n        item.incomeType = .ActiveInsuranceIncome) :\n    -- Insurance income is NOT counted as passive\n    \u2203 exempted : Currency, exempted > 0 \u2227\n      passiveIncome corp < grossIncome corp := by\n  sorry -- Existence proof\n\n-- Theorem: Look-through can either help or hurt\n-- If subsidiary is active, look-through HELPS avoid PFIC\n-- If subsidiary is passive, look-through HURTS\ntheorem look_through_effect (corp : ForeignCorporation)"
+        }
+      ],
+      "status": "submitted",
+      "project_id": "130fdc0f-2c50-49f5-9a00-506c848b3a91",
+      "submitted_at": "2025-12-18 15:40:28",
+      "completed_at": null,
+      "error": null
+    },
+    "61": {
+      "section": "61",
+      "sorries": [
+        {
+          "file": "Section61.lean",
+          "section": "61",
+          "line": 584,
+          "theorem_name": "gross_income_nonneg",
+          "context": "  input.sources.foldl (fun acc s => acc + s.amount) 0\n\n-- Theorem: Gross income is non-negative when all sources are non-negative\ntheorem gross_income_nonneg (input : GrossIncomeInput)\n  (h : \u2200 s \u2208 input.sources, s.amount \u2265 0) : calculateGrossIncome input \u2265 0 := by\n  sorry -- Requires fold accumulator monotonicity lemma\n\n-- Theorem: Gross income is additive over source lists\ntheorem additivity (sources1 sources2 : List IncomeSource) :\n  calculateGrossIncome {sources := sources1 ++ sources2} =\n  calculateGrossIncome {sources := sources1} + calculateGrossIncome {sources := sources2} := by"
+        },
+        {
+          "file": "Section61.lean",
+          "section": "61",
+          "line": 590,
+          "theorem_name": "compatibility",
+          "context": "\n-- Theorem: Gross income is additive over source lists\ntheorem additivity (sources1 sources2 : List IncomeSource) :\n  calculateGrossIncome {sources := sources1 ++ sources2} =\n  calculateGrossIncome {sources := sources1} + calculateGrossIncome {sources := sources2} := by\n  sorry -- Requires List.foldl_append lemma compatibility\n\ntheorem gross_income_empty : calculateGrossIncome {sources := []} = 0 := by\n  unfold calculateGrossIncome\n  rfl\n"
+        }
+      ],
+      "status": "submitted",
+      "project_id": "ba5c05fe-f09f-439d-ad44-f96641fb559f",
+      "submitted_at": "2025-12-18 15:40:35",
+      "completed_at": null,
+      "error": null
+    },
+    "453": {
+      "section": "453",
+      "sorries": [
+        {
+          "file": "Section453.lean",
+          "section": "453",
+          "line": 251,
+          "theorem_name": "deferral_proportional_to_gain",
+          "context": "    (h_gain : grossProfit sale > 0) :\n    -- Higher gross profit ratio = more tax deferred per payment\n    grossProfitRatio sale > 0 := by\n  unfold grossProfitRatio\n  simp\n  sorry -- Arithmetic with division\n\n-- Theorem: Below $5M threshold avoids interest charge\ntheorem threshold_avoidance (sale : InstallmentSale) (afterYear : TaxYear)\n    (taxRate interestRate : Rat)\n    (h_under : sale.sellingPrice \u2264 installmentThreshold) :"
+        }
+      ],
+      "status": "submitted",
+      "project_id": "f9532aa7-1358-4583-b839-069780df566d",
+      "submitted_at": "2025-12-18 15:40:41",
+      "completed_at": null,
+      "error": null
+    },
+    "64": {
+      "section": "64",
+      "sorries": [
+        {
+          "file": "Section64.lean",
+          "section": "64",
+          "line": 60,
+          "theorem_name": "ordinary_income_nonnegative",
+          "context": "-- Theorem: Ordinary income is non-negative\n-- Note: Full proof requires custom lemma about fold accumulator monotonicity\ntheorem ordinary_income_nonnegative (gains : List PropertyGain)\n    (h : \u2200 g \u2208 gains, (g.amount : Int) \u2265 0) :\n    calculateOrdinaryIncome gains \u2265 0 := by\n  sorry\n\n-- Theorem: Capital asset gains don't contribute to ordinary income\ntheorem capital_gains_excluded (g : PropertyGain)\n    (h : g.propertyType = PropertyType.CapitalAsset) :\n    isOrdinaryIncome g = false := by"
+        }
+      ],
+      "status": "submitted",
+      "project_id": "56810822-047c-4cc2-bf6a-614b4baff286",
+      "submitted_at": "2025-12-18 15:40:48",
+      "completed_at": null,
+      "error": null
+    },
+    "65": {
+      "section": "65",
+      "sorries": [
+        {
+          "file": "Section65.lean",
+          "section": "65",
+          "line": 49,
+          "theorem_name": "ordinary_loss_nonpositive",
+          "context": "-- Theorem: Ordinary losses are non-positive\n-- Note: Full proof requires custom lemma about fold accumulator monotonicity\ntheorem ordinary_loss_nonpositive (losses : List PropertyLoss)\n    (h : \u2200 l \u2208 losses, (l.amount : Int) \u2264 0) :\n    calculateOrdinaryLoss losses \u2264 0 := by\n  sorry\n\n-- Theorem: Capital asset losses don't contribute to ordinary loss\ntheorem capital_losses_excluded (l : PropertyLoss)\n    (h : l.isCapitalAsset = true) :\n    isOrdinaryLoss l = false := by"
+        }
+      ],
+      "status": "submitted",
+      "project_id": "2765a629-e695-44b9-9f79-15f767336a71",
+      "submitted_at": "2025-12-18 15:40:54",
+      "completed_at": null,
+      "error": null
+    },
+    "831": {
+      "section": "831",
+      "sorries": [
+        {
+          "file": "Section831.lean",
+          "section": "831",
+          "line": 201,
+          "theorem_name": "_831b_saves_tax_on_underwriting",
+          "context": "    (h_pos_underwriting : co.underwritingIncome > 0) :\n    taxSavingsFrom831b co > 0 := by\n  unfold taxSavingsFrom831b\n  simp [h_qual]\n  unfold taxUnder831a taxUnder831b\n  sorry -- Arithmetic proof\n\n-- Theorem: Threshold cliff - $1 over disqualifies entirely\ntheorem threshold_cliff_effect (co : InsuranceCompany)\n    (h_at_threshold : totalPremiumsWithControlledGroup co = inflationAdjustedThreshold co.taxYear)\n    (h_other_qual : meetsDiversificationTest co = true \u2227 co.hasElected831b = true) :"
+        },
+        {
+          "file": "Section831.lean",
+          "section": "831",
+          "line": 219,
+          "theorem_name": "controlled_group_disqualifies",
+          "context": "    (h_controlled_too_much : co.controlledGroupPremiums >\n        inflationAdjustedThreshold co.taxYear - relevantPremiums co) :\n    meetsPremiumTest co = false := by\n  unfold meetsPremiumTest totalPremiumsWithControlledGroup\n  simp\n  sorry -- Arithmetic proof\n\n-- Theorem: De minimis creates a 2% ownership premium loophole\n-- A specified holder can own 2% MORE than their asset percentage\ntheorem de_minimis_ownership_premium (sh : SpecifiedHolder) (co : InsuranceCompany)\n    (h_specified : isSpecifiedHolder sh = true)"
+        },
+        {
+          "file": "Section831.lean",
+          "section": "831",
+          "line": 240,
+          "theorem_name": "unrelated_parties_separate",
+          "context": "        !ph1.isRelatedParty \u2227 !ph2.isRelatedParty \u2227 ph1.id \u2260 ph2.id)\n    (h_each_under_20 : co.policyHolders.all fun ph =>\n        !ph.isRelatedParty \u2192 policyholderPremiumPercentage ph co \u2264 20/100) :\n    meetsNoPolicyholderOver20Test co = true := by\n  unfold meetsNoPolicyholderOver20Test aggregateRelatedPolicyholders\n  sorry -- Proof depends on aggregation logic\n\n/-!\n## Loophole Scenario: Classic Micro-Captive Abuse\n\nThe following structures model the classic micro-captive tax shelter:"
+        },
+        {
+          "file": "Section831.lean",
+          "section": "831",
+          "line": 279,
+          "theorem_name": "micro_captive_arbitrage_exists",
+          "context": "    (h_qual : qualifiesFor831b arr.captiveInsurer = true)\n    (h_premiums_gt_claims : arr.premiumsPaidByOperating > arr.claimsPaidByCaptive)\n    (h_positive_premium : arr.premiumsPaidByOperating > 0) :\n    taxArbitrage arr > 0 := by\n  unfold taxArbitrage\n  sorry -- Arithmetic proof\n\n/-!\n## Test Cases\n-/\n"
+        }
+      ],
+      "status": "submitted",
+      "project_id": "8924f1c1-28b5-4823-b7e1-506fda4f6fd7",
+      "submitted_at": "2025-12-18 15:41:01",
+      "completed_at": null,
+      "error": null
+    },
+    "951_956": {
+      "section": "951_956",
+      "sorries": [
+        {
+          "file": "Section951_956.lean",
+          "section": "951_956",
+          "line": 324,
+          "theorem_name": "gilti_qbai_benefit",
+          "context": "    (h_tested : corp.testedIncome > 0) :\n    let result := calculateGILTI corp qbai\n    result.qbaiReturn > 0 := by\n  unfold calculateGILTI\n  simp\n  sorry -- Arithmetic with floor\n\n-- LOOPHOLE: CFC exemption from PFIC\n-- Per \u00a71297(d), CFC shareholders avoid harsher PFIC rules\ntheorem cfc_pfic_exemption (corp : ForeignCorporation)\n    (person : USPerson) (ownership : ShareOwnership)"
+        }
+      ],
+      "status": "submitted",
+      "project_id": "c292535b-ae5e-4eba-9b40-73e36a36bffb",
+      "submitted_at": "2025-12-18 15:41:07",
+      "completed_at": null,
+      "error": null
+    },
+    "63": {
+      "section": "63",
+      "sorries": [
+        {
+          "file": "Section63.lean",
+          "section": "63",
+          "line": 1092,
+          "theorem_name": "taxable_le_agi",
+          "context": "-- Theorems (proven with Grok-4 + Claude assistance)\n\n-- Theorem: Taxable income \u2264 AGI (max subtraction can't exceed original)\ntheorem taxable_le_agi (input : TaxableIncomeInput) (h : input.adjustedGrossIncome \u2265 0) :\n    calculateTaxableIncome input \u2264 input.adjustedGrossIncome := by\n  sorry -- Requires max_le lemmas from Mathlib\n\n-- Theorem: Taxable income is non-negative (due to max 0 floor)\ntheorem taxable_nonneg (input : TaxableIncomeInput) :\n    calculateTaxableIncome input \u2265 0 := by\n  sorry -- Requires le_max_left from Mathlib"
+        },
+        {
+          "file": "Section63.lean",
+          "section": "63",
+          "line": 1097,
+          "theorem_name": "taxable_nonneg",
+          "context": "  sorry -- Requires max_le lemmas from Mathlib\n\n-- Theorem: Taxable income is non-negative (due to max 0 floor)\ntheorem taxable_nonneg (input : TaxableIncomeInput) :\n    calculateTaxableIncome input \u2265 0 := by\n  sorry -- Requires le_max_left from Mathlib\n\ntheorem standard_deduction_single_2024 :\n  let input : TaxableIncomeInput := {\n    adjustedGrossIncome := 0,\n    itemizedDeductions := none,"
+        }
+      ],
+      "status": "submitted",
+      "project_id": "19e85159-d7e3-429b-b96d-2b4d2430f8b0",
+      "submitted_at": "2025-12-18 15:41:14",
+      "completed_at": null,
+      "error": null
+    },
+    "704": {
+      "section": "704",
+      "sorries": [
+        {
+          "file": "Section704.lean",
+          "section": "704",
+          "line": 296,
+          "theorem_name": "built_in_gain_to_contributor",
+          "context": "    (h_gain : hasBuiltInGain prop = true) :\n    -- Contributor bears built-in gain\n    section704cGainAllocation prop salePrice \u2265 0 := by\n  unfold section704cGainAllocation hasBuiltInGain builtInGainOrLoss at *\n  simp only [decide_eq_true_eq] at h_gain\n  split_ifs with h1 h2 <;> sorry\n\n-- LOOPHOLE: Traditional method ceiling rule\n-- If property depreciates, non-contributing partners get excess deductions\ntheorem ceiling_rule_loophole (prop : ContributedProperty)\n    (h_gain : hasBuiltInGain prop = true)"
+        },
+        {
+          "file": "Section704.lean",
+          "section": "704",
+          "line": 320,
+          "theorem_name": "suspended_losses_preserved",
+          "context": "-- LOOPHOLE: Suspended losses carry forward indefinitely\ntheorem suspended_losses_preserved (partner : Partner) (loss : Currency)\n    (h_excess : loss > partner.outsideBasis) :\n    suspendedLoss partner loss > 0 := by\n  unfold suspendedLoss\n  split_ifs with h <;> sorry\n\n/-!\n## Loophole Scenarios\n-/\n"
+        }
+      ],
+      "status": "submitted",
+      "project_id": "23d9995b-73f5-4e48-8f4b-a234a1a40da0",
+      "submitted_at": "2025-12-18 15:41:20",
+      "completed_at": null,
+      "error": null
+    }
+  },
+  "last_updated": "2025-12-18 15:41:20"
+}
