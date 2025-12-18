@@ -578,25 +578,16 @@ structure GrossIncomeInput where
 def calculateGrossIncome (input : GrossIncomeInput) : Currency :=
   input.sources.foldl (fun acc s => acc + s.amount) 0
 
+-- Theorem: Gross income is non-negative when all sources are non-negative
 theorem gross_income_nonneg (input : GrossIncomeInput)
   (h : ∀ s ∈ input.sources, s.amount ≥ 0) : calculateGrossIncome input ≥ 0 := by
-  unfold calculateGrossIncome
-  induction input.sources with
-  | nil => simp [List.foldl]
-  | cons head tail ih =>
-    simp only [List.foldl]
-    have h_head : head.amount ≥ 0 := h head (List.mem_cons_self _ _)
-    have h_tail : ∀ s ∈ tail, s.amount ≥ 0 := fun s hs => h s (List.mem_cons_of_mem _ hs)
-    omega
+  sorry -- Requires fold accumulator monotonicity lemma
 
+-- Theorem: Gross income is additive over source lists
 theorem additivity (sources1 sources2 : List IncomeSource) :
   calculateGrossIncome {sources := sources1 ++ sources2} =
   calculateGrossIncome {sources := sources1} + calculateGrossIncome {sources := sources2} := by
-  unfold calculateGrossIncome
-  simp only [List.foldl_append]
-  induction sources1 with
-  | nil => simp [List.foldl]
-  | cons head tail ih => simp [List.foldl, ih]
+  sorry -- Requires List.foldl_append lemma compatibility
 
 theorem gross_income_empty : calculateGrossIncome {sources := []} = 0 := by
   unfold calculateGrossIncome

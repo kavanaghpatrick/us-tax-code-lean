@@ -21,7 +21,7 @@ def toDollars (c : Currency) : Int :=
   let ci : Int := c
   ci / 100
 
-instance : OfNat Currency n := ⟨(n : Int)⟩
+instance (n : Nat) : OfNat Currency n := ⟨(n : Int)⟩
 
 -- Since Currency is Int, we can use Int's ordering
 instance : LE Currency where
