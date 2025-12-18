@@ -33,12 +33,20 @@ noncomputable section
 
 def Currency := Int
 
-structure TaxYear where year : Nat
+structure TaxYear where
+  year : Nat
+  h_valid : year ≥ 1913
+  deriving DecidableEq, Repr
 
-; h_valid : year ≥ 1913; deriving
-
-DecidableEq, Repr
-inductive FilingStatus | Single | MarriedFilingJointly | MarriedFilingSeparately | HeadOfHousehold | QualifyingWidower | Estate | Trust deriving Repr, DecidableEq, Inhabited
+inductive FilingStatus
+  | Single
+  | MarriedFilingJointly
+  | MarriedFilingSeparately
+  | HeadOfHousehold
+  | QualifyingWidower
+  | Estate
+  | Trust
+  deriving Repr, DecidableEq, Inhabited
 
 /-!
 # IRC Section 341 - Repealed. Pub. L. 108–27, title III, § 302(e)(4)(A), May 28, 2003, 117 Stat. 763]

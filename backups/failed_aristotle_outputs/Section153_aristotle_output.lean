@@ -1,0 +1,183 @@
+/-
+This file was edited by Aristotle.
+
+Lean version: leanprover/lean4:v4.24.0
+Mathlib version: f897ebcf72cd16f89ab4577d0c826cd14afaafc7
+This project request had uuid: 5e661e50-1ac3-42be-ae37-7e379b0b660d
+-/
+
+import Mathlib
+
+
+/- Aristotle failed to load this code into its environment. Double check that the syntax is correct.
+
+unexpected token ';'; expected command
+unexpected identifier; expected 'instance'-/
+set_option linter.mathlibStandardSet false
+
+open scoped BigOperators Real Nat Classical Pointwise
+
+set_option maxHeartbeats 0
+
+set_option maxRecDepth 4000
+
+set_option synthInstance.maxHeartbeats 20000
+
+set_option synthInstance.maxSize 128
+
+set_option relaxedAutoImplicit false
+
+set_option autoImplicit false
+
+noncomputable section
+
+def Currency := Int
+
+structure TaxYear where year : Nat
+
+; h_valid : year ≥ 1913; deriving
+
+DecidableEq, Repr
+inductive FilingStatus | Single | MarriedFilingJointly | MarriedFilingSeparately | HeadOfHousehold | QualifyingWidower | Estate | Trust deriving Repr, DecidableEq, Inhabited
+
+/-!
+# IRC Section 153 - Cross references
+
+This file formalizes IRC §153 (Cross references).
+
+## References
+- [26 USC §153](https://www.law.cornell.edu/uscode/text/26/153)
+
+## Summary
+   Quick search by citation:
+   Title
+   Section
+   Go!
+   26 U.S. Code § 153 - Cross references
+   U.S. Code
+   Notes
+   prev
+   | next
+   (1)
+   For deductions of estates and trusts, in lieu of the exemptions under section 151, see section 642(b).
+   (2)
+   For exemptions of nonresident aliens, see section 873(b)(3).
+   (3)
+   For determination of marital status, see section 7703.
+   (Aug. 16, 1954, ch. 736,
+   68A Stat. 45
+   , § 154;
+   Pub. L. 89–809, title I, § 103(c)(2)
+   ,
+   Nov. 13, 1966
+   ,
+   80 Stat. 1551
+   ; renumbered § 153 and amended
+   Pub. L. 94–455, title XIX, § 1901(b)(7)(A)(i)
+   , (C),
+   Oct. 4, 1976
+   ,
+   90 Stat. 1794
+   ;
+   Pub. L. 99–514, title XII, § 1272(d)(7)
+   , title XIII, § 1301(j)(8),
+   Oct. 22, 1986
+   ,
+   100 Stat. 2594
+   , 2658;
+   Pub. L. 108–311, title II, § 207(14)
+   ,
+   Oct. 4, 2004
+   ,
+   118 Stat. 1177
+   .)
+   Editorial Notes
+   Prior Provisions
+   A prior section 153, act Aug. 16, 1954, ch. 736,
+   68A Stat. 45
+   , related to determination of marital status, prior to repeal by
+   Pub. L. 94–455, title XIX, § 1901(b)(7)(A)(i)
+   , (d),
+   Oct. 4, 1976
+   ,
+   90 Stat. 1794
+   , 1803, applicable with respect to taxable years beginning after
+   Dec. 31, 1976
+   . See
+   section 143 of this title
+   .
+   Amendments
+   2004—Pars. (1) to (4).
+   Pub. L. 108–311
+   redesignated pars. (2) to (4) as (1) to (3), respectively, and struck out former par. (1) which read as follows: “For definitions of ‘husband’ and ‘wife’, as used in section 152(b)(4), see section 7701(a)(17).”
+   1986—Par. (4).
+   Pub. L. 99–514, § 1272(d)(7)
+   , redesignated par. (5) as (4) and struck out former par. (4) which read as follows: “For exemptions of citizens deriving income mainly from sources within possessions of the United States, see section 931(e).”
+   Par. (5).
+   Pub. L. 99–514, § 1272(d)(7)
+   , redesignated par. (5) as (4).
+   Pub. L. 99–514, § 1301(j)(8)
+   , substituted “section 7703” for “section 143”.
+   1976—Par. (5).
+   Pub. L. 94–455, § 1901(b)(7)(C)
+   , added par. (5).
+   1966—Par. (3).
+   Pub. L. 89–809
+   substituted “873(b)(3)” for “873(d)”.
+   Statutory Notes and Related Subsidiaries
+   Effective Date of 2004 Amendment
+   Amendment by
+   Pub. L. 108–311
+   applicable to taxable years beginning after
+   Dec. 31, 2004
+   , see
+   section 208 of Pub. L. 108–311
+   , set out as a note under
+   section 2 of this title
+   .
+   Effective Date of 1986 Amendment
+   Amendment by
+   section 1272(d)(7) of Pub. L. 99–514
+   applicable to taxable years beginning after
+   Dec. 31, 1986
+   , with certain exceptions and qualifications, see
+   section 1277 of Pub. L. 99–514
+   , set out as a note under
+   section 931 of this title
+   .
+   Amendment by
+   section 1301(j)(8) of Pub. L. 99–514
+   applicable to bonds issued after
+   Aug. 15, 1986
+   , except as otherwise provided, see sections 1311 to 1318 of
+   Pub. L. 99–514
+   , set out as an Effective Date; Transitional Rules note under
+   section 141 of this title
+   .
+   Effective Date of 1976 Amendment
+   Amendment by
+   Pub. L. 94–455
+   applicable with respect to taxable years beginning after
+   Dec. 31, 1976
+   , see
+   section 1901(d) of Pub. L. 94–455
+   , set out as a note under
+   section 2 of this title
+   .
+   Effective Date of 1966 Amendment
+   Amendment by
+   Pub. L. 89–809
+   applicable with respect to taxable years beginning after
+   Dec. 31, 1966
+   , see
+   section 103(n)(1) of Pub. L. 89–809
+   , set out as a note under
+   section 871 of this title
+   .
+   U.S. Code Toolbox
+   Law about... Articles from Wex
+   Table of Popular Names
+   Parallel Table of Authorities
+   How
+   current is this?
+-/

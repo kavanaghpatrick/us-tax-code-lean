@@ -33,12 +33,20 @@ noncomputable section
 
 def Currency := Int
 
-structure TaxYear where year : Nat
+structure TaxYear where
+  year : Nat
+  h_valid : year ≥ 1913
+  deriving DecidableEq, Repr
 
-; h_valid : year ≥ 1913; deriving
-
-DecidableEq, Repr
-inductive FilingStatus | Single | MarriedFilingJointly | MarriedFilingSeparately | HeadOfHousehold | QualifyingWidower | Estate | Trust deriving Repr, DecidableEq, Inhabited
+inductive FilingStatus
+  | Single
+  | MarriedFilingJointly
+  | MarriedFilingSeparately
+  | HeadOfHousehold
+  | QualifyingWidower
+  | Estate
+  | Trust
+  deriving Repr, DecidableEq, Inhabited
 
 /-!
 # IRC Section 1232 - 26 U.S. Code § 1232 to 1232B - Repealed. Pub. L. 98–369, div. A, title I, § 42(a)(1), July 18, 1984, 98 Stat. 556]

@@ -630,6 +630,8 @@ This file formalizes IRC §871 (Tax on nonresident alien individuals).
 
 -- [Content truncated - key provisions above]
 
+
+-/
 -- TODO: Add type definitions
 -- TODO: Add main functions
 -- TODO: Add theorems to prove

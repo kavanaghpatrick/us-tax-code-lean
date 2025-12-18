@@ -33,12 +33,20 @@ noncomputable section
 
 def Currency := Int
 
-structure TaxYear where year : Nat
+structure TaxYear where
+  year : Nat
+  h_valid : year ≥ 1913
+  deriving DecidableEq, Repr
 
-; h_valid : year ≥ 1913; deriving
-
-DecidableEq, Repr
-inductive FilingStatus | Single | MarriedFilingJointly | MarriedFilingSeparately | HeadOfHousehold | QualifyingWidower | Estate | Trust deriving Repr, DecidableEq, Inhabited
+inductive FilingStatus
+  | Single
+  | MarriedFilingJointly
+  | MarriedFilingSeparately
+  | HeadOfHousehold
+  | QualifyingWidower
+  | Estate
+  | Trust
+  deriving Repr, DecidableEq, Inhabited
 
 /-!
 # IRC Section 551 - 26 U.S. Code § 551 to 558 - Repealed. Pub. L. 108–357, title IV, § 413(a)(1), Oct. 22, 2004, 118 Stat. 1506]

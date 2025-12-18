@@ -641,6 +641,8 @@ This file formalizes IRC §42 (Low-income housing credit).
 
 -- [Content truncated - key provisions above]
 
+
+-/
 -- TODO: Add type definitions
 -- TODO: Add main functions
 -- TODO: Add theorems to prove

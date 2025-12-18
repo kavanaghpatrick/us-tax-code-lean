@@ -1,0 +1,120 @@
+/-
+This file was edited by Aristotle.
+
+Lean version: leanprover/lean4:v4.24.0
+Mathlib version: f897ebcf72cd16f89ab4577d0c826cd14afaafc7
+This project request had uuid: f6fcd424-fe02-4e60-b820-dcd37a9baafe
+-/
+
+import Mathlib
+
+
+/- Aristotle failed to load this code into its environment. Double check that the syntax is correct.
+
+unexpected token ';'; expected command
+unexpected identifier; expected 'instance'-/
+set_option linter.mathlibStandardSet false
+
+open scoped BigOperators Real Nat Classical Pointwise
+
+set_option maxHeartbeats 0
+
+set_option maxRecDepth 4000
+
+set_option synthInstance.maxHeartbeats 20000
+
+set_option synthInstance.maxSize 128
+
+set_option relaxedAutoImplicit false
+
+set_option autoImplicit false
+
+noncomputable section
+
+def Currency := Int
+
+structure TaxYear where year : Nat
+
+; h_valid : year ≥ 1913; deriving
+
+DecidableEq, Repr
+inductive FilingStatus | Single | MarriedFilingJointly | MarriedFilingSeparately | HeadOfHousehold | QualifyingWidower | Estate | Trust deriving Repr, DecidableEq, Inhabited
+
+/-!
+# IRC Section 466 - Repealed. Pub. L. 99–514, title VIII, § 823(a), Oct. 22, 1986, 100 Stat. 2373]
+
+This file formalizes IRC §466 (Repealed. Pub. L. 99–514, title VIII, § 823(a), Oct. 22, 1986, 100 Stat. 2373]).
+
+## References
+- [26 USC §466](https://www.law.cornell.edu/uscode/text/26/466)
+
+## Summary
+   Quick search by citation:
+   Title
+   Section
+   Go!
+   26 U.S. Code § 466 - Repealed. Pub. L. 99–514, title VIII, § 823(a), Oct. 22, 1986, 100 Stat. 2373]
+   U.S. Code
+   Notes
+   Authorities (CFR)
+   prev
+   |
+   next
+   Section, added
+   Pub. L. 95–600, title III, § 373(a)
+   ,
+   Nov. 6, 1978
+   ,
+   92 Stat. 2863
+   ; amended
+   Pub. L. 96–222, title I, § 103(a)(16)
+   ,
+   Apr. 1, 1980
+   ,
+   94 Stat. 214
+   , related to qualified discount coupons redeemed after close of taxable year.
+   Statutory Notes and Related Subsidiaries
+   Effective Date of Repeal
+   Pub. L. 99–514, title VIII, § 823(c)
+   ,
+   Oct. 22, 1986
+   ,
+   100 Stat. 2374
+   , provided:
+   “(1)
+   In general.—
+   The amendments made by this section [amending
+   section 461 of this title
+   and repealing this section] shall apply to taxable years beginning after
+   December 31, 1986
+   .
+   “(2)
+   Change in method of accounting.—
+   In the case of any taxpayer who elected to have section 466 of the
+   Internal Revenue Code of 1954
+   [now 1986] apply for such taxpayer’s last taxable year beginning before
+   January 1, 1987
+   , and is required to change its method of accounting by reason of the amendments made by this section for any taxable year—
+   “(A)
+   such change shall be treated as initiated by the taxpayer,
+   “(B)
+   such change shall be treated as having been made with the consent of the Secretary, and
+   “(C)
+   the net amount of adjustments required by section 481 of the
+   Internal Revenue Code of 1986
+   to be taken into account by the taxpayer shall—
+   “(i)
+   be reduced by the balance in the suspense account under section 466(e) of such Code as of the close of such last taxable year, and
+   “(ii)
+   be taken into account over a period not longer than 4 years.”
+   CFR Title
+   Parts
+   26
+   1
+   U.S. Code Toolbox
+   Law about... Articles from Wex
+   Table of Popular Names
+   Parallel Table of Authorities
+   How
+   current is this?
+-/

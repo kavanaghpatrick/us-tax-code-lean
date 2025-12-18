@@ -1,0 +1,18 @@
+{
+  "mode": "sample(100)",
+  "total": 100,
+  "passed": 98,
+  "failed": 2,
+  "with_sorry": 0,
+  "failures": [
+    [
+      "Section103",
+      "src/TaxCode/Section103.lean:422:4: No goals to be solved"
+    ],
+    [
+      "Section311",
+      "src/TaxCode/Section311.lean:65:24: failed to synthesize inst"
+    ]
+  ],
+  "sorry_sections": []
+}

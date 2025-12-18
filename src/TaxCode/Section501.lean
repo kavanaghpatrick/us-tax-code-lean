@@ -630,6 +630,8 @@ This file formalizes IRC §501 (Exemption from tax on corporations, certain trus
 
 -- [Content truncated]
 
+
+-/
 -- TODO: Add type definitions
 -- TODO: Add main functions
 -- TODO: Add theorems to prove

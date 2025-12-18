@@ -33,12 +33,20 @@ noncomputable section
 
 def Currency := Int
 
-structure TaxYear where year : Nat
+structure TaxYear where
+  year : Nat
+  h_valid : year ≥ 1913
+  deriving DecidableEq, Repr
 
-; h_valid : year ≥ 1913; deriving
-
-DecidableEq, Repr
-inductive FilingStatus | Single | MarriedFilingJointly | MarriedFilingSeparately | HeadOfHousehold | QualifyingWidower | Estate | Trust deriving Repr, DecidableEq, Inhabited
+inductive FilingStatus
+  | Single
+  | MarriedFilingJointly
+  | MarriedFilingSeparately
+  | HeadOfHousehold
+  | QualifyingWidower
+  | Estate
+  | Trust
+  deriving Repr, DecidableEq, Inhabited
 
 /-!
 # IRC Section 189 - Repealed. Pub. L. 99–514, title VIII, § 803(b)(1), Oct. 22, 1986, 100 Stat. 2355]

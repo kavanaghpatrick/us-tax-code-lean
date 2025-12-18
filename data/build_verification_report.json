@@ -1,0 +1,204 @@
+{
+  "summary": {
+    "timestamp": "2025-12-18 15:51:54",
+    "total_sections": 14,
+    "successes": 11,
+    "failures": 3,
+    "with_sorry": 4,
+    "success_rate": "78.6%",
+    "total_time_seconds": 109.7,
+    "failed_sections": [
+      {
+        "section": "Section102",
+        "errors": [
+          "error: src/TaxCode/Section102.lean:50:0: unexpected token ';'; expected command",
+          "error: src/TaxCode/Section102.lean:50:33: unexpected identifier; expected 'instance'",
+          "error: Lean exited with code 1"
+        ]
+      },
+      {
+        "section": "Section103",
+        "errors": [
+          "error: src/TaxCode/Section103.lean:422:4: No goals to be solved",
+          "error: Lean exited with code 1",
+          "error: build failed"
+        ]
+      },
+      {
+        "section": "Section1000",
+        "errors": [
+          "error: src/TaxCode/Section1000.lean:38:0: unexpected token ';'; expected command",
+          "error: src/TaxCode/Section1000.lean:38:33: unexpected identifier; expected 'instance'",
+          "error: Lean exited with code 1"
+        ]
+      }
+    ],
+    "sorry_sections": [
+      "Section61",
+      "Section63",
+      "Section64",
+      "Section65"
+    ]
+  },
+  "results": {
+    "Section1": {
+      "section": "Section1",
+      "success": true,
+      "duration_ms": 23562,
+      "warnings": [
+        "warning: src/TaxCode/Section1.lean:198:26: aesop: failed to prove the goal after exhaustive search.",
+        "warning: src/TaxCode/Section1.lean:201:29: aesop: failed to prove the goal after exhaustive search.",
+        "warning: src/TaxCode/Section1.lean:209:29: aesop: failed to prove the goal after exhaustive search.",
+        "warning: src/TaxCode/Section1.lean:216:29: aesop: failed to prove the goal after exhaustive search.",
+        "warning: src/TaxCode/Section1.lean:222:29: aesop: failed to prove the goal after exhaustive search.",
+        "warning: src/TaxCode/Section1.lean:235:29: aesop: failed to prove the goal after exhaustive search.",
+        "warning: src/TaxCode/Section1.lean:241:29: aesop: failed to prove the goal after exhaustive search.",
+        "warning: src/TaxCode/Section1.lean:255:4: aesop: failed to prove the goal after exhaustive search.",
+        "warning: src/TaxCode/Section1.lean:309:34: 'norm_num at *' tactic does nothing",
+        "warning: src/TaxCode/Section1.lean:329:10: aesop: failed to prove the goal after exhaustive search.",
+        "warning: src/TaxCode/Section1.lean:332:36: 'norm_num at *' tactic does nothing",
+        "warning: src/TaxCode/Section1.lean:333:34: 'norm_num at *' tactic does nothing",
+        "warning: src/TaxCode/Section1.lean:357:34: 'norm_num at *' tactic does nothing",
+        "warning: src/TaxCode/Section1.lean:365:66: unused variable `h1`"
+      ],
+      "errors": [],
+      "has_sorry": false
+    },
+    "Section61": {
+      "section": "Section61",
+      "success": true,
+      "duration_ms": 1078,
+      "warnings": [
+        "warning: src/TaxCode/Section61.lean:582:8: declaration uses 'sorry'",
+        "warning: src/TaxCode/Section61.lean:587:8: declaration uses 'sorry'"
+      ],
+      "errors": [],
+      "has_sorry": true
+    },
+    "Section62": {
+      "section": "Section62",
+      "success": true,
+      "duration_ms": 9805,
+      "warnings": [
+        "warning: src/TaxCode/Section62.lean:175:14: aesop: failed to prove the goal after exhaustive search."
+      ],
+      "errors": [],
+      "has_sorry": false
+    },
+    "Section63": {
+      "section": "Section63",
+      "success": true,
+      "duration_ms": 1166,
+      "warnings": [
+        "warning: src/TaxCode/Section63.lean:1090:8: declaration uses 'sorry'",
+        "warning: src/TaxCode/Section63.lean:1095:8: declaration uses 'sorry'"
+      ],
+      "errors": [],
+      "has_sorry": true
+    },
+    "Section64": {
+      "section": "Section64",
+      "success": true,
+      "duration_ms": 1130,
+      "warnings": [
+        "warning: src/TaxCode/Section64.lean:57:8: declaration uses 'sorry'"
+      ],
+      "errors": [],
+      "has_sorry": true
+    },
+    "Section65": {
+      "section": "Section65",
+      "success": true,
+      "duration_ms": 1163,
+      "warnings": [
+        "warning: src/TaxCode/Section65.lean:46:8: declaration uses 'sorry'"
+      ],
+      "errors": [],
+      "has_sorry": true
+    },
+    "Section101": {
+      "section": "Section101",
+      "success": true,
+      "duration_ms": 9710,
+      "warnings": [],
+      "errors": [],
+      "has_sorry": false
+    },
+    "Section102": {
+      "section": "Section102",
+      "success": false,
+      "duration_ms": 9652,
+      "warnings": [],
+      "errors": [
+        "error: src/TaxCode/Section102.lean:50:0: unexpected token ';'; expected command",
+        "error: src/TaxCode/Section102.lean:50:33: unexpected identifier; expected 'instance'",
+        "error: Lean exited with code 1",
+        "error: build failed"
+      ],
+      "has_sorry": false
+    },
+    "Section103": {
+      "section": "Section103",
+      "success": false,
+      "duration_ms": 10685,
+      "warnings": [
+        "warning: src/TaxCode/Section103.lean:420:67: This simp argument is unused:"
+      ],
+      "errors": [
+        "error: src/TaxCode/Section103.lean:422:4: No goals to be solved",
+        "error: Lean exited with code 1",
+        "error: build failed"
+      ],
+      "has_sorry": false
+    },
+    "Section162": {
+      "section": "Section162",
+      "success": true,
+      "duration_ms": 10350,
+      "warnings": [
+        "warning: src/TaxCode/Section162.lean:160:36: unused variable `amt`"
+      ],
+      "errors": [],
+      "has_sorry": false
+    },
+    "Section1000": {
+      "section": "Section1000",
+      "success": false,
+      "duration_ms": 9646,
+      "warnings": [],
+      "errors": [
+        "error: src/TaxCode/Section1000.lean:38:0: unexpected token ';'; expected command",
+        "error: src/TaxCode/Section1000.lean:38:33: unexpected identifier; expected 'instance'",
+        "error: Lean exited with code 1",
+        "error: build failed"
+      ],
+      "has_sorry": false
+    },
+    "Section1031": {
+      "section": "Section1031",
+      "success": true,
+      "duration_ms": 1215,
+      "warnings": [],
+      "errors": [],
+      "has_sorry": false
+    },
+    "Section2001": {
+      "section": "Section2001",
+      "success": true,
+      "duration_ms": 10059,
+      "warnings": [],
+      "errors": [],
+      "has_sorry": false
+    },
+    "Section2501": {
+      "section": "Section2501",
+      "success": true,
+      "duration_ms": 10495,
+      "warnings": [
+        "warning: src/TaxCode/Section2501.lean:197:3: unused variable `h_nonresident`"
+      ],
+      "errors": [],
+      "has_sorry": false
+    }
+  }
+}

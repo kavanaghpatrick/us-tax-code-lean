@@ -628,5 +628,7 @@ This file formalizes IRC §1250 (Gain from dispositions of certain depreciable r
    (i)
    25 percent of the adjusted basis of the
 
+
+-/
 -- TODO: Add type definitions
 -- TODO: Add main functions

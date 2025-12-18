@@ -1,0 +1,191 @@
+/-
+This file was edited by Aristotle.
+
+Lean version: leanprover/lean4:v4.24.0
+Mathlib version: f897ebcf72cd16f89ab4577d0c826cd14afaafc7
+This project request had uuid: 68c6dc26-9fc7-4579-ac8f-dc9079a9c6f5
+-/
+
+import Mathlib
+
+
+/- Aristotle failed to load this code into its environment. Double check that the syntax is correct.
+
+unexpected token ';'; expected command
+unexpected identifier; expected 'instance'-/
+set_option linter.mathlibStandardSet false
+
+open scoped BigOperators Real Nat Classical Pointwise
+
+set_option maxHeartbeats 0
+
+set_option maxRecDepth 4000
+
+set_option synthInstance.maxHeartbeats 20000
+
+set_option synthInstance.maxSize 128
+
+set_option relaxedAutoImplicit false
+
+set_option autoImplicit false
+
+noncomputable section
+
+def Currency := Int
+
+structure TaxYear where year : Nat
+
+; h_valid : year ≥ 1913; deriving
+
+DecidableEq, Repr
+inductive FilingStatus | Single | MarriedFilingJointly | MarriedFilingSeparately | HeadOfHousehold | QualifyingWidower | Estate | Trust deriving Repr, DecidableEq, Inhabited
+
+/-!
+# IRC Section 531 - Imposition of accumulated earnings tax
+
+This file formalizes IRC §531 (Imposition of accumulated earnings tax).
+
+## References
+- [26 USC §531](https://www.law.cornell.edu/uscode/text/26/531)
+
+## Summary
+   Quick search by citation:
+   Title
+   Section
+   Go!
+   26 U.S. Code § 531 - Imposition of accumulated earnings tax
+   U.S. Code
+   Notes
+   prev |
+   next
+   In addition to other taxes imposed by this chapter, there is hereby imposed for each taxable year on the
+   accumulated taxable income
+   (as defined in section 535) of each corporation described in section 532, an accumulated earnings tax equal to 20 percent of the
+   accumulated taxable income
+   .
+   (Aug. 16, 1954, ch. 736,
+   68A Stat. 179
+   ;
+   Pub. L. 100–647, title I, § 1001(a)(2)(A)
+   ,
+   Nov. 10, 1988
+   ,
+   102 Stat. 3349
+   ;
+   Pub. L. 103–66, title XIII
+   , §§ 13201(b)(1), 13202(b),
+   Aug. 10, 1993
+   ,
+   107 Stat. 459
+   , 461;
+   Pub. L. 107–16, title I, § 101(c)(4)
+   ,
+   June 7, 2001
+   ,
+   115 Stat. 43
+   ;
+   Pub. L. 108–27, title III, § 302(e)(5)
+   ,
+   May 28, 2003
+   ,
+   117 Stat. 764
+   ;
+   Pub. L. 112–240, title I, § 102(c)(1)(A)
+   ,
+   Jan. 2, 2013
+   ,
+   126 Stat. 2319
+   .)
+   Editorial Notes
+   Amendments
+   2013—
+   Pub. L. 112–240
+   substituted “20 percent” for “15 percent”.
+   2003—
+   Pub. L. 108–27
+   substituted “equal to 15 percent of the
+   accumulated taxable income.
+   ” for “equal to the product of the highest rate of tax under section 1(c) and the
+   accumulated taxable income.
+   ”
+   2001—
+   Pub. L. 107–16
+   substituted “equal to the product of the highest rate of tax under section 1(c) and the
+   accumulated taxable income.
+   ” for “equal to 39.6 percent of the
+   accumulated taxable income.
+   ”
+   1993—
+   Pub. L. 103–66, § 13202(b)
+   , substituted “39.6 percent” for “36 percent”.
+   Pub. L. 103–66, § 13201(b)(1)
+   , substituted “36 percent” for “28 percent”.
+   1988—
+   Pub. L. 100–647
+   amended section generally. Prior to amendment, section read as follows: “In addition to other taxes imposed by this chapter, there is hereby imposed for each taxable year on the
+   accumulated taxable income
+   (as defined in section 535) of every corporation described in section 532, an accumulated earnings tax equal to the sum of—
+   “(1) 27½ percent of the
+   accumulated taxable income
+   not in excess of $100,000, plus
+   “(2) 38½ percent of the
+   accumulated taxable income
+   in excess of $100,000.”
+   Statutory Notes and Related Subsidiaries
+   Effective Date of 2013 Amendment
+   Amendment by
+   Pub. L. 112–240
+   applicable to taxable years beginning after
+   Dec. 31, 2012
+   , see
+   section 102(d)(1) of Pub. L. 112–240
+   , set out as a note under
+   section 1 of this title
+   .
+   Effective Date of 2003 Amendment
+   Amendment by
+   Pub. L. 108–27
+   applicable, except as otherwise provided, to taxable years beginning after
+   Dec. 31, 2002
+   , see
+   section 302(f) of Pub. L. 108–27
+   , set out as an Effective and Termination Dates of 2003 Amendment note under
+   section 1 of this title
+   .
+   Effective Date of 2001 Amendment
+   Amendment by
+   Pub. L. 107–16
+   applicable to taxable years beginning after
+   Dec. 31, 2000
+   , see
+   section 101(d)(1) of Pub. L. 107–16
+   , set out as an Effective and Termination Dates of 2001 Amendment note under
+   section 1 of this title
+   .
+   Effective Date of 1993 Amendment
+   Amendment by
+   Pub. L. 103–66
+   applicable to taxable years beginning after
+   Dec. 31, 1992
+   , see sections 13201(c) and 13202(c) of
+   Pub. L. 103–66
+   , set out as notes under
+   section 1 of this title
+   .
+   Effective Date of 1988 Amendment
+   Pub. L. 100–647, title I, § 1001(a)(2)(B)
+   ,
+   Nov. 10, 1988
+   ,
+   102 Stat. 3349
+   , provided that:
+   “The amendment made by subparagraph (A) [amending this section] shall apply to taxable years beginning after
+   December 31, 1987
+   . Such amendment shall not be treated as a change in a rate of tax for purposes of section 15 of the 1986 Code.”
+   U.S. Code Toolbox
+   Law about... Articles from Wex
+   Table of Popular Names
+   Parallel Table of Authorities
+   How
+   current is this?
+-/

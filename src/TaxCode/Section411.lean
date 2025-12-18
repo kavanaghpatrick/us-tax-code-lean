@@ -630,6 +630,8 @@ This file formalizes IRC §411 (Minimum vesting standards).
 
 -- [Content truncated - key provisions above]
 
+
+-/
 -- TODO: Add type definitions
 -- TODO: Add main functions
 -- TODO: Add theorems to prove

@@ -534,6 +534,8 @@ This file formalizes IRC §832 (Insurance company taxable income).
    section 831(a)
    filing or required to file a consolidated return under section 1501 with respect to any affiliated group for any taxable year, any determination under this part with respect to any dividend paid by one member of such group to another member of such group shall be made as if such group were not filing a consolidated return.
 
+
+-/
 -- TODO: Add type definitions
 -- TODO: Add main functions
 -- TODO: Add theorems to prove

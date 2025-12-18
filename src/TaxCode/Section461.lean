@@ -671,6 +671,8 @@ This file formalizes IRC §461 (General rule for taxable year of deduction).
    section 1 of this title
    .
 
+
+-/
 -- TODO: Add type definitions
 -- TODO: Add main functions
 -- TODO: Add theorems to prove
