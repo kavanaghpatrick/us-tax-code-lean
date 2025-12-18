@@ -1,226 +1,179 @@
 # Gap Submission Plan
 
-**Objective**: Formalize the 4 major missing areas of the US Tax Code
+**Objective**: Formalize the 4 major missing areas using existing infrastructure.
 
-## Overview
+## The 4 Gaps (185 sections)
 
-| Gap | Sections | Priority | Complexity | Impact |
-|-----|----------|----------|------------|--------|
-| **Partnerships** | §701-777 (77) | 1 - Highest | HIGH | LLCs are #1 business entity |
-| **Trusts & Estates** | §641-692 (52) | 2 | MEDIUM | Trust taxation, inheritance |
-| **Natural Resources** | §611-638 (28) | 3 | MEDIUM | Oil/gas depletion, mining |
-| **FICA** | §3101-3128 (28) | 4 | LOW | Every paycheck |
-
-**Total**: 185 sections
+| Priority | Gap | Sections | Complexity |
+|----------|-----|----------|------------|
+| 1 | **Partnerships** | §701-777 (77) | HIGH |
+| 2 | **Trusts/Estates** | §641-692 (52) | MEDIUM |
+| 3 | **Natural Resources** | §611-638 (28) | MEDIUM |
+| 4 | **FICA** | §3101-3128 (28) | LOW |
 
 ---
 
-## Pipeline
+## Execution Plan (Using Existing Scripts)
 
-```
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│  1. SCRAPE      │────▶│  2. GENERATE    │────▶│  3. SUBMIT      │────▶│  4. INTEGRATE   │
-│  Cornell Law    │     │  Lean Stubs     │     │  Aristotle      │     │  Output Files   │
-│  ~3 min/gap     │     │  ~5 min/gap     │     │  ~2-4 hrs/gap   │     │  Automatic      │
-└─────────────────┘     └─────────────────┘     └─────────────────┘     └─────────────────┘
-```
-
-### Step 1: Scrape from Cornell Law
-- Fetches legal text from https://www.law.cornell.edu/uscode/text/26
-- Rate-limited: 1 request/second
-- Outputs to: `data/sections.json`
-
-### Step 2: Generate Lean Stubs
-- Uses Claude Sonnet to create initial Lean 4 code
-- Creates type definitions, function signatures
-- Outputs to: `src/TaxCode/SectionXXX.lean`
-
-### Step 3: Submit to Aristotle
-- Batches of 5 sections (Aristotle limit)
-- Uses INFORMAL mode for proof search
-- Polls every 60 seconds for completion
-
-### Step 4: Integrate Results
-- Copies proven files to: `src/TaxCode/SectionXXX_aristotle_output.lean`
-- Automatically triggered on completion
-
----
-
-## Time Estimates
-
-| Phase | Partnerships | Trusts | Resources | FICA | Total |
-|-------|--------------|--------|-----------|------|-------|
-| Scrape | 1.5 min | 1 min | 0.5 min | 0.5 min | ~4 min |
-| Generate | 5 min | 3 min | 2 min | 2 min | ~12 min |
-| Aristotle | 2-4 hrs | 1-2 hrs | 1 hr | 1 hr | ~6-10 hrs |
-| **Total** | ~4 hrs | ~2 hrs | ~1.5 hrs | ~1.5 hrs | **~9 hrs** |
-
-**Note**: Aristotle processing is the bottleneck. Each batch of 5 sections takes 20-60 minutes depending on complexity.
-
----
-
-## Commands
+### Phase 1: Scrape from Cornell Law
 
 ```bash
-# Check current status
-python scripts/gap_submission_plan.py status
+# Scrape each gap range
+python3 scripts/scrape_cornell.py --range 701-777   # Partnerships
+python3 scripts/scrape_cornell.py --range 641-692   # Trusts/Estates
+python3 scripts/scrape_cornell.py --range 611-638   # Natural Resources
+python3 scripts/scrape_cornell.py --range 3101-3128 # FICA
+```
 
-# Show execution plan
-python scripts/gap_submission_plan.py plan
+Or use the merge script to add to existing data:
+```bash
+python3 scripts/scrape_and_merge.py 701 777
+python3 scripts/scrape_and_merge.py 641 692
+python3 scripts/scrape_and_merge.py 611 638
+python3 scripts/scrape_and_merge.py 3101 3128
+```
 
-# Run individual phases
-python scripts/gap_submission_plan.py scrape partnerships
-python scripts/gap_submission_plan.py generate partnerships
-python scripts/gap_submission_plan.py submit partnerships
+### Phase 2: Generate Stubs & Submit
 
-# Run full pipeline for one gap
-python scripts/gap_submission_plan.py run partnerships
+**Option A: Use batch_formalize.py** (creates skeletons + prepares + submits)
+```bash
+# Generate section list
+FICA="3101,3102,3103,3104,3105,3106,3107,3108,3109,3110,3111,3112,3113,3114,3115,3116,3117,3118,3119,3120,3121,3122,3123,3124,3125,3126,3127,3128"
 
-# Run full pipeline for all gaps (recommended)
-python scripts/gap_submission_plan.py run all
+# Dry run first
+python3 scripts/batch_formalize.py --sections $FICA --dry-run
 
-# Dry run (show what would be done)
-python scripts/gap_submission_plan.py run all --dry-run
+# Then submit
+python3 scripts/batch_formalize.py --sections $FICA --submit
+```
+
+**Option B: Use aristotle_formalization_queue.py** (INFORMAL mode with natural language)
+```bash
+python3 scripts/aristotle_formalization_queue.py --sections "3101,3102,3103,3104,3105"
+```
+
+**Option C: Use process_remaining_stubs.py** (for existing stub files)
+```bash
+python3 scripts/process_remaining_stubs.py
 ```
 
 ---
 
-## Execution Order (Recommended)
+## Recommended Order
 
-### Phase 1: FICA (Priority: Start Here)
-**Why**: Lowest complexity, quick win, validates the pipeline
-
+### Step 1: Start with FICA (easiest, validates pipeline)
 ```bash
-python scripts/gap_submission_plan.py run fica
+# Scrape
+python3 scripts/scrape_and_merge.py 3101 3128
+
+# Submit via INFORMAL mode
+python3 scripts/aristotle_formalization_queue.py \
+  --sections "3101,3102,3103,3104,3105,3106,3107,3108,3109,3110,3111,3112,3113,3114,3115,3116,3117,3118,3119,3120,3121,3122,3123,3124,3125,3126,3127,3128"
 ```
 
-Expected outcome:
-- 28 new sections formalized
-- ~1.5 hours total time
-- Validates scraping and submission work
-
-### Phase 2: Natural Resources
-**Why**: Medium complexity, oil/gas industry relevance
-
+### Step 2: Natural Resources
 ```bash
-python scripts/gap_submission_plan.py run natural_resources
+python3 scripts/scrape_and_merge.py 611 638
+python3 scripts/aristotle_formalization_queue.py \
+  --sections "611,612,613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638"
 ```
 
-Expected outcome:
-- 28 new sections formalized
-- Depletion allowance rules
-- Percentage depletion calculations
-
-### Phase 3: Trusts & Estates
-**Why**: High impact for estate planning, builds on existing grantor trust rules (§671-679)
-
+### Step 3: Trusts & Estates
 ```bash
-python scripts/gap_submission_plan.py run trusts
+python3 scripts/scrape_and_merge.py 641 692
+# Submit in batches (large range)
+python3 scripts/aristotle_formalization_queue.py \
+  --sections "641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660"
+python3 scripts/aristotle_formalization_queue.py \
+  --sections "661,662,663,664,665,666,667,668,669,670,681,682,683,684,685,686,687,688,689,690,691,692"
 ```
 
-Expected outcome:
-- 52 new sections formalized (we already have §671-679)
-- Trust income distribution rules
-- Simple trust vs complex trust distinctions
-
-### Phase 4: Partnerships (Most Complex)
-**Why**: Highest impact but most complex - do last
-
+### Step 4: Partnerships (most complex)
 ```bash
-python scripts/gap_submission_plan.py run partnerships
+python3 scripts/scrape_and_merge.py 701 777
+# Submit in multiple batches
+python3 scripts/aristotle_formalization_queue.py \
+  --sections "701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720"
+# ... continue with remaining sections
 ```
-
-Expected outcome:
-- 77 new sections formalized (we already have §704)
-- Partnership allocations
-- Basis adjustments
-- Distributions and liquidations
 
 ---
 
 ## Monitoring
 
-### Check Aristotle Queue
+### Check Aristotle Queue Status
+```bash
+python3 scripts/aristotle_status.py
+```
+
+Or directly:
 ```bash
 python3 << 'EOF'
 import aristotlelib, os, asyncio
 
 async def main():
     aristotlelib.set_api_key(os.getenv('ARISTOTLE_API_KEY'))
-    projects = await aristotlelib.Project.list_projects()
-
-    if isinstance(projects, tuple):
-        projects = projects[0]
+    result = await aristotlelib.Project.list_projects()
+    projects = result[0] if isinstance(result, tuple) else result
 
     for p in projects:
-        print(f"{p.status.name:12} {p.percent_complete or 0:3}% {p.file_name}")
+        pct = p.percent_complete or 0
+        print(f"{p.status.name:12} {pct:3}% {p.file_name}")
 
 asyncio.run(main())
 EOF
 ```
 
-### Check Logs
+### Check Batch Progress
 ```bash
-tail -f logs/gap_submission.log
-```
-
-### Check Integration Status
-```bash
-python scripts/gap_submission_plan.py status
+python3 scripts/batch_formalize.py --status
 ```
 
 ---
 
-## Troubleshooting
+## Time Estimates
 
-### "5 projects in progress"
-Aristotle limits concurrent submissions. The script waits automatically.
+| Phase | Scraping | Aristotle Processing |
+|-------|----------|---------------------|
+| FICA (28) | ~30s | ~1-2 hours |
+| Natural Resources (28) | ~30s | ~1-2 hours |
+| Trusts (52) | ~1 min | ~2-4 hours |
+| Partnerships (77) | ~1.5 min | ~4-6 hours |
 
-### Scraping fails
-Check Cornell Law is accessible. Rate limiting may require longer delays.
-
-### Claude API errors
-Ensure `ANTHROPIC_API_KEY` is set. Check rate limits.
-
-### Aristotle timeout
-Some complex sections take longer. Max wait is 2 hours per batch.
-
-### Large files rejected
-Files >45KB are truncated. Editorial notes are removed automatically.
+**Total**: ~3 minutes scraping + ~8-14 hours Aristotle processing
 
 ---
 
-## Expected Results
+## Existing Scripts Reference
 
-After completing all 4 gaps:
-
-| Metric | Current | After |
-|--------|---------|-------|
-| Total Sections | 765 | 950 |
-| Subtitle A Coverage | 93% | ~98% |
-| Partnerships | 1% | 100% |
-| Trusts/Estates | 17% | 100% |
-| Natural Resources | 0% | 100% |
-| FICA | 0% | 100% |
-
----
-
-## Post-Completion
-
-After all submissions complete:
-
-1. **Verify builds**: `lake build`
-2. **Run loophole finder**: `python tools/safe_loophole_finder.py`
-3. **Update README**: Reflect new coverage stats
-4. **Commit and push**: Save all new formalizations
+| Script | Purpose |
+|--------|---------|
+| `scripts/scrape_cornell.py` | Scrape IRC text from Cornell Law |
+| `scripts/scrape_and_merge.py` | Scrape and merge with existing data |
+| `scripts/batch_formalize.py` | Create skeletons + prepare + submit |
+| `scripts/aristotle_formalization_queue.py` | INFORMAL mode submission |
+| `scripts/process_remaining_stubs.py` | Process existing stub files |
+| `scripts/aristotle_status.py` | Check Aristotle queue status |
+| `scripts/prepare_aristotle.py` | Prepare file for Aristotle (inline deps) |
 
 ---
 
-## Files
+## Quick Start (One-Liner per Gap)
 
-| File | Purpose |
-|------|---------|
-| `scripts/gap_submission_plan.py` | Main orchestration script |
-| `scripts/scrape_cornell.py` | Cornell Law scraper |
-| `data/sections.json` | Scraped section data |
-| `logs/gap_submission.log` | Execution log |
+```bash
+# FICA - Start here
+python3 scripts/scrape_and_merge.py 3101 3128 && \
+python3 scripts/aristotle_formalization_queue.py --sections "$(seq -s, 3101 3128)"
+
+# Natural Resources
+python3 scripts/scrape_and_merge.py 611 638 && \
+python3 scripts/aristotle_formalization_queue.py --sections "$(seq -s, 611 638)"
+
+# Trusts/Estates
+python3 scripts/scrape_and_merge.py 641 692 && \
+python3 scripts/aristotle_formalization_queue.py --sections "$(seq -s, 641 692)"
+
+# Partnerships
+python3 scripts/scrape_and_merge.py 701 777 && \
+python3 scripts/aristotle_formalization_queue.py --sections "$(seq -s, 701 777)"
+```
