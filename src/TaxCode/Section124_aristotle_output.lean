@@ -3,12 +3,24 @@ This file was edited by Aristotle.
 
 Lean version: leanprover/lean4:v4.24.0
 Mathlib version: f897ebcf72cd16f89ab4577d0c826cd14afaafc7
+This project request had uuid: 8c8b5dcb-d429-490a-b4aa-01623d9ed1fa
+-/
+
+/-
+This file was edited by Aristotle.
+
+Lean version: leanprover/lean4:v4.24.0
+Mathlib version: f897ebcf72cd16f89ab4577d0c826cd14afaafc7
 This project request had uuid: dd014116-2ea3-4f07-b95e-65fe0f849ab6
 -/
 
 import Mathlib
 
 
+/- Aristotle failed to load this code into its environment. Double check that the syntax is correct.
+
+unexpected token ';'; expected command
+unexpected identifier; expected 'instance'-/
 /- Aristotle failed to load this code into its environment. Double check that the syntax is correct.
 
 unexpected token ';'; expected command

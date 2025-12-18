@@ -3,10 +3,9 @@
 **Complete formalization of the US Internal Revenue Code (Title 26) using Lean 4 and Harmonic Aristotle**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Lean 4](https://img.shields.io/badge/Lean-4.24.0-blue)](https://leanprover.github.io/lean4/)
-[![Sections Complete](https://img.shields.io/badge/Sections-748%20Complete-brightgreen)]()
-[![Formalization](https://img.shields.io/badge/Formalization-100%25-success)]()
-[![Build](https://img.shields.io/badge/Build-Passing-brightgreen)]()
+[![Lean 4](https://img.shields.io/badge/Lean-4.14.0-blue)](https://leanprover.github.io/lean4/)
+[![Sections](https://img.shields.io/badge/Sections-752-brightgreen)]()
+[![Theorems](https://img.shields.io/badge/Theorems-607-blue)]()
 
 ## Mission
 
@@ -18,28 +17,28 @@ Create a complete, machine-verified formalization of US tax law enabling:
 
 ---
 
-## Current Status (Dec 16, 2025)
+## Current Status (Dec 18, 2025)
 
-### 100% Formalization Complete
+### Formalization Progress
 
-**748 IRC sections fully formalized** - The entire US Internal Revenue Code has been formalized in Lean 4 using Harmonic Aristotle's INFORMAL mode.
+**752 IRC sections formalized** covering the core of the US Internal Revenue Code.
 
 | Metric | Value |
 |--------|-------|
-| **Total Sections** | 748 |
+| **Main Section Files** | 752 |
 | **Aristotle Output Files** | 703 |
-| **Original Format Files** | 45 |
-| **Completion** | 100% |
-| **Build Status** | Passing |
-| **Sorry Statements** | 0 |
+| **Total Lean Files** | 1,455 |
+| **Lines of Lean Code** | 537,400 |
+| **Theorems & Lemmas** | 607 |
+| **Remaining `sorry`** | 17 |
 
 ### Key Achievements
 
-- **Full IRC Coverage**: All 748 sections of Title 26 formalized
-- **Zero Incomplete Proofs**: No `sorry` statements in final codebase
-- **Build Success**: Complete project compiles with `lake build`
+- **Broad IRC Coverage**: 752 sections of Title 26 formalized
+- **Formal Proofs**: 607 theorems and lemmas proven
 - **Automated Pipeline**: Processed via Aristotle API with batch automation
 - **Quality Tooling**: Loophole detection and contradiction analysis tools
+- **Near-Complete**: 17 `sorry` statements remain in complex sections
 
 ---
 
@@ -47,7 +46,7 @@ Create a complete, machine-verified formalization of US tax law enabling:
 
 ```
 src/
-  TaxCode/                    # 748 formalized IRC sections
+  TaxCode/                    # 752 formalized IRC sections
     Section1.lean             # Tax rates
     Section1_aristotle_output.lean
     Section61.lean            # Gross income
@@ -58,19 +57,20 @@ src/
     Currency.lean             # Currency handling
   Utils/                      # Helper functions
 
-tools/                        # Analysis tools
+tools/                        # 20 analysis tools
   safe_loophole_finder.py     # Single-threaded contradiction detector
   loophole_classifier.py      # Pattern classification
   grok_loophole_investigator.py
   contradiction_detector.py
   dependency_analyzer.py
 
-scripts/                      # Automation
+scripts/                      # 22 automation scripts
   process_remaining_stubs.py
   process_oversized_stubs.py
   process_final_19.py
   monitor_queue.py
 
+tests/                        # 5 test files
 docs/                         # Documentation
 data/                         # Scraped IRC data, queue state
 ```
@@ -107,7 +107,7 @@ inductive FilingStatus
 
 ### Loophole Finder
 
-Single-threaded contradiction detector that analyzes all 748 sections:
+Single-threaded contradiction detector that analyzes all sections:
 
 ```bash
 # Run full analysis (safe, single-threaded)
@@ -177,12 +177,12 @@ grep -r "sorry" src/TaxCode/*.lean
 
 | Category | Count |
 |----------|-------|
-| IRC Sections Formalized | 748 |
-| Lines of Lean Code | ~900,000 |
-| Proven Theorems | 100+ |
-| Test Cases | 200+ |
-| Processing Scripts | 15 |
-| Analysis Tools | 8 |
+| IRC Sections Formalized | 752 |
+| Lines of Lean Code | 537,400 |
+| Proven Theorems/Lemmas | 607 |
+| Test Files | 5 |
+| Processing Scripts | 22 |
+| Analysis Tools | 20 |
 
 ---
 
@@ -249,6 +249,18 @@ Large files were handled with truncation strategies:
 | 401 | Qualified Plans | Complete |
 | 482 | Transfer Pricing | Complete |
 
+### Sections with Remaining Work
+
+| Section | Issue |
+|---------|-------|
+| 103 | Complex municipal bond rules |
+| 168 | Accelerated depreciation |
+| 453 | Installment sales |
+| 704 | Partnership allocations |
+| 831 | Insurance company rules |
+| 951-956 | Controlled foreign corps |
+| 1297 | PFIC definitions |
+
 ---
 
 ## Resources
@@ -287,7 +299,6 @@ Large files were handled with truncation strategies:
 
 ---
 
-**Status**: Complete
-**Last Updated**: 2025-12-16
-**Total Sections**: 748 (100%)
-**Build**: Passing
+**Status**: Near-Complete (17 `sorry` remaining)
+**Last Updated**: 2025-12-18
+**Total Sections**: 752
